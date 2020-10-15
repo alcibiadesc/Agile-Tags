@@ -7,6 +7,10 @@
 </script>
 
 <style>
+    a {
+        text-decoration-color: none;
+        color: white;
+    }
     @import url("https://fonts.googleapis.com/css?family=Abel");
     .centered {
         margin: auto;
@@ -14,8 +18,8 @@
         padding: 10px;
     }
     .card {
-        width: 30em;
-        height: 16em;
+        width: 450px;
+        height: 250px;
         background-color: #fff;
         background: linear-gradient(#f8f8f8, #fff);
         box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
@@ -121,7 +125,6 @@
 
     .card .additional .stats > div {
         flex: 1;
-        text-align: center;
     }
 
     .card .general {
@@ -160,7 +163,7 @@
                 <div class="points ma2 w4 ">{Math.random(0, 1).toFixed(2)}</div>
             </div>
             <div class="more-info">
-                <h1 class="f4 tl">{name}</h1>
+                <h1 class="f4 ">{name}</h1>
 
                 <div>
                     <button
@@ -171,15 +174,16 @@
                 </div>
                 <div class="stats">
                     <div>
-                        <div>
-                            <p class="f6 tr">{email}</p>
+                        <div class="tr">
+                            <span class="f6 tr">
+                                <a href={`mailto:${email}`}>{email}</a></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="general">
-            <h1 class="f4 tl">{name}</h1>
+            <h1 class="f4 ">{name}</h1>
             <p class="tl">
                 Pertenece a la tribu
                 <span class="b">{tribal}</span>
