@@ -33837,7 +33837,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (105:0) {:else}
+    // (119:0) {:else}
     function create_else_block(ctx) {
     	let charts;
     	let current;
@@ -33870,7 +33870,7 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(105:0) {:else}",
+    		source: "(119:0) {:else}",
     		ctx
     	});
 
@@ -33987,6 +33987,17 @@ var app = (function () {
     	let t3_value = /*item*/ ctx[11][/*key*/ ctx[14]] + "";
     	let t3;
     	let t4;
+    	let p2;
+    	let select;
+    	let option0;
+    	let option1;
+    	let option2;
+    	let option3;
+    	let option4;
+    	let option5;
+    	let t11;
+    	let p3;
+    	let t12;
 
     	const block = {
     		c: function create() {
@@ -33998,10 +34009,51 @@ var app = (function () {
     			p1 = element("p");
     			t3 = text(t3_value);
     			t4 = space();
+    			p2 = element("p");
+    			select = element("select");
+    			option0 = element("option");
+    			option0.textContent = "Moderar";
+    			option1 = element("option");
+    			option1.textContent = "0";
+    			option2 = element("option");
+    			option2.textContent = "0,25";
+    			option3 = element("option");
+    			option3.textContent = "0,50";
+    			option4 = element("option");
+    			option4.textContent = "0,75";
+    			option5 = element("option");
+    			option5.textContent = "1";
+    			t11 = space();
+    			p3 = element("p");
+    			t12 = space();
     			attr_dev(p0, "class", "b");
-    			add_location(p0, file$4, 96, 28, 2930);
-    			add_location(p1, file$4, 97, 28, 2982);
-    			attr_dev(div, "class", "ma4 svelte-130d1z2");
+    			add_location(p0, file$4, 98, 28, 3007);
+    			add_location(p1, file$4, 99, 28, 3059);
+    			option0.__value = "Moderar";
+    			option0.value = option0.__value;
+    			add_location(option0, file$4, 103, 36, 3235);
+    			option1.__value = "0";
+    			option1.value = option1.__value;
+    			add_location(option1, file$4, 104, 36, 3312);
+    			option2.__value = "0,25";
+    			option2.value = option2.__value;
+    			add_location(option2, file$4, 105, 36, 3377);
+    			option3.__value = "0,50";
+    			option3.value = option3.__value;
+    			add_location(option3, file$4, 106, 36, 3448);
+    			option4.__value = "0,75";
+    			option4.value = option4.__value;
+    			add_location(option4, file$4, 107, 36, 3519);
+    			option5.__value = "1";
+    			option5.value = option5.__value;
+    			add_location(option5, file$4, 108, 36, 3590);
+    			attr_dev(select, "name", "moderar");
+    			attr_dev(select, "id", "moderar");
+    			add_location(select, file$4, 102, 32, 3162);
+    			attr_dev(p2, "class", " f6 tr mb1");
+    			add_location(p2, file$4, 101, 28, 3107);
+    			add_location(p3, file$4, 111, 28, 3722);
+    			attr_dev(div, "class", "mt3 ph3 pt2 pb2 shadow-5 svelte-130d1z2");
     			toggle_class(div, "invisible", /*toggleVisible*/ ctx[0]);
     			add_location(div, file$4, 95, 24, 2852);
     		},
@@ -34014,6 +34066,17 @@ var app = (function () {
     			append_dev(div, p1);
     			append_dev(p1, t3);
     			append_dev(div, t4);
+    			append_dev(div, p2);
+    			append_dev(p2, select);
+    			append_dev(select, option0);
+    			append_dev(select, option1);
+    			append_dev(select, option2);
+    			append_dev(select, option3);
+    			append_dev(select, option4);
+    			append_dev(select, option5);
+    			append_dev(div, t11);
+    			append_dev(div, p3);
+    			append_dev(div, t12);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*listFiltered*/ 8 && t0_value !== (t0_value = /*key*/ ctx[14] + "")) set_data_dev(t0, t0_value);
