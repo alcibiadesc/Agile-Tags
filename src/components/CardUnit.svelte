@@ -167,7 +167,7 @@
 
                 <div>
                     <button
-                        class="grow mt4"
+                        class="grow mt4 br4"
                         on:click={() => {
                             isVisible = !isVisible;
                         }}>Moderar su cuestionario</button>
