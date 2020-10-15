@@ -34533,33 +34533,41 @@ var app = (function () {
     	let footer;
     	let small;
     	let t0;
-    	let b;
+    	let t1;
     	let t2;
-    	let t3;
+    	let b;
+    	let t4;
+    	let t5;
     	let div;
     	let p;
+    	let t7;
+    	let t8;
 
     	const block = {
     		c: function create() {
     			footer = element("footer");
     			small = element("small");
-    			t0 = text("© 2020\n        ");
+    			t0 = text("©\n        ");
+    			t1 = text(/*yearNow*/ ctx[0]);
+    			t2 = space();
     			b = element("b");
     			b.textContent = "Santander Global Tech";
-    			t2 = text("., All Rights Reserved");
-    			t3 = space();
+    			t4 = text("., All Rights Reserved");
+    			t5 = space();
     			div = element("div");
     			p = element("p");
     			p.textContent = "La información procesada no es trasferida a ningún servidor externo.\n            Siendo utilizada y procesada en el equipo local del usuario a través\n            de su navegador web. No recopilando ningún tipo de información en el\n            proceso";
+    			t7 = space();
+    			t8 = text(/*yearNow*/ ctx[0]);
     			attr_dev(b, "class", "ttu");
-    			add_location(b, file$5, 2, 8, 104);
+    			add_location(b, file$5, 7, 8, 181);
     			attr_dev(small, "class", "f6 db tc");
-    			add_location(small, file$5, 1, 4, 65);
-    			add_location(p, file$5, 4, 8, 208);
-    			attr_dev(div, "class", "tc mt3");
-    			add_location(div, file$5, 3, 4, 179);
+    			add_location(small, file$5, 5, 4, 129);
+    			add_location(p, file$5, 9, 8, 288);
+    			attr_dev(div, "class", "tc f6 db ");
+    			add_location(div, file$5, 8, 4, 256);
     			attr_dev(footer, "class", "pv4 ph3 ph5-m ph6-l mid-gray fixed bottom-0");
-    			add_location(footer, file$5, 0, 0, 0);
+    			add_location(footer, file$5, 4, 0, 64);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -34568,17 +34576,23 @@ var app = (function () {
     			insert_dev(target, footer, anchor);
     			append_dev(footer, small);
     			append_dev(small, t0);
-    			append_dev(small, b);
+    			append_dev(small, t1);
     			append_dev(small, t2);
-    			append_dev(footer, t3);
+    			append_dev(small, b);
+    			append_dev(small, t4);
+    			append_dev(footer, t5);
     			append_dev(footer, div);
     			append_dev(div, p);
+    			insert_dev(target, t7, anchor);
+    			insert_dev(target, t8, anchor);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(footer);
+    			if (detaching) detach_dev(t7);
+    			if (detaching) detach_dev(t8);
     		}
     	};
 
@@ -34593,7 +34607,8 @@ var app = (function () {
     	return block;
     }
 
-    function instance$5($$self, $$props) {
+    function instance$5($$self, $$props, $$invalidate) {
+    	let yearNow = new Date().getFullYear();
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -34602,7 +34617,17 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Warning", $$slots, []);
-    	return [];
+    	$$self.$capture_state = () => ({ yearNow });
+
+    	$$self.$inject_state = $$props => {
+    		if ("yearNow" in $$props) $$invalidate(0, yearNow = $$props.yearNow);
+    	};
+
+    	if ($$props && "$$inject" in $$props) {
+    		$$self.$inject_state($$props.$$inject);
+    	}
+
+    	return [yearNow];
     }
 
     class Warning extends SvelteComponentDev {
