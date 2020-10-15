@@ -1,7 +1,8 @@
 <script>
+    import Charts from "./Charts.svelte";
     import { items } from "../stores.js";
     let listItems = $items || [];
-    let visible = false;
+
     // Search
 
     const removeAccents = (str) => {
@@ -102,5 +103,5 @@
         {/each}
     </div>
 {:else}
-    <h1>Aquí van los gráficos</h1>
+    <Charts />
 {/if}
