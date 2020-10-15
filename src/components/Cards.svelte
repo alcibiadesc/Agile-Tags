@@ -1,4 +1,6 @@
 <script>
+    import { searchStore } from "./../searchStore.js";
+    import Searchbar from "./Searchbar.svelte";
     import Charts from "./Charts.svelte";
     import { items } from "../stores.js";
     let listItems = $items || [];
@@ -15,10 +17,10 @@
     $: listFiltered = listItems.filter(
         (item) =>
             removeAccents(item.Tribu.toLowerCase()).includes(
-                removeAccents(searchbar.toLowerCase())
+                removeAccents($searchStore.toLowerCase())
             ) ||
             removeAccents(item.Nombre.toLowerCase()).includes(
-                removeAccents(searchbar.toLowerCase())
+                removeAccents($searchStore.toLowerCase())
             )
     );
 
@@ -42,39 +44,10 @@
     .invisible {
         display: none;
     }
-
-    .noselect {
-        -webkit-touch-callout: none; /* iOS Safari */
-        -webkit-user-select: none; /* Safari */
-        -khtml-user-select: none; /* Konqueror HTML */
-        -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-        user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-    }
 </style>
 
-<article class="cf f7 ma4 noselect">
-    <div
-        on:click={() => {
-            toggleMenu = 'Personas';
-        }}
-        class=" grow link fl w-50 bg-near-white tc">
-        <h1>PERSONAS</h1>
-    </div>
-    <div
-        on:click={() => (toggleMenu = 'Graficos')}
-        class="grow link fl w-50 bg-light-gray tc">
-        <h1>GRAFICOS</h1>
-    </div>
-</article>
-
 {#if toggleMenu == 'Personas'}
-    <input
-        type="text"
-        class="w-60"
-        placeholder="buscar por nombre o tribu..."
-        bind:value={searchbar} />
+    <Searchbar />
 
     <div>
         {#each listFiltered as item, i}

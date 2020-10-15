@@ -1,9 +1,10 @@
 <script>
+  import Selector from "./components/Selector.svelte";
   import xlsx from "xlsx";
   import Header from "./components/Header.svelte";
 
   import { columns, items } from "./stores.js";
-  import Cards from "./components/Cards.svelte";
+
   import Warning from "./components/Warning.svelte";
   export let files;
 
@@ -78,6 +79,6 @@
     </div>
     <Warning />
   {:else}
-    <Cards />
+    <Selector />
   {/if}
 </main>
