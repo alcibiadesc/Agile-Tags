@@ -32681,7 +32681,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Reset");
+    			t = text("Resetear");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -32708,7 +32708,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Export");
+    			t = text("Exportar");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -32772,11 +32772,11 @@ var app = (function () {
     			attr_dev(img, "class", "w-50");
     			if (img.src !== (img_src_value = /*logo*/ ctx[1])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "site logo");
-    			add_location(img, file$1, 40, 2, 741);
-    			attr_dev(div, "class", "menu svelte-1ga2gbh");
-    			add_location(div, file$1, 42, 2, 792);
-    			attr_dev(header, "class", header_class_value = "" + (null_to_empty(/*$items*/ ctx[0].length ? "with-menu" : "") + " svelte-1ga2gbh"));
-    			add_location(header, file$1, 39, 0, 689);
+    			add_location(img, file$1, 40, 2, 740);
+    			attr_dev(div, "class", "menu svelte-11wzsl");
+    			add_location(div, file$1, 42, 2, 791);
+    			attr_dev(header, "class", header_class_value = "" + (null_to_empty(/*$items*/ ctx[0].length ? "with-menu" : "") + " svelte-11wzsl"));
+    			add_location(header, file$1, 39, 0, 688);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -32807,7 +32807,7 @@ var app = (function () {
 
     			button1.$set(button1_changes);
 
-    			if (!current || dirty & /*$items*/ 1 && header_class_value !== (header_class_value = "" + (null_to_empty(/*$items*/ ctx[0].length ? "with-menu" : "") + " svelte-1ga2gbh"))) {
+    			if (!current || dirty & /*$items*/ 1 && header_class_value !== (header_class_value = "" + (null_to_empty(/*$items*/ ctx[0].length ? "with-menu" : "") + " svelte-11wzsl"))) {
     				attr_dev(header, "class", header_class_value);
     			}
     		},
@@ -34540,8 +34540,6 @@ var app = (function () {
     	let t5;
     	let div;
     	let p;
-    	let t7;
-    	let t8;
 
     	const block = {
     		c: function create() {
@@ -34557,8 +34555,6 @@ var app = (function () {
     			div = element("div");
     			p = element("p");
     			p.textContent = "La información procesada no es trasferida a ningún servidor externo.\n            Siendo utilizada y procesada en el equipo local del usuario a través\n            de su navegador web. No recopilando ningún tipo de información en el\n            proceso";
-    			t7 = space();
-    			t8 = text(/*yearNow*/ ctx[0]);
     			attr_dev(b, "class", "ttu");
     			add_location(b, file$5, 7, 8, 181);
     			attr_dev(small, "class", "f6 db tc");
@@ -34583,16 +34579,12 @@ var app = (function () {
     			append_dev(footer, t5);
     			append_dev(footer, div);
     			append_dev(div, p);
-    			insert_dev(target, t7, anchor);
-    			insert_dev(target, t8, anchor);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(footer);
-    			if (detaching) detach_dev(t7);
-    			if (detaching) detach_dev(t8);
     		}
     	};
 

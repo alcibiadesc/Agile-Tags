@@ -15,7 +15,7 @@
 
 <style>
   header {
-    padding: 30px 0;
+    padding: 5px 0;
   }
 
   .menu {
@@ -41,7 +41,7 @@
   <img class="w-50" src={logo} alt="site logo" />
 
   <div class="menu">
-    <Button onClick={reset}>Reset</Button>
-    <Button type="secondary" onClick={exportFile}>Export</Button>
+    <Button onClick={reset}>Resetear</Button>
+    <Button type="secondary" onClick={exportFile}>Exportar</Button>
   </div>
 </header>
