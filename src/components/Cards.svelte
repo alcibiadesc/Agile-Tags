@@ -1,8 +1,9 @@
 <script>
-    import { searchStore } from "./../searchStore.js";
+    import { items } from "./../stores/answerStore.js";
+    import { searchStore } from "../stores/searchStore.js";
     import Searchbar from "./Searchbar.svelte";
     import Charts from "./Charts.svelte";
-    import { items } from "../stores.js";
+
     let listItems = $items || [];
 
     // Search

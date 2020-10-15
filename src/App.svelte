@@ -1,9 +1,8 @@
 <script>
+  import { columns, items } from "./stores/answerStore.js";
   import Selector from "./components/Selector.svelte";
   import xlsx from "xlsx";
   import Header from "./components/Header.svelte";
-
-  import { columns, items } from "./stores.js";
 
   import Warning from "./components/Warning.svelte";
   export let files;

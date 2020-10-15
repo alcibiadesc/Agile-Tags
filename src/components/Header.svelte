@@ -1,6 +1,7 @@
 <script>
+  import { items, reset } from "./../stores/answerStore.js";
   import xlsx from "xlsx";
-  import { items, reset } from "../stores.js";
+
   import { Button } from "./UI";
 
   let logo = "./Logo Agile Flag.svg";
