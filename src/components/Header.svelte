@@ -3,6 +3,8 @@
   import { items, reset } from "../stores.js";
   import { Button } from "./UI";
 
+  let logo = "./Logo Agile Flag.svg";
+
   function exportFile() {
     const ws = xlsx.utils.json_to_sheet($items);
     const wb = xlsx.utils.book_new();
@@ -44,7 +46,7 @@
 </style>
 
 <header class={$items.length ? 'with-menu' : ''}>
-  <h1>Agile Flags</h1>
+  <img class="w-50" src={logo} alt="site logo" />
 
   <div class="menu">
     <Button onClick={reset}>Reset</Button>

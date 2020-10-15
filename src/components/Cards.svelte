@@ -22,6 +22,17 @@
             )
     );
 
+    $: listCrop = listFiltered.map((item, i, array) => {
+        delete item.ID;
+        delete item["Hora de finalización"];
+        delete item["Hora de inicio"];
+        console.log(item);
+
+        return array;
+        console.log(array);
+        console.log(listFiltered);
+    });
+
     let toggleVisible = true;
 
     let toggleMenu = "Personas";
@@ -82,6 +93,10 @@
                         name="visible" />
                 </h1>
                 <div class="tl pa3 bt b--black-10">
+                    <p class="f6 f5-ns lh-copy measure">
+                        <span class="b">Puntuación Obtenida:</span>
+                        {Math.random(0, 1).toFixed(2)}
+                    </p>
                     <p class="f6 f5-ns lh-copy measure">
                         {item['Correo electrónico']}
                     </p>
