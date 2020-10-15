@@ -1,9 +1,10 @@
 <script>
   import xlsx from "xlsx";
   import Header from "./components/Header.svelte";
-  import GridList from "./components/GridList.svelte";
+
   import { columns, items } from "./stores.js";
   import Cards from "./components/Cards.svelte";
+  import Warning from "./components/Warning.svelte";
   export let files;
 
   $: if (files.length) {
@@ -75,8 +76,8 @@
         accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
         bind:files />
     </div>
+    <Warning />
   {:else}
-    <!-- <GridList /> -->
     <Cards />
   {/if}
 </main>
