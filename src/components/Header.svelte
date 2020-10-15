@@ -18,14 +18,6 @@
     padding: 30px 0;
   }
 
-  h1 {
-    color: var(--color-primary);
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
-    margin: 0;
-  }
-
   .menu {
     display: none;
   }
