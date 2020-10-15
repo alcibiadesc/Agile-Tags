@@ -1,4 +1,5 @@
 <script>
+  import Modal from "./Modal.svelte";
   import { items, reset } from "./../stores/answerStore.js";
   import xlsx from "xlsx";
 
@@ -44,5 +45,7 @@
   <div class="menu">
     <Button onClick={reset}>Resetear</Button>
     <Button type="secondary" onClick={exportFile}>Exportar</Button>
+
+    <Modal />
   </div>
 </header>

@@ -3,13 +3,6 @@
   export let onClick = () => {};
 </script>
 
-<button
-  class="btn btn-{type}"
-  on:click={onClick}
-  {...$$restProps}>
-  <slot></slot>
-</button>
-
 <style>
   .btn {
     background: var(--color-primary);
@@ -21,7 +14,7 @@
   }
 
   .btn:hover {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   .btn-secondary {
@@ -32,3 +25,7 @@
     background: var(--color-text);
   }
 </style>
+
+<button class="btn btn-{type}" on:click={onClick} {...$$restProps}>
+  <slot />
+</button>

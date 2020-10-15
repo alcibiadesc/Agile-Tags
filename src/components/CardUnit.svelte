@@ -4,6 +4,97 @@
     export let email;
 
     let isVisible = "true";
+
+    export let answers; // user answers
+
+    console.log(answers);
+
+    // const masterAnswers = {
+    //     "¿Cada cuánto tiempo se actualiza?": "< 3 meses &100",
+
+    //     "¿Con qué frecuencia lo haces?2": "diaria &200",
+
+    //     "¿Con qué frecuencia lo haces?3": "diaria &300",
+
+    //     "¿Con qué frecuencia?": "diaria & 400",
+
+    //     "¿Confías plenamente en el equipo? ¿Delegas incluso la responsabilidad de validaciones con clientes y usuarios finales?":
+    //         "Si & 500",
+
+    //     "¿Consultas al equipo sobre cuestiones relevantes acerca de las metas a medio o largo del producto?":
+    //         "Si & 600",
+
+    //     "¿Cuánto tiempo llevas gestionando las dependencias?": "< 3 mes & 800",
+
+    //     "¿Cuánto tiempo llevas haciéndolo?": "< 3 mes & 900",
+
+    //     "¿Cuánto tiempo llevas haciéndolo?2": "< 3 mes & 560",
+
+    //     "¿Cuánto tiempo llevas haciéndolo?3": "< 3 mes & 230",
+
+    //     "¿Cuánto tiempo llevas haciéndolo?4": "< 3 mes & 500",
+
+    //     "¿Cuánto tiempo llevas haciéndolo?6": "< 3 meses & 120",
+
+    //     "¿Cuánto tiempo llevas ordenando según los criterios de priorización?":
+    //         "< 3 mes & 30",
+
+    //     "¿Cuánto tiempo llevas participando en la elaboración del roadmap?":
+    //         "< 3 mes & 40",
+
+    //     "¿Cuánto tiempo lleváis haciéndolo?3": "< 3 meses & 50",
+
+    //     "¿Cuánto tiempo lleváis haciéndolo?4": "< 3 meses & 800",
+
+    //     "¿Cuánto tiempo lleváis haciéndolo?5": "< 3 meses & 90",
+
+    //     "¿Cómo lo haces?": "definición clara de objetivos en las tareas & 300",
+
+    //     "¿Cómo lo mides? ¿Con qué frecuencia lo haces?":
+    //         "semanal, contando correos & 100",
+
+    //     "¿Cómo lo realizas? ¿Con qué frecuencia se efectúa esa validación?":
+    //         "diario & 200",
+
+    //     "¿De qué forma lo haces y con qué frecuencia?": "diaria & 20",
+
+    //     "¿De qué formas medís o verificáis el cumplimiento de esas metas?":
+    //         "diario & 30",
+    // };
+
+    const masterAnswers = {
+        "Comparte el motivo.":
+            "Problemas con el proveedores o dependencia de tercertos& 1000",
+        "Cuéntanos cómo lo haces": "Necesidades de las historias de usuario",
+        "¿De qué formas medís o verificáis el cumplimiento de esas metas?":
+            "diario & 3",
+        "¿Cuánto tiempo lleváis haciéndolo?5": "< 3 meses & 90",
+    };
+
+    console.log(answers);
+    let key = Object.keys(masterAnswers);
+
+    let score = 0;
+
+    let sizeQuest = Object.keys(masterAnswers).length; // number of questions define to use the loop.
+
+    for (let i = 0; i < sizeQuest; i++) {
+        let masterAnswersValues = masterAnswers[key[i]];
+        let splitMasterAnswer = masterAnswersValues.split("&");
+        let trueAnswer = splitMasterAnswer[0]
+            ? splitMasterAnswer[0].replace(" ", "")
+            : "";
+        let scoreSum = Number(
+            splitMasterAnswer[1] ? splitMasterAnswer[1].replace(",", ".") : "0"
+        ); // prevent use "," to decimals
+
+        let answerToEvaluate = answers[key[i]]
+            ? answers[key[i]].replace(" ", "")
+            : "";
+
+        answerToEvaluate == trueAnswer ? (score += scoreSum) : (score += 0);
+        console.log(score);
+    }
 </script>
 
 <style>
@@ -19,7 +110,7 @@
     }
     .card {
         width: 450px;
-        height: 250px;
+        height: 220px;
         background-color: #fff;
         background: linear-gradient(#f8f8f8, #fff);
         box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
@@ -174,7 +265,7 @@
                     <path
                         d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z" /></svg>
 
-                <div class="points ma2 w4 ">{Math.random(0, 1).toFixed(2)}</div>
+                <div class="points ma2 w4 ">{score}</div>
             </div>
             <div class="more-info">
                 <h1 class="f4 ">{name}</h1>

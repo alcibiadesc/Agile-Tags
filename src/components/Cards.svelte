@@ -32,7 +32,8 @@
     <CardUnit
         name={item.Nombre}
         tribal={item.Tribu}
-        email={item['Correo electrónico']}>
+        email={item['Correo electrónico']}
+        answers={listFiltered[i]}>
         {#each Object.keys(item) as key}
             {#if key == 'Correo electrónico'}
                 <p />
