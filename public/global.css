@@ -87,4 +87,10 @@ button:focus {
         -ms-user-select: none; /* Internet Explorer/Edge */
         user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
-    }
+	}
+	
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

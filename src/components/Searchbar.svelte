@@ -8,7 +8,7 @@
     /* Base styling */
 
     .search__container {
-        padding-top: 64px;
+        padding-top: 30px;
     }
 
     .search__input {
@@ -52,16 +52,18 @@
 
     .centered {
         margin: auto;
-        width: 70%;
+        width: 40%;
 
         padding: 10px;
     }
 </style>
 
-<div class="search__container  centered">
-    <input
-        class="search__input"
-        type="text"
-        placeholder="Busca por nombre y apellidos o Tribu..."
-        bind:value={$searchStore} />
+<div class="mb4">
+    <div class="search__container  centered m">
+        <input
+            class="search__input"
+            type="text"
+            placeholder="Busca por nombre y apellidos o Tribu..."
+            bind:value={$searchStore} />
+    </div>
 </div>
