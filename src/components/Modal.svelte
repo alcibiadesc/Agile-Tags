@@ -120,7 +120,7 @@
 </button>
 
 <dialog class:hide={showModal == false} class:show={showModal == true}>
-    <div class="drop-area">
+    <div class="drop-area ">
         ¡Añade tu plantilla correctora aquí!
         <input
             type="file"

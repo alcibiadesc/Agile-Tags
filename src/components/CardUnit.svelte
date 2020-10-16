@@ -1,10 +1,17 @@
 <script>
+    import { moderateStore } from "./../stores/moderateStore.js";
     import { itemsMaster } from "./../stores/masterStore.js";
+    import { afterUpdate } from "svelte";
+
     export let name;
     export let tribal;
     export let email;
+    export let index;
+    export let rol;
 
-    let isVisible = "true";
+    let userObject = {};
+
+    let isVisible = "false";
 
     export let answers; // user answers
 
@@ -19,6 +26,7 @@
     let sizeQuest = Object.keys(answers).length; // number of questions define to use the loop.
     let sizeQuestMaster = Object.keys(masterAnswers).length;
 
+    // Loop Validate Answers
     for (let index = 0; index < sizeQuestMaster; index++) {
         for (let i = 0; i < sizeQuest; i++) {
             let masterAnswersValues = masterAnswers[index][key[i]];
@@ -38,16 +46,69 @@
                 ? answers[key[i]].replace(" ", "")
                 : "";
 
-            answerToEvaluate == trueAnswer ? (score += scoreSum) : (score += 0);
-            console.log(`${name} suma ${score}`);
+            if (answerToEvaluate == trueAnswer) {
+                score += scoreSum;
+                scoreSum > 0 ? (userObject[key[i]] = scoreSum) : "";
+            } else {
+                score += 0;
+            }
+
+            // console.log(`${name} suma ${score}`);
         }
     }
+
+    // Add Object to array with only scores
+    $moderateStore.push(userObject);
+
+    // Sum Global Score
+    $: scoreUser = Object.values($moderateStore[index])
+        ? Object.values($moderateStore[index]).reduce((a, b) => a + b)
+        : 0;
+
+    const findAndFilter = (term) => {
+        let find = Object.keys($moderateStore[index]).filter((item) => {
+            return item.includes(term);
+        });
+
+        const filtered = Object.keys($moderateStore[index])
+            .filter((key) => find.includes(key))
+            .reduce((obj, key) => {
+                obj[key] = $moderateStore[index][key];
+                return obj;
+            }, {});
+        return filtered;
+    };
+
+    // Product Managment -> "A-"
+
+    let findScorePM = findAndFilter("A-");
+
+    // Customer and Stakeholder Management -> "C-"
+
+    let findScoreCSM = findAndFilter("B-");
+
+    // Product Delivery -> "D-"
+
+    let findScoreD = findAndFilter("C-");
+
+    // Relationship with the team -> "D-"
+
+    let findScoreRT = findAndFilter("D-");
+
+    // change color select unselect
+    let isSelected = false;
 </script>
 
 <style>
     a {
         text-decoration-color: none;
         color: white;
+    }
+
+    .metricas p {
+        text-align: left;
+        margin: 0;
+        padding: 0;
     }
     @import url("https://fonts.googleapis.com/css?family=Abel");
     .centered {
@@ -77,9 +138,14 @@
         width: 150px;
         height: 100%;
         background: linear-gradient(#de685e, #ee786e);
+
         transition: width 0.4s;
         overflow: hidden;
         z-index: 2;
+    }
+
+    .card .unCheck {
+        background: linear-gradient(#777777, #747474);
     }
 
     .card:hover .additional {
@@ -138,10 +204,6 @@
         margin-bottom: 0;
     }
 
-    .card.green .additional .more-info h1 {
-        color: #224c36;
-    }
-
     .card .additional .coords span + span {
         float: right;
     }
@@ -155,10 +217,6 @@
         right: 1rem;
         top: auto;
         color: #fff;
-    }
-
-    .card.green .additional .stats {
-        color: #325c46;
     }
 
     .card .additional .stats > div {
@@ -197,8 +255,12 @@
 </style>
 
 <div class="centered ">
-    <div class="card ">
-        <div class="additional">
+    <div
+        class="card"
+        on:click={() => {
+            isSelected = !isSelected;
+        }}>
+        <div class="additional " class:unCheck={isSelected}>
             <div class="user-card mt4">
                 <div class="level ma2 w4">Practitioner</div>
 
@@ -212,7 +274,7 @@
                     <path
                         d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z" /></svg>
 
-                <div class="points ma2 w4 ">{score}</div>
+                <div class="points ma2 w4 ">{scoreUser}</div>
             </div>
             <div class="more-info">
                 <h1 class="f4 ">{name}</h1>
@@ -222,13 +284,15 @@
                         class="grow mt4 br3"
                         on:click={() => {
                             isVisible = !isVisible;
+                            isSelected = !isSelected;
                         }}>Moderar su cuestionario</button>
                 </div>
                 <div class="stats">
                     <div>
                         <div class="tr">
                             <span class="f6 tr">
-                                <a href={`mailto:${email}`}>{email}</a></span>
+                                <a
+                                    href={`mailto:${email}`}>{email ? email : ''}</a></span>
                         </div>
                     </div>
                 </div>
@@ -239,9 +303,16 @@
             <p class="tl">
                 Pertenece a la tribu
                 <span class="b">{tribal}</span>
-                con el rol de
-                <span class="b">Product Owner</span>
+                {#if rol}con el rol de <span class="b">{rol}.</span>{/if}
             </p>
+
+            <h4 class="mb1 pb0">Resultados</h4>
+            <div class="f6 metricas tl">
+                <p>Product Management:</p>
+                <p>Customer and Stakeholder Mgmt:</p>
+                <p>Product Delivery:</p>
+                <p>Relationship with the team:</p>
+            </div>
         </div>
     </div>
     <div class="tl " class:invisible={isVisible}>
