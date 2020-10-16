@@ -8,22 +8,17 @@
     export let email;
     export let index;
     export let rol;
+    export let answers;
 
-    let userObject = { a: 0 };
+    let userObject = {};
 
-    let isVisible = "false";
-
-    export let answers; // user answers
-
-    const masterAnswers = $itemsMaster
-        ? $itemsMaster
-        : { "nothing nada": "1&0" };
+    const masterAnswers = $itemsMaster ? $itemsMaster : {};
 
     let key = Object.keys(answers);
 
     let score = 0;
 
-    let sizeQuest = Object.keys(answers).length; // number of questions define to use the loop.
+    let sizeQuest = key.length; // number of questions define to use the loop.
     let sizeQuestMaster = Object.keys(masterAnswers).length;
 
     // Loop Validate Answers
@@ -159,12 +154,10 @@
 
     let status = evaluation(participantAll, practitionerAll, expertAll);
 
-    // show select
+    // Toogle Visibility
     let isSelected = false;
-
-    // show chart
-
     let showChart = true;
+    let hideModerator = true;
 </script>
 
 <style>
@@ -346,7 +339,7 @@
                     <button
                         class="grow mt4 br3"
                         on:click={() => {
-                            isVisible = !isVisible;
+                            hideModerator = !hideModerator;
                             isSelected = !isSelected;
                         }}>Moderar su cuestionario</button>
                 </div>
@@ -379,12 +372,12 @@
             </p>
         </div>
     </div>
-    <div class="tl " class:invisible={isVisible}>
+    <div class="tl " class:invisible={hideModerator}>
         <slot />
 
         <div
             on:click={() => {
-                isVisible = !isVisible;
+                hideModerator = !hideModerator;
             }}
             class="float grow ">
             <svg

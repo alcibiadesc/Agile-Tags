@@ -1266,7 +1266,7 @@ var app = (function () {
     const { Object: Object_1, console: console_1 } = globals;
     const file$2 = "src/components/CardUnit.svelte";
 
-    // (378:16) {#if rol}
+    // (371:16) {#if rol}
     function create_if_block(ctx) {
     	let t0;
     	let span;
@@ -1280,7 +1280,7 @@ var app = (function () {
     			t1 = text(/*rol*/ ctx[3]);
     			t2 = text(".");
     			attr_dev(span, "class", "b svelte-1yiwp32");
-    			add_location(span, file$2, 377, 39, 10351);
+    			add_location(span, file$2, 370, 39, 10266);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1301,7 +1301,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(378:16) {#if rol}",
+    		source: "(371:16) {#if rol}",
     		ctx
     	});
 
@@ -1433,78 +1433,78 @@ var app = (function () {
     			div15 = element("div");
     			create_component(tableresult.$$.fragment);
     			attr_dev(div0, "class", "level ma2 w4 svelte-1yiwp32");
-    			add_location(div0, file$2, 327, 16, 8125);
+    			add_location(div0, file$2, 320, 16, 8032);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$2, 335, 34, 8415);
+    			add_location(path0, file$2, 328, 34, 8322);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$2, 336, 20, 8474);
+    			add_location(path1, file$2, 329, 20, 8381);
     			attr_dev(svg0, "class", "mv3 svelte-1yiwp32");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$2, 329, 16, 8183);
+    			add_location(svg0, file$2, 322, 16, 8090);
     			attr_dev(div1, "class", "points ma2 w4  svelte-1yiwp32");
-    			add_location(div1, file$2, 339, 16, 8947);
+    			add_location(div1, file$2, 332, 16, 8854);
     			attr_dev(div2, "class", "user-card mt4 svelte-1yiwp32");
-    			add_location(div2, file$2, 326, 12, 8081);
+    			add_location(div2, file$2, 319, 12, 7988);
     			attr_dev(h10, "class", "f4  svelte-1yiwp32");
-    			add_location(h10, file$2, 342, 16, 9065);
+    			add_location(h10, file$2, 335, 16, 8972);
     			attr_dev(button0, "class", "grow mt4 br3");
-    			add_location(button0, file$2, 345, 20, 9136);
-    			add_location(div3, file$2, 344, 16, 9110);
+    			add_location(button0, file$2, 338, 20, 9043);
+    			add_location(div3, file$2, 337, 16, 9017);
     			attr_dev(button1, "class", "grow mt4 br3");
-    			add_location(button1, file$2, 354, 20, 9463);
-    			add_location(div4, file$2, 353, 16, 9437);
+    			add_location(button1, file$2, 347, 20, 9378);
+    			add_location(div4, file$2, 346, 16, 9352);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
     			attr_dev(a, "class", "svelte-1yiwp32");
-    			add_location(a, file$2, 365, 32, 9919);
+    			add_location(a, file$2, 358, 32, 9834);
     			attr_dev(span0, "class", "f6 tr svelte-1yiwp32");
-    			add_location(span0, file$2, 364, 28, 9866);
+    			add_location(span0, file$2, 357, 28, 9781);
     			attr_dev(div5, "class", "tr");
-    			add_location(div5, file$2, 363, 24, 9821);
+    			add_location(div5, file$2, 356, 24, 9736);
     			attr_dev(div6, "class", "svelte-1yiwp32");
-    			add_location(div6, file$2, 362, 20, 9791);
+    			add_location(div6, file$2, 355, 20, 9706);
     			attr_dev(div7, "class", "stats svelte-1yiwp32");
-    			add_location(div7, file$2, 361, 16, 9751);
+    			add_location(div7, file$2, 354, 16, 9666);
     			attr_dev(div8, "class", "more-info svelte-1yiwp32");
-    			add_location(div8, file$2, 341, 12, 9025);
+    			add_location(div8, file$2, 334, 12, 8932);
     			attr_dev(div9, "class", "additional  svelte-1yiwp32");
-    			toggle_class(div9, "unCheck", /*isSelected*/ ctx[5]);
-    			add_location(div9, file$2, 325, 8, 8016);
+    			toggle_class(div9, "unCheck", /*isSelected*/ ctx[4]);
+    			add_location(div9, file$2, 318, 8, 7923);
     			attr_dev(h11, "class", "f4  svelte-1yiwp32");
-    			add_location(h11, file$2, 373, 12, 10172);
+    			add_location(h11, file$2, 366, 12, 10087);
     			attr_dev(span1, "class", "b svelte-1yiwp32");
-    			add_location(span1, file$2, 376, 16, 10280);
+    			add_location(span1, file$2, 369, 16, 10195);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$2, 374, 12, 10212);
+    			add_location(p, file$2, 367, 12, 10127);
     			attr_dev(div10, "class", "general svelte-1yiwp32");
-    			add_location(div10, file$2, 372, 8, 10138);
+    			add_location(div10, file$2, 365, 8, 10053);
     			attr_dev(div11, "class", "card svelte-1yiwp32");
-    			add_location(div11, file$2, 320, 4, 7906);
+    			add_location(div11, file$2, 313, 4, 7813);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$2, 394, 30, 10820);
+    			add_location(path2, file$2, 387, 30, 10747);
     			attr_dev(path3, "d", "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z");
-    			add_location(path3, file$2, 395, 16, 10875);
+    			add_location(path3, file$2, 388, 16, 10802);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$2, 389, 12, 10640);
+    			add_location(svg1, file$2, 382, 12, 10567);
     			attr_dev(div12, "class", "float grow  svelte-1yiwp32");
-    			add_location(div12, file$2, 384, 8, 10505);
+    			add_location(div12, file$2, 377, 8, 10424);
     			attr_dev(div13, "class", "tl  svelte-1yiwp32");
-    			toggle_class(div13, "invisible", /*isVisible*/ ctx[4]);
-    			add_location(div13, file$2, 381, 4, 10433);
+    			toggle_class(div13, "invisible", /*hideModerator*/ ctx[6]);
+    			add_location(div13, file$2, 374, 4, 10348);
     			attr_dev(div14, "class", "centered  svelte-1yiwp32");
-    			add_location(div14, file$2, 319, 0, 7878);
+    			add_location(div14, file$2, 312, 0, 7785);
     			attr_dev(div15, "class", "svelte-1yiwp32");
-    			toggle_class(div15, "invisible", /*showChart*/ ctx[6]);
-    			add_location(div15, file$2, 400, 0, 11049);
+    			toggle_class(div15, "invisible", /*showChart*/ ctx[5]);
+    			add_location(div15, file$2, 393, 0, 10976);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1585,8 +1585,8 @@ var app = (function () {
     				attr_dev(a, "href", a_href_value);
     			}
 
-    			if (dirty[0] & /*isSelected*/ 32) {
-    				toggle_class(div9, "unCheck", /*isSelected*/ ctx[5]);
+    			if (dirty[0] & /*isSelected*/ 16) {
+    				toggle_class(div9, "unCheck", /*isSelected*/ ctx[4]);
     			}
 
     			if (!current || dirty[0] & /*name*/ 1) set_data_dev(t13, /*name*/ ctx[0]);
@@ -1611,12 +1611,12 @@ var app = (function () {
     				}
     			}
 
-    			if (dirty[0] & /*isVisible*/ 16) {
-    				toggle_class(div13, "invisible", /*isVisible*/ ctx[4]);
+    			if (dirty[0] & /*hideModerator*/ 64) {
+    				toggle_class(div13, "invisible", /*hideModerator*/ ctx[6]);
     			}
 
-    			if (dirty[0] & /*showChart*/ 64) {
-    				toggle_class(div15, "invisible", /*showChart*/ ctx[6]);
+    			if (dirty[0] & /*showChart*/ 32) {
+    				toggle_class(div15, "invisible", /*showChart*/ ctx[5]);
     			}
     		},
     		i: function intro(local) {
@@ -1665,13 +1665,12 @@ var app = (function () {
     	let { email } = $$props;
     	let { index } = $$props;
     	let { rol } = $$props;
-    	let userObject = { a: 0 };
-    	let isVisible = "false";
-    	let { answers } = $$props; // user answers
-    	const masterAnswers = $itemsMaster ? $itemsMaster : { "nothing nada": "1&0" };
+    	let { answers } = $$props;
+    	let userObject = {};
+    	const masterAnswers = $itemsMaster ? $itemsMaster : {};
     	let key = Object.keys(answers);
     	let score = 0;
-    	let sizeQuest = Object.keys(answers).length; // number of questions define to use the loop.
+    	let sizeQuest = key.length; // number of questions define to use the loop.
     	let sizeQuestMaster = Object.keys(masterAnswers).length;
 
     	// Loop Validate Answers
@@ -1784,12 +1783,11 @@ var app = (function () {
     	let scoreFinal = sumaAllPoints();
     	let status = evaluation(participantAll, practitionerAll, expertAll);
 
-    	// show select
+    	// Toogle Visibility
     	let isSelected = false;
 
-    	// show chart
     	let showChart = true;
-
+    	let hideModerator = true;
     	const writable_props = ["name", "tribal", "email", "index", "rol", "answers"];
 
     	Object_1.keys($$props).forEach(key => {
@@ -1800,21 +1798,21 @@ var app = (function () {
     	validate_slots("CardUnit", $$slots, ['default']);
 
     	const click_handler = () => {
-    		$$invalidate(4, isVisible = !isVisible);
-    		$$invalidate(5, isSelected = !isSelected);
+    		$$invalidate(6, hideModerator = !hideModerator);
+    		$$invalidate(4, isSelected = !isSelected);
     	};
 
     	const click_handler_1 = () => {
-    		$$invalidate(5, isSelected = !isSelected);
-    		$$invalidate(6, showChart = !showChart);
+    		$$invalidate(4, isSelected = !isSelected);
+    		$$invalidate(5, showChart = !showChart);
     	};
 
     	const click_handler_2 = () => {
-    		$$invalidate(5, isSelected = !isSelected);
+    		$$invalidate(4, isSelected = !isSelected);
     	};
 
     	const click_handler_3 = () => {
-    		$$invalidate(4, isVisible = !isVisible);
+    		$$invalidate(6, hideModerator = !hideModerator);
     	};
 
     	$$self.$set = $$props => {
@@ -1836,9 +1834,8 @@ var app = (function () {
     		email,
     		index,
     		rol,
-    		userObject,
-    		isVisible,
     		answers,
+    		userObject,
     		masterAnswers,
     		key,
     		score,
@@ -1860,6 +1857,7 @@ var app = (function () {
     		status,
     		isSelected,
     		showChart,
+    		hideModerator,
     		$itemsMaster,
     		$moderateStore,
     		scoreUser
@@ -1871,9 +1869,8 @@ var app = (function () {
     		if ("email" in $$props) $$invalidate(2, email = $$props.email);
     		if ("index" in $$props) $$invalidate(13, index = $$props.index);
     		if ("rol" in $$props) $$invalidate(3, rol = $$props.rol);
-    		if ("userObject" in $$props) userObject = $$props.userObject;
-    		if ("isVisible" in $$props) $$invalidate(4, isVisible = $$props.isVisible);
     		if ("answers" in $$props) $$invalidate(14, answers = $$props.answers);
+    		if ("userObject" in $$props) userObject = $$props.userObject;
     		if ("key" in $$props) key = $$props.key;
     		if ("score" in $$props) score = $$props.score;
     		if ("sizeQuest" in $$props) sizeQuest = $$props.sizeQuest;
@@ -1888,8 +1885,9 @@ var app = (function () {
     		if ("sumaAllPoints" in $$props) sumaAllPoints = $$props.sumaAllPoints;
     		if ("scoreFinal" in $$props) $$invalidate(11, scoreFinal = $$props.scoreFinal);
     		if ("status" in $$props) $$invalidate(12, status = $$props.status);
-    		if ("isSelected" in $$props) $$invalidate(5, isSelected = $$props.isSelected);
-    		if ("showChart" in $$props) $$invalidate(6, showChart = $$props.showChart);
+    		if ("isSelected" in $$props) $$invalidate(4, isSelected = $$props.isSelected);
+    		if ("showChart" in $$props) $$invalidate(5, showChart = $$props.showChart);
+    		if ("hideModerator" in $$props) $$invalidate(6, hideModerator = $$props.hideModerator);
     		if ("scoreUser" in $$props) scoreUser = $$props.scoreUser;
     	};
 
@@ -1913,9 +1911,9 @@ var app = (function () {
     		tribal,
     		email,
     		rol,
-    		isVisible,
     		isSelected,
     		showChart,
+    		hideModerator,
     		scorePM,
     		scoreCSM,
     		scorePD,
