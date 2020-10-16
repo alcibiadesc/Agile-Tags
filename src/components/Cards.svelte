@@ -31,6 +31,12 @@
     });
 </script>
 
+<style>
+    .pair {
+        background-color: #f9fff7;
+    }
+</style>
+
 {#each listFiltered as item, i}
     <CardUnit
         name={item.Nombre}
@@ -47,7 +53,9 @@
             {:else if key == 'Tribu'}
                 <p />
             {:else}
-                <div class="mt3 ph3 pt2 pb2 shadow-5 bg-white">
+                <div
+                    class="mt3 ph3 pt2 pb2 shadow-5 bg-white"
+                    class:pair={Number(key.substring(4, 5)) % 2 === 0 ? true : false}>
                     <p class="b">{key}</p>
                     <p>{item[key]}</p>
 

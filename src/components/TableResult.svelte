@@ -1,10 +1,12 @@
 <script>
-    import { Axis } from "./../stores/AxisBBDD.js";
-
     export let scorePM;
     export let scoreCSM;
     export let scorePD;
     export let scoreRT;
+
+    export let participantAll;
+    export let practitionerAll;
+    export let expertAll;
 </script>
 
 <div class="mb4 pb3 pt0 mt0 topindex">
@@ -48,6 +50,16 @@
                     <td class="pa3">{scoreRT.participant}</td>
                     <td class="pa3">{scoreRT.practitioner}</td>
                     <td class="pa3">{scoreRT.expert}</td>
+                </tr>
+                <tr class="stripe-dark">
+                    <td class="pa3"><strong>Total</strong></td>
+                    <td class="pa3">
+                        <strong>{participantAll.toFixed(2)}</strong>
+                    </td>
+                    <td class="pa3">
+                        <strong>{practitionerAll.toFixed(2)}</strong>
+                    </td>
+                    <td class="pa3"><strong>{expertAll.toFixed(2)}</strong></td>
                 </tr>
             </tbody>
         </table>

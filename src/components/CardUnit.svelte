@@ -56,9 +56,6 @@
     $moderateStore.push(userObject);
 
     // Sum Global Score
-    $: scoreUser = Object.values($moderateStore[index])
-        ? Object.values($moderateStore[index]).reduce((a, b) => a + b)
-        : 0;
 
     const findAndFilter = (term) => {
         let find = Object.keys($moderateStore[index]).filter((item) => {
@@ -78,10 +75,9 @@
 
     const sumAll = (object) => {
         let values = Object.values(object);
-        let result =
-            values.length > 0
-                ? values.reduce((a, b) => a + b) / values.length
-                : 0;
+        let cleanValues = values.length > 0 ? values : [0];
+        let result = cleanValues.reduce((a, b) => a + b / values.length);
+
         return result;
     };
 
@@ -89,6 +85,7 @@
 
     const clusterLevels = (practitioner, participant, expert) => {
         let pract = sumAll(findAndFilter(practitioner));
+
         let parti = sumAll(findAndFilter(participant));
         let exp = sumAll(findAndFilter(expert));
         let result = {
@@ -112,7 +109,7 @@
     let scoreRT = clusterLevels("D-1", "D-2", "D-3");
     // change color select unselect
 
-    const evaluation = (participant, practitioner, expert) => {
+    const evaluation = (practitioner, expert) => {
         if (practitioner + expert / 2 >= 0.65 && expert >= 0.75) {
             return "Expert";
         } else if (practitioner + expert / 2 >= 0.65) {
@@ -123,21 +120,27 @@
     };
 
     let participantAll = Number(
-        scorePM.participant +
-            scoreCSM.participant +
-            scorePD.participant +
-            scoreRT.participant
+        (scorePM.participant[0] +
+            scoreCSM.participant[0] +
+            scorePD.participant[0] +
+            scoreRT.participant[0]) /
+            4
     );
 
     let practitionerAll = Number(
-        scorePM.practitioner +
-            scoreCSM.practitioner +
-            scorePD.practitioner +
-            scoreRT.practitioner
+        (scorePM.practitioner[0] +
+            scoreCSM.practitioner[0] +
+            scorePD.practitioner[0] +
+            scoreRT.practitioner[0]) /
+            4
     );
 
     let expertAll = Number(
-        scorePM.expert + scoreCSM.expert + scorePD.expert + scoreRT.expert
+        (scorePM.expert[0] +
+            scoreCSM.expert[0] +
+            scorePD.expert[0] +
+            scoreRT.expert[0]) /
+            4
     );
 
     let sumaAllPoints = () => {
@@ -330,7 +333,7 @@
                     <path
                         d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z" /></svg>
 
-                <div class="points ma2 w4 ">{scoreFinal}</div>
+                <div class="points ma2 w4 ">{scoreFinal.toFixed(2)}</div>
             </div>
             <div class="more-info">
                 <h1 class="f4 ">{name}</h1>
@@ -392,5 +395,12 @@
     </div>
 </div>
 <div class:invisible={showChart}>
-    <TableResult {scorePM} {scoreCSM} {scorePD} {scoreRT} />
+    <TableResult
+        {scorePM}
+        {scoreCSM}
+        {scorePD}
+        {scoreRT}
+        {participantAll}
+        {practitionerAll}
+        {expertAll} />
 </div>
