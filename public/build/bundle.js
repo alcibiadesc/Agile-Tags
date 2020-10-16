@@ -35097,7 +35097,7 @@ var app = (function () {
     			attr_dev(button1, "class", "aceptar svelte-13mz6nd");
     			add_location(button1, file$7, 131, 8, 3002);
     			attr_dev(button2, "class", "cancel svelte-13mz6nd");
-    			add_location(button2, file$7, 140, 8, 3215);
+    			add_location(button2, file$7, 140, 8, 3213);
     			attr_dev(div1, "class", " mt3");
     			add_location(div1, file$7, 130, 4, 2975);
     			attr_dev(dialog, "class", "svelte-13mz6nd");
@@ -35217,7 +35217,7 @@ var app = (function () {
     	}
 
     	const click_handler_1 = () => {
-    		//window.location.reload();
+    		window.location.reload();
     		$$invalidate(1, showModal = !showModal);
     	};
 

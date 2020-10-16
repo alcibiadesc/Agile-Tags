@@ -8,8 +8,8 @@
 
     export let answers; // user answers
 
-    const masterAnswers = itemsMaster[0]
-        ? itemsMaster[0]
+    const masterAnswers = $itemsMaster[0]
+        ? $itemsMaster[0]
         : { "nothing nada": 1 };
 
     console.log(answers);
