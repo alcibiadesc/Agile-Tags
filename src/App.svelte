@@ -4,7 +4,6 @@
   import Selector from "./components/Selector.svelte";
   import xlsx from "xlsx";
   import Header from "./components/Header.svelte";
-
   import Warning from "./components/Warning.svelte";
 
   let toggleFaqs = false;
@@ -27,6 +26,7 @@
         const rowObject = xlsx.utils.sheet_to_row_object_array(
           workbook.Sheets[sheetName]
         );
+
         const keys = Object.keys(rowObject[0]).map((col) => {
           return {
             id: col,
@@ -73,7 +73,7 @@
 
   {#if !$items.length}
     <div class="drop-area">
-      ¡Añade tu archivo de excel!
+      Añade tu archivo de excel
 
       <svg
         class="grow link black dim"

@@ -83,7 +83,10 @@
 
     const sumAll = (object) => {
         let values = Object.values(object);
-        let result = values.length > 0 ? values.reduce((a, b) => a + b) : 0;
+        let result =
+            values.length > 0
+                ? values.reduce((a, b) => a + b) / values.length
+                : 0;
         return result;
     };
 
@@ -113,6 +116,9 @@
     // Relationship with the team -> "D-"
     let scoreRT = clusterLevels("D-1", "D-2", "D-3");
     // change color select unselect
+
+    const Evaluation = () => {};
+
     let isSelected = false;
 
     // show chart

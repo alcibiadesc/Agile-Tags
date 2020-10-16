@@ -1,4 +1,6 @@
 <script>
+    import { Axis } from "./../stores/AxisBBDD.js";
+
     export let scorePM;
     export let scoreCSM;
     export let scorePD;

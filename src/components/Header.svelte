@@ -1,12 +1,10 @@
 <script>
+  import Button from "./UI/Button.svelte";
   import { moderateStore } from "./../stores/moderateStore.js";
-  import { resetMaster } from "./../stores/masterStore.js";
   import Modal from "./Modal.svelte";
   import { items, reset } from "./../stores/answerStore.js";
 
   import xlsx from "xlsx";
-
-  import { Button } from "./UI";
 
   let logo = "./Logo Agile Flag.svg";
 
