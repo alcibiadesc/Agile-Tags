@@ -1,5 +1,7 @@
 <script>
+    import { axisStore } from "../stores/axisStore.js";
     import { columnsMaster, itemsMaster } from "../stores/masterStore.js";
+
     import xlsx from "xlsx";
     $: showModal = false;
 
@@ -127,7 +129,13 @@
             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             bind:files />
     </div>
-
+    <div>
+        <p>¿A qué rol le pertence?</p>
+        <select bind:value={$axisStore} name="roles" id="roles">
+            <option value="productOwner">Product Owner</option>
+            <option value="scrumMaster">Scrum Master</option>
+        </select>
+    </div>
     <div class=" mt3">
         <button
             class="aceptar"

@@ -72,7 +72,7 @@
   <Header />
 
   {#if !$items.length}
-    <div class="drop-area">
+    <div class="drop-area bg-white">
       Añade tu archivo de excel
 
       <svg

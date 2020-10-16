@@ -1,3 +1,4 @@
+
 export default {
     "chart": {
         "caption": "Nivel por Categoria",
