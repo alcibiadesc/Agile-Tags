@@ -1,4 +1,5 @@
 <script>
+  import { moderateStore } from "./../stores/moderateStore.js";
   import { resetMaster } from "./../stores/masterStore.js";
   import Modal from "./Modal.svelte";
   import { items, reset } from "./../stores/answerStore.js";
@@ -12,8 +13,12 @@
   function exportFile() {
     const ws = xlsx.utils.json_to_sheet($items);
     const wb = xlsx.utils.book_new();
-    xlsx.utils.book_append_sheet(wb, ws, "Spreadsheet Viewer");
-    xlsx.writeFile(wb, "svelte-spreadsheet.xlsx");
+    const moderator = xlsx.utils.json_to_sheet($moderateStore);
+
+    xlsx.utils.book_append_sheet(wb, ws, "Answer");
+    xlsx.utils.book_append_sheet(wb, moderator, "Moderator");
+
+    xlsx.writeFile(wb, "agile-flag-export.xlsx");
   }
 </script>
 
