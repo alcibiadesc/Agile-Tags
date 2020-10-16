@@ -931,73 +931,73 @@ var app = (function () {
     			path2 = svg_element("path");
     			path3 = svg_element("path");
     			attr_dev(div0, "class", "level ma2 w4 svelte-zga325");
-    			add_location(div0, file$1, 196, 16, 4423);
+    			add_location(div0, file$1, 198, 16, 4511);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$1, 204, 34, 4717);
+    			add_location(path0, file$1, 206, 34, 4805);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$1, 205, 20, 4776);
+    			add_location(path1, file$1, 207, 20, 4864);
     			attr_dev(svg0, "class", "mv3 svelte-zga325");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$1, 198, 16, 4485);
+    			add_location(svg0, file$1, 200, 16, 4573);
     			attr_dev(div1, "class", "points ma2 w4  svelte-zga325");
-    			add_location(div1, file$1, 208, 16, 5249);
+    			add_location(div1, file$1, 210, 16, 5337);
     			attr_dev(div2, "class", "user-card mt4 svelte-zga325");
-    			add_location(div2, file$1, 195, 12, 4379);
+    			add_location(div2, file$1, 197, 12, 4467);
     			attr_dev(h10, "class", "f4  svelte-zga325");
-    			add_location(h10, file$1, 211, 16, 5362);
+    			add_location(h10, file$1, 213, 16, 5450);
     			attr_dev(button, "class", "grow mt4 br3");
-    			add_location(button, file$1, 214, 20, 5433);
-    			add_location(div3, file$1, 213, 16, 5407);
+    			add_location(button, file$1, 216, 20, 5521);
+    			add_location(div3, file$1, 215, 16, 5495);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
     			attr_dev(a, "class", "svelte-zga325");
-    			add_location(a, file$1, 224, 32, 5847);
+    			add_location(a, file$1, 226, 32, 5935);
     			attr_dev(span0, "class", "f6 tr svelte-zga325");
-    			add_location(span0, file$1, 223, 28, 5794);
+    			add_location(span0, file$1, 225, 28, 5882);
     			attr_dev(div4, "class", "tr");
-    			add_location(div4, file$1, 222, 24, 5749);
+    			add_location(div4, file$1, 224, 24, 5837);
     			attr_dev(div5, "class", "svelte-zga325");
-    			add_location(div5, file$1, 221, 20, 5719);
+    			add_location(div5, file$1, 223, 20, 5807);
     			attr_dev(div6, "class", "stats svelte-zga325");
-    			add_location(div6, file$1, 220, 16, 5679);
+    			add_location(div6, file$1, 222, 16, 5767);
     			attr_dev(div7, "class", "more-info svelte-zga325");
-    			add_location(div7, file$1, 210, 12, 5322);
+    			add_location(div7, file$1, 212, 12, 5410);
     			attr_dev(div8, "class", "additional svelte-zga325");
-    			add_location(div8, file$1, 194, 8, 4342);
+    			add_location(div8, file$1, 196, 8, 4430);
     			attr_dev(h11, "class", "f4  svelte-zga325");
-    			add_location(h11, file$1, 231, 12, 6051);
+    			add_location(h11, file$1, 233, 12, 6139);
     			attr_dev(span1, "class", "b svelte-zga325");
-    			add_location(span1, file$1, 234, 16, 6159);
+    			add_location(span1, file$1, 236, 16, 6247);
     			attr_dev(span2, "class", "b svelte-zga325");
-    			add_location(span2, file$1, 236, 16, 6237);
+    			add_location(span2, file$1, 238, 16, 6325);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$1, 232, 12, 6091);
+    			add_location(p, file$1, 234, 12, 6179);
     			attr_dev(div9, "class", "general svelte-zga325");
-    			add_location(div9, file$1, 230, 8, 6017);
+    			add_location(div9, file$1, 232, 8, 6105);
     			attr_dev(div10, "class", "card  svelte-zga325");
-    			add_location(div10, file$1, 193, 4, 4314);
+    			add_location(div10, file$1, 195, 4, 4402);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$1, 253, 30, 6708);
+    			add_location(path2, file$1, 255, 30, 6796);
     			attr_dev(path3, "d", "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z");
-    			add_location(path3, file$1, 254, 16, 6763);
+    			add_location(path3, file$1, 256, 16, 6851);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$1, 248, 12, 6528);
+    			add_location(svg1, file$1, 250, 12, 6616);
     			attr_dev(div11, "class", "float grow  svelte-zga325");
-    			add_location(div11, file$1, 243, 8, 6393);
+    			add_location(div11, file$1, 245, 8, 6481);
     			attr_dev(div12, "class", "tl  svelte-zga325");
     			toggle_class(div12, "invisible", /*isVisible*/ ctx[3]);
-    			add_location(div12, file$1, 240, 4, 6321);
+    			add_location(div12, file$1, 242, 4, 6409);
     			attr_dev(div13, "class", "centered  svelte-zga325");
-    			add_location(div13, file$1, 192, 0, 4286);
+    			add_location(div13, file$1, 194, 0, 4374);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1114,12 +1114,19 @@ var app = (function () {
     }
 
     function instance$1($$self, $$props, $$invalidate) {
+    	let $itemsMaster;
+    	validate_store(itemsMaster, "itemsMaster");
+    	component_subscribe($$self, itemsMaster, $$value => $$invalidate(10, $itemsMaster = $$value));
     	let { name } = $$props;
     	let { tribal } = $$props;
     	let { email } = $$props;
     	let isVisible = "true";
     	let { answers } = $$props; // user answers
-    	const masterAnswers = itemsMaster[0] ? itemsMaster[0] : { "nothing nada": 1 };
+
+    	const masterAnswers = $itemsMaster[0]
+    	? $itemsMaster[0]
+    	: { "nothing nada": "1&0" };
+
     	console.log(answers);
     	let key = Object.keys(masterAnswers);
     	let score = 0;
@@ -1127,7 +1134,10 @@ var app = (function () {
 
     	for (let i = 0; i < sizeQuest; i++) {
     		let masterAnswersValues = masterAnswers[key[i]];
-    		let splitMasterAnswer = masterAnswersValues.split("&");
+
+    		let splitMasterAnswer = masterAnswersValues.includes("&")
+    		? masterAnswersValues.split("&")
+    		: masterAnswersValues;
 
     		let trueAnswer = splitMasterAnswer[0]
     		? splitMasterAnswer[0].replace(" ", "")
@@ -1181,7 +1191,8 @@ var app = (function () {
     		masterAnswers,
     		key,
     		score,
-    		sizeQuest
+    		sizeQuest,
+    		$itemsMaster
     	});
 
     	$$self.$inject_state = $$props => {
@@ -35872,7 +35883,7 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			t0 = text("!Añade tu archivo de excel!\n\n      ");
+    			t0 = text("¡Añade tu archivo de excel!\n\n      ");
     			svg = svg_element("svg");
     			path0 = svg_element("path");
     			path1 = svg_element("path");

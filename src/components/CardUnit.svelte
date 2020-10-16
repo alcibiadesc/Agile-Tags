@@ -10,7 +10,7 @@
 
     const masterAnswers = $itemsMaster[0]
         ? $itemsMaster[0]
-        : { "nothing nada": 1 };
+        : { "nothing nada": "1&0" };
 
     console.log(answers);
     let key = Object.keys(masterAnswers);
@@ -21,7 +21,9 @@
 
     for (let i = 0; i < sizeQuest; i++) {
         let masterAnswersValues = masterAnswers[key[i]];
-        let splitMasterAnswer = masterAnswersValues.split("&");
+        let splitMasterAnswer = masterAnswersValues.includes("&")
+            ? masterAnswersValues.split("&")
+            : masterAnswersValues;
         let trueAnswer = splitMasterAnswer[0]
             ? splitMasterAnswer[0].replace(" ", "")
             : "";

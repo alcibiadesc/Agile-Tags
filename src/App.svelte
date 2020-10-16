@@ -73,7 +73,7 @@
 
   {#if !$items.length}
     <div class="drop-area">
-      !Añade tu archivo de excel!
+      ¡Añade tu archivo de excel!
 
       <svg
         class="grow link black dim"
