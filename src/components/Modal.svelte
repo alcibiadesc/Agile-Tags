@@ -1,7 +1,46 @@
 <script>
-    import Button from "./UI/Button.svelte";
-
+    import { columnsMaster, itemsMaster } from "../stores/masterStore.js";
+    import xlsx from "xlsx";
     $: showModal = false;
+
+    export let files = { a: 1 };
+
+    $: if (files.length) {
+        parseExcel(files[0]);
+    }
+
+    function parseExcel(file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const result = e.target.result;
+            const workbook = xlsx.read(result, {
+                type: "binary",
+            });
+
+            workbook.SheetNames.forEach((sheetName) => {
+                const rowObject = xlsx.utils.sheet_to_row_object_array(
+                    workbook.Sheets[sheetName]
+                );
+                const keys = Object.keys(rowObject[0]).map((col) => {
+                    return {
+                        id: col,
+                        isVisible: true,
+                        isEditable: false,
+                        isImage: false,
+                    };
+                });
+                columnsMaster.set(keys);
+                itemsMaster.set(rowObject);
+            });
+        };
+
+        reader.onerror = function (e) {
+            console.error(e);
+        };
+
+        reader.readAsBinaryString(file);
+    }
 </script>
 
 <style>
@@ -85,15 +124,16 @@
         ¡Añade tu plantilla correctora aquí!
         <input
             type="file"
-            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            bind:files />
     </div>
 
     <div class=" mt3">
         <button
             class="aceptar"
             on:click={() => {
+                window.location.reload();
                 showModal = !showModal;
-                console.log(showModal);
             }}>
             Aceptar
         </button>
@@ -102,7 +142,6 @@
             class="cancel"
             on:click={() => {
                 showModal = !showModal;
-                console.log(showModal);
             }}>
             Cancelar
         </button>

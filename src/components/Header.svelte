@@ -1,6 +1,8 @@
 <script>
+  import { resetMaster } from "./../stores/masterStore.js";
   import Modal from "./Modal.svelte";
   import { items, reset } from "./../stores/answerStore.js";
+
   import xlsx from "xlsx";
 
   import { Button } from "./UI";

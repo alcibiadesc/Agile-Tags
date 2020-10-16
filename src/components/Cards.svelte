@@ -9,14 +9,16 @@
         return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     };
 
-    $: listFiltered = listItems.filter(
-        (item) =>
-            removeAccents(item.Tribu.toLowerCase()).includes(
-                removeAccents($searchStore.toLowerCase())
-            ) ||
-            removeAccents(item.Nombre.toLowerCase()).includes(
-                removeAccents($searchStore.toLowerCase())
-            )
+    $: listFiltered = listItems.filter((item) =>
+        item.Tribu
+            ? removeAccents(item.Tribu.toLowerCase()).includes(
+                  removeAccents($searchStore.toLowerCase())
+              )
+            : item.Nombre
+            ? removeAccents(item.Nombre.toLowerCase()).includes(
+                  removeAccents($searchStore.toLowerCase())
+              )
+            : listItems
     );
 
     $: listCrop = listFiltered.map((item, i, array) => {

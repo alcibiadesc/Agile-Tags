@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-const STORE_PREFIX = 'svltxls_';
+const STORE_PREFIX = 'answer_';
 
 // Columns Store
 const columnsData = localStorage.getItem(`${STORE_PREFIX}columns`);
