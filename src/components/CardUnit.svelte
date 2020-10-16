@@ -1,7 +1,7 @@
 <script>
+    import TableResult from "./TableResult.svelte";
     import { moderateStore } from "./../stores/moderateStore.js";
     import { itemsMaster } from "./../stores/masterStore.js";
-    import { afterUpdate } from "svelte";
 
     export let name;
     export let tribal;
@@ -9,7 +9,7 @@
     export let index;
     export let rol;
 
-    let userObject = {};
+    let userObject = { a: 0 };
 
     let isVisible = "false";
 
@@ -48,7 +48,7 @@
 
             if (answerToEvaluate == trueAnswer) {
                 score += scoreSum;
-                scoreSum > 0 ? (userObject[key[i]] = scoreSum) : "";
+                scoreSum > 0 ? (userObject[key[i]] = scoreSum) : 0;
             } else {
                 score += 0;
             }
@@ -79,24 +79,45 @@
         return filtered;
     };
 
+    // sum all values in a term
+
+    const sumAll = (object) => {
+        let values = Object.values(object);
+        let result = values.length > 0 ? values.reduce((a, b) => a + b) : 0;
+        return result;
+    };
+
+    // Cluster in Participant, Practitioner, Expert
+
+    const clusterLevels = (practitioner, participant, expert) => {
+        let pract = sumAll(findAndFilter(practitioner));
+        let parti = sumAll(findAndFilter(participant));
+        let exp = sumAll(findAndFilter(expert));
+        let result = {
+            practitioner: [pract],
+            participant: [parti],
+            expert: [exp],
+        };
+        return result;
+    };
+
     // Product Managment -> "A-"
+    let scorePM = clusterLevels("A-1", "A-2", "A-3");
 
-    let findScorePM = findAndFilter("A-");
+    // Customer And Stakeholder Management -> "B-"
+    let scoreCSM = clusterLevels("B-1", "B-2", "B-3");
 
-    // Customer and Stakeholder Management -> "C-"
-
-    let findScoreCSM = findAndFilter("B-");
-
-    // Product Delivery -> "D-"
-
-    let findScoreD = findAndFilter("C-");
+    // Product Delivery -> "C-"
+    let scorePD = clusterLevels("C-1", "C-2", "C-3");
 
     // Relationship with the team -> "D-"
-
-    let findScoreRT = findAndFilter("D-");
-
+    let scoreRT = clusterLevels("D-1", "D-2", "D-3");
     // change color select unselect
     let isSelected = false;
+
+    // show chart
+
+    let showChart = true;
 </script>
 
 <style>
@@ -105,11 +126,6 @@
         color: white;
     }
 
-    .metricas p {
-        text-align: left;
-        margin: 0;
-        padding: 0;
-    }
     @import url("https://fonts.googleapis.com/css?family=Abel");
     .centered {
         margin: auto;
@@ -287,6 +303,15 @@
                             isSelected = !isSelected;
                         }}>Moderar su cuestionario</button>
                 </div>
+
+                <div>
+                    <button
+                        class="grow mt4 br3"
+                        on:click={() => {
+                            isSelected = !isSelected;
+                            showChart = !showChart;
+                        }}>Ver detalle</button>
+                </div>
                 <div class="stats">
                     <div>
                         <div class="tr">
@@ -305,14 +330,6 @@
                 <span class="b">{tribal}</span>
                 {#if rol}con el rol de <span class="b">{rol}.</span>{/if}
             </p>
-
-            <h4 class="mb1 pb0">Resultados</h4>
-            <div class="f6 metricas tl">
-                <p>Product Management:</p>
-                <p>Customer and Stakeholder Mgmt:</p>
-                <p>Product Delivery:</p>
-                <p>Relationship with the team:</p>
-            </div>
         </div>
     </div>
     <div class="tl " class:invisible={isVisible}>
@@ -333,4 +350,7 @@
                     d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /></svg>
         </div>
     </div>
+</div>
+<div class:invisible={showChart}>
+    <TableResult {scorePM} {scoreCSM} {scorePD} {scoreRT} />
 </div>
