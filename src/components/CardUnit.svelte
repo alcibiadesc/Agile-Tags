@@ -8,35 +8,39 @@
 
     export let answers; // user answers
 
-    const masterAnswers = $itemsMaster[0]
-        ? $itemsMaster[0]
+    const masterAnswers = $itemsMaster
+        ? $itemsMaster
         : { "nothing nada": "1&0" };
 
-    console.log(answers);
-    let key = Object.keys(masterAnswers);
+    let key = Object.keys(answers);
 
     let score = 0;
 
-    let sizeQuest = Object.keys(masterAnswers).length; // number of questions define to use the loop.
+    let sizeQuest = Object.keys(answers).length; // number of questions define to use the loop.
+    let sizeQuestMaster = Object.keys(masterAnswers).length;
 
-    for (let i = 0; i < sizeQuest; i++) {
-        let masterAnswersValues = masterAnswers[key[i]];
-        let splitMasterAnswer = masterAnswersValues.includes("&")
-            ? masterAnswersValues.split("&")
-            : masterAnswersValues;
-        let trueAnswer = splitMasterAnswer[0]
-            ? splitMasterAnswer[0].replace(" ", "")
-            : "";
-        let scoreSum = Number(
-            splitMasterAnswer[1] ? splitMasterAnswer[1].replace(",", ".") : "0"
-        ); // prevent use "," to decimals
+    for (let index = 0; index < sizeQuestMaster; index++) {
+        for (let i = 0; i < sizeQuest; i++) {
+            let masterAnswersValues = masterAnswers[index][key[i]];
+            let splitMasterAnswer = masterAnswersValues
+                ? masterAnswersValues.split("&")
+                : {};
+            let trueAnswer = splitMasterAnswer[0]
+                ? splitMasterAnswer[0].replace(" ", "")
+                : "";
+            let scoreSum = Number(
+                splitMasterAnswer[1]
+                    ? splitMasterAnswer[1].replace(",", ".")
+                    : "0"
+            ); // prevent use "," to decimals
 
-        let answerToEvaluate = answers[key[i]]
-            ? answers[key[i]].replace(" ", "")
-            : "";
+            let answerToEvaluate = answers[key[i]]
+                ? answers[key[i]].replace(" ", "")
+                : "";
 
-        answerToEvaluate == trueAnswer ? (score += scoreSum) : (score += 0);
-        console.log(score);
+            answerToEvaluate == trueAnswer ? (score += scoreSum) : (score += 0);
+            console.log(`${name} suma ${score}`);
+        }
     }
 </script>
 

@@ -931,73 +931,73 @@ var app = (function () {
     			path2 = svg_element("path");
     			path3 = svg_element("path");
     			attr_dev(div0, "class", "level ma2 w4 svelte-zga325");
-    			add_location(div0, file$1, 198, 16, 4511);
+    			add_location(div0, file$1, 202, 16, 4696);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$1, 206, 34, 4805);
+    			add_location(path0, file$1, 210, 34, 4990);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$1, 207, 20, 4864);
+    			add_location(path1, file$1, 211, 20, 5049);
     			attr_dev(svg0, "class", "mv3 svelte-zga325");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$1, 200, 16, 4573);
+    			add_location(svg0, file$1, 204, 16, 4758);
     			attr_dev(div1, "class", "points ma2 w4  svelte-zga325");
-    			add_location(div1, file$1, 210, 16, 5337);
+    			add_location(div1, file$1, 214, 16, 5522);
     			attr_dev(div2, "class", "user-card mt4 svelte-zga325");
-    			add_location(div2, file$1, 197, 12, 4467);
+    			add_location(div2, file$1, 201, 12, 4652);
     			attr_dev(h10, "class", "f4  svelte-zga325");
-    			add_location(h10, file$1, 213, 16, 5450);
+    			add_location(h10, file$1, 217, 16, 5635);
     			attr_dev(button, "class", "grow mt4 br3");
-    			add_location(button, file$1, 216, 20, 5521);
-    			add_location(div3, file$1, 215, 16, 5495);
+    			add_location(button, file$1, 220, 20, 5706);
+    			add_location(div3, file$1, 219, 16, 5680);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
     			attr_dev(a, "class", "svelte-zga325");
-    			add_location(a, file$1, 226, 32, 5935);
+    			add_location(a, file$1, 230, 32, 6120);
     			attr_dev(span0, "class", "f6 tr svelte-zga325");
-    			add_location(span0, file$1, 225, 28, 5882);
+    			add_location(span0, file$1, 229, 28, 6067);
     			attr_dev(div4, "class", "tr");
-    			add_location(div4, file$1, 224, 24, 5837);
+    			add_location(div4, file$1, 228, 24, 6022);
     			attr_dev(div5, "class", "svelte-zga325");
-    			add_location(div5, file$1, 223, 20, 5807);
+    			add_location(div5, file$1, 227, 20, 5992);
     			attr_dev(div6, "class", "stats svelte-zga325");
-    			add_location(div6, file$1, 222, 16, 5767);
+    			add_location(div6, file$1, 226, 16, 5952);
     			attr_dev(div7, "class", "more-info svelte-zga325");
-    			add_location(div7, file$1, 212, 12, 5410);
+    			add_location(div7, file$1, 216, 12, 5595);
     			attr_dev(div8, "class", "additional svelte-zga325");
-    			add_location(div8, file$1, 196, 8, 4430);
+    			add_location(div8, file$1, 200, 8, 4615);
     			attr_dev(h11, "class", "f4  svelte-zga325");
-    			add_location(h11, file$1, 233, 12, 6139);
+    			add_location(h11, file$1, 237, 12, 6324);
     			attr_dev(span1, "class", "b svelte-zga325");
-    			add_location(span1, file$1, 236, 16, 6247);
+    			add_location(span1, file$1, 240, 16, 6432);
     			attr_dev(span2, "class", "b svelte-zga325");
-    			add_location(span2, file$1, 238, 16, 6325);
+    			add_location(span2, file$1, 242, 16, 6510);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$1, 234, 12, 6179);
+    			add_location(p, file$1, 238, 12, 6364);
     			attr_dev(div9, "class", "general svelte-zga325");
-    			add_location(div9, file$1, 232, 8, 6105);
+    			add_location(div9, file$1, 236, 8, 6290);
     			attr_dev(div10, "class", "card  svelte-zga325");
-    			add_location(div10, file$1, 195, 4, 4402);
+    			add_location(div10, file$1, 199, 4, 4587);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$1, 255, 30, 6796);
+    			add_location(path2, file$1, 259, 30, 6981);
     			attr_dev(path3, "d", "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z");
-    			add_location(path3, file$1, 256, 16, 6851);
+    			add_location(path3, file$1, 260, 16, 7036);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$1, 250, 12, 6616);
+    			add_location(svg1, file$1, 254, 12, 6801);
     			attr_dev(div11, "class", "float grow  svelte-zga325");
-    			add_location(div11, file$1, 245, 8, 6481);
+    			add_location(div11, file$1, 249, 8, 6666);
     			attr_dev(div12, "class", "tl  svelte-zga325");
     			toggle_class(div12, "invisible", /*isVisible*/ ctx[3]);
-    			add_location(div12, file$1, 242, 4, 6409);
+    			add_location(div12, file$1, 246, 4, 6594);
     			attr_dev(div13, "class", "centered  svelte-zga325");
-    			add_location(div13, file$1, 194, 0, 4374);
+    			add_location(div13, file$1, 198, 0, 4559);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1122,38 +1122,36 @@ var app = (function () {
     	let { email } = $$props;
     	let isVisible = "true";
     	let { answers } = $$props; // user answers
-
-    	const masterAnswers = $itemsMaster[0]
-    	? $itemsMaster[0]
-    	: { "nothing nada": "1&0" };
-
-    	console.log(answers);
-    	let key = Object.keys(masterAnswers);
+    	const masterAnswers = $itemsMaster ? $itemsMaster : { "nothing nada": "1&0" };
+    	let key = Object.keys(answers);
     	let score = 0;
-    	let sizeQuest = Object.keys(masterAnswers).length; // number of questions define to use the loop.
+    	let sizeQuest = Object.keys(answers).length; // number of questions define to use the loop.
+    	let sizeQuestMaster = Object.keys(masterAnswers).length;
 
-    	for (let i = 0; i < sizeQuest; i++) {
-    		let masterAnswersValues = masterAnswers[key[i]];
+    	for (let index = 0; index < sizeQuestMaster; index++) {
+    		for (let i = 0; i < sizeQuest; i++) {
+    			let masterAnswersValues = masterAnswers[index][key[i]];
 
-    		let splitMasterAnswer = masterAnswersValues.includes("&")
-    		? masterAnswersValues.split("&")
-    		: masterAnswersValues;
+    			let splitMasterAnswer = masterAnswersValues
+    			? masterAnswersValues.split("&")
+    			: {};
 
-    		let trueAnswer = splitMasterAnswer[0]
-    		? splitMasterAnswer[0].replace(" ", "")
-    		: "";
+    			let trueAnswer = splitMasterAnswer[0]
+    			? splitMasterAnswer[0].replace(" ", "")
+    			: "";
 
-    		let scoreSum = Number(splitMasterAnswer[1]
-    		? splitMasterAnswer[1].replace(",", ".")
-    		: "0"); // prevent use "," to decimals
+    			let scoreSum = Number(splitMasterAnswer[1]
+    			? splitMasterAnswer[1].replace(",", ".")
+    			: "0"); // prevent use "," to decimals
 
-    		let answerToEvaluate = answers[key[i]] ? answers[key[i]].replace(" ", "") : "";
+    			let answerToEvaluate = answers[key[i]] ? answers[key[i]].replace(" ", "") : "";
 
-    		answerToEvaluate == trueAnswer
-    		? score += scoreSum
-    		: score += 0;
+    			answerToEvaluate == trueAnswer
+    			? score += scoreSum
+    			: score += 0;
 
-    		console.log(score);
+    			console.log(`${name} suma ${score}`);
+    		}
     	}
 
     	const writable_props = ["name", "tribal", "email", "answers"];
@@ -1192,6 +1190,7 @@ var app = (function () {
     		key,
     		score,
     		sizeQuest,
+    		sizeQuestMaster,
     		$itemsMaster
     	});
 
@@ -1204,6 +1203,7 @@ var app = (function () {
     		if ("key" in $$props) key = $$props.key;
     		if ("score" in $$props) $$invalidate(4, score = $$props.score);
     		if ("sizeQuest" in $$props) sizeQuest = $$props.sizeQuest;
+    		if ("sizeQuestMaster" in $$props) sizeQuestMaster = $$props.sizeQuestMaster;
     	};
 
     	if ($$props && "$$inject" in $$props) {
