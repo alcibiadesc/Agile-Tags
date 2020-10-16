@@ -27,26 +27,26 @@
             <tbody class="lh-copy tc">
                 <tr class="stripe-dark">
                     <td class="pa3">Product Managment</td>
-                    <td class="pa3">{scorePM.practitioner}</td>
                     <td class="pa3">{scorePM.participant}</td>
+                    <td class="pa3">{scorePM.practitioner}</td>
                     <td class="pa3">{scorePM.expert}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">Customer & Stakeholder Management</td>
-                    <td class="pa3">{scoreCSM.practitioner}</td>
                     <td class="pa3">{scoreCSM.participant}</td>
+                    <td class="pa3">{scoreCSM.practitioner}</td>
                     <td class="pa3">{scoreCSM.expert}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">Product Delivery</td>
-                    <td class="pa3">{scorePD.practitioner}</td>
                     <td class="pa3">{scorePD.participant}</td>
+                    <td class="pa3">{scorePD.practitioner}</td>
                     <td class="pa3">{scorePD.expert}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">Relationship with the team</td>
-                    <td class="pa3">{scoreRT.practitioner}</td>
                     <td class="pa3">{scoreRT.participant}</td>
+                    <td class="pa3">{scoreRT.practitioner}</td>
                     <td class="pa3">{scoreRT.expert}</td>
                 </tr>
             </tbody>

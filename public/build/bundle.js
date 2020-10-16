@@ -827,11 +827,11 @@ var app = (function () {
     	let td0;
     	let t9;
     	let td1;
-    	let t10_value = /*scorePM*/ ctx[0].practitioner + "";
+    	let t10_value = /*scorePM*/ ctx[0].participant + "";
     	let t10;
     	let t11;
     	let td2;
-    	let t12_value = /*scorePM*/ ctx[0].participant + "";
+    	let t12_value = /*scorePM*/ ctx[0].practitioner + "";
     	let t12;
     	let t13;
     	let td3;
@@ -842,11 +842,11 @@ var app = (function () {
     	let td4;
     	let t17;
     	let td5;
-    	let t18_value = /*scoreCSM*/ ctx[1].practitioner + "";
+    	let t18_value = /*scoreCSM*/ ctx[1].participant + "";
     	let t18;
     	let t19;
     	let td6;
-    	let t20_value = /*scoreCSM*/ ctx[1].participant + "";
+    	let t20_value = /*scoreCSM*/ ctx[1].practitioner + "";
     	let t20;
     	let t21;
     	let td7;
@@ -857,11 +857,11 @@ var app = (function () {
     	let td8;
     	let t25;
     	let td9;
-    	let t26_value = /*scorePD*/ ctx[2].practitioner + "";
+    	let t26_value = /*scorePD*/ ctx[2].participant + "";
     	let t26;
     	let t27;
     	let td10;
-    	let t28_value = /*scorePD*/ ctx[2].participant + "";
+    	let t28_value = /*scorePD*/ ctx[2].practitioner + "";
     	let t28;
     	let t29;
     	let td11;
@@ -872,11 +872,11 @@ var app = (function () {
     	let td12;
     	let t33;
     	let td13;
-    	let t34_value = /*scoreRT*/ ctx[3].practitioner + "";
+    	let t34_value = /*scoreRT*/ ctx[3].participant + "";
     	let t34;
     	let t35;
     	let td14;
-    	let t36_value = /*scoreRT*/ ctx[3].participant + "";
+    	let t36_value = /*scoreRT*/ ctx[3].practitioner + "";
     	let t36;
     	let t37;
     	let td15;
@@ -977,7 +977,7 @@ var app = (function () {
     			attr_dev(td1, "class", "pa3");
     			add_location(td1, file$1, 29, 20, 1031);
     			attr_dev(td2, "class", "pa3");
-    			add_location(td2, file$1, 30, 20, 1095);
+    			add_location(td2, file$1, 30, 20, 1094);
     			attr_dev(td3, "class", "pa3");
     			add_location(td3, file$1, 31, 20, 1158);
     			attr_dev(tr1, "class", "stripe-dark");
@@ -987,7 +987,7 @@ var app = (function () {
     			attr_dev(td5, "class", "pa3");
     			add_location(td5, file$1, 35, 20, 1354);
     			attr_dev(td6, "class", "pa3");
-    			add_location(td6, file$1, 36, 20, 1419);
+    			add_location(td6, file$1, 36, 20, 1418);
     			attr_dev(td7, "class", "pa3");
     			add_location(td7, file$1, 37, 20, 1483);
     			attr_dev(tr2, "class", "stripe-dark");
@@ -997,7 +997,7 @@ var app = (function () {
     			attr_dev(td9, "class", "pa3");
     			add_location(td9, file$1, 41, 20, 1663);
     			attr_dev(td10, "class", "pa3");
-    			add_location(td10, file$1, 42, 20, 1727);
+    			add_location(td10, file$1, 42, 20, 1726);
     			attr_dev(td11, "class", "pa3");
     			add_location(td11, file$1, 43, 20, 1790);
     			attr_dev(tr3, "class", "stripe-dark");
@@ -1007,7 +1007,7 @@ var app = (function () {
     			attr_dev(td13, "class", "pa3");
     			add_location(td13, file$1, 47, 20, 1979);
     			attr_dev(td14, "class", "pa3");
-    			add_location(td14, file$1, 48, 20, 2043);
+    			add_location(td14, file$1, 48, 20, 2042);
     			attr_dev(td15, "class", "pa3");
     			add_location(td15, file$1, 49, 20, 2106);
     			attr_dev(tr4, "class", "stripe-dark");
@@ -1092,17 +1092,17 @@ var app = (function () {
     			append_dev(td15, t38);
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*scorePM*/ 1 && t10_value !== (t10_value = /*scorePM*/ ctx[0].practitioner + "")) set_data_dev(t10, t10_value);
-    			if (dirty & /*scorePM*/ 1 && t12_value !== (t12_value = /*scorePM*/ ctx[0].participant + "")) set_data_dev(t12, t12_value);
+    			if (dirty & /*scorePM*/ 1 && t10_value !== (t10_value = /*scorePM*/ ctx[0].participant + "")) set_data_dev(t10, t10_value);
+    			if (dirty & /*scorePM*/ 1 && t12_value !== (t12_value = /*scorePM*/ ctx[0].practitioner + "")) set_data_dev(t12, t12_value);
     			if (dirty & /*scorePM*/ 1 && t14_value !== (t14_value = /*scorePM*/ ctx[0].expert + "")) set_data_dev(t14, t14_value);
-    			if (dirty & /*scoreCSM*/ 2 && t18_value !== (t18_value = /*scoreCSM*/ ctx[1].practitioner + "")) set_data_dev(t18, t18_value);
-    			if (dirty & /*scoreCSM*/ 2 && t20_value !== (t20_value = /*scoreCSM*/ ctx[1].participant + "")) set_data_dev(t20, t20_value);
+    			if (dirty & /*scoreCSM*/ 2 && t18_value !== (t18_value = /*scoreCSM*/ ctx[1].participant + "")) set_data_dev(t18, t18_value);
+    			if (dirty & /*scoreCSM*/ 2 && t20_value !== (t20_value = /*scoreCSM*/ ctx[1].practitioner + "")) set_data_dev(t20, t20_value);
     			if (dirty & /*scoreCSM*/ 2 && t22_value !== (t22_value = /*scoreCSM*/ ctx[1].expert + "")) set_data_dev(t22, t22_value);
-    			if (dirty & /*scorePD*/ 4 && t26_value !== (t26_value = /*scorePD*/ ctx[2].practitioner + "")) set_data_dev(t26, t26_value);
-    			if (dirty & /*scorePD*/ 4 && t28_value !== (t28_value = /*scorePD*/ ctx[2].participant + "")) set_data_dev(t28, t28_value);
+    			if (dirty & /*scorePD*/ 4 && t26_value !== (t26_value = /*scorePD*/ ctx[2].participant + "")) set_data_dev(t26, t26_value);
+    			if (dirty & /*scorePD*/ 4 && t28_value !== (t28_value = /*scorePD*/ ctx[2].practitioner + "")) set_data_dev(t28, t28_value);
     			if (dirty & /*scorePD*/ 4 && t30_value !== (t30_value = /*scorePD*/ ctx[2].expert + "")) set_data_dev(t30, t30_value);
-    			if (dirty & /*scoreRT*/ 8 && t34_value !== (t34_value = /*scoreRT*/ ctx[3].practitioner + "")) set_data_dev(t34, t34_value);
-    			if (dirty & /*scoreRT*/ 8 && t36_value !== (t36_value = /*scoreRT*/ ctx[3].participant + "")) set_data_dev(t36, t36_value);
+    			if (dirty & /*scoreRT*/ 8 && t34_value !== (t34_value = /*scoreRT*/ ctx[3].participant + "")) set_data_dev(t34, t34_value);
+    			if (dirty & /*scoreRT*/ 8 && t36_value !== (t36_value = /*scoreRT*/ ctx[3].practitioner + "")) set_data_dev(t36, t36_value);
     			if (dirty & /*scoreRT*/ 8 && t38_value !== (t38_value = /*scoreRT*/ ctx[3].expert + "")) set_data_dev(t38, t38_value);
     		},
     		i: noop,
@@ -1263,10 +1263,10 @@ var app = (function () {
 
     /* src/components/CardUnit.svelte generated by Svelte v3.23.2 */
 
-    const { Object: Object_1 } = globals;
+    const { Object: Object_1, console: console_1 } = globals;
     const file$2 = "src/components/CardUnit.svelte";
 
-    // (337:16) {#if rol}
+    // (378:16) {#if rol}
     function create_if_block(ctx) {
     	let t0;
     	let span;
@@ -1280,7 +1280,7 @@ var app = (function () {
     			t1 = text(/*rol*/ ctx[3]);
     			t2 = text(".");
     			attr_dev(span, "class", "b svelte-1yiwp32");
-    			add_location(span, file$2, 336, 39, 9276);
+    			add_location(span, file$2, 377, 39, 10351);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1301,7 +1301,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(337:16) {#if rol}",
+    		source: "(378:16) {#if rol}",
     		ctx
     	});
 
@@ -1320,7 +1320,6 @@ var app = (function () {
     	let path1;
     	let t2;
     	let div1;
-    	let t3;
     	let t4;
     	let div8;
     	let h10;
@@ -1364,15 +1363,15 @@ var app = (function () {
     	let mounted;
     	let dispose;
     	let if_block = /*rol*/ ctx[3] && create_if_block(ctx);
-    	const default_slot_template = /*$$slots*/ ctx[15].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[14], null);
+    	const default_slot_template = /*$$slots*/ ctx[16].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[15], null);
 
     	tableresult = new TableResult({
     			props: {
-    				scorePM: /*scorePM*/ ctx[8],
-    				scoreCSM: /*scoreCSM*/ ctx[9],
-    				scorePD: /*scorePD*/ ctx[10],
-    				scoreRT: /*scoreRT*/ ctx[11]
+    				scorePM: /*scorePM*/ ctx[7],
+    				scoreCSM: /*scoreCSM*/ ctx[8],
+    				scorePD: /*scorePD*/ ctx[9],
+    				scoreRT: /*scoreRT*/ ctx[10]
     			},
     			$$inline: true
     		});
@@ -1384,14 +1383,14 @@ var app = (function () {
     			div9 = element("div");
     			div2 = element("div");
     			div0 = element("div");
-    			div0.textContent = "Practitioner";
+    			div0.textContent = `${/*status*/ ctx[12]}`;
     			t1 = space();
     			svg0 = svg_element("svg");
     			path0 = svg_element("path");
     			path1 = svg_element("path");
     			t2 = space();
     			div1 = element("div");
-    			t3 = text(/*scoreUser*/ ctx[7]);
+    			div1.textContent = `${/*scoreFinal*/ ctx[11]}`;
     			t4 = space();
     			div8 = element("div");
     			h10 = element("h1");
@@ -1434,78 +1433,78 @@ var app = (function () {
     			div15 = element("div");
     			create_component(tableresult.$$.fragment);
     			attr_dev(div0, "class", "level ma2 w4 svelte-1yiwp32");
-    			add_location(div0, file$2, 286, 16, 7047);
+    			add_location(div0, file$2, 327, 16, 8125);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$2, 294, 34, 7341);
+    			add_location(path0, file$2, 335, 34, 8415);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$2, 295, 20, 7400);
+    			add_location(path1, file$2, 336, 20, 8474);
     			attr_dev(svg0, "class", "mv3 svelte-1yiwp32");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$2, 288, 16, 7109);
+    			add_location(svg0, file$2, 329, 16, 8183);
     			attr_dev(div1, "class", "points ma2 w4  svelte-1yiwp32");
-    			add_location(div1, file$2, 298, 16, 7873);
+    			add_location(div1, file$2, 339, 16, 8947);
     			attr_dev(div2, "class", "user-card mt4 svelte-1yiwp32");
-    			add_location(div2, file$2, 285, 12, 7003);
+    			add_location(div2, file$2, 326, 12, 8081);
     			attr_dev(h10, "class", "f4  svelte-1yiwp32");
-    			add_location(h10, file$2, 301, 16, 7990);
+    			add_location(h10, file$2, 342, 16, 9065);
     			attr_dev(button0, "class", "grow mt4 br3");
-    			add_location(button0, file$2, 304, 20, 8061);
-    			add_location(div3, file$2, 303, 16, 8035);
+    			add_location(button0, file$2, 345, 20, 9136);
+    			add_location(div3, file$2, 344, 16, 9110);
     			attr_dev(button1, "class", "grow mt4 br3");
-    			add_location(button1, file$2, 313, 20, 8388);
-    			add_location(div4, file$2, 312, 16, 8362);
+    			add_location(button1, file$2, 354, 20, 9463);
+    			add_location(div4, file$2, 353, 16, 9437);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
     			attr_dev(a, "class", "svelte-1yiwp32");
-    			add_location(a, file$2, 324, 32, 8844);
+    			add_location(a, file$2, 365, 32, 9919);
     			attr_dev(span0, "class", "f6 tr svelte-1yiwp32");
-    			add_location(span0, file$2, 323, 28, 8791);
+    			add_location(span0, file$2, 364, 28, 9866);
     			attr_dev(div5, "class", "tr");
-    			add_location(div5, file$2, 322, 24, 8746);
+    			add_location(div5, file$2, 363, 24, 9821);
     			attr_dev(div6, "class", "svelte-1yiwp32");
-    			add_location(div6, file$2, 321, 20, 8716);
+    			add_location(div6, file$2, 362, 20, 9791);
     			attr_dev(div7, "class", "stats svelte-1yiwp32");
-    			add_location(div7, file$2, 320, 16, 8676);
+    			add_location(div7, file$2, 361, 16, 9751);
     			attr_dev(div8, "class", "more-info svelte-1yiwp32");
-    			add_location(div8, file$2, 300, 12, 7950);
+    			add_location(div8, file$2, 341, 12, 9025);
     			attr_dev(div9, "class", "additional  svelte-1yiwp32");
     			toggle_class(div9, "unCheck", /*isSelected*/ ctx[5]);
-    			add_location(div9, file$2, 284, 8, 6938);
+    			add_location(div9, file$2, 325, 8, 8016);
     			attr_dev(h11, "class", "f4  svelte-1yiwp32");
-    			add_location(h11, file$2, 332, 12, 9097);
+    			add_location(h11, file$2, 373, 12, 10172);
     			attr_dev(span1, "class", "b svelte-1yiwp32");
-    			add_location(span1, file$2, 335, 16, 9205);
+    			add_location(span1, file$2, 376, 16, 10280);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$2, 333, 12, 9137);
+    			add_location(p, file$2, 374, 12, 10212);
     			attr_dev(div10, "class", "general svelte-1yiwp32");
-    			add_location(div10, file$2, 331, 8, 9063);
+    			add_location(div10, file$2, 372, 8, 10138);
     			attr_dev(div11, "class", "card svelte-1yiwp32");
-    			add_location(div11, file$2, 279, 4, 6828);
+    			add_location(div11, file$2, 320, 4, 7906);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$2, 353, 30, 9745);
+    			add_location(path2, file$2, 394, 30, 10820);
     			attr_dev(path3, "d", "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z");
-    			add_location(path3, file$2, 354, 16, 9800);
+    			add_location(path3, file$2, 395, 16, 10875);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$2, 348, 12, 9565);
+    			add_location(svg1, file$2, 389, 12, 10640);
     			attr_dev(div12, "class", "float grow  svelte-1yiwp32");
-    			add_location(div12, file$2, 343, 8, 9430);
+    			add_location(div12, file$2, 384, 8, 10505);
     			attr_dev(div13, "class", "tl  svelte-1yiwp32");
     			toggle_class(div13, "invisible", /*isVisible*/ ctx[4]);
-    			add_location(div13, file$2, 340, 4, 9358);
+    			add_location(div13, file$2, 381, 4, 10433);
     			attr_dev(div14, "class", "centered  svelte-1yiwp32");
-    			add_location(div14, file$2, 278, 0, 6800);
+    			add_location(div14, file$2, 319, 0, 7878);
     			attr_dev(div15, "class", "svelte-1yiwp32");
     			toggle_class(div15, "invisible", /*showChart*/ ctx[6]);
-    			add_location(div15, file$2, 359, 0, 9974);
+    			add_location(div15, file$2, 400, 0, 11049);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1522,7 +1521,6 @@ var app = (function () {
     			append_dev(svg0, path1);
     			append_dev(div2, t2);
     			append_dev(div2, div1);
-    			append_dev(div1, t3);
     			append_dev(div9, t4);
     			append_dev(div9, div8);
     			append_dev(div8, h10);
@@ -1570,17 +1568,16 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*click_handler*/ ctx[16], false, false, false),
-    					listen_dev(button1, "click", /*click_handler_1*/ ctx[17], false, false, false),
-    					listen_dev(div11, "click", /*click_handler_2*/ ctx[18], false, false, false),
-    					listen_dev(div12, "click", /*click_handler_3*/ ctx[19], false, false, false)
+    					listen_dev(button0, "click", /*click_handler*/ ctx[17], false, false, false),
+    					listen_dev(button1, "click", /*click_handler_1*/ ctx[18], false, false, false),
+    					listen_dev(div11, "click", /*click_handler_2*/ ctx[19], false, false, false),
+    					listen_dev(div12, "click", /*click_handler_3*/ ctx[20], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty[0] & /*scoreUser*/ 128) set_data_dev(t3, /*scoreUser*/ ctx[7]);
     			if (!current || dirty[0] & /*name*/ 1) set_data_dev(t5, /*name*/ ctx[0]);
     			if ((!current || dirty[0] & /*email*/ 4) && t11_value !== (t11_value = (/*email*/ ctx[2] ? /*email*/ ctx[2] : "") + "")) set_data_dev(t11, t11_value);
 
@@ -1609,8 +1606,8 @@ var app = (function () {
     			}
 
     			if (default_slot) {
-    				if (default_slot.p && dirty[0] & /*$$scope*/ 16384) {
-    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[14], dirty, null, null);
+    				if (default_slot.p && dirty[0] & /*$$scope*/ 32768) {
+    					update_slot(default_slot, default_slot_template, ctx, /*$$scope*/ ctx[15], dirty, null, null);
     				}
     			}
 
@@ -1660,9 +1657,9 @@ var app = (function () {
     	let $itemsMaster;
     	let $moderateStore;
     	validate_store(itemsMaster, "itemsMaster");
-    	component_subscribe($$self, itemsMaster, $$value => $$invalidate(22, $itemsMaster = $$value));
+    	component_subscribe($$self, itemsMaster, $$value => $$invalidate(23, $itemsMaster = $$value));
     	validate_store(moderateStore, "moderateStore");
-    	component_subscribe($$self, moderateStore, $$value => $$invalidate(23, $moderateStore = $$value));
+    	component_subscribe($$self, moderateStore, $$value => $$invalidate(24, $moderateStore = $$value));
     	let { name } = $$props;
     	let { tribal } = $$props;
     	let { email } = $$props;
@@ -1763,10 +1760,31 @@ var app = (function () {
     	let scoreRT = clusterLevels("D-1", "D-2", "D-3");
 
     	// change color select unselect
-    	const Evaluation = () => {
-    		
+    	const evaluation = (participant, practitioner, expert) => {
+    		if (practitioner + expert / 2 >= 0.65 && expert >= 0.75) {
+    			return "Expert";
+    		} else if (practitioner + expert / 2 >= 0.65) {
+    			return "Practitioner";
+    		} else {
+    			return "Participant";
+    		}
     	};
 
+    	let participantAll = Number(scorePM.participant + scoreCSM.participant + scorePD.participant + scoreRT.participant);
+    	let practitionerAll = Number(scorePM.practitioner + scoreCSM.practitioner + scorePD.practitioner + scoreRT.practitioner);
+    	let expertAll = Number(scorePM.expert + scoreCSM.expert + scorePD.expert + scoreRT.expert);
+
+    	let sumaAllPoints = () => {
+    		let result = participantAll + practitionerAll + expertAll;
+    		return result;
+    	};
+
+    	console.log(name + " " + scorePD.expert);
+    	sumaAllPoints();
+    	let scoreFinal = sumaAllPoints();
+    	let status = evaluation(participantAll, practitionerAll, expertAll);
+
+    	// show select
     	let isSelected = false;
 
     	// show chart
@@ -1775,7 +1793,7 @@ var app = (function () {
     	const writable_props = ["name", "tribal", "email", "index", "rol", "answers"];
 
     	Object_1.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<CardUnit> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<CardUnit> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -1803,10 +1821,10 @@ var app = (function () {
     		if ("name" in $$props) $$invalidate(0, name = $$props.name);
     		if ("tribal" in $$props) $$invalidate(1, tribal = $$props.tribal);
     		if ("email" in $$props) $$invalidate(2, email = $$props.email);
-    		if ("index" in $$props) $$invalidate(12, index = $$props.index);
+    		if ("index" in $$props) $$invalidate(13, index = $$props.index);
     		if ("rol" in $$props) $$invalidate(3, rol = $$props.rol);
-    		if ("answers" in $$props) $$invalidate(13, answers = $$props.answers);
-    		if ("$$scope" in $$props) $$invalidate(14, $$scope = $$props.$$scope);
+    		if ("answers" in $$props) $$invalidate(14, answers = $$props.answers);
+    		if ("$$scope" in $$props) $$invalidate(15, $$scope = $$props.$$scope);
     	};
 
     	$$self.$capture_state = () => ({
@@ -1833,7 +1851,13 @@ var app = (function () {
     		scoreCSM,
     		scorePD,
     		scoreRT,
-    		Evaluation,
+    		evaluation,
+    		participantAll,
+    		practitionerAll,
+    		expertAll,
+    		sumaAllPoints,
+    		scoreFinal,
+    		status,
     		isSelected,
     		showChart,
     		$itemsMaster,
@@ -1845,22 +1869,28 @@ var app = (function () {
     		if ("name" in $$props) $$invalidate(0, name = $$props.name);
     		if ("tribal" in $$props) $$invalidate(1, tribal = $$props.tribal);
     		if ("email" in $$props) $$invalidate(2, email = $$props.email);
-    		if ("index" in $$props) $$invalidate(12, index = $$props.index);
+    		if ("index" in $$props) $$invalidate(13, index = $$props.index);
     		if ("rol" in $$props) $$invalidate(3, rol = $$props.rol);
     		if ("userObject" in $$props) userObject = $$props.userObject;
     		if ("isVisible" in $$props) $$invalidate(4, isVisible = $$props.isVisible);
-    		if ("answers" in $$props) $$invalidate(13, answers = $$props.answers);
+    		if ("answers" in $$props) $$invalidate(14, answers = $$props.answers);
     		if ("key" in $$props) key = $$props.key;
     		if ("score" in $$props) score = $$props.score;
     		if ("sizeQuest" in $$props) sizeQuest = $$props.sizeQuest;
     		if ("sizeQuestMaster" in $$props) sizeQuestMaster = $$props.sizeQuestMaster;
-    		if ("scorePM" in $$props) $$invalidate(8, scorePM = $$props.scorePM);
-    		if ("scoreCSM" in $$props) $$invalidate(9, scoreCSM = $$props.scoreCSM);
-    		if ("scorePD" in $$props) $$invalidate(10, scorePD = $$props.scorePD);
-    		if ("scoreRT" in $$props) $$invalidate(11, scoreRT = $$props.scoreRT);
+    		if ("scorePM" in $$props) $$invalidate(7, scorePM = $$props.scorePM);
+    		if ("scoreCSM" in $$props) $$invalidate(8, scoreCSM = $$props.scoreCSM);
+    		if ("scorePD" in $$props) $$invalidate(9, scorePD = $$props.scorePD);
+    		if ("scoreRT" in $$props) $$invalidate(10, scoreRT = $$props.scoreRT);
+    		if ("participantAll" in $$props) participantAll = $$props.participantAll;
+    		if ("practitionerAll" in $$props) practitionerAll = $$props.practitionerAll;
+    		if ("expertAll" in $$props) expertAll = $$props.expertAll;
+    		if ("sumaAllPoints" in $$props) sumaAllPoints = $$props.sumaAllPoints;
+    		if ("scoreFinal" in $$props) $$invalidate(11, scoreFinal = $$props.scoreFinal);
+    		if ("status" in $$props) $$invalidate(12, status = $$props.status);
     		if ("isSelected" in $$props) $$invalidate(5, isSelected = $$props.isSelected);
     		if ("showChart" in $$props) $$invalidate(6, showChart = $$props.showChart);
-    		if ("scoreUser" in $$props) $$invalidate(7, scoreUser = $$props.scoreUser);
+    		if ("scoreUser" in $$props) scoreUser = $$props.scoreUser;
     	};
 
     	let scoreUser;
@@ -1870,11 +1900,11 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty[0] & /*$moderateStore, index*/ 8392704) {
+    		if ($$self.$$.dirty[0] & /*$moderateStore, index*/ 16785408) {
     			// Sum Global Score
-    			 $$invalidate(7, scoreUser = Object.values($moderateStore[index])
+    			 scoreUser = Object.values($moderateStore[index])
     			? Object.values($moderateStore[index]).reduce((a, b) => a + b)
-    			: 0);
+    			: 0;
     		}
     	};
 
@@ -1886,11 +1916,12 @@ var app = (function () {
     		isVisible,
     		isSelected,
     		showChart,
-    		scoreUser,
     		scorePM,
     		scoreCSM,
     		scorePD,
     		scoreRT,
+    		scoreFinal,
+    		status,
     		index,
     		answers,
     		$$scope,
@@ -1916,9 +1947,9 @@ var app = (function () {
     				name: 0,
     				tribal: 1,
     				email: 2,
-    				index: 12,
+    				index: 13,
     				rol: 3,
-    				answers: 13
+    				answers: 14
     			},
     			[-1, -1]
     		);
@@ -1934,27 +1965,27 @@ var app = (function () {
     		const props = options.props || {};
 
     		if (/*name*/ ctx[0] === undefined && !("name" in props)) {
-    			console.warn("<CardUnit> was created without expected prop 'name'");
+    			console_1.warn("<CardUnit> was created without expected prop 'name'");
     		}
 
     		if (/*tribal*/ ctx[1] === undefined && !("tribal" in props)) {
-    			console.warn("<CardUnit> was created without expected prop 'tribal'");
+    			console_1.warn("<CardUnit> was created without expected prop 'tribal'");
     		}
 
     		if (/*email*/ ctx[2] === undefined && !("email" in props)) {
-    			console.warn("<CardUnit> was created without expected prop 'email'");
+    			console_1.warn("<CardUnit> was created without expected prop 'email'");
     		}
 
-    		if (/*index*/ ctx[12] === undefined && !("index" in props)) {
-    			console.warn("<CardUnit> was created without expected prop 'index'");
+    		if (/*index*/ ctx[13] === undefined && !("index" in props)) {
+    			console_1.warn("<CardUnit> was created without expected prop 'index'");
     		}
 
     		if (/*rol*/ ctx[3] === undefined && !("rol" in props)) {
-    			console.warn("<CardUnit> was created without expected prop 'rol'");
+    			console_1.warn("<CardUnit> was created without expected prop 'rol'");
     		}
 
-    		if (/*answers*/ ctx[13] === undefined && !("answers" in props)) {
-    			console.warn("<CardUnit> was created without expected prop 'answers'");
+    		if (/*answers*/ ctx[14] === undefined && !("answers" in props)) {
+    			console_1.warn("<CardUnit> was created without expected prop 'answers'");
     		}
     	}
 
@@ -2870,7 +2901,7 @@ var app = (function () {
 
     /* node_modules/svelte-fusioncharts/src/index.svelte generated by Svelte v3.23.2 */
 
-    const { console: console_1 } = globals;
+    const { console: console_1$1 } = globals;
 
     const file$4 = "node_modules/svelte-fusioncharts/src/index.svelte";
 
@@ -3024,7 +3055,7 @@ var app = (function () {
     	];
 
     	Object.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1.warn(`<Src> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$1.warn(`<Src> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -3139,31 +3170,31 @@ var app = (function () {
     		const props = options.props || {};
 
     		if (/*id*/ ctx[5] === undefined && !("id" in props)) {
-    			console_1.warn("<Src> was created without expected prop 'id'");
+    			console_1$1.warn("<Src> was created without expected prop 'id'");
     		}
 
     		if (/*type*/ ctx[6] === undefined && !("type" in props)) {
-    			console_1.warn("<Src> was created without expected prop 'type'");
+    			console_1$1.warn("<Src> was created without expected prop 'type'");
     		}
 
     		if (/*renderAt*/ ctx[3] === undefined && !("renderAt" in props)) {
-    			console_1.warn("<Src> was created without expected prop 'renderAt'");
+    			console_1$1.warn("<Src> was created without expected prop 'renderAt'");
     		}
 
     		if (/*width*/ ctx[7] === undefined && !("width" in props)) {
-    			console_1.warn("<Src> was created without expected prop 'width'");
+    			console_1$1.warn("<Src> was created without expected prop 'width'");
     		}
 
     		if (/*height*/ ctx[8] === undefined && !("height" in props)) {
-    			console_1.warn("<Src> was created without expected prop 'height'");
+    			console_1$1.warn("<Src> was created without expected prop 'height'");
     		}
 
     		if (/*dataSource*/ ctx[10] === undefined && !("dataSource" in props)) {
-    			console_1.warn("<Src> was created without expected prop 'dataSource'");
+    			console_1$1.warn("<Src> was created without expected prop 'dataSource'");
     		}
 
     		if (/*chart*/ ctx[4] === undefined && !("chart" in props)) {
-    			console_1.warn("<Src> was created without expected prop 'chart'");
+    			console_1$1.warn("<Src> was created without expected prop 'chart'");
     		}
     	}
 
@@ -35939,7 +35970,7 @@ var app = (function () {
 
     /* src/components/Modal.svelte generated by Svelte v3.23.2 */
 
-    const { Object: Object_1$2, console: console_1$1 } = globals;
+    const { Object: Object_1$2, console: console_1$2 } = globals;
     const file$9 = "src/components/Modal.svelte";
 
     function create_fragment$9(ctx) {
@@ -36088,7 +36119,7 @@ var app = (function () {
     	const writable_props = ["files"];
 
     	Object_1$2.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$1.warn(`<Modal> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$2.warn(`<Modal> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -36536,7 +36567,7 @@ var app = (function () {
 
     /* src/App.svelte generated by Svelte v3.23.2 */
 
-    const { Object: Object_1$3, console: console_1$2 } = globals;
+    const { Object: Object_1$3, console: console_1$3 } = globals;
     const file$c = "src/App.svelte";
 
     // (99:2) {:else}
@@ -36888,7 +36919,7 @@ var app = (function () {
     	const writable_props = ["files"];
 
     	Object_1$3.keys($$props).forEach(key => {
-    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$2.warn(`<App> was created with unknown prop '${key}'`);
+    		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console_1$3.warn(`<App> was created with unknown prop '${key}'`);
     	});
 
     	let { $$slots = {}, $$scope } = $$props;
@@ -36954,7 +36985,7 @@ var app = (function () {
     		const props = options.props || {};
 
     		if (/*files*/ ctx[0] === undefined && !("files" in props)) {
-    			console_1$2.warn("<App> was created without expected prop 'files'");
+    			console_1$3.warn("<App> was created without expected prop 'files'");
     		}
     	}
 
