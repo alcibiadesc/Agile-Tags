@@ -57,7 +57,7 @@
                     <td class="pa3">{scoreRT.expert}</td>
                 </tr>
                 <tr class="stripe-dark">
-                    <td class="pa3"><strong>Total</strong></td>
+                    <td class="pa3"><strong>Resultado</strong></td>
                     <td class="pa3">
                         <strong>{participantAll.toFixed(2)}</strong>
                     </td>

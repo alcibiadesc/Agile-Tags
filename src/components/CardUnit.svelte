@@ -57,7 +57,7 @@
 
     // Sum Global Score
 
-    const findAndFilter = (term) => {
+    let findAndFilter = (term) => {
         let find = Object.keys($moderateStore[index]).filter((item) => {
             return item.includes(term);
         });

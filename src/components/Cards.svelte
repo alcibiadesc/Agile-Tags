@@ -66,7 +66,10 @@
                         </p>
 
                         <p class=" f6 tr mb1 fl w-50">
-                            <input type="number" placeholder="Moderar" />
+                            <input
+                                bind:value={$moderateStore[i][key]}
+                                type="number"
+                                placeholder="Moderar" />
                         </p>
                         <p />
                     </div>

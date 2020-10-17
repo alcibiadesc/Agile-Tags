@@ -161,6 +161,9 @@ var app = (function () {
             }
         }
     }
+    function to_number(value) {
+        return value === '' ? undefined : +value;
+    }
     function children(element) {
         return Array.from(element.childNodes);
     }
@@ -1015,7 +1018,7 @@ var app = (function () {
     			tr5 = element("tr");
     			td16 = element("td");
     			strong3 = element("strong");
-    			strong3.textContent = "Total";
+    			strong3.textContent = "Resultado";
     			t41 = space();
     			td17 = element("td");
     			strong4 = element("strong");
@@ -1086,15 +1089,15 @@ var app = (function () {
     			add_location(strong3, file$1, 59, 36, 2375);
     			attr_dev(td16, "class", "pa3");
     			add_location(td16, file$1, 59, 20, 2359);
-    			add_location(strong4, file$1, 61, 24, 2464);
+    			add_location(strong4, file$1, 61, 24, 2468);
     			attr_dev(td17, "class", "pa3");
-    			add_location(td17, file$1, 60, 20, 2423);
-    			add_location(strong5, file$1, 64, 24, 2596);
+    			add_location(td17, file$1, 60, 20, 2427);
+    			add_location(strong5, file$1, 64, 24, 2600);
     			attr_dev(td18, "class", "pa3");
-    			add_location(td18, file$1, 63, 20, 2555);
-    			add_location(strong6, file$1, 66, 36, 2704);
+    			add_location(td18, file$1, 63, 20, 2559);
+    			add_location(strong6, file$1, 66, 36, 2708);
     			attr_dev(td19, "class", "pa3");
-    			add_location(td19, file$1, 66, 20, 2688);
+    			add_location(td19, file$1, 66, 20, 2692);
     			attr_dev(tr5, "class", "stripe-dark");
     			add_location(tr5, file$1, 58, 16, 2314);
     			attr_dev(tbody, "class", "lh-copy tc");
@@ -1477,7 +1480,7 @@ var app = (function () {
     			t1 = text(/*rol*/ ctx[3]);
     			t2 = text(".");
     			attr_dev(span, "class", "b svelte-1yiwp32");
-    			add_location(span, file$2, 373, 39, 10249);
+    			add_location(span, file$2, 373, 39, 10247);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1633,78 +1636,78 @@ var app = (function () {
     			div15 = element("div");
     			create_component(tableresult.$$.fragment);
     			attr_dev(div0, "class", "level ma2 w4 svelte-1yiwp32");
-    			add_location(div0, file$2, 323, 16, 8004);
+    			add_location(div0, file$2, 323, 16, 8002);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$2, 331, 34, 8294);
+    			add_location(path0, file$2, 331, 34, 8292);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$2, 332, 20, 8353);
+    			add_location(path1, file$2, 332, 20, 8351);
     			attr_dev(svg0, "class", "mv3 svelte-1yiwp32");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$2, 325, 16, 8062);
+    			add_location(svg0, file$2, 325, 16, 8060);
     			attr_dev(div1, "class", "points ma2 w4  svelte-1yiwp32");
-    			add_location(div1, file$2, 335, 16, 8826);
+    			add_location(div1, file$2, 335, 16, 8824);
     			attr_dev(div2, "class", "user-card mt4 svelte-1yiwp32");
-    			add_location(div2, file$2, 322, 12, 7960);
+    			add_location(div2, file$2, 322, 12, 7958);
     			attr_dev(h10, "class", "f4  svelte-1yiwp32");
-    			add_location(h10, file$2, 338, 16, 8955);
+    			add_location(h10, file$2, 338, 16, 8953);
     			attr_dev(button0, "class", "grow mt4 br3");
-    			add_location(button0, file$2, 341, 20, 9026);
-    			add_location(div3, file$2, 340, 16, 9000);
+    			add_location(button0, file$2, 341, 20, 9024);
+    			add_location(div3, file$2, 340, 16, 8998);
     			attr_dev(button1, "class", "grow mt4 br3");
-    			add_location(button1, file$2, 350, 20, 9361);
-    			add_location(div4, file$2, 349, 16, 9335);
+    			add_location(button1, file$2, 350, 20, 9359);
+    			add_location(div4, file$2, 349, 16, 9333);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
     			attr_dev(a, "class", "svelte-1yiwp32");
-    			add_location(a, file$2, 361, 32, 9817);
+    			add_location(a, file$2, 361, 32, 9815);
     			attr_dev(span0, "class", "f6 tr svelte-1yiwp32");
-    			add_location(span0, file$2, 360, 28, 9764);
+    			add_location(span0, file$2, 360, 28, 9762);
     			attr_dev(div5, "class", "tr");
-    			add_location(div5, file$2, 359, 24, 9719);
+    			add_location(div5, file$2, 359, 24, 9717);
     			attr_dev(div6, "class", "svelte-1yiwp32");
-    			add_location(div6, file$2, 358, 20, 9689);
+    			add_location(div6, file$2, 358, 20, 9687);
     			attr_dev(div7, "class", "stats svelte-1yiwp32");
-    			add_location(div7, file$2, 357, 16, 9649);
+    			add_location(div7, file$2, 357, 16, 9647);
     			attr_dev(div8, "class", "more-info svelte-1yiwp32");
-    			add_location(div8, file$2, 337, 12, 8915);
+    			add_location(div8, file$2, 337, 12, 8913);
     			attr_dev(div9, "class", "additional  svelte-1yiwp32");
     			toggle_class(div9, "unCheck", /*isSelected*/ ctx[4]);
-    			add_location(div9, file$2, 321, 8, 7895);
+    			add_location(div9, file$2, 321, 8, 7893);
     			attr_dev(h11, "class", "f4  svelte-1yiwp32");
-    			add_location(h11, file$2, 369, 12, 10070);
+    			add_location(h11, file$2, 369, 12, 10068);
     			attr_dev(span1, "class", "b svelte-1yiwp32");
-    			add_location(span1, file$2, 372, 16, 10178);
+    			add_location(span1, file$2, 372, 16, 10176);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$2, 370, 12, 10110);
+    			add_location(p, file$2, 370, 12, 10108);
     			attr_dev(div10, "class", "general svelte-1yiwp32");
-    			add_location(div10, file$2, 368, 8, 10036);
+    			add_location(div10, file$2, 368, 8, 10034);
     			attr_dev(div11, "class", "card svelte-1yiwp32");
-    			add_location(div11, file$2, 316, 4, 7785);
+    			add_location(div11, file$2, 316, 4, 7783);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$2, 390, 30, 10730);
+    			add_location(path2, file$2, 390, 30, 10728);
     			attr_dev(path3, "d", "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z");
-    			add_location(path3, file$2, 391, 16, 10785);
+    			add_location(path3, file$2, 391, 16, 10783);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$2, 385, 12, 10550);
+    			add_location(svg1, file$2, 385, 12, 10548);
     			attr_dev(div12, "class", "float grow  svelte-1yiwp32");
-    			add_location(div12, file$2, 380, 8, 10407);
+    			add_location(div12, file$2, 380, 8, 10405);
     			attr_dev(div13, "class", "tl  svelte-1yiwp32");
     			toggle_class(div13, "invisible", /*hideModerator*/ ctx[6]);
-    			add_location(div13, file$2, 377, 4, 10331);
+    			add_location(div13, file$2, 377, 4, 10329);
     			attr_dev(div14, "class", "centered  svelte-1yiwp32");
-    			add_location(div14, file$2, 315, 0, 7757);
+    			add_location(div14, file$2, 315, 0, 7755);
     			attr_dev(div15, "class", "svelte-1yiwp32");
     			toggle_class(div15, "invisible", /*showChart*/ ctx[5]);
-    			add_location(div15, file$2, 396, 0, 10959);
+    			add_location(div15, file$2, 396, 0, 10957);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1905,7 +1908,7 @@ var app = (function () {
     	$moderateStore.push(userObject);
 
     	// Sum Global Score
-    	const findAndFilter = term => {
+    	let findAndFilter = term => {
     		let find = Object.keys($moderateStore[index]).filter(item => {
     			return item.includes(term);
     		});
@@ -2072,6 +2075,7 @@ var app = (function () {
     		if ("score" in $$props) score = $$props.score;
     		if ("sizeQuest" in $$props) sizeQuest = $$props.sizeQuest;
     		if ("sizeQuestMaster" in $$props) sizeQuestMaster = $$props.sizeQuestMaster;
+    		if ("findAndFilter" in $$props) findAndFilter = $$props.findAndFilter;
     		if ("scorePM" in $$props) $$invalidate(7, scorePM = $$props.scorePM);
     		if ("scoreCSM" in $$props) $$invalidate(8, scoreCSM = $$props.scoreCSM);
     		if ("scorePD" in $$props) $$invalidate(9, scorePD = $$props.scorePD);
@@ -2233,14 +2237,14 @@ var app = (function () {
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[11] = list[i];
     	return child_ctx;
     }
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
-    	child_ctx[9] = i;
+    	child_ctx[8] = list[i];
+    	child_ctx[10] = i;
     	return child_ctx;
     }
 
@@ -2248,19 +2252,19 @@ var app = (function () {
     function create_else_block(ctx) {
     	let div1;
     	let p0;
-    	let t0_value = /*key*/ ctx[10] + "";
+    	let t0_value = /*key*/ ctx[11] + "";
     	let t0;
     	let t1;
     	let p1;
-    	let t2_value = /*item*/ ctx[7][/*key*/ ctx[10]] + "";
+    	let t2_value = /*item*/ ctx[8][/*key*/ ctx[11]] + "";
     	let t2;
     	let t3;
     	let div0;
     	let p2;
     	let t4;
 
-    	let t5_value = (/*$moderateStore*/ ctx[1][/*i*/ ctx[9]][/*key*/ ctx[10]]
-    	? /*$moderateStore*/ ctx[1][/*i*/ ctx[9]][/*key*/ ctx[10]]
+    	let t5_value = (/*$moderateStore*/ ctx[1][/*i*/ ctx[10]][/*key*/ ctx[11]]
+    	? /*$moderateStore*/ ctx[1][/*i*/ ctx[10]][/*key*/ ctx[11]]
     	: 0) + "";
 
     	let t5;
@@ -2269,6 +2273,12 @@ var app = (function () {
     	let input;
     	let t7;
     	let p4;
+    	let mounted;
+    	let dispose;
+
+    	function input_input_handler() {
+    		/*input_input_handler*/ ctx[2].call(input, /*i*/ ctx[10], /*key*/ ctx[11]);
+    	}
 
     	const block = {
     		c: function create() {
@@ -2298,12 +2308,12 @@ var app = (function () {
     			add_location(input, file$3, 68, 28, 2120);
     			attr_dev(p3, "class", " f6 tr mb1 fl w-50");
     			add_location(p3, file$3, 67, 24, 2061);
-    			add_location(p4, file$3, 70, 24, 2219);
+    			add_location(p4, file$3, 73, 24, 2351);
     			attr_dev(div0, "class", "cf");
     			add_location(div0, file$3, 61, 20, 1815);
     			attr_dev(div1, "class", "mt3 ph3 pt2 pb2 shadow-5 bg-white svelte-n4gs8n");
 
-    			toggle_class(div1, "pair", Number(/*key*/ ctx[10].substring(4, 5)) % 2 === 0
+    			toggle_class(div1, "pair", Number(/*key*/ ctx[11].substring(4, 5)) % 2 === 0
     			? true
     			: false);
 
@@ -2324,25 +2334,38 @@ var app = (function () {
     			append_dev(div0, t6);
     			append_dev(div0, p3);
     			append_dev(p3, input);
+    			set_input_value(input, /*$moderateStore*/ ctx[1][/*i*/ ctx[10]][/*key*/ ctx[11]]);
     			append_dev(div0, t7);
     			append_dev(div0, p4);
-    		},
-    		p: function update(ctx, dirty) {
-    			if (dirty & /*listFiltered*/ 1 && t0_value !== (t0_value = /*key*/ ctx[10] + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*listFiltered*/ 1 && t2_value !== (t2_value = /*item*/ ctx[7][/*key*/ ctx[10]] + "")) set_data_dev(t2, t2_value);
 
-    			if (dirty & /*$moderateStore, listFiltered*/ 3 && t5_value !== (t5_value = (/*$moderateStore*/ ctx[1][/*i*/ ctx[9]][/*key*/ ctx[10]]
-    			? /*$moderateStore*/ ctx[1][/*i*/ ctx[9]][/*key*/ ctx[10]]
+    			if (!mounted) {
+    				dispose = listen_dev(input, "input", input_input_handler);
+    				mounted = true;
+    			}
+    		},
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
+    			if (dirty & /*listFiltered*/ 1 && t0_value !== (t0_value = /*key*/ ctx[11] + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*listFiltered*/ 1 && t2_value !== (t2_value = /*item*/ ctx[8][/*key*/ ctx[11]] + "")) set_data_dev(t2, t2_value);
+
+    			if (dirty & /*$moderateStore, listFiltered*/ 3 && t5_value !== (t5_value = (/*$moderateStore*/ ctx[1][/*i*/ ctx[10]][/*key*/ ctx[11]]
+    			? /*$moderateStore*/ ctx[1][/*i*/ ctx[10]][/*key*/ ctx[11]]
     			: 0) + "")) set_data_dev(t5, t5_value);
 
+    			if (dirty & /*$moderateStore, Object, listFiltered*/ 3 && to_number(input.value) !== /*$moderateStore*/ ctx[1][/*i*/ ctx[10]][/*key*/ ctx[11]]) {
+    				set_input_value(input, /*$moderateStore*/ ctx[1][/*i*/ ctx[10]][/*key*/ ctx[11]]);
+    			}
+
     			if (dirty & /*Number, Object, listFiltered*/ 1) {
-    				toggle_class(div1, "pair", Number(/*key*/ ctx[10].substring(4, 5)) % 2 === 0
+    				toggle_class(div1, "pair", Number(/*key*/ ctx[11].substring(4, 5)) % 2 === 0
     				? true
     				: false);
     			}
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -2449,9 +2472,9 @@ var app = (function () {
     	let if_block_anchor;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*key*/ ctx[10] == "Correo electrónico") return create_if_block$1;
-    		if (/*key*/ ctx[10] == "Nombre") return create_if_block_1;
-    		if (/*key*/ ctx[10] == "Tribu") return create_if_block_2;
+    		if (/*key*/ ctx[11] == "Correo electrónico") return create_if_block$1;
+    		if (/*key*/ ctx[11] == "Nombre") return create_if_block_1;
+    		if (/*key*/ ctx[11] == "Tribu") return create_if_block_2;
     		return create_else_block;
     	}
 
@@ -2500,7 +2523,7 @@ var app = (function () {
     // (41:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}>
     function create_default_slot(ctx) {
     	let t;
-    	let each_value_1 = Object.keys(/*item*/ ctx[7]);
+    	let each_value_1 = Object.keys(/*item*/ ctx[8]);
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -2525,7 +2548,7 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*Object, listFiltered, Number, $moderateStore*/ 3) {
-    				each_value_1 = Object.keys(/*item*/ ctx[7]);
+    				each_value_1 = Object.keys(/*item*/ ctx[8]);
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -2572,12 +2595,12 @@ var app = (function () {
 
     	cardunit = new CardUnit({
     			props: {
-    				name: /*item*/ ctx[7].Nombre,
-    				tribal: /*item*/ ctx[7].Tribu,
-    				email: /*item*/ ctx[7]["Correo electrónico"],
-    				rol: /*item*/ ctx[7].Rol,
-    				answers: /*listFiltered*/ ctx[0][/*i*/ ctx[9]],
-    				index: /*i*/ ctx[9],
+    				name: /*item*/ ctx[8].Nombre,
+    				tribal: /*item*/ ctx[8].Tribu,
+    				email: /*item*/ ctx[8]["Correo electrónico"],
+    				rol: /*item*/ ctx[8].Rol,
+    				answers: /*listFiltered*/ ctx[0][/*i*/ ctx[10]],
+    				index: /*i*/ ctx[10],
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
@@ -2594,13 +2617,13 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const cardunit_changes = {};
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.name = /*item*/ ctx[7].Nombre;
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.tribal = /*item*/ ctx[7].Tribu;
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.email = /*item*/ ctx[7]["Correo electrónico"];
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.rol = /*item*/ ctx[7].Rol;
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.answers = /*listFiltered*/ ctx[0][/*i*/ ctx[9]];
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.name = /*item*/ ctx[8].Nombre;
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.tribal = /*item*/ ctx[8].Tribu;
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.email = /*item*/ ctx[8]["Correo electrónico"];
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.rol = /*item*/ ctx[8].Rol;
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.answers = /*listFiltered*/ ctx[0][/*i*/ ctx[10]];
 
-    			if (dirty & /*$$scope, listFiltered, $moderateStore*/ 8195) {
+    			if (dirty & /*$$scope, listFiltered, $moderateStore*/ 16387) {
     				cardunit_changes.$$scope = { dirty, ctx };
     			}
 
@@ -2734,9 +2757,9 @@ var app = (function () {
     	let $searchStore;
     	let $moderateStore;
     	validate_store(items, "items");
-    	component_subscribe($$self, items, $$value => $$invalidate(2, $items = $$value));
+    	component_subscribe($$self, items, $$value => $$invalidate(3, $items = $$value));
     	validate_store(searchStore, "searchStore");
-    	component_subscribe($$self, searchStore, $$value => $$invalidate(3, $searchStore = $$value));
+    	component_subscribe($$self, searchStore, $$value => $$invalidate(4, $searchStore = $$value));
     	validate_store(moderateStore, "moderateStore");
     	component_subscribe($$self, moderateStore, $$value => $$invalidate(1, $moderateStore = $$value));
     	let listItems = $items || [];
@@ -2754,6 +2777,12 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Cards", $$slots, []);
 
+    	function input_input_handler(i, key) {
+    		$moderateStore[i][key] = to_number(this.value);
+    		moderateStore.set($moderateStore);
+    		(($$invalidate(0, listFiltered), $$invalidate(6, listItems)), $$invalidate(4, $searchStore));
+    	}
+
     	$$self.$capture_state = () => ({
     		moderateStore,
     		CardUnit,
@@ -2769,7 +2798,7 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("listItems" in $$props) $$invalidate(5, listItems = $$props.listItems);
+    		if ("listItems" in $$props) $$invalidate(6, listItems = $$props.listItems);
     		if ("listFiltered" in $$props) $$invalidate(0, listFiltered = $$props.listFiltered);
     		if ("listCrop" in $$props) listCrop = $$props.listCrop;
     	};
@@ -2782,7 +2811,7 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*$searchStore*/ 8) {
+    		if ($$self.$$.dirty & /*$searchStore*/ 16) {
     			 $$invalidate(0, listFiltered = listItems.filter(item => item.Tribu
     			? removeAccents(item.Tribu.toLowerCase()).includes(removeAccents($searchStore.toLowerCase()))
     			: item.Nombre
@@ -2800,7 +2829,7 @@ var app = (function () {
     		}
     	};
 
-    	return [listFiltered, $moderateStore];
+    	return [listFiltered, $moderateStore, input_input_handler];
     }
 
     class Cards extends SvelteComponentDev {
