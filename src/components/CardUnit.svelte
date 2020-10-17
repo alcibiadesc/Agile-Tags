@@ -1,4 +1,5 @@
 <script>
+    import { onMount } from "svelte";
     import { dataLevel, dataAxis } from "./../stores/chartStore.js";
     import TableResult from "./TableResult.svelte";
     import { moderateStore } from "./../stores/moderateStore.js";
@@ -160,20 +161,9 @@
 
     // Push the level of madurity
 
-    $dataLevel.push({
-        participant: participantAll,
-        practitioner: practitionerAll,
-        expert: expertAll,
-    });
+    // Solo cuando esta seleccionado
 
     // Push the level of knowledge in a field
-
-    $dataAxis.push({
-        axisA: allAxisA,
-        axisB: allAxisB,
-        axisC: allAxisC,
-        axisD: allAxisD,
-    });
 
     let sumaAllPoints = () => {
         let result = participantAll + practitionerAll + expertAll;
@@ -188,9 +178,24 @@
     let status = evaluation(participantAll, practitionerAll, expertAll);
 
     // Toogle Visibility
-    let isSelected = false;
+    let isUnSelected = false;
     let showChart = true;
     let hideModerator = true;
+
+    // send data to charts
+
+    $dataLevel.push({
+        participant: participantAll,
+        practitioner: practitionerAll,
+        expert: expertAll,
+    });
+
+    $dataAxis.push({
+        axisA: allAxisA,
+        axisB: allAxisB,
+        axisC: allAxisC,
+        axisD: allAxisD,
+    });
 </script>
 
 <style>
@@ -347,9 +352,9 @@
     <div
         class="card"
         on:click={() => {
-            isSelected = !isSelected;
+            isUnSelected = !isUnSelected;
         }}>
-        <div class="additional " class:unCheck={isSelected}>
+        <div class="additional " class:unCheck={isUnSelected}>
             <div class="user-card mt4">
                 <div class="level ma2 w4">{status}</div>
 
@@ -373,7 +378,7 @@
                         class="grow mt4 br3"
                         on:click={() => {
                             hideModerator = !hideModerator;
-                            isSelected = !isSelected;
+                            isUnSelected = !isUnSelected;
                         }}>Moderar su cuestionario</button>
                 </div>
 
@@ -381,7 +386,7 @@
                     <button
                         class="grow mt4 br3"
                         on:click={() => {
-                            isSelected = !isSelected;
+                            isUnSelected = !isUnSelected;
                             showChart = !showChart;
                         }}>Ver detalle</button>
                 </div>
