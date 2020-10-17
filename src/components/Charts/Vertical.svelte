@@ -76,5 +76,4 @@
     });
 </script>
 
-{$axisStore}
 <canvas id="myChart" width="20px" height="20px" />

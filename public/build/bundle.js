@@ -22652,36 +22652,26 @@ var app = (function () {
     const file$1 = "src/components/Charts/Vertical.svelte";
 
     function create_fragment$1(ctx) {
-    	let t0;
-    	let t1;
     	let canvas;
 
     	const block = {
     		c: function create() {
-    			t0 = text(/*$axisStore*/ ctx[0]);
-    			t1 = space();
     			canvas = element("canvas");
     			attr_dev(canvas, "id", "myChart");
     			attr_dev(canvas, "width", "20px");
     			attr_dev(canvas, "height", "20px");
-    			add_location(canvas, file$1, 79, 0, 2261);
+    			add_location(canvas, file$1, 78, 0, 2248);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, t1, anchor);
     			insert_dev(target, canvas, anchor);
     		},
-    		p: function update(ctx, [dirty]) {
-    			if (dirty & /*$axisStore*/ 1) set_data_dev(t0, /*$axisStore*/ ctx[0]);
-    		},
+    		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(canvas);
     		}
     	};
@@ -22701,9 +22691,9 @@ var app = (function () {
     	let $dataAxis;
     	let $axisStore;
     	validate_store(dataAxis, "dataAxis");
-    	component_subscribe($$self, dataAxis, $$value => $$invalidate(3, $dataAxis = $$value));
+    	component_subscribe($$self, dataAxis, $$value => $$invalidate(2, $dataAxis = $$value));
     	validate_store(axisStore, "axisStore");
-    	component_subscribe($$self, axisStore, $$value => $$invalidate(0, $axisStore = $$value));
+    	component_subscribe($$self, axisStore, $$value => $$invalidate(3, $axisStore = $$value));
     	let data = [0, 0, 0];
     	let axisA = [0];
     	let axisB = [0];
@@ -22819,7 +22809,7 @@ var app = (function () {
     	}
 
     	 tag = productOwner;
-    	return [$axisStore];
+    	return [];
     }
 
     class Vertical extends SvelteComponentDev {
