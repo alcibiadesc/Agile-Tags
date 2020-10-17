@@ -809,17 +809,30 @@ var app = (function () {
       items.set([]);
     };
 
-    const moderateStore = writable([]);
-
-    const STORE_PREFIX$1 = 'axis_';
+    const STORE_PREFIX$1 = 'moderator_';
 
     const itemsData$1 = localStorage.getItem(`${STORE_PREFIX$1}items`);
 
-    const axisStore = writable(JSON.parse(itemsData$1) || []);
 
-    axisStore.subscribe(value => {
+
+    const moderateStore = writable(JSON.parse(itemsData$1) || []);
+
+
+    moderateStore.subscribe(value => {
         if (itemsData$1 !== value) {
             localStorage.setItem(`${STORE_PREFIX$1}items`, JSON.stringify(value));
+        }
+    });
+
+    const STORE_PREFIX$2 = 'axis_';
+
+    const itemsData$2 = localStorage.getItem(`${STORE_PREFIX$2}items`);
+
+    const axisStore = writable(JSON.parse(itemsData$2) || []);
+
+    axisStore.subscribe(value => {
+        if (itemsData$2 !== value) {
+            localStorage.setItem(`${STORE_PREFIX$2}items`, JSON.stringify(value));
         }
     });
 
@@ -1443,27 +1456,27 @@ var app = (function () {
     	}
     }
 
-    const STORE_PREFIX$2 = 'master_';
+    const STORE_PREFIX$3 = 'master_';
 
     // Columns Store
-    const columnsData$1 = localStorage.getItem(`${STORE_PREFIX$2}columns`);
+    const columnsData$1 = localStorage.getItem(`${STORE_PREFIX$3}columns`);
 
     const columnsMaster = writable(JSON.parse(columnsData$1) || []);
 
     columnsMaster.subscribe(value => {
         if (columnsData$1 !== value) {
-            localStorage.setItem(`${STORE_PREFIX$2}columns`, JSON.stringify(value));
+            localStorage.setItem(`${STORE_PREFIX$3}columns`, JSON.stringify(value));
         }
     });
 
     // Items Store
-    const itemsData$2 = localStorage.getItem(`${STORE_PREFIX$2}items`);
+    const itemsData$3 = localStorage.getItem(`${STORE_PREFIX$3}items`);
 
-    const itemsMaster = writable(JSON.parse(itemsData$2) || []);
+    const itemsMaster = writable(JSON.parse(itemsData$3) || []);
 
     itemsMaster.subscribe(value => {
-        if (itemsData$2 !== value) {
-            localStorage.setItem(`${STORE_PREFIX$2}items`, JSON.stringify(value));
+        if (itemsData$3 !== value) {
+            localStorage.setItem(`${STORE_PREFIX$3}items`, JSON.stringify(value));
         }
     });
 
