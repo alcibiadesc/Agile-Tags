@@ -1,5 +1,4 @@
 <script>
-    import { resetModerator } from "./../stores/moderateStore.js";
     import { axisStore } from "../stores/axisStore.js";
     import { columnsMaster, itemsMaster } from "../stores/masterStore.js";
 
@@ -129,11 +128,6 @@
             type="file"
             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             bind:files />
-        <p>
-            <span class="red mt3"> Ojo!</span>
-            Cargar la plantilla eliminará la moderación que haya sido realizada
-            hasta el momento.
-        </p>
     </div>
     <div>
         <p>¿A qué rol le pertence?</p>
@@ -146,7 +140,6 @@
         <button
             class="aceptar"
             on:click={() => {
-                resetModerator();
                 window.location.reload();
                 showModal = !showModal;
             }}>

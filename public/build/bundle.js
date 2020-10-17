@@ -36238,20 +36238,16 @@ var app = (function () {
     	let t2;
     	let input;
     	let t3;
-    	let p0;
-    	let span;
-    	let t5;
-    	let t6;
     	let div1;
-    	let p1;
-    	let t8;
+    	let p;
+    	let t5;
     	let select;
     	let option0;
     	let option1;
-    	let t11;
+    	let t8;
     	let div2;
     	let button1;
-    	let t13;
+    	let t10;
     	let button2;
     	let mounted;
     	let dispose;
@@ -36266,61 +36262,53 @@ var app = (function () {
     			t2 = text("¡Añade tu plantilla correctora aquí!\n        ");
     			input = element("input");
     			t3 = space();
-    			p0 = element("p");
-    			span = element("span");
-    			span.textContent = "Ojo!";
-    			t5 = text("\n            Cargar la plantilla eliminará la moderación que haya sido realizada\n            hasta el momento.");
-    			t6 = space();
     			div1 = element("div");
-    			p1 = element("p");
-    			p1.textContent = "¿A qué rol le pertence?";
-    			t8 = space();
+    			p = element("p");
+    			p.textContent = "¿A qué rol le pertence?";
+    			t5 = space();
     			select = element("select");
     			option0 = element("option");
     			option0.textContent = "Product Owner";
     			option1 = element("option");
     			option1.textContent = "Scrum Master";
-    			t11 = space();
+    			t8 = space();
     			div2 = element("div");
     			button1 = element("button");
     			button1.textContent = "Aceptar";
-    			t13 = space();
+    			t10 = space();
     			button2 = element("button");
     			button2.textContent = "Cancelar";
     			attr_dev(button0, "type", "plain");
     			attr_dev(button0, "class", "svelte-13mz6nd");
-    			add_location(button0, file$9, 115, 0, 2631);
+    			add_location(button0, file$9, 114, 0, 2564);
     			attr_dev(input, "type", "file");
     			attr_dev(input, "accept", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     			attr_dev(input, "class", "svelte-13mz6nd");
-    			add_location(input, file$9, 127, 8, 2940);
-    			attr_dev(span, "class", "red mt3");
-    			add_location(span, file$9, 132, 12, 3108);
-    			add_location(p0, file$9, 131, 8, 3092);
+    			add_location(input, file$9, 126, 8, 2873);
     			attr_dev(div0, "class", "drop-area  svelte-13mz6nd");
-    			add_location(div0, file$9, 125, 4, 2862);
-    			add_location(p1, file$9, 138, 8, 3295);
+    			add_location(div0, file$9, 124, 4, 2795);
+    			add_location(p, file$9, 132, 8, 3046);
     			option0.__value = "productOwner";
     			option0.value = option0.__value;
-    			add_location(option0, file$9, 140, 12, 3403);
+    			add_location(option0, file$9, 134, 12, 3154);
     			option1.__value = "scrumMaster";
     			option1.value = option1.__value;
-    			add_location(option1, file$9, 141, 12, 3467);
+    			add_location(option1, file$9, 135, 12, 3218);
     			attr_dev(select, "name", "roles");
     			attr_dev(select, "id", "roles");
     			if (/*$axisStore*/ ctx[2] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[5].call(select));
-    			add_location(select, file$9, 139, 8, 3334);
-    			add_location(div1, file$9, 137, 4, 3281);
+    			add_location(select, file$9, 133, 8, 3085);
+    			add_location(div1, file$9, 131, 4, 3032);
     			attr_dev(button1, "class", "aceptar svelte-13mz6nd");
-    			add_location(button1, file$9, 145, 8, 3577);
+    			add_location(button1, file$9, 139, 8, 3328);
     			attr_dev(button2, "class", "cancel svelte-13mz6nd");
-    			add_location(button2, file$9, 155, 8, 3822);
+    			add_location(button2, file$9, 148, 8, 3539);
     			attr_dev(div2, "class", " mt3");
-    			add_location(div2, file$9, 144, 4, 3550);
+    			add_location(div2, file$9, 138, 4, 3301);
     			attr_dev(dialog, "class", "svelte-13mz6nd");
     			toggle_class(dialog, "hide", /*showModal*/ ctx[1] == false);
     			toggle_class(dialog, "show", /*showModal*/ ctx[1] == true);
-    			add_location(dialog, file$9, 124, 0, 2786);
+    			add_location(dialog, file$9, 123, 0, 2719);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -36332,22 +36320,18 @@ var app = (function () {
     			append_dev(dialog, div0);
     			append_dev(div0, t2);
     			append_dev(div0, input);
-    			append_dev(div0, t3);
-    			append_dev(div0, p0);
-    			append_dev(p0, span);
-    			append_dev(p0, t5);
-    			append_dev(dialog, t6);
+    			append_dev(dialog, t3);
     			append_dev(dialog, div1);
-    			append_dev(div1, p1);
-    			append_dev(div1, t8);
+    			append_dev(div1, p);
+    			append_dev(div1, t5);
     			append_dev(div1, select);
     			append_dev(select, option0);
     			append_dev(select, option1);
     			select_option(select, /*$axisStore*/ ctx[2]);
-    			append_dev(dialog, t11);
+    			append_dev(dialog, t8);
     			append_dev(dialog, div2);
     			append_dev(div2, button1);
-    			append_dev(div2, t13);
+    			append_dev(div2, t10);
     			append_dev(div2, button2);
 
     			if (!mounted) {
@@ -36459,7 +36443,6 @@ var app = (function () {
     	}
 
     	const click_handler_1 = () => {
-    		resetModerator();
     		window.location.reload();
     		$$invalidate(1, showModal = !showModal);
     	};
@@ -36473,7 +36456,6 @@ var app = (function () {
     	};
 
     	$$self.$capture_state = () => ({
-    		resetModerator,
     		axisStore,
     		columnsMaster,
     		itemsMaster,
