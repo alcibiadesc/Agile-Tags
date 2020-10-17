@@ -1,6 +1,6 @@
 <script>
     import { axisStore } from "./../stores/axisStore.js";
-    import { productOwner, scrumMaster } from "../AxisBBDD.js";
+    import all from "../AxisBBDD.js";
 
     export let scorePM;
     export let scoreCSM;
