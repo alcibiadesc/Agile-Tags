@@ -24619,7 +24619,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (55:12) {:else}
+    // (57:12) {:else}
     function create_else_block(ctx) {
     	let div1;
     	let p0;
@@ -24670,25 +24670,25 @@ var app = (function () {
     			t7 = space();
     			p4 = element("p");
     			attr_dev(p0, "class", "b");
-    			add_location(p0, file$5, 58, 20, 1732);
-    			add_location(p1, file$5, 59, 20, 1775);
+    			add_location(p0, file$5, 60, 20, 1806);
+    			add_location(p1, file$5, 61, 20, 1849);
     			attr_dev(p2, "class", "f6 green fl w-50");
-    			add_location(p2, file$5, 62, 24, 1856);
+    			add_location(p2, file$5, 64, 24, 1930);
     			attr_dev(input, "type", "number");
     			attr_dev(input, "placeholder", "Moderar");
-    			add_location(input, file$5, 68, 28, 2120);
+    			add_location(input, file$5, 70, 28, 2194);
     			attr_dev(p3, "class", " f6 tr mb1 fl w-50");
-    			add_location(p3, file$5, 67, 24, 2061);
-    			add_location(p4, file$5, 73, 24, 2351);
+    			add_location(p3, file$5, 69, 24, 2135);
+    			add_location(p4, file$5, 75, 24, 2425);
     			attr_dev(div0, "class", "cf");
-    			add_location(div0, file$5, 61, 20, 1815);
+    			add_location(div0, file$5, 63, 20, 1889);
     			attr_dev(div1, "class", "mt3 ph3 pt2 pb2 shadow-5 bg-white svelte-n4gs8n");
 
     			toggle_class(div1, "pair", Number(/*key*/ ctx[11].substring(4, 5)) % 2 === 0
     			? true
     			: false);
 
-    			add_location(div1, file$5, 55, 16, 1558);
+    			add_location(div1, file$5, 57, 16, 1632);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -24744,21 +24744,21 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(55:12) {:else}",
+    		source: "(57:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (53:37) 
+    // (55:37) 
     function create_if_block_2(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			add_location(p, file$5, 53, 16, 1516);
+    			add_location(p, file$5, 55, 16, 1590);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -24773,21 +24773,21 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(53:37) ",
+    		source: "(55:37) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:38) 
+    // (53:38) 
     function create_if_block_1(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			add_location(p, file$5, 51, 16, 1456);
+    			add_location(p, file$5, 53, 16, 1530);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -24802,21 +24802,21 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(51:38) ",
+    		source: "(53:38) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (49:12) {#if key == 'Correo electrónico'}
+    // (51:12) {#if key == 'Correo electrónico'}
     function create_if_block$1(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			add_location(p, file$5, 49, 16, 1395);
+    			add_location(p, file$5, 51, 16, 1469);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -24831,14 +24831,14 @@ var app = (function () {
     		block,
     		id: create_if_block$1.name,
     		type: "if",
-    		source: "(49:12) {#if key == 'Correo electrónico'}",
+    		source: "(51:12) {#if key == 'Correo electrónico'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:8) {#each Object.keys(item) as key}
+    // (50:8) {#each Object.keys(item) as key}
     function create_each_block_1(ctx) {
     	let if_block_anchor;
 
@@ -24884,14 +24884,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(48:8) {#each Object.keys(item) as key}",
+    		source: "(50:8) {#each Object.keys(item) as key}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (41:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}>
+    // (43:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}>
     function create_default_slot(ctx) {
     	let t;
     	let each_value_1 = Object.keys(/*item*/ ctx[8]);
@@ -24952,14 +24952,14 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(41:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}>",
+    		source: "(43:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (40:0) {#each listFiltered as item, i}
+    // (42:0) {#each listFiltered as item, i}
     function create_each_block(ctx) {
     	let cardunit;
     	let current;
@@ -25018,7 +25018,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(40:0) {#each listFiltered as item, i}",
+    		source: "(42:0) {#each listFiltered as item, i}",
     		ctx
     	});
 
@@ -25183,11 +25183,11 @@ var app = (function () {
 
     	$$self.$$.update = () => {
     		if ($$self.$$.dirty & /*$searchStore*/ 16) {
-    			 $$invalidate(0, listFiltered = listItems.filter(item => item.Tribu
+    			 $$invalidate(0, listFiltered = listItems.filter(item => (item.Tribu
     			? removeAccents(item.Tribu.toLowerCase()).includes(removeAccents($searchStore.toLowerCase()))
-    			: item.Nombre
-    				? removeAccents(item.Nombre.toLowerCase()).includes(removeAccents($searchStore.toLowerCase()))
-    				: listItems));
+    			: listItems) || (item.Nombre
+    			? removeAccents(item.Nombre.toLowerCase()).includes(removeAccents($searchStore.toLowerCase()))
+    			: listItems)));
     		}
 
     		if ($$self.$$.dirty & /*listFiltered*/ 1) {
