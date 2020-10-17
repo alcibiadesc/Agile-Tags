@@ -1466,7 +1466,7 @@ var app = (function () {
     const { Object: Object_1, console: console_1 } = globals;
     const file$2 = "src/components/CardUnit.svelte";
 
-    // (374:16) {#if rol}
+    // (377:16) {#if rol}
     function create_if_block(ctx) {
     	let t0;
     	let span;
@@ -1480,7 +1480,7 @@ var app = (function () {
     			t1 = text(/*rol*/ ctx[3]);
     			t2 = text(".");
     			attr_dev(span, "class", "b svelte-1yiwp32");
-    			add_location(span, file$2, 373, 39, 10247);
+    			add_location(span, file$2, 376, 39, 10262);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1501,7 +1501,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(374:16) {#if rol}",
+    		source: "(377:16) {#if rol}",
     		ctx
     	});
 
@@ -1509,54 +1509,61 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
+    	let h10;
+    	let t1;
+    	let t2;
+    	let t3;
     	let div14;
     	let div11;
     	let div9;
     	let div2;
     	let div0;
-    	let t1;
+    	let t4;
+    	let t5;
     	let svg0;
     	let path0;
     	let path1;
-    	let t2;
-    	let div1;
-    	let t4;
-    	let div8;
-    	let h10;
-    	let t5;
     	let t6;
+    	let div1;
+    	let t7_value = /*scoreFinal*/ ctx[14].toFixed(2) + "";
+    	let t7;
+    	let t8;
+    	let div8;
+    	let h11;
+    	let t9;
+    	let t10;
     	let div3;
     	let button0;
-    	let t8;
+    	let t12;
     	let div4;
     	let button1;
-    	let t10;
+    	let t14;
     	let div7;
     	let div6;
     	let div5;
     	let span0;
     	let a;
-    	let t11_value = (/*email*/ ctx[2] ? /*email*/ ctx[2] : "") + "";
-    	let t11;
-    	let a_href_value;
-    	let t12;
-    	let div10;
-    	let h11;
-    	let t13;
-    	let t14;
-    	let p;
+    	let t15_value = (/*email*/ ctx[2] ? /*email*/ ctx[2] : "") + "";
     	let t15;
-    	let span1;
+    	let a_href_value;
     	let t16;
+    	let div10;
+    	let h12;
     	let t17;
     	let t18;
-    	let div13;
+    	let p;
     	let t19;
+    	let span1;
+    	let t20;
+    	let t21;
+    	let t22;
+    	let div13;
+    	let t23;
     	let div12;
     	let svg1;
     	let path2;
     	let path3;
-    	let t20;
+    	let t24;
     	let div15;
     	let tableresult;
     	let current;
@@ -1581,190 +1588,202 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
+    			h10 = element("h1");
+    			h10.textContent = "Expert All";
+    			t1 = space();
+    			t2 = text(/*expertAll*/ ctx[13]);
+    			t3 = space();
     			div14 = element("div");
     			div11 = element("div");
     			div9 = element("div");
     			div2 = element("div");
     			div0 = element("div");
-    			div0.textContent = `${/*status*/ ctx[15]}`;
-    			t1 = space();
+    			t4 = text(/*status*/ ctx[15]);
+    			t5 = space();
     			svg0 = svg_element("svg");
     			path0 = svg_element("path");
     			path1 = svg_element("path");
-    			t2 = space();
-    			div1 = element("div");
-    			div1.textContent = `${/*scoreFinal*/ ctx[14].toFixed(2)}`;
-    			t4 = space();
-    			div8 = element("div");
-    			h10 = element("h1");
-    			t5 = text(/*name*/ ctx[0]);
     			t6 = space();
+    			div1 = element("div");
+    			t7 = text(t7_value);
+    			t8 = space();
+    			div8 = element("div");
+    			h11 = element("h1");
+    			t9 = text(/*name*/ ctx[0]);
+    			t10 = space();
     			div3 = element("div");
     			button0 = element("button");
     			button0.textContent = "Moderar su cuestionario";
-    			t8 = space();
+    			t12 = space();
     			div4 = element("div");
     			button1 = element("button");
     			button1.textContent = "Ver detalle";
-    			t10 = space();
+    			t14 = space();
     			div7 = element("div");
     			div6 = element("div");
     			div5 = element("div");
     			span0 = element("span");
     			a = element("a");
-    			t11 = text(t11_value);
-    			t12 = space();
+    			t15 = text(t15_value);
+    			t16 = space();
     			div10 = element("div");
-    			h11 = element("h1");
-    			t13 = text(/*name*/ ctx[0]);
-    			t14 = space();
-    			p = element("p");
-    			t15 = text("Pertenece a la tribu\n                ");
-    			span1 = element("span");
-    			t16 = text(/*tribal*/ ctx[1]);
-    			t17 = space();
-    			if (if_block) if_block.c();
+    			h12 = element("h1");
+    			t17 = text(/*name*/ ctx[0]);
     			t18 = space();
+    			p = element("p");
+    			t19 = text("Pertenece a la tribu\n                ");
+    			span1 = element("span");
+    			t20 = text(/*tribal*/ ctx[1]);
+    			t21 = space();
+    			if (if_block) if_block.c();
+    			t22 = space();
     			div13 = element("div");
     			if (default_slot) default_slot.c();
-    			t19 = space();
+    			t23 = space();
     			div12 = element("div");
     			svg1 = svg_element("svg");
     			path2 = svg_element("path");
     			path3 = svg_element("path");
-    			t20 = space();
+    			t24 = space();
     			div15 = element("div");
     			create_component(tableresult.$$.fragment);
+    			add_location(h10, file$2, 315, 0, 7737);
     			attr_dev(div0, "class", "level ma2 w4 svelte-1yiwp32");
-    			add_location(div0, file$2, 323, 16, 8002);
+    			add_location(div0, file$2, 326, 16, 8017);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$2, 331, 34, 8292);
+    			add_location(path0, file$2, 334, 34, 8307);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$2, 332, 20, 8351);
+    			add_location(path1, file$2, 335, 20, 8366);
     			attr_dev(svg0, "class", "mv3 svelte-1yiwp32");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$2, 325, 16, 8060);
+    			add_location(svg0, file$2, 328, 16, 8075);
     			attr_dev(div1, "class", "points ma2 w4  svelte-1yiwp32");
-    			add_location(div1, file$2, 335, 16, 8824);
+    			add_location(div1, file$2, 338, 16, 8839);
     			attr_dev(div2, "class", "user-card mt4 svelte-1yiwp32");
-    			add_location(div2, file$2, 322, 12, 7958);
-    			attr_dev(h10, "class", "f4  svelte-1yiwp32");
-    			add_location(h10, file$2, 338, 16, 8953);
+    			add_location(div2, file$2, 325, 12, 7973);
+    			attr_dev(h11, "class", "f4  svelte-1yiwp32");
+    			add_location(h11, file$2, 341, 16, 8968);
     			attr_dev(button0, "class", "grow mt4 br3");
-    			add_location(button0, file$2, 341, 20, 9024);
-    			add_location(div3, file$2, 340, 16, 8998);
+    			add_location(button0, file$2, 344, 20, 9039);
+    			add_location(div3, file$2, 343, 16, 9013);
     			attr_dev(button1, "class", "grow mt4 br3");
-    			add_location(button1, file$2, 350, 20, 9359);
-    			add_location(div4, file$2, 349, 16, 9333);
+    			add_location(button1, file$2, 353, 20, 9374);
+    			add_location(div4, file$2, 352, 16, 9348);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
     			attr_dev(a, "class", "svelte-1yiwp32");
-    			add_location(a, file$2, 361, 32, 9815);
+    			add_location(a, file$2, 364, 32, 9830);
     			attr_dev(span0, "class", "f6 tr svelte-1yiwp32");
-    			add_location(span0, file$2, 360, 28, 9762);
+    			add_location(span0, file$2, 363, 28, 9777);
     			attr_dev(div5, "class", "tr");
-    			add_location(div5, file$2, 359, 24, 9717);
+    			add_location(div5, file$2, 362, 24, 9732);
     			attr_dev(div6, "class", "svelte-1yiwp32");
-    			add_location(div6, file$2, 358, 20, 9687);
+    			add_location(div6, file$2, 361, 20, 9702);
     			attr_dev(div7, "class", "stats svelte-1yiwp32");
-    			add_location(div7, file$2, 357, 16, 9647);
+    			add_location(div7, file$2, 360, 16, 9662);
     			attr_dev(div8, "class", "more-info svelte-1yiwp32");
-    			add_location(div8, file$2, 337, 12, 8913);
+    			add_location(div8, file$2, 340, 12, 8928);
     			attr_dev(div9, "class", "additional  svelte-1yiwp32");
     			toggle_class(div9, "unCheck", /*isSelected*/ ctx[4]);
-    			add_location(div9, file$2, 321, 8, 7893);
-    			attr_dev(h11, "class", "f4  svelte-1yiwp32");
-    			add_location(h11, file$2, 369, 12, 10068);
+    			add_location(div9, file$2, 324, 8, 7908);
+    			attr_dev(h12, "class", "f4  svelte-1yiwp32");
+    			add_location(h12, file$2, 372, 12, 10083);
     			attr_dev(span1, "class", "b svelte-1yiwp32");
-    			add_location(span1, file$2, 372, 16, 10176);
+    			add_location(span1, file$2, 375, 16, 10191);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$2, 370, 12, 10108);
+    			add_location(p, file$2, 373, 12, 10123);
     			attr_dev(div10, "class", "general svelte-1yiwp32");
-    			add_location(div10, file$2, 368, 8, 10034);
+    			add_location(div10, file$2, 371, 8, 10049);
     			attr_dev(div11, "class", "card svelte-1yiwp32");
-    			add_location(div11, file$2, 316, 4, 7783);
+    			add_location(div11, file$2, 319, 4, 7798);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$2, 390, 30, 10728);
+    			add_location(path2, file$2, 393, 30, 10743);
     			attr_dev(path3, "d", "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z");
-    			add_location(path3, file$2, 391, 16, 10783);
+    			add_location(path3, file$2, 394, 16, 10798);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$2, 385, 12, 10548);
+    			add_location(svg1, file$2, 388, 12, 10563);
     			attr_dev(div12, "class", "float grow  svelte-1yiwp32");
-    			add_location(div12, file$2, 380, 8, 10405);
+    			add_location(div12, file$2, 383, 8, 10420);
     			attr_dev(div13, "class", "tl  svelte-1yiwp32");
     			toggle_class(div13, "invisible", /*hideModerator*/ ctx[6]);
-    			add_location(div13, file$2, 377, 4, 10329);
+    			add_location(div13, file$2, 380, 4, 10344);
     			attr_dev(div14, "class", "centered  svelte-1yiwp32");
-    			add_location(div14, file$2, 315, 0, 7755);
+    			add_location(div14, file$2, 318, 0, 7770);
     			attr_dev(div15, "class", "svelte-1yiwp32");
     			toggle_class(div15, "invisible", /*showChart*/ ctx[5]);
-    			add_location(div15, file$2, 396, 0, 10957);
+    			add_location(div15, file$2, 399, 0, 10972);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
+    			insert_dev(target, h10, anchor);
+    			insert_dev(target, t1, anchor);
+    			insert_dev(target, t2, anchor);
+    			insert_dev(target, t3, anchor);
     			insert_dev(target, div14, anchor);
     			append_dev(div14, div11);
     			append_dev(div11, div9);
     			append_dev(div9, div2);
     			append_dev(div2, div0);
-    			append_dev(div2, t1);
+    			append_dev(div0, t4);
+    			append_dev(div2, t5);
     			append_dev(div2, svg0);
     			append_dev(svg0, path0);
     			append_dev(svg0, path1);
-    			append_dev(div2, t2);
+    			append_dev(div2, t6);
     			append_dev(div2, div1);
-    			append_dev(div9, t4);
+    			append_dev(div1, t7);
+    			append_dev(div9, t8);
     			append_dev(div9, div8);
-    			append_dev(div8, h10);
-    			append_dev(h10, t5);
-    			append_dev(div8, t6);
+    			append_dev(div8, h11);
+    			append_dev(h11, t9);
+    			append_dev(div8, t10);
     			append_dev(div8, div3);
     			append_dev(div3, button0);
-    			append_dev(div8, t8);
+    			append_dev(div8, t12);
     			append_dev(div8, div4);
     			append_dev(div4, button1);
-    			append_dev(div8, t10);
+    			append_dev(div8, t14);
     			append_dev(div8, div7);
     			append_dev(div7, div6);
     			append_dev(div6, div5);
     			append_dev(div5, span0);
     			append_dev(span0, a);
-    			append_dev(a, t11);
-    			append_dev(div11, t12);
+    			append_dev(a, t15);
+    			append_dev(div11, t16);
     			append_dev(div11, div10);
-    			append_dev(div10, h11);
-    			append_dev(h11, t13);
-    			append_dev(div10, t14);
+    			append_dev(div10, h12);
+    			append_dev(h12, t17);
+    			append_dev(div10, t18);
     			append_dev(div10, p);
-    			append_dev(p, t15);
+    			append_dev(p, t19);
     			append_dev(p, span1);
-    			append_dev(span1, t16);
-    			append_dev(p, t17);
+    			append_dev(span1, t20);
+    			append_dev(p, t21);
     			if (if_block) if_block.m(p, null);
-    			append_dev(div14, t18);
+    			append_dev(div14, t22);
     			append_dev(div14, div13);
 
     			if (default_slot) {
     				default_slot.m(div13, null);
     			}
 
-    			append_dev(div13, t19);
+    			append_dev(div13, t23);
     			append_dev(div13, div12);
     			append_dev(div12, svg1);
     			append_dev(svg1, path2);
     			append_dev(svg1, path3);
-    			insert_dev(target, t20, anchor);
+    			insert_dev(target, t24, anchor);
     			insert_dev(target, div15, anchor);
     			mount_component(tableresult, div15, null);
     			current = true;
@@ -1781,8 +1800,11 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (!current || dirty[0] & /*name*/ 1) set_data_dev(t5, /*name*/ ctx[0]);
-    			if ((!current || dirty[0] & /*email*/ 4) && t11_value !== (t11_value = (/*email*/ ctx[2] ? /*email*/ ctx[2] : "") + "")) set_data_dev(t11, t11_value);
+    			if (!current || dirty[0] & /*expertAll*/ 8192) set_data_dev(t2, /*expertAll*/ ctx[13]);
+    			if (!current || dirty[0] & /*status*/ 32768) set_data_dev(t4, /*status*/ ctx[15]);
+    			if ((!current || dirty[0] & /*scoreFinal*/ 16384) && t7_value !== (t7_value = /*scoreFinal*/ ctx[14].toFixed(2) + "")) set_data_dev(t7, t7_value);
+    			if (!current || dirty[0] & /*name*/ 1) set_data_dev(t9, /*name*/ ctx[0]);
+    			if ((!current || dirty[0] & /*email*/ 4) && t15_value !== (t15_value = (/*email*/ ctx[2] ? /*email*/ ctx[2] : "") + "")) set_data_dev(t15, t15_value);
 
     			if (!current || dirty[0] & /*email*/ 4 && a_href_value !== (a_href_value = `mailto:${/*email*/ ctx[2]}`)) {
     				attr_dev(a, "href", a_href_value);
@@ -1792,8 +1814,8 @@ var app = (function () {
     				toggle_class(div9, "unCheck", /*isSelected*/ ctx[4]);
     			}
 
-    			if (!current || dirty[0] & /*name*/ 1) set_data_dev(t13, /*name*/ ctx[0]);
-    			if (!current || dirty[0] & /*tribal*/ 2) set_data_dev(t16, /*tribal*/ ctx[1]);
+    			if (!current || dirty[0] & /*name*/ 1) set_data_dev(t17, /*name*/ ctx[0]);
+    			if (!current || dirty[0] & /*tribal*/ 2) set_data_dev(t20, /*tribal*/ ctx[1]);
 
     			if (/*rol*/ ctx[3]) {
     				if (if_block) {
@@ -1818,6 +1840,16 @@ var app = (function () {
     				toggle_class(div13, "invisible", /*hideModerator*/ ctx[6]);
     			}
 
+    			const tableresult_changes = {};
+    			if (dirty[0] & /*scorePM*/ 128) tableresult_changes.scorePM = /*scorePM*/ ctx[7];
+    			if (dirty[0] & /*scoreCSM*/ 256) tableresult_changes.scoreCSM = /*scoreCSM*/ ctx[8];
+    			if (dirty[0] & /*scorePD*/ 512) tableresult_changes.scorePD = /*scorePD*/ ctx[9];
+    			if (dirty[0] & /*scoreRT*/ 1024) tableresult_changes.scoreRT = /*scoreRT*/ ctx[10];
+    			if (dirty[0] & /*participantAll*/ 2048) tableresult_changes.participantAll = /*participantAll*/ ctx[11];
+    			if (dirty[0] & /*practitionerAll*/ 4096) tableresult_changes.practitionerAll = /*practitionerAll*/ ctx[12];
+    			if (dirty[0] & /*expertAll*/ 8192) tableresult_changes.expertAll = /*expertAll*/ ctx[13];
+    			tableresult.$set(tableresult_changes);
+
     			if (dirty[0] & /*showChart*/ 32) {
     				toggle_class(div15, "invisible", /*showChart*/ ctx[5]);
     			}
@@ -1834,10 +1866,14 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
+    			if (detaching) detach_dev(h10);
+    			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(t2);
+    			if (detaching) detach_dev(t3);
     			if (detaching) detach_dev(div14);
     			if (if_block) if_block.d();
     			if (default_slot) default_slot.d(detaching);
-    			if (detaching) detach_dev(t20);
+    			if (detaching) detach_dev(t24);
     			if (detaching) detach_dev(div15);
     			destroy_component(tableresult);
     			mounted = false;
@@ -1862,19 +1898,13 @@ var app = (function () {
     	validate_store(itemsMaster, "itemsMaster");
     	component_subscribe($$self, itemsMaster, $$value => $$invalidate(26, $itemsMaster = $$value));
     	validate_store(moderateStore, "moderateStore");
-    	component_subscribe($$self, moderateStore, $$value => $$invalidate(27, $moderateStore = $$value));
+    	component_subscribe($$self, moderateStore, $$value => $$invalidate(31, $moderateStore = $$value));
     	let { name } = $$props;
     	let { tribal } = $$props;
     	let { email } = $$props;
     	let { index } = $$props;
     	let { rol } = $$props;
     	let { answers } = $$props;
-    	let userObject = {};
-    	const masterAnswers = $itemsMaster ? $itemsMaster : {};
-    	let key = Object.keys(answers);
-    	let score = 0;
-    	let sizeQuest = key.length; // number of questions define to use the loop.
-    	let sizeQuestMaster = Object.keys(masterAnswers).length;
 
     	// Loop Validate Answers
     	for (let index = 0; index < sizeQuestMaster; index++) {
@@ -1947,18 +1977,6 @@ var app = (function () {
     		return result;
     	};
 
-    	// Product Managment -> "A-"
-    	let scorePM = clusterLevels("A-1", "A-2", "A-3");
-
-    	// Customer And Stakeholder Management -> "B-"
-    	let scoreCSM = clusterLevels("B-1", "B-2", "B-3");
-
-    	// Product Delivery -> "C-"
-    	let scorePD = clusterLevels("C-1", "C-2", "C-3");
-
-    	// Relationship with the team -> "D-"
-    	let scoreRT = clusterLevels("D-1", "D-2", "D-3");
-
     	// change color select unselect
     	const evaluation = (practitioner, expert) => {
     		if (practitioner + expert / 2 >= 0.65 && expert >= 0.75) {
@@ -1970,19 +1988,8 @@ var app = (function () {
     		}
     	};
 
-    	let participantAll = Number((scorePM.participant[0] + scoreCSM.participant[0] + scorePD.participant[0] + scoreRT.participant[0]) / 4);
-    	let practitionerAll = Number((scorePM.practitioner[0] + scoreCSM.practitioner[0] + scorePD.practitioner[0] + scoreRT.practitioner[0]) / 4);
-    	let expertAll = Number((scorePM.expert[0] + scoreCSM.expert[0] + scorePD.expert[0] + scoreRT.expert[0]) / 4);
-
-    	let sumaAllPoints = () => {
-    		let result = participantAll + practitionerAll + expertAll;
-    		return result;
-    	};
-
     	console.log(name + " " + scorePD.expert);
     	sumaAllPoints();
-    	let scoreFinal = sumaAllPoints();
-    	let status = evaluation(participantAll, practitionerAll);
 
     	// Toogle Visibility
     	let isSelected = false;
@@ -2036,31 +2043,31 @@ var app = (function () {
     		index,
     		rol,
     		answers,
+    		findAndFilter,
+    		sumAll,
+    		clusterLevels,
+    		evaluation,
+    		isSelected,
+    		showChart,
+    		hideModerator,
     		userObject,
     		masterAnswers,
+    		$itemsMaster,
     		key,
     		score,
     		sizeQuest,
     		sizeQuestMaster,
-    		findAndFilter,
-    		sumAll,
-    		clusterLevels,
+    		$moderateStore,
     		scorePM,
     		scoreCSM,
     		scorePD,
     		scoreRT,
-    		evaluation,
     		participantAll,
     		practitionerAll,
     		expertAll,
     		sumaAllPoints,
     		scoreFinal,
-    		status,
-    		isSelected,
-    		showChart,
-    		hideModerator,
-    		$itemsMaster,
-    		$moderateStore
+    		status
     	});
 
     	$$self.$inject_state = $$props => {
@@ -2070,12 +2077,16 @@ var app = (function () {
     		if ("index" in $$props) $$invalidate(16, index = $$props.index);
     		if ("rol" in $$props) $$invalidate(3, rol = $$props.rol);
     		if ("answers" in $$props) $$invalidate(17, answers = $$props.answers);
+    		if ("findAndFilter" in $$props) findAndFilter = $$props.findAndFilter;
+    		if ("isSelected" in $$props) $$invalidate(4, isSelected = $$props.isSelected);
+    		if ("showChart" in $$props) $$invalidate(5, showChart = $$props.showChart);
+    		if ("hideModerator" in $$props) $$invalidate(6, hideModerator = $$props.hideModerator);
     		if ("userObject" in $$props) userObject = $$props.userObject;
-    		if ("key" in $$props) key = $$props.key;
+    		if ("masterAnswers" in $$props) $$invalidate(25, masterAnswers = $$props.masterAnswers);
+    		if ("key" in $$props) $$invalidate(27, key = $$props.key);
     		if ("score" in $$props) score = $$props.score;
     		if ("sizeQuest" in $$props) sizeQuest = $$props.sizeQuest;
     		if ("sizeQuestMaster" in $$props) sizeQuestMaster = $$props.sizeQuestMaster;
-    		if ("findAndFilter" in $$props) findAndFilter = $$props.findAndFilter;
     		if ("scorePM" in $$props) $$invalidate(7, scorePM = $$props.scorePM);
     		if ("scoreCSM" in $$props) $$invalidate(8, scoreCSM = $$props.scoreCSM);
     		if ("scorePD" in $$props) $$invalidate(9, scorePD = $$props.scorePD);
@@ -2083,17 +2094,91 @@ var app = (function () {
     		if ("participantAll" in $$props) $$invalidate(11, participantAll = $$props.participantAll);
     		if ("practitionerAll" in $$props) $$invalidate(12, practitionerAll = $$props.practitionerAll);
     		if ("expertAll" in $$props) $$invalidate(13, expertAll = $$props.expertAll);
-    		if ("sumaAllPoints" in $$props) sumaAllPoints = $$props.sumaAllPoints;
+    		if ("sumaAllPoints" in $$props) $$invalidate(32, sumaAllPoints = $$props.sumaAllPoints);
     		if ("scoreFinal" in $$props) $$invalidate(14, scoreFinal = $$props.scoreFinal);
     		if ("status" in $$props) $$invalidate(15, status = $$props.status);
-    		if ("isSelected" in $$props) $$invalidate(4, isSelected = $$props.isSelected);
-    		if ("showChart" in $$props) $$invalidate(5, showChart = $$props.showChart);
-    		if ("hideModerator" in $$props) $$invalidate(6, hideModerator = $$props.hideModerator);
     	};
+
+    	let userObject;
+    	let masterAnswers;
+    	let key;
+    	let score;
+    	let sizeQuest;
+    	let sizeQuestMaster;
+    	let scorePM;
+    	let scoreCSM;
+    	let scorePD;
+    	let scoreRT;
+    	let participantAll;
+    	let practitionerAll;
+    	let expertAll;
+    	let sumaAllPoints;
+    	let scoreFinal;
+    	let status;
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
+
+    	$$self.$$.update = () => {
+    		if ($$self.$$.dirty[0] & /*$itemsMaster*/ 67108864) {
+    			 $$invalidate(25, masterAnswers = $itemsMaster ? $itemsMaster : {});
+    		}
+
+    		if ($$self.$$.dirty[0] & /*answers*/ 131072) {
+    			 $$invalidate(27, key = Object.keys(answers));
+    		}
+
+    		if ($$self.$$.dirty[0] & /*key*/ 134217728) {
+    			 sizeQuest = key.length; // number of questions define to use the loop.
+    		}
+
+    		if ($$self.$$.dirty[0] & /*masterAnswers*/ 33554432) {
+    			 sizeQuestMaster = Object.keys(masterAnswers).length;
+    		}
+
+    		if ($$self.$$.dirty[0] & /*scorePM, scoreCSM, scorePD, scoreRT*/ 1920) {
+    			 $$invalidate(11, participantAll = Number((scorePM.participant[0] + scoreCSM.participant[0] + scorePD.participant[0] + scoreRT.participant[0]) / 4));
+    		}
+
+    		if ($$self.$$.dirty[0] & /*scorePM, scoreCSM, scorePD, scoreRT*/ 1920) {
+    			 $$invalidate(12, practitionerAll = Number((scorePM.practitioner[0] + scoreCSM.practitioner[0] + scorePD.practitioner[0] + scoreRT.practitioner[0]) / 4));
+    		}
+
+    		if ($$self.$$.dirty[0] & /*scorePM, scoreCSM, scorePD, scoreRT*/ 1920) {
+    			 $$invalidate(13, expertAll = Number((scorePM.expert[0] + scoreCSM.expert[0] + scorePD.expert[0] + scoreRT.expert[0]) / 4));
+    		}
+
+    		if ($$self.$$.dirty[0] & /*participantAll, practitionerAll, expertAll*/ 14336) {
+    			 $$invalidate(32, sumaAllPoints = () => {
+    				let result = participantAll + practitionerAll + expertAll;
+    				return result;
+    			});
+    		}
+
+    		if ($$self.$$.dirty[1] & /*sumaAllPoints*/ 2) {
+    			 $$invalidate(14, scoreFinal = sumaAllPoints());
+    		}
+
+    		if ($$self.$$.dirty[0] & /*participantAll, practitionerAll, expertAll*/ 14336) {
+    			 $$invalidate(15, status = evaluation(participantAll, practitionerAll));
+    		}
+    	};
+
+    	 userObject = {};
+    	 score = 0;
+
+    	// Product Managment -> "A-"
+    	 $$invalidate(7, scorePM = clusterLevels("A-1", "A-2", "A-3"));
+
+    	// Customer And Stakeholder Management -> "B-"
+    	 $$invalidate(8, scoreCSM = clusterLevels("B-1", "B-2", "B-3"));
+
+    	// Product Delivery -> "C-"
+    	 $$invalidate(9, scorePD = clusterLevels("C-1", "C-2", "C-3"));
+
+    	// Relationship with the team -> "D-"
+    	 $$invalidate(10, scoreRT = clusterLevels("D-1", "D-2", "D-3"));
 
     	return [
     		name,
