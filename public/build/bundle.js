@@ -885,15 +885,15 @@ var app = (function () {
     	let t8;
     	let t9;
     	let td1;
-    	let t10_value = /*scorePM*/ ctx[0].participant + "";
+    	let t10_value = /*axisA*/ ctx[0].participant + "";
     	let t10;
     	let t11;
     	let td2;
-    	let t12_value = /*scorePM*/ ctx[0].practitioner + "";
+    	let t12_value = /*axisA*/ ctx[0].practitioner + "";
     	let t12;
     	let t13;
     	let td3;
-    	let t14_value = /*scorePM*/ ctx[0].expert + "";
+    	let t14_value = /*axisA*/ ctx[0].expert + "";
     	let t14;
     	let t15;
     	let tr2;
@@ -902,15 +902,15 @@ var app = (function () {
     	let t16;
     	let t17;
     	let td5;
-    	let t18_value = /*scoreCSM*/ ctx[1].participant + "";
+    	let t18_value = /*axisB*/ ctx[1].participant + "";
     	let t18;
     	let t19;
     	let td6;
-    	let t20_value = /*scoreCSM*/ ctx[1].practitioner + "";
+    	let t20_value = /*axisB*/ ctx[1].practitioner + "";
     	let t20;
     	let t21;
     	let td7;
-    	let t22_value = /*scoreCSM*/ ctx[1].expert + "";
+    	let t22_value = /*axisB*/ ctx[1].expert + "";
     	let t22;
     	let t23;
     	let tr3;
@@ -919,15 +919,15 @@ var app = (function () {
     	let t24;
     	let t25;
     	let td9;
-    	let t26_value = /*scorePD*/ ctx[2].participant + "";
+    	let t26_value = /*axisC*/ ctx[2].participant + "";
     	let t26;
     	let t27;
     	let td10;
-    	let t28_value = /*scorePD*/ ctx[2].practitioner + "";
+    	let t28_value = /*axisC*/ ctx[2].practitioner + "";
     	let t28;
     	let t29;
     	let td11;
-    	let t30_value = /*scorePD*/ ctx[2].expert + "";
+    	let t30_value = /*axisC*/ ctx[2].expert + "";
     	let t30;
     	let t31;
     	let tr4;
@@ -936,15 +936,15 @@ var app = (function () {
     	let t32;
     	let t33;
     	let td13;
-    	let t34_value = /*scoreRT*/ ctx[3].participant + "";
+    	let t34_value = /*axisD*/ ctx[3].participant + "";
     	let t34;
     	let t35;
     	let td14;
-    	let t36_value = /*scoreRT*/ ctx[3].practitioner + "";
+    	let t36_value = /*axisD*/ ctx[3].practitioner + "";
     	let t36;
     	let t37;
     	let td15;
-    	let t38_value = /*scoreRT*/ ctx[3].expert + "";
+    	let t38_value = /*axisD*/ ctx[3].expert + "";
     	let t38;
     	let t39;
     	let tr5;
@@ -1058,83 +1058,83 @@ var app = (function () {
     			strong6 = element("strong");
     			t46 = text(t46_value);
     			attr_dev(th0, "class", "fw6 tc pa3 bg-white");
-    			add_location(th0, file$1, 23, 20, 607);
-    			add_location(strong0, file$1, 25, 24, 726);
+    			add_location(th0, file$1, 23, 20, 598);
+    			add_location(strong0, file$1, 25, 24, 717);
     			attr_dev(th1, "class", "fw6 tc pa3 bg-white");
-    			add_location(th1, file$1, 24, 20, 669);
-    			add_location(strong1, file$1, 28, 24, 858);
+    			add_location(th1, file$1, 24, 20, 660);
+    			add_location(strong1, file$1, 28, 24, 849);
     			attr_dev(th2, "class", "fw6 tc pa3 bg-white");
-    			add_location(th2, file$1, 27, 20, 801);
-    			add_location(strong2, file$1, 30, 52, 966);
+    			add_location(th2, file$1, 27, 20, 792);
+    			add_location(strong2, file$1, 30, 52, 957);
     			attr_dev(th3, "class", "fw6 tc pa3 bg-white");
-    			add_location(th3, file$1, 30, 20, 934);
+    			add_location(th3, file$1, 30, 20, 925);
     			attr_dev(tr0, "class", "stripe-dark ");
-    			add_location(tr0, file$1, 22, 16, 561);
+    			add_location(tr0, file$1, 22, 16, 552);
     			attr_dev(thead, "class", "");
-    			add_location(thead, file$1, 21, 12, 528);
+    			add_location(thead, file$1, 21, 12, 519);
     			attr_dev(td0, "class", "pa3");
-    			add_location(td0, file$1, 35, 20, 1138);
+    			add_location(td0, file$1, 35, 20, 1129);
     			attr_dev(td1, "class", "pa3");
-    			add_location(td1, file$1, 36, 20, 1188);
+    			add_location(td1, file$1, 36, 20, 1179);
     			attr_dev(td2, "class", "pa3");
-    			add_location(td2, file$1, 37, 20, 1251);
+    			add_location(td2, file$1, 37, 20, 1240);
     			attr_dev(td3, "class", "pa3");
-    			add_location(td3, file$1, 38, 20, 1315);
+    			add_location(td3, file$1, 38, 20, 1302);
     			attr_dev(tr1, "class", "stripe-dark");
-    			add_location(tr1, file$1, 34, 16, 1093);
+    			add_location(tr1, file$1, 34, 16, 1084);
     			attr_dev(td4, "class", "pa3");
-    			add_location(td4, file$1, 41, 20, 1436);
+    			add_location(td4, file$1, 41, 20, 1421);
     			attr_dev(td5, "class", "pa3");
-    			add_location(td5, file$1, 42, 20, 1486);
+    			add_location(td5, file$1, 42, 20, 1471);
     			attr_dev(td6, "class", "pa3");
-    			add_location(td6, file$1, 43, 20, 1550);
+    			add_location(td6, file$1, 43, 20, 1532);
     			attr_dev(td7, "class", "pa3");
-    			add_location(td7, file$1, 44, 20, 1615);
+    			add_location(td7, file$1, 44, 20, 1594);
     			attr_dev(tr2, "class", "stripe-dark");
-    			add_location(tr2, file$1, 40, 16, 1391);
+    			add_location(tr2, file$1, 40, 16, 1376);
     			attr_dev(td8, "class", "pa3");
-    			add_location(td8, file$1, 47, 20, 1737);
+    			add_location(td8, file$1, 47, 20, 1713);
     			attr_dev(td9, "class", "pa3");
-    			add_location(td9, file$1, 48, 20, 1787);
+    			add_location(td9, file$1, 48, 20, 1763);
     			attr_dev(td10, "class", "pa3");
-    			add_location(td10, file$1, 49, 20, 1850);
+    			add_location(td10, file$1, 49, 20, 1824);
     			attr_dev(td11, "class", "pa3");
-    			add_location(td11, file$1, 50, 20, 1914);
+    			add_location(td11, file$1, 50, 20, 1886);
     			attr_dev(tr3, "class", "stripe-dark");
-    			add_location(tr3, file$1, 46, 16, 1692);
+    			add_location(tr3, file$1, 46, 16, 1668);
     			attr_dev(td12, "class", "pa3");
-    			add_location(td12, file$1, 53, 20, 2035);
+    			add_location(td12, file$1, 53, 20, 2005);
     			attr_dev(td13, "class", "pa3");
-    			add_location(td13, file$1, 54, 20, 2085);
+    			add_location(td13, file$1, 54, 20, 2055);
     			attr_dev(td14, "class", "pa3");
-    			add_location(td14, file$1, 55, 20, 2148);
+    			add_location(td14, file$1, 55, 20, 2116);
     			attr_dev(td15, "class", "pa3");
-    			add_location(td15, file$1, 56, 20, 2212);
+    			add_location(td15, file$1, 56, 20, 2178);
     			attr_dev(tr4, "class", "stripe-dark");
-    			add_location(tr4, file$1, 52, 16, 1990);
-    			add_location(strong3, file$1, 59, 36, 2349);
+    			add_location(tr4, file$1, 52, 16, 1960);
+    			add_location(strong3, file$1, 59, 36, 2313);
     			attr_dev(td16, "class", "pa3");
-    			add_location(td16, file$1, 59, 20, 2333);
-    			add_location(strong4, file$1, 61, 24, 2442);
+    			add_location(td16, file$1, 59, 20, 2297);
+    			add_location(strong4, file$1, 61, 24, 2406);
     			attr_dev(td17, "class", "pa3");
-    			add_location(td17, file$1, 60, 20, 2401);
-    			add_location(strong5, file$1, 64, 24, 2574);
+    			add_location(td17, file$1, 60, 20, 2365);
+    			add_location(strong5, file$1, 64, 24, 2538);
     			attr_dev(td18, "class", "pa3");
-    			add_location(td18, file$1, 63, 20, 2533);
-    			add_location(strong6, file$1, 66, 36, 2682);
+    			add_location(td18, file$1, 63, 20, 2497);
+    			add_location(strong6, file$1, 66, 36, 2646);
     			attr_dev(td19, "class", "pa3");
-    			add_location(td19, file$1, 66, 20, 2666);
+    			add_location(td19, file$1, 66, 20, 2630);
     			attr_dev(tr5, "class", "stripe-dark");
-    			add_location(tr5, file$1, 58, 16, 2288);
+    			add_location(tr5, file$1, 58, 16, 2252);
     			attr_dev(tbody, "class", "lh-copy tc");
-    			add_location(tbody, file$1, 33, 12, 1050);
+    			add_location(tbody, file$1, 33, 12, 1041);
     			attr_dev(table, "class", "f6 w-80 mw8 center bg-white ma2 shadow-5 br3");
     			attr_dev(table, "cellspacing", "0");
-    			add_location(table, file$1, 18, 8, 415);
+    			add_location(table, file$1, 18, 8, 406);
     			attr_dev(div0, "class", "overflow-auto");
-    			add_location(div0, file$1, 17, 4, 379);
+    			add_location(div0, file$1, 17, 4, 370);
     			attr_dev(div1, "class", "mb4 pb3 pt0 mt0 topindex");
-    			add_location(div1, file$1, 16, 0, 336);
+    			add_location(div1, file$1, 16, 0, 327);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1227,21 +1227,21 @@ var app = (function () {
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*tag*/ 128 && t8_value !== (t8_value = /*tag*/ ctx[7][0] + "")) set_data_dev(t8, t8_value);
-    			if (dirty & /*scorePM*/ 1 && t10_value !== (t10_value = /*scorePM*/ ctx[0].participant + "")) set_data_dev(t10, t10_value);
-    			if (dirty & /*scorePM*/ 1 && t12_value !== (t12_value = /*scorePM*/ ctx[0].practitioner + "")) set_data_dev(t12, t12_value);
-    			if (dirty & /*scorePM*/ 1 && t14_value !== (t14_value = /*scorePM*/ ctx[0].expert + "")) set_data_dev(t14, t14_value);
+    			if (dirty & /*axisA*/ 1 && t10_value !== (t10_value = /*axisA*/ ctx[0].participant + "")) set_data_dev(t10, t10_value);
+    			if (dirty & /*axisA*/ 1 && t12_value !== (t12_value = /*axisA*/ ctx[0].practitioner + "")) set_data_dev(t12, t12_value);
+    			if (dirty & /*axisA*/ 1 && t14_value !== (t14_value = /*axisA*/ ctx[0].expert + "")) set_data_dev(t14, t14_value);
     			if (dirty & /*tag*/ 128 && t16_value !== (t16_value = /*tag*/ ctx[7][1] + "")) set_data_dev(t16, t16_value);
-    			if (dirty & /*scoreCSM*/ 2 && t18_value !== (t18_value = /*scoreCSM*/ ctx[1].participant + "")) set_data_dev(t18, t18_value);
-    			if (dirty & /*scoreCSM*/ 2 && t20_value !== (t20_value = /*scoreCSM*/ ctx[1].practitioner + "")) set_data_dev(t20, t20_value);
-    			if (dirty & /*scoreCSM*/ 2 && t22_value !== (t22_value = /*scoreCSM*/ ctx[1].expert + "")) set_data_dev(t22, t22_value);
+    			if (dirty & /*axisB*/ 2 && t18_value !== (t18_value = /*axisB*/ ctx[1].participant + "")) set_data_dev(t18, t18_value);
+    			if (dirty & /*axisB*/ 2 && t20_value !== (t20_value = /*axisB*/ ctx[1].practitioner + "")) set_data_dev(t20, t20_value);
+    			if (dirty & /*axisB*/ 2 && t22_value !== (t22_value = /*axisB*/ ctx[1].expert + "")) set_data_dev(t22, t22_value);
     			if (dirty & /*tag*/ 128 && t24_value !== (t24_value = /*tag*/ ctx[7][2] + "")) set_data_dev(t24, t24_value);
-    			if (dirty & /*scorePD*/ 4 && t26_value !== (t26_value = /*scorePD*/ ctx[2].participant + "")) set_data_dev(t26, t26_value);
-    			if (dirty & /*scorePD*/ 4 && t28_value !== (t28_value = /*scorePD*/ ctx[2].practitioner + "")) set_data_dev(t28, t28_value);
-    			if (dirty & /*scorePD*/ 4 && t30_value !== (t30_value = /*scorePD*/ ctx[2].expert + "")) set_data_dev(t30, t30_value);
+    			if (dirty & /*axisC*/ 4 && t26_value !== (t26_value = /*axisC*/ ctx[2].participant + "")) set_data_dev(t26, t26_value);
+    			if (dirty & /*axisC*/ 4 && t28_value !== (t28_value = /*axisC*/ ctx[2].practitioner + "")) set_data_dev(t28, t28_value);
+    			if (dirty & /*axisC*/ 4 && t30_value !== (t30_value = /*axisC*/ ctx[2].expert + "")) set_data_dev(t30, t30_value);
     			if (dirty & /*tag*/ 128 && t32_value !== (t32_value = /*tag*/ ctx[7][3] + "")) set_data_dev(t32, t32_value);
-    			if (dirty & /*scoreRT*/ 8 && t34_value !== (t34_value = /*scoreRT*/ ctx[3].participant + "")) set_data_dev(t34, t34_value);
-    			if (dirty & /*scoreRT*/ 8 && t36_value !== (t36_value = /*scoreRT*/ ctx[3].practitioner + "")) set_data_dev(t36, t36_value);
-    			if (dirty & /*scoreRT*/ 8 && t38_value !== (t38_value = /*scoreRT*/ ctx[3].expert + "")) set_data_dev(t38, t38_value);
+    			if (dirty & /*axisD*/ 8 && t34_value !== (t34_value = /*axisD*/ ctx[3].participant + "")) set_data_dev(t34, t34_value);
+    			if (dirty & /*axisD*/ 8 && t36_value !== (t36_value = /*axisD*/ ctx[3].practitioner + "")) set_data_dev(t36, t36_value);
+    			if (dirty & /*axisD*/ 8 && t38_value !== (t38_value = /*axisD*/ ctx[3].expert + "")) set_data_dev(t38, t38_value);
     			if (dirty & /*participantAll*/ 16 && t42_value !== (t42_value = /*participantAll*/ ctx[4].toFixed(2) + "")) set_data_dev(t42, t42_value);
     			if (dirty & /*practitionerAll*/ 32 && t44_value !== (t44_value = /*practitionerAll*/ ctx[5].toFixed(2) + "")) set_data_dev(t44, t44_value);
     			if (dirty & /*expertAll*/ 64 && t46_value !== (t46_value = /*expertAll*/ ctx[6].toFixed(2) + "")) set_data_dev(t46, t46_value);
@@ -1268,19 +1268,19 @@ var app = (function () {
     	let $axisStore;
     	validate_store(axisStore, "axisStore");
     	component_subscribe($$self, axisStore, $$value => $$invalidate(8, $axisStore = $$value));
-    	let { scorePM } = $$props;
-    	let { scoreCSM } = $$props;
-    	let { scorePD } = $$props;
-    	let { scoreRT } = $$props;
+    	let { axisA } = $$props;
+    	let { axisB } = $$props;
+    	let { axisC } = $$props;
+    	let { axisD } = $$props;
     	let { participantAll } = $$props;
     	let { practitionerAll } = $$props;
     	let { expertAll } = $$props;
 
     	const writable_props = [
-    		"scorePM",
-    		"scoreCSM",
-    		"scorePD",
-    		"scoreRT",
+    		"axisA",
+    		"axisB",
+    		"axisC",
+    		"axisD",
     		"participantAll",
     		"practitionerAll",
     		"expertAll"
@@ -1294,10 +1294,10 @@ var app = (function () {
     	validate_slots("TableResult", $$slots, []);
 
     	$$self.$set = $$props => {
-    		if ("scorePM" in $$props) $$invalidate(0, scorePM = $$props.scorePM);
-    		if ("scoreCSM" in $$props) $$invalidate(1, scoreCSM = $$props.scoreCSM);
-    		if ("scorePD" in $$props) $$invalidate(2, scorePD = $$props.scorePD);
-    		if ("scoreRT" in $$props) $$invalidate(3, scoreRT = $$props.scoreRT);
+    		if ("axisA" in $$props) $$invalidate(0, axisA = $$props.axisA);
+    		if ("axisB" in $$props) $$invalidate(1, axisB = $$props.axisB);
+    		if ("axisC" in $$props) $$invalidate(2, axisC = $$props.axisC);
+    		if ("axisD" in $$props) $$invalidate(3, axisD = $$props.axisD);
     		if ("participantAll" in $$props) $$invalidate(4, participantAll = $$props.participantAll);
     		if ("practitionerAll" in $$props) $$invalidate(5, practitionerAll = $$props.practitionerAll);
     		if ("expertAll" in $$props) $$invalidate(6, expertAll = $$props.expertAll);
@@ -1306,10 +1306,10 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		axisStore,
     		all,
-    		scorePM,
-    		scoreCSM,
-    		scorePD,
-    		scoreRT,
+    		axisA,
+    		axisB,
+    		axisC,
+    		axisD,
     		participantAll,
     		practitionerAll,
     		expertAll,
@@ -1318,10 +1318,10 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("scorePM" in $$props) $$invalidate(0, scorePM = $$props.scorePM);
-    		if ("scoreCSM" in $$props) $$invalidate(1, scoreCSM = $$props.scoreCSM);
-    		if ("scorePD" in $$props) $$invalidate(2, scorePD = $$props.scorePD);
-    		if ("scoreRT" in $$props) $$invalidate(3, scoreRT = $$props.scoreRT);
+    		if ("axisA" in $$props) $$invalidate(0, axisA = $$props.axisA);
+    		if ("axisB" in $$props) $$invalidate(1, axisB = $$props.axisB);
+    		if ("axisC" in $$props) $$invalidate(2, axisC = $$props.axisC);
+    		if ("axisD" in $$props) $$invalidate(3, axisD = $$props.axisD);
     		if ("participantAll" in $$props) $$invalidate(4, participantAll = $$props.participantAll);
     		if ("practitionerAll" in $$props) $$invalidate(5, practitionerAll = $$props.practitionerAll);
     		if ("expertAll" in $$props) $$invalidate(6, expertAll = $$props.expertAll);
@@ -1340,16 +1340,7 @@ var app = (function () {
     		}
     	};
 
-    	return [
-    		scorePM,
-    		scoreCSM,
-    		scorePD,
-    		scoreRT,
-    		participantAll,
-    		practitionerAll,
-    		expertAll,
-    		tag
-    	];
+    	return [axisA, axisB, axisC, axisD, participantAll, practitionerAll, expertAll, tag];
     }
 
     class TableResult extends SvelteComponentDev {
@@ -1357,10 +1348,10 @@ var app = (function () {
     		super(options);
 
     		init(this, options, instance$1, create_fragment$1, safe_not_equal, {
-    			scorePM: 0,
-    			scoreCSM: 1,
-    			scorePD: 2,
-    			scoreRT: 3,
+    			axisA: 0,
+    			axisB: 1,
+    			axisC: 2,
+    			axisD: 3,
     			participantAll: 4,
     			practitionerAll: 5,
     			expertAll: 6
@@ -1376,20 +1367,20 @@ var app = (function () {
     		const { ctx } = this.$$;
     		const props = options.props || {};
 
-    		if (/*scorePM*/ ctx[0] === undefined && !("scorePM" in props)) {
-    			console.warn("<TableResult> was created without expected prop 'scorePM'");
+    		if (/*axisA*/ ctx[0] === undefined && !("axisA" in props)) {
+    			console.warn("<TableResult> was created without expected prop 'axisA'");
     		}
 
-    		if (/*scoreCSM*/ ctx[1] === undefined && !("scoreCSM" in props)) {
-    			console.warn("<TableResult> was created without expected prop 'scoreCSM'");
+    		if (/*axisB*/ ctx[1] === undefined && !("axisB" in props)) {
+    			console.warn("<TableResult> was created without expected prop 'axisB'");
     		}
 
-    		if (/*scorePD*/ ctx[2] === undefined && !("scorePD" in props)) {
-    			console.warn("<TableResult> was created without expected prop 'scorePD'");
+    		if (/*axisC*/ ctx[2] === undefined && !("axisC" in props)) {
+    			console.warn("<TableResult> was created without expected prop 'axisC'");
     		}
 
-    		if (/*scoreRT*/ ctx[3] === undefined && !("scoreRT" in props)) {
-    			console.warn("<TableResult> was created without expected prop 'scoreRT'");
+    		if (/*axisD*/ ctx[3] === undefined && !("axisD" in props)) {
+    			console.warn("<TableResult> was created without expected prop 'axisD'");
     		}
 
     		if (/*participantAll*/ ctx[4] === undefined && !("participantAll" in props)) {
@@ -1405,35 +1396,35 @@ var app = (function () {
     		}
     	}
 
-    	get scorePM() {
+    	get axisA() {
     		throw new Error("<TableResult>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set scorePM(value) {
+    	set axisA(value) {
     		throw new Error("<TableResult>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get scoreCSM() {
+    	get axisB() {
     		throw new Error("<TableResult>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set scoreCSM(value) {
+    	set axisB(value) {
     		throw new Error("<TableResult>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get scorePD() {
+    	get axisC() {
     		throw new Error("<TableResult>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set scorePD(value) {
+    	set axisC(value) {
     		throw new Error("<TableResult>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	get scoreRT() {
+    	get axisD() {
     		throw new Error("<TableResult>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
-    	set scoreRT(value) {
+    	set axisD(value) {
     		throw new Error("<TableResult>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
 
@@ -1511,7 +1502,7 @@ var app = (function () {
     			t1 = text(/*rol*/ ctx[3]);
     			t2 = text(".");
     			attr_dev(span, "class", "b svelte-1iw5nkm");
-    			add_location(span, file$2, 373, 39, 10253);
+    			add_location(span, file$2, 373, 39, 10215);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1599,10 +1590,10 @@ var app = (function () {
 
     	tableresult = new TableResult({
     			props: {
-    				scorePM: /*scorePM*/ ctx[7],
-    				scoreCSM: /*scoreCSM*/ ctx[8],
-    				scorePD: /*scorePD*/ ctx[9],
-    				scoreRT: /*scoreRT*/ ctx[10],
+    				axisA: /*axisA*/ ctx[7],
+    				axisB: /*axisB*/ ctx[8],
+    				axisC: /*axisC*/ ctx[9],
+    				axisD: /*axisD*/ ctx[10],
     				participantAll: /*participantAll*/ ctx[11],
     				practitionerAll: /*practitionerAll*/ ctx[12],
     				expertAll: /*expertAll*/ ctx[13]
@@ -1667,78 +1658,78 @@ var app = (function () {
     			div15 = element("div");
     			create_component(tableresult.$$.fragment);
     			attr_dev(div0, "class", "level ma2 w4 svelte-1iw5nkm");
-    			add_location(div0, file$2, 323, 16, 8008);
+    			add_location(div0, file$2, 323, 16, 7970);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$2, 331, 34, 8298);
+    			add_location(path0, file$2, 331, 34, 8260);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$2, 332, 20, 8357);
+    			add_location(path1, file$2, 332, 20, 8319);
     			attr_dev(svg0, "class", "mv3 svelte-1iw5nkm");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$2, 325, 16, 8066);
+    			add_location(svg0, file$2, 325, 16, 8028);
     			attr_dev(div1, "class", "points ma2 w4  svelte-1iw5nkm");
-    			add_location(div1, file$2, 335, 16, 8830);
+    			add_location(div1, file$2, 335, 16, 8792);
     			attr_dev(div2, "class", "user-card mt4 svelte-1iw5nkm");
-    			add_location(div2, file$2, 322, 12, 7964);
+    			add_location(div2, file$2, 322, 12, 7926);
     			attr_dev(h10, "class", "f4  svelte-1iw5nkm");
-    			add_location(h10, file$2, 338, 16, 8959);
+    			add_location(h10, file$2, 338, 16, 8921);
     			attr_dev(button0, "class", "grow mt4 br3");
-    			add_location(button0, file$2, 341, 20, 9030);
-    			add_location(div3, file$2, 340, 16, 9004);
+    			add_location(button0, file$2, 341, 20, 8992);
+    			add_location(div3, file$2, 340, 16, 8966);
     			attr_dev(button1, "class", "grow mt4 br3");
-    			add_location(button1, file$2, 350, 20, 9365);
-    			add_location(div4, file$2, 349, 16, 9339);
+    			add_location(button1, file$2, 350, 20, 9327);
+    			add_location(div4, file$2, 349, 16, 9301);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
     			attr_dev(a, "class", "svelte-1iw5nkm");
-    			add_location(a, file$2, 361, 32, 9821);
+    			add_location(a, file$2, 361, 32, 9783);
     			attr_dev(span0, "class", "f6 tr svelte-1iw5nkm");
-    			add_location(span0, file$2, 360, 28, 9768);
+    			add_location(span0, file$2, 360, 28, 9730);
     			attr_dev(div5, "class", "tr");
-    			add_location(div5, file$2, 359, 24, 9723);
+    			add_location(div5, file$2, 359, 24, 9685);
     			attr_dev(div6, "class", "svelte-1iw5nkm");
-    			add_location(div6, file$2, 358, 20, 9693);
+    			add_location(div6, file$2, 358, 20, 9655);
     			attr_dev(div7, "class", "stats svelte-1iw5nkm");
-    			add_location(div7, file$2, 357, 16, 9653);
+    			add_location(div7, file$2, 357, 16, 9615);
     			attr_dev(div8, "class", "more-info svelte-1iw5nkm");
-    			add_location(div8, file$2, 337, 12, 8919);
+    			add_location(div8, file$2, 337, 12, 8881);
     			attr_dev(div9, "class", "additional  svelte-1iw5nkm");
     			toggle_class(div9, "unCheck", /*isSelected*/ ctx[4]);
-    			add_location(div9, file$2, 321, 8, 7899);
+    			add_location(div9, file$2, 321, 8, 7861);
     			attr_dev(h11, "class", "f4  svelte-1iw5nkm");
-    			add_location(h11, file$2, 369, 12, 10074);
+    			add_location(h11, file$2, 369, 12, 10036);
     			attr_dev(span1, "class", "b svelte-1iw5nkm");
-    			add_location(span1, file$2, 372, 16, 10182);
+    			add_location(span1, file$2, 372, 16, 10144);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$2, 370, 12, 10114);
+    			add_location(p, file$2, 370, 12, 10076);
     			attr_dev(div10, "class", "general svelte-1iw5nkm");
-    			add_location(div10, file$2, 368, 8, 10040);
+    			add_location(div10, file$2, 368, 8, 10002);
     			attr_dev(div11, "class", "card svelte-1iw5nkm");
-    			add_location(div11, file$2, 316, 4, 7789);
+    			add_location(div11, file$2, 316, 4, 7751);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$2, 391, 30, 10780);
+    			add_location(path2, file$2, 391, 30, 10742);
     			attr_dev(path3, "d", "M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z");
-    			add_location(path3, file$2, 392, 16, 10835);
+    			add_location(path3, file$2, 392, 16, 10797);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$2, 386, 12, 10600);
+    			add_location(svg1, file$2, 386, 12, 10562);
     			attr_dev(div12, "class", "float-btn grow  svelte-1iw5nkm");
-    			add_location(div12, file$2, 380, 8, 10411);
+    			add_location(div12, file$2, 380, 8, 10373);
     			attr_dev(div13, "class", "tl  svelte-1iw5nkm");
     			toggle_class(div13, "invisible", /*hideModerator*/ ctx[6]);
-    			add_location(div13, file$2, 377, 4, 10335);
+    			add_location(div13, file$2, 377, 4, 10297);
     			attr_dev(div14, "class", "centered  svelte-1iw5nkm");
-    			add_location(div14, file$2, 315, 0, 7761);
+    			add_location(div14, file$2, 315, 0, 7723);
     			attr_dev(div15, "class", "svelte-1iw5nkm");
     			toggle_class(div15, "invisible", /*showChart*/ ctx[5]);
-    			add_location(div15, file$2, 397, 0, 11050);
+    			add_location(div15, file$2, 397, 0, 11012);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1979,16 +1970,16 @@ var app = (function () {
     	};
 
     	// Product Managment -> "A-"
-    	let scorePM = clusterLevels("A-1", "A-2", "A-3");
+    	let axisA = clusterLevels("A-1", "A-2", "A-3");
 
     	// Customer And Stakeholder Management -> "B-"
-    	let scoreCSM = clusterLevels("B-1", "B-2", "B-3");
+    	let axisB = clusterLevels("B-1", "B-2", "B-3");
 
     	// Product Delivery -> "C-"
-    	let scorePD = clusterLevels("C-1", "C-2", "C-3");
+    	let axisC = clusterLevels("C-1", "C-2", "C-3");
 
     	// Relationship with the team -> "D-"
-    	let scoreRT = clusterLevels("D-1", "D-2", "D-3");
+    	let axisD = clusterLevels("D-1", "D-2", "D-3");
 
     	// change color select unselect
     	const evaluation = (practitioner, expert) => {
@@ -2001,16 +1992,16 @@ var app = (function () {
     		}
     	};
 
-    	let participantAll = Number((scorePM.participant[0] + scoreCSM.participant[0] + scorePD.participant[0] + scoreRT.participant[0]) / 4);
-    	let practitionerAll = Number((scorePM.practitioner[0] + scoreCSM.practitioner[0] + scorePD.practitioner[0] + scoreRT.practitioner[0]) / 4);
-    	let expertAll = Number((scorePM.expert[0] + scoreCSM.expert[0] + scorePD.expert[0] + scoreRT.expert[0]) / 4);
+    	let participantAll = Number((axisA.participant[0] + axisB.participant[0] + axisC.participant[0] + axisD.participant[0]) / 4);
+    	let practitionerAll = Number((axisA.practitioner[0] + axisB.practitioner[0] + axisC.practitioner[0] + axisD.practitioner[0]) / 4);
+    	let expertAll = Number((axisA.expert[0] + axisB.expert[0] + axisC.expert[0] + axisD.expert[0]) / 4);
 
     	let sumaAllPoints = () => {
     		let result = participantAll + practitionerAll + expertAll;
     		return result;
     	};
 
-    	console.log(name + " " + scorePD.expert);
+    	console.log(name + " " + axisC.expert);
     	sumaAllPoints();
     	let scoreFinal = sumaAllPoints();
     	let status = evaluation(participantAll, practitionerAll);
@@ -2077,10 +2068,10 @@ var app = (function () {
     		findAndFilter,
     		sumAll,
     		clusterLevels,
-    		scorePM,
-    		scoreCSM,
-    		scorePD,
-    		scoreRT,
+    		axisA,
+    		axisB,
+    		axisC,
+    		axisD,
     		evaluation,
     		participantAll,
     		practitionerAll,
@@ -2107,10 +2098,10 @@ var app = (function () {
     		if ("score" in $$props) score = $$props.score;
     		if ("sizeQuest" in $$props) sizeQuest = $$props.sizeQuest;
     		if ("sizeQuestMaster" in $$props) sizeQuestMaster = $$props.sizeQuestMaster;
-    		if ("scorePM" in $$props) $$invalidate(7, scorePM = $$props.scorePM);
-    		if ("scoreCSM" in $$props) $$invalidate(8, scoreCSM = $$props.scoreCSM);
-    		if ("scorePD" in $$props) $$invalidate(9, scorePD = $$props.scorePD);
-    		if ("scoreRT" in $$props) $$invalidate(10, scoreRT = $$props.scoreRT);
+    		if ("axisA" in $$props) $$invalidate(7, axisA = $$props.axisA);
+    		if ("axisB" in $$props) $$invalidate(8, axisB = $$props.axisB);
+    		if ("axisC" in $$props) $$invalidate(9, axisC = $$props.axisC);
+    		if ("axisD" in $$props) $$invalidate(10, axisD = $$props.axisD);
     		if ("participantAll" in $$props) $$invalidate(11, participantAll = $$props.participantAll);
     		if ("practitionerAll" in $$props) $$invalidate(12, practitionerAll = $$props.practitionerAll);
     		if ("expertAll" in $$props) $$invalidate(13, expertAll = $$props.expertAll);
@@ -2134,10 +2125,10 @@ var app = (function () {
     		isSelected,
     		showChart,
     		hideModerator,
-    		scorePM,
-    		scoreCSM,
-    		scorePD,
-    		scoreRT,
+    		axisA,
+    		axisB,
+    		axisC,
+    		axisD,
     		participantAll,
     		practitionerAll,
     		expertAll,
@@ -36264,7 +36255,7 @@ var app = (function () {
     			t3 = space();
     			div1 = element("div");
     			p = element("p");
-    			p.textContent = "¿A qué rol le pertence?";
+    			p.textContent = "¿A qué rol le pertenece?";
     			t5 = space();
     			select = element("select");
     			option0 = element("option");
@@ -36290,21 +36281,21 @@ var app = (function () {
     			add_location(p, file$9, 132, 8, 3046);
     			option0.__value = "productOwner";
     			option0.value = option0.__value;
-    			add_location(option0, file$9, 134, 12, 3154);
+    			add_location(option0, file$9, 134, 12, 3155);
     			option1.__value = "scrumMaster";
     			option1.value = option1.__value;
-    			add_location(option1, file$9, 135, 12, 3218);
+    			add_location(option1, file$9, 135, 12, 3219);
     			attr_dev(select, "name", "roles");
     			attr_dev(select, "id", "roles");
     			if (/*$axisStore*/ ctx[2] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[5].call(select));
-    			add_location(select, file$9, 133, 8, 3085);
+    			add_location(select, file$9, 133, 8, 3086);
     			add_location(div1, file$9, 131, 4, 3032);
     			attr_dev(button1, "class", "aceptar svelte-13mz6nd");
-    			add_location(button1, file$9, 139, 8, 3328);
+    			add_location(button1, file$9, 139, 8, 3329);
     			attr_dev(button2, "class", "cancel svelte-13mz6nd");
-    			add_location(button2, file$9, 148, 8, 3539);
+    			add_location(button2, file$9, 148, 8, 3540);
     			attr_dev(div2, "class", " mt3");
-    			add_location(div2, file$9, 138, 4, 3301);
+    			add_location(div2, file$9, 138, 4, 3302);
     			attr_dev(dialog, "class", "svelte-13mz6nd");
     			toggle_class(dialog, "hide", /*showModal*/ ctx[1] == false);
     			toggle_class(dialog, "show", /*showModal*/ ctx[1] == true);

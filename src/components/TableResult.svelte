@@ -2,10 +2,10 @@
     import { axisStore } from "./../stores/axisStore.js";
     import all from "../AxisBBDD.js";
 
-    export let scorePM;
-    export let scoreCSM;
-    export let scorePD;
-    export let scoreRT;
+    export let axisA;
+    export let axisB;
+    export let axisC;
+    export let axisD;
 
     export let participantAll;
     export let practitionerAll;
@@ -34,27 +34,27 @@
             <tbody class="lh-copy tc">
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[0]}</td>
-                    <td class="pa3">{scorePM.participant}</td>
-                    <td class="pa3">{scorePM.practitioner}</td>
-                    <td class="pa3">{scorePM.expert}</td>
+                    <td class="pa3">{axisA.participant}</td>
+                    <td class="pa3">{axisA.practitioner}</td>
+                    <td class="pa3">{axisA.expert}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[1]}</td>
-                    <td class="pa3">{scoreCSM.participant}</td>
-                    <td class="pa3">{scoreCSM.practitioner}</td>
-                    <td class="pa3">{scoreCSM.expert}</td>
+                    <td class="pa3">{axisB.participant}</td>
+                    <td class="pa3">{axisB.practitioner}</td>
+                    <td class="pa3">{axisB.expert}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[2]}</td>
-                    <td class="pa3">{scorePD.participant}</td>
-                    <td class="pa3">{scorePD.practitioner}</td>
-                    <td class="pa3">{scorePD.expert}</td>
+                    <td class="pa3">{axisC.participant}</td>
+                    <td class="pa3">{axisC.practitioner}</td>
+                    <td class="pa3">{axisC.expert}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[3]}</td>
-                    <td class="pa3">{scoreRT.participant}</td>
-                    <td class="pa3">{scoreRT.practitioner}</td>
-                    <td class="pa3">{scoreRT.expert}</td>
+                    <td class="pa3">{axisD.participant}</td>
+                    <td class="pa3">{axisD.practitioner}</td>
+                    <td class="pa3">{axisD.expert}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3"><strong>Resultado</strong></td>

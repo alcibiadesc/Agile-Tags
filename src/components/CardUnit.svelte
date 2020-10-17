@@ -97,16 +97,16 @@
     };
 
     // Product Managment -> "A-"
-    let scorePM = clusterLevels("A-1", "A-2", "A-3");
+    let axisA = clusterLevels("A-1", "A-2", "A-3");
 
     // Customer And Stakeholder Management -> "B-"
-    let scoreCSM = clusterLevels("B-1", "B-2", "B-3");
+    let axisB = clusterLevels("B-1", "B-2", "B-3");
 
     // Product Delivery -> "C-"
-    let scorePD = clusterLevels("C-1", "C-2", "C-3");
+    let axisC = clusterLevels("C-1", "C-2", "C-3");
 
     // Relationship with the team -> "D-"
-    let scoreRT = clusterLevels("D-1", "D-2", "D-3");
+    let axisD = clusterLevels("D-1", "D-2", "D-3");
     // change color select unselect
 
     const evaluation = (practitioner, expert) => {
@@ -120,26 +120,26 @@
     };
 
     let participantAll = Number(
-        (scorePM.participant[0] +
-            scoreCSM.participant[0] +
-            scorePD.participant[0] +
-            scoreRT.participant[0]) /
+        (axisA.participant[0] +
+            axisB.participant[0] +
+            axisC.participant[0] +
+            axisD.participant[0]) /
             4
     );
 
     let practitionerAll = Number(
-        (scorePM.practitioner[0] +
-            scoreCSM.practitioner[0] +
-            scorePD.practitioner[0] +
-            scoreRT.practitioner[0]) /
+        (axisA.practitioner[0] +
+            axisB.practitioner[0] +
+            axisC.practitioner[0] +
+            axisD.practitioner[0]) /
             4
     );
 
     let expertAll = Number(
-        (scorePM.expert[0] +
-            scoreCSM.expert[0] +
-            scorePD.expert[0] +
-            scoreRT.expert[0]) /
+        (axisA.expert[0] +
+            axisB.expert[0] +
+            axisC.expert[0] +
+            axisD.expert[0]) /
             4
     );
 
@@ -149,7 +149,7 @@
         return result;
     };
 
-    console.log(name + " " + scorePD.expert);
+    console.log(name + " " + axisC.expert);
 
     sumaAllPoints();
 
@@ -397,10 +397,10 @@
 </div>
 <div class:invisible={showChart}>
     <TableResult
-        {scorePM}
-        {scoreCSM}
-        {scorePD}
-        {scoreRT}
+        {axisA}
+        {axisB}
+        {axisC}
+        {axisD}
         {participantAll}
         {practitionerAll}
         {expertAll} />

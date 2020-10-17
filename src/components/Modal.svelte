@@ -130,7 +130,7 @@
             bind:files />
     </div>
     <div>
-        <p>¿A qué rol le pertence?</p>
+        <p>¿A qué rol le pertenece?</p>
         <select bind:value={$axisStore} name="roles" id="roles">
             <option value="productOwner">Product Owner</option>
             <option value="scrumMaster">Scrum Master</option>
