@@ -47,7 +47,7 @@
                 labels: tag,
                 datasets: [
                     {
-                        label: "",
+                        label: "Nivel de Madurez por Eje de Conocimiento",
                         data: data,
                         backgroundColor: backgroundColor,
                         borderColor: borderColor,

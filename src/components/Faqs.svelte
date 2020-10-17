@@ -18,10 +18,10 @@
     </p>
     <h2 class="mt4">¿Cuál es el formato del excel?</h2>
     <p>
-        <strong>IMPORTANTE</strong>, el excel sólo debe tener una hoja, para
-        evitar problemas a la hora de cargarlo. En la primera fila se
-        encontrarán los enunciados de las preguntas. Cada fila será interpretada
-        como la respuesta de una persona.
+        <strong>IMPORTANTE</strong>, el excel sólo debe tener una hoja (salvo
+        que sea un formulario ya moderado), para evitar problemas a la hora de
+        cargarlo. En la primera fila se encontrarán los enunciados de las
+        preguntas. Cada fila será interpretada como la respuesta de una persona.
     </p>
 
     <h2 class="mt4">¿Cómo puedo importar un excel?</h2>
