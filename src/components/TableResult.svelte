@@ -7,6 +7,11 @@
     export let axisC;
     export let axisD;
 
+    export let allAxisA;
+    export let allAxisB;
+    export let allAxisC;
+    export let allAxisD;
+
     export let participantAll;
     export let practitionerAll;
     export let expertAll;
@@ -29,6 +34,7 @@
                         <strong>Practitioner</strong>
                     </th>
                     <th class="fw6 tc pa3 bg-white"><strong>Expert</strong></th>
+                    <th class="fw6 tc pa3 bg-white">Resultado</th>
                 </tr>
             </thead>
             <tbody class="lh-copy tc">
@@ -37,24 +43,28 @@
                     <td class="pa3">{axisA.participant}</td>
                     <td class="pa3">{axisA.practitioner}</td>
                     <td class="pa3">{axisA.expert}</td>
+                    <td class="pa3">{allAxisA.toFixed(2)}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[1]}</td>
                     <td class="pa3">{axisB.participant}</td>
                     <td class="pa3">{axisB.practitioner}</td>
                     <td class="pa3">{axisB.expert}</td>
+                    <td class="pa3">{allAxisB.toFixed(2)}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[2]}</td>
                     <td class="pa3">{axisC.participant}</td>
                     <td class="pa3">{axisC.practitioner}</td>
                     <td class="pa3">{axisC.expert}</td>
+                    <td class="pa3">{allAxisC.toFixed(2)}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[3]}</td>
                     <td class="pa3">{axisD.participant}</td>
                     <td class="pa3">{axisD.practitioner}</td>
                     <td class="pa3">{axisD.expert}</td>
+                    <td class="pa3">{allAxisD.toFixed(2)}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3"><strong>Resultado</strong></td>

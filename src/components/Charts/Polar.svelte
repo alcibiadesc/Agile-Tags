@@ -1,6 +1,6 @@
 <script>
     import { dataLevel } from "./../../stores/chartStore.js";
-    import { onMount } from "svelte";
+    import { onDestroy, onMount } from "svelte";
     import { backgroundColor, borderColor, borderWidth } from "./custom.js";
     import Chart from "chart.js";
 
@@ -8,12 +8,12 @@
     import all from "./../../AxisBBDD.js";
     $: tag = eval($axisStore);
 
+    let data = [0, 0, 0];
     let participant = [0];
     let practitioner = [0];
     let expert = [0];
 
-    console.log("Prac: " + $dataLevel[0].practitioner);
-
+    practitioner = [0];
     for (const value of $dataLevel) {
         participant.push(value.participant);
         practitioner.push(value.practitioner);
@@ -30,7 +30,7 @@
 
     let exp = (expert.reduce((a, b) => a + b) / expert.length).toFixed(2);
 
-    let data = [parti, pract, exp];
+    data = [parti, pract, exp];
 
     function createChart() {
         var ctx = document.getElementById("polar").getContext("2d");
@@ -54,6 +54,9 @@
     }
 
     onMount(createChart);
+    onDestroy(() => {
+        dataLevel.set([]);
+    });
 </script>
 
 <canvas id="polar" width="20px" height="20px" />

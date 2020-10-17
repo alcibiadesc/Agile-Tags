@@ -1,5 +1,5 @@
 <script>
-    import { dataLevel } from "./../stores/chartStore.js";
+    import { dataLevel, dataAxis } from "./../stores/chartStore.js";
     import TableResult from "./TableResult.svelte";
     import { moderateStore } from "./../stores/moderateStore.js";
     import { itemsMaster } from "./../stores/masterStore.js";
@@ -48,8 +48,6 @@
             } else {
                 score += 0;
             }
-
-            // console.log(`${name} suma ${score}`);
         }
     }
 
@@ -144,10 +142,37 @@
             4
     );
 
+    let allAxisA = Number(
+        (axisA.participant[0] + axisA.practitioner[0] + axisA.expert[0]) / 3
+    );
+
+    let allAxisB = Number(
+        (axisB.participant[0] + axisB.practitioner[0] + axisB.expert[0]) / 3
+    );
+
+    let allAxisC = Number(
+        (axisC.participant[0] + axisC.practitioner[0] + axisC.expert[0]) / 3
+    );
+
+    let allAxisD = Number(
+        (axisD.participant[0] + axisD.practitioner[0] + axisD.expert[0]) / 3
+    );
+
+    // Push the level of madurity
+
     $dataLevel.push({
         participant: participantAll,
         practitioner: practitionerAll,
         expert: expertAll,
+    });
+
+    // Push the level of knowledge in a field
+
+    $dataAxis.push({
+        axisA: allAxisA,
+        axisB: allAxisB,
+        axisC: allAxisC,
+        axisD: allAxisD,
     });
 
     let sumaAllPoints = () => {
@@ -155,8 +180,6 @@
 
         return result;
     };
-
-    console.log(name + " " + axisC.expert);
 
     sumaAllPoints();
 
@@ -410,5 +433,9 @@
         {axisD}
         {participantAll}
         {practitionerAll}
-        {expertAll} />
+        {expertAll}
+        {allAxisA}
+        {allAxisB}
+        {allAxisC}
+        {allAxisD} />
 </div>
