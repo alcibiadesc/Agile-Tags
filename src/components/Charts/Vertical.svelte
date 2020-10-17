@@ -1,18 +1,23 @@
 <script>
+    import {} from "./../../stores/chartStore.js";
     import { onMount } from "svelte";
     import Chart from "chart.js";
     import { backgroundColor, borderColor, borderWidth } from "./custom.js";
 
+    import { axisStore } from "./../../stores/axisStore.js";
+    import all from "./../../AxisBBDD.js";
+    $: tag = eval($axisStore);
+    let data = [1, 2, 3, 4];
     function createChart() {
         var ctx = document.getElementById("myChart").getContext("2d");
         var myChart = new Chart(ctx, {
             type: "bar",
             data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: tag,
                 datasets: [
                     {
-                        label: "# of Votes",
-                        data: [12, 19, 3, 5, 2, 3],
+                        label: "",
+                        data: data,
                         backgroundColor: backgroundColor,
                         borderColor: borderColor,
                         borderWidth: borderWidth,
@@ -36,4 +41,4 @@
     onMount(createChart);
 </script>
 
-<div class="w-25"><canvas id="myChart" width="20px" height="20px" /></div>
+<canvas id="myChart" width="20px" height="20px" />

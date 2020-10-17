@@ -1,4 +1,5 @@
 <script>
+    import { dataLevel } from "./../stores/chartStore.js";
     import TableResult from "./TableResult.svelte";
     import { moderateStore } from "./../stores/moderateStore.js";
     import { itemsMaster } from "./../stores/masterStore.js";
@@ -142,6 +143,12 @@
             axisD.expert[0]) /
             4
     );
+
+    $dataLevel.push({
+        participant: participantAll,
+        practitioner: practitionerAll,
+        expert: expertAll,
+    });
 
     let sumaAllPoints = () => {
         let result = participantAll + practitionerAll + expertAll;

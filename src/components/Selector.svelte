@@ -1,5 +1,5 @@
 <script>
-    import { Vertical, Polar, Bubble } from "./Charts";
+    import { Vertical, Polar } from "./Charts";
     import Cards from "./Cards.svelte";
 
     import Searchbar from "./Searchbar.svelte";
@@ -28,7 +28,14 @@
     <Searchbar />
     <Cards />
 {:else if toggleMenu == 'Metricas'}
-    <Polar />
-    <Vertical />
-    <Bubble />
+    <div class="mh5 tc ph3-ns">
+        <div class="cf ph2-ns">
+            <div class="fl w-100 w-50-ns pa2">
+                <Vertical />
+            </div>
+            <div class="fl w-100 w-50-ns pa2">
+                <Polar />
+            </div>
+        </div>
+    </div>
 {/if}
