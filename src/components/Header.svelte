@@ -1,6 +1,7 @@
 <script>
+  import { resetMaster } from "./../stores/masterStore.js";
   import Button from "./UI/Button.svelte";
-  import { moderateStore } from "./../stores/moderateStore.js";
+  import { moderateStore, resetModerator } from "./../stores/moderateStore.js";
   import Modal from "./Modal.svelte";
   import { items, reset } from "./../stores/answerStore.js";
 
@@ -16,7 +17,7 @@
     xlsx.utils.book_append_sheet(wb, ws, "Answer");
     xlsx.utils.book_append_sheet(wb, moderator, "Moderator");
 
-    xlsx.writeFile(wb, "agile-flag-export.xlsx");
+    xlsx.writeFile(wb, "Moderated-Agile-Flags.xlsx");
   }
 </script>
 
@@ -48,7 +49,14 @@
   <img class="w-50" src={logo} alt="site logo" />
 
   <div class="menu">
-    <Button onClick={reset}>Resetear</Button>
+    <Button
+      onClick={() => {
+        reset();
+        resetMaster();
+        resetModerator();
+      }}>
+      Resetear
+    </Button>
     <Button type="secondary" onClick={exportFile}>Exportar</Button>
 
     <Modal />

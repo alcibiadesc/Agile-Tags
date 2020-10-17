@@ -16,3 +16,8 @@ moderateStore.subscribe(value => {
     }
 });
 
+
+// Reset Storeage
+export const resetModerator = () => {
+    moderateStore.set([]);
+};

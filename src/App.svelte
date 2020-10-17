@@ -5,6 +5,7 @@
   import xlsx from "xlsx";
   import Header from "./components/Header.svelte";
   import Warning from "./components/Warning.svelte";
+  import { moderateStore } from "./stores/moderateStore";
 
   let toggleFaqs = false;
 
@@ -27,6 +28,12 @@
           workbook.Sheets[sheetName]
         );
 
+        if (sheetName == "Moderator") {
+          moderateStore.set(rowObject);
+        } else {
+          items.set(rowObject);
+        }
+
         const keys = Object.keys(rowObject[0]).map((col) => {
           return {
             id: col,
@@ -36,7 +43,6 @@
           };
         });
         columns.set(keys);
-        items.set(rowObject);
       });
     };
 
