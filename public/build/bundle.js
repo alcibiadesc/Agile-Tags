@@ -828,7 +828,7 @@ var app = (function () {
 
     const itemsData$2 = localStorage.getItem(`${STORE_PREFIX$2}items`);
 
-    const axisStore = writable(JSON.parse(itemsData$2) || []);
+    const axisStore = writable(JSON.parse(itemsData$2) || "productOwner");
 
     axisStore.subscribe(value => {
         if (itemsData$2 !== value) {
@@ -1498,8 +1498,8 @@ var app = (function () {
     			span = element("span");
     			t1 = text(/*rol*/ ctx[3]);
     			t2 = text(".");
-    			attr_dev(span, "class", "b svelte-1yiwp32");
-    			add_location(span, file$2, 373, 39, 10249);
+    			attr_dev(span, "class", "b svelte-1iw5nkm");
+    			add_location(span, file$2, 373, 39, 10253);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1654,79 +1654,79 @@ var app = (function () {
     			t20 = space();
     			div15 = element("div");
     			create_component(tableresult.$$.fragment);
-    			attr_dev(div0, "class", "level ma2 w4 svelte-1yiwp32");
-    			add_location(div0, file$2, 323, 16, 8004);
+    			attr_dev(div0, "class", "level ma2 w4 svelte-1iw5nkm");
+    			add_location(div0, file$2, 323, 16, 8008);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$2, 331, 34, 8294);
+    			add_location(path0, file$2, 331, 34, 8298);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$2, 332, 20, 8353);
-    			attr_dev(svg0, "class", "mv3 svelte-1yiwp32");
+    			add_location(path1, file$2, 332, 20, 8357);
+    			attr_dev(svg0, "class", "mv3 svelte-1iw5nkm");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$2, 325, 16, 8062);
-    			attr_dev(div1, "class", "points ma2 w4  svelte-1yiwp32");
-    			add_location(div1, file$2, 335, 16, 8826);
-    			attr_dev(div2, "class", "user-card mt4 svelte-1yiwp32");
-    			add_location(div2, file$2, 322, 12, 7960);
-    			attr_dev(h10, "class", "f4  svelte-1yiwp32");
-    			add_location(h10, file$2, 338, 16, 8955);
+    			add_location(svg0, file$2, 325, 16, 8066);
+    			attr_dev(div1, "class", "points ma2 w4  svelte-1iw5nkm");
+    			add_location(div1, file$2, 335, 16, 8830);
+    			attr_dev(div2, "class", "user-card mt4 svelte-1iw5nkm");
+    			add_location(div2, file$2, 322, 12, 7964);
+    			attr_dev(h10, "class", "f4  svelte-1iw5nkm");
+    			add_location(h10, file$2, 338, 16, 8959);
     			attr_dev(button0, "class", "grow mt4 br3");
-    			add_location(button0, file$2, 341, 20, 9026);
-    			add_location(div3, file$2, 340, 16, 9000);
+    			add_location(button0, file$2, 341, 20, 9030);
+    			add_location(div3, file$2, 340, 16, 9004);
     			attr_dev(button1, "class", "grow mt4 br3");
-    			add_location(button1, file$2, 350, 20, 9361);
-    			add_location(div4, file$2, 349, 16, 9335);
+    			add_location(button1, file$2, 350, 20, 9365);
+    			add_location(div4, file$2, 349, 16, 9339);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
-    			attr_dev(a, "class", "svelte-1yiwp32");
-    			add_location(a, file$2, 361, 32, 9817);
-    			attr_dev(span0, "class", "f6 tr svelte-1yiwp32");
-    			add_location(span0, file$2, 360, 28, 9764);
+    			attr_dev(a, "class", "svelte-1iw5nkm");
+    			add_location(a, file$2, 361, 32, 9821);
+    			attr_dev(span0, "class", "f6 tr svelte-1iw5nkm");
+    			add_location(span0, file$2, 360, 28, 9768);
     			attr_dev(div5, "class", "tr");
-    			add_location(div5, file$2, 359, 24, 9719);
-    			attr_dev(div6, "class", "svelte-1yiwp32");
-    			add_location(div6, file$2, 358, 20, 9689);
-    			attr_dev(div7, "class", "stats svelte-1yiwp32");
-    			add_location(div7, file$2, 357, 16, 9649);
-    			attr_dev(div8, "class", "more-info svelte-1yiwp32");
-    			add_location(div8, file$2, 337, 12, 8915);
-    			attr_dev(div9, "class", "additional  svelte-1yiwp32");
+    			add_location(div5, file$2, 359, 24, 9723);
+    			attr_dev(div6, "class", "svelte-1iw5nkm");
+    			add_location(div6, file$2, 358, 20, 9693);
+    			attr_dev(div7, "class", "stats svelte-1iw5nkm");
+    			add_location(div7, file$2, 357, 16, 9653);
+    			attr_dev(div8, "class", "more-info svelte-1iw5nkm");
+    			add_location(div8, file$2, 337, 12, 8919);
+    			attr_dev(div9, "class", "additional  svelte-1iw5nkm");
     			toggle_class(div9, "unCheck", /*isSelected*/ ctx[4]);
-    			add_location(div9, file$2, 321, 8, 7895);
-    			attr_dev(h11, "class", "f4  svelte-1yiwp32");
-    			add_location(h11, file$2, 369, 12, 10070);
-    			attr_dev(span1, "class", "b svelte-1yiwp32");
-    			add_location(span1, file$2, 372, 16, 10178);
+    			add_location(div9, file$2, 321, 8, 7899);
+    			attr_dev(h11, "class", "f4  svelte-1iw5nkm");
+    			add_location(h11, file$2, 369, 12, 10074);
+    			attr_dev(span1, "class", "b svelte-1iw5nkm");
+    			add_location(span1, file$2, 372, 16, 10182);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$2, 370, 12, 10110);
-    			attr_dev(div10, "class", "general svelte-1yiwp32");
-    			add_location(div10, file$2, 368, 8, 10036);
-    			attr_dev(div11, "class", "card svelte-1yiwp32");
-    			add_location(div11, file$2, 316, 4, 7785);
+    			add_location(p, file$2, 370, 12, 10114);
+    			attr_dev(div10, "class", "general svelte-1iw5nkm");
+    			add_location(div10, file$2, 368, 8, 10040);
+    			attr_dev(div11, "class", "card svelte-1iw5nkm");
+    			add_location(div11, file$2, 316, 4, 7789);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$2, 390, 30, 10730);
-    			attr_dev(path3, "d", "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z");
-    			add_location(path3, file$2, 391, 16, 10785);
+    			add_location(path2, file$2, 391, 30, 10780);
+    			attr_dev(path3, "d", "M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z");
+    			add_location(path3, file$2, 392, 16, 10835);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$2, 385, 12, 10550);
-    			attr_dev(div12, "class", "float grow  svelte-1yiwp32");
-    			add_location(div12, file$2, 380, 8, 10407);
-    			attr_dev(div13, "class", "tl  svelte-1yiwp32");
+    			add_location(svg1, file$2, 386, 12, 10600);
+    			attr_dev(div12, "class", "float-btn grow  svelte-1iw5nkm");
+    			add_location(div12, file$2, 380, 8, 10411);
+    			attr_dev(div13, "class", "tl  svelte-1iw5nkm");
     			toggle_class(div13, "invisible", /*hideModerator*/ ctx[6]);
-    			add_location(div13, file$2, 377, 4, 10331);
-    			attr_dev(div14, "class", "centered  svelte-1yiwp32");
-    			add_location(div14, file$2, 315, 0, 7757);
-    			attr_dev(div15, "class", "svelte-1yiwp32");
+    			add_location(div13, file$2, 377, 4, 10335);
+    			attr_dev(div14, "class", "centered  svelte-1iw5nkm");
+    			add_location(div14, file$2, 315, 0, 7761);
+    			attr_dev(div15, "class", "svelte-1iw5nkm");
     			toggle_class(div15, "invisible", /*showChart*/ ctx[5]);
-    			add_location(div15, file$2, 396, 0, 10959);
+    			add_location(div15, file$2, 397, 0, 11050);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2033,6 +2033,7 @@ var app = (function () {
 
     	const click_handler_3 = () => {
     		$$invalidate(6, hideModerator = !hideModerator);
+    		window.location.reload();
     	};
 
     	$$self.$set = $$props => {
@@ -36267,35 +36268,35 @@ var app = (function () {
     			button2.textContent = "Cancelar";
     			attr_dev(button0, "type", "plain");
     			attr_dev(button0, "class", "svelte-13mz6nd");
-    			add_location(button0, file$9, 114, 0, 2601);
+    			add_location(button0, file$9, 114, 0, 2564);
     			attr_dev(input, "type", "file");
     			attr_dev(input, "accept", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     			attr_dev(input, "class", "svelte-13mz6nd");
-    			add_location(input, file$9, 126, 8, 2910);
+    			add_location(input, file$9, 126, 8, 2873);
     			attr_dev(div0, "class", "drop-area  svelte-13mz6nd");
-    			add_location(div0, file$9, 124, 4, 2832);
-    			add_location(p, file$9, 132, 8, 3083);
+    			add_location(div0, file$9, 124, 4, 2795);
+    			add_location(p, file$9, 132, 8, 3046);
     			option0.__value = "productOwner";
     			option0.value = option0.__value;
-    			add_location(option0, file$9, 134, 12, 3191);
+    			add_location(option0, file$9, 134, 12, 3154);
     			option1.__value = "scrumMaster";
     			option1.value = option1.__value;
-    			add_location(option1, file$9, 135, 12, 3255);
+    			add_location(option1, file$9, 135, 12, 3218);
     			attr_dev(select, "name", "roles");
     			attr_dev(select, "id", "roles");
     			if (/*$axisStore*/ ctx[2] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[5].call(select));
-    			add_location(select, file$9, 133, 8, 3122);
-    			add_location(div1, file$9, 131, 4, 3069);
+    			add_location(select, file$9, 133, 8, 3085);
+    			add_location(div1, file$9, 131, 4, 3032);
     			attr_dev(button1, "class", "aceptar svelte-13mz6nd");
-    			add_location(button1, file$9, 139, 8, 3365);
+    			add_location(button1, file$9, 139, 8, 3328);
     			attr_dev(button2, "class", "cancel svelte-13mz6nd");
-    			add_location(button2, file$9, 148, 8, 3576);
+    			add_location(button2, file$9, 148, 8, 3539);
     			attr_dev(div2, "class", " mt3");
-    			add_location(div2, file$9, 138, 4, 3338);
+    			add_location(div2, file$9, 138, 4, 3301);
     			attr_dev(dialog, "class", "svelte-13mz6nd");
     			toggle_class(dialog, "hide", /*showModal*/ ctx[1] == false);
     			toggle_class(dialog, "show", /*showModal*/ ctx[1] == true);
-    			add_location(dialog, file$9, 123, 0, 2756);
+    			add_location(dialog, file$9, 123, 0, 2719);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -36446,7 +36447,6 @@ var app = (function () {
     		axisStore,
     		columnsMaster,
     		itemsMaster,
-    		all,
     		xlsx,
     		files,
     		parseExcel,

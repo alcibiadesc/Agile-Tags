@@ -10,6 +10,6 @@ const scrumMaster = ["Developing Teams", "Adoption of agile", "Enabling Continuo
 export default {
     productOwner,
     scrumMaster
-};
+}
 
 // Add here and in modal.svelte and option to mark it

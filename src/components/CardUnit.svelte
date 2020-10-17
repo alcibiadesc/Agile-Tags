@@ -298,14 +298,14 @@
         display: none;
     }
 
-    .float {
+    .float-btn {
         position: fixed;
         width: 60px;
         height: 60px;
         bottom: 40px;
         right: 40px;
         padding-top: 15px;
-        background-color: #e67066;
+        background-color: #53adb2;
         color: #fff;
         border-radius: 50px;
         text-align: center;
@@ -381,8 +381,9 @@
         <div
             on:click={() => {
                 hideModerator = !hideModerator;
+                window.location.reload();
             }}
-            class="float grow ">
+            class="float-btn grow ">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -390,7 +391,7 @@
                 width="24px"
                 height="24px"><path d="M0 0h24v24H0z" fill="none" />
                 <path
-                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" /></svg>
+                    d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z" /></svg>
         </div>
     </div>
 </div>
