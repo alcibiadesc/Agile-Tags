@@ -1,6 +1,7 @@
 <script>
+    import { Vertical, Polar, Bubble } from "./Charts";
     import Cards from "./Cards.svelte";
-    import Charts from "./Charts.svelte";
+
     import Searchbar from "./Searchbar.svelte";
 
     let toggleMenu = "Personas";
@@ -27,5 +28,7 @@
     <Searchbar />
     <Cards />
 {:else if toggleMenu == 'Metricas'}
-    <Charts />
+    <Polar />
+    <Vertical />
+    <Bubble />
 {/if}
