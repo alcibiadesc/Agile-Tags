@@ -4,10 +4,6 @@
     import { backgroundColor, borderColor, borderWidth } from "./custom.js";
     import Chart from "chart.js";
 
-    import { axisStore } from "./../../stores/axisStore.js";
-    import all from "./../../AxisBBDD.js";
-    $: tag = eval($axisStore);
-
     let data = [0, 0, 0];
     let participant = [0];
     let practitioner = [0];

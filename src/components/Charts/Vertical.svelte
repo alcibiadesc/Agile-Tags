@@ -1,12 +1,12 @@
 <script>
     import { dataAxis } from "./../../stores/chartStore.js";
-    import { onMount, onDestroy } from "svelte";
+    import { onMount, onDestroy, afterUpdate } from "svelte";
     import Chart from "chart.js";
     import { backgroundColor, borderColor, borderWidth } from "./custom.js";
-
+    import { productOwner, scrumMaster } from "./../../AxisBBDD.js";
     import { axisStore } from "./../../stores/axisStore.js";
-    import all from "./../../AxisBBDD.js";
-    $: tag = eval($axisStore);
+
+    $: tag = productOwner;
 
     let data = [0, 0, 0];
     let axisA = [0];
@@ -30,6 +30,14 @@
     let axisDresult = (axisD.reduce((a, b) => a + b) / axisD.length).toFixed(2);
 
     data = [axisAresult, axisBresult, axisCresult, axisDresult];
+
+    onMount(() => {
+        if ($axisStore == "scrumMaster") {
+            tag = scrumMaster;
+        } else if ($axisStore == "productOwner") {
+            tag = productOwner;
+        }
+    });
 
     function createChart() {
         var ctx = document.getElementById("myChart").getContext("2d");
@@ -68,4 +76,5 @@
     });
 </script>
 
+{$axisStore}
 <canvas id="myChart" width="20px" height="20px" />

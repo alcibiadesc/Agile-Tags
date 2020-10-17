@@ -1,6 +1,7 @@
 <script>
     import { axisStore } from "./../stores/axisStore.js";
-    import all from "../AxisBBDD.js";
+    import { productOwner, scrumMaster } from "../AxisBBDD.js";
+    import { afterUpdate } from "svelte";
 
     export let axisA;
     export let axisB;
@@ -16,7 +17,21 @@
     export let practitionerAll;
     export let expertAll;
 
-    $: tag = eval($axisStore);
+    $: tag = [0, 0, 0, 0];
+
+    afterUpdate(() => {
+        switch ($axisStore) {
+            case "productOwner":
+                tag = productOwner;
+                break;
+            case "scrumMaster":
+                tag = scrumMaster;
+                break;
+
+            default:
+                break;
+        }
+    });
 </script>
 
 <div class="mb4 pb3 pt0 mt0 topindex">
