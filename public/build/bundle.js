@@ -58902,7 +58902,7 @@ var app = (function () {
     const { Object: Object_1$3, console: console_1$2 } = globals;
     const file$e = "src/App.svelte";
 
-    // (108:1) {:else}
+    // (106:1) {:else}
     function create_else_block$1(ctx) {
     	let selector;
     	let current;
@@ -58935,14 +58935,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(108:1) {:else}",
+    		source: "(106:1) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (83:1) {#if !$items.length}
+    // (81:1) {#if !$items.length}
     function create_if_block$4(ctx) {
     	let div;
     	let t0;
@@ -58956,7 +58956,7 @@ var app = (function () {
     	let current;
     	let mounted;
     	let dispose;
-    	let if_block = /*toggleFaqs*/ ctx[1] && create_if_block_1$2(ctx);
+    	let if_block = /*showFaq*/ ctx[1] && create_if_block_1$2(ctx);
 
     	const block = {
     		c: function create() {
@@ -58972,22 +58972,22 @@ var app = (function () {
     			if_block_anchor = empty();
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$e, 93, 18, 1824);
+    			add_location(path0, file$e, 91, 18, 1842);
     			attr_dev(path1, "d", "M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z");
-    			add_location(path1, file$e, 94, 4, 1867);
+    			add_location(path1, file$e, 92, 4, 1885);
     			attr_dev(svg, "class", "grow link black dim");
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "viewBox", "0 0 24 24");
     			attr_dev(svg, "fill", "black");
     			attr_dev(svg, "width", "18px");
     			attr_dev(svg, "height", "18px");
-    			add_location(svg, file$e, 86, 3, 1624);
+    			add_location(svg, file$e, 84, 3, 1665);
     			attr_dev(input, "type", "file");
     			attr_dev(input, "accept", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
     			attr_dev(input, "class", "svelte-kp9ppu");
-    			add_location(input, file$e, 97, 3, 2139);
+    			add_location(input, file$e, 95, 3, 2157);
     			attr_dev(div, "class", "drop-area bg-white svelte-kp9ppu");
-    			add_location(div, file$e, 83, 2, 1558);
+    			add_location(div, file$e, 81, 2, 1599);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -59004,7 +59004,7 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(svg, "click", /*click_handler*/ ctx[3], false, false, false),
+    					listen_dev(svg, "click", /*toogleFaq*/ ctx[3], false, false, false),
     					listen_dev(input, "change", /*input_change_handler*/ ctx[4])
     				];
 
@@ -59012,9 +59012,9 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (/*toggleFaqs*/ ctx[1]) {
+    			if (/*showFaq*/ ctx[1]) {
     				if (if_block) {
-    					if (dirty & /*toggleFaqs*/ 2) {
+    					if (dirty & /*showFaq*/ 2) {
     						transition_in(if_block, 1);
     					}
     				} else {
@@ -59056,14 +59056,14 @@ var app = (function () {
     		block,
     		id: create_if_block$4.name,
     		type: "if",
-    		source: "(83:1) {#if !$items.length}",
+    		source: "(81:1) {#if !$items.length}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (103:2) {#if toggleFaqs}
+    // (101:2) {#if showFaq}
     function create_if_block_1$2(ctx) {
     	let div;
     	let faqs;
@@ -59075,7 +59075,7 @@ var app = (function () {
     			div = element("div");
     			create_component(faqs.$$.fragment);
     			attr_dev(div, "class", "tc center");
-    			add_location(div, file$e, 103, 3, 2290);
+    			add_location(div, file$e, 101, 3, 2305);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -59101,7 +59101,7 @@ var app = (function () {
     		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(103:2) {#if toggleFaqs}",
+    		source: "(101:2) {#if showFaq}",
     		ctx
     	});
 
@@ -59139,7 +59139,7 @@ var app = (function () {
     			t1 = space();
     			create_component(warning.$$.fragment);
     			attr_dev(main, "class", "svelte-kp9ppu");
-    			add_location(main, file$e, 75, 0, 1510);
+    			add_location(main, file$e, 77, 0, 1555);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -59214,7 +59214,6 @@ var app = (function () {
     	let $items;
     	validate_store(items, "items");
     	component_subscribe($$self, items, $$value => $$invalidate(2, $items = $$value));
-    	let toggleFaqs = false;
     	let { files } = $$props;
 
     	function parseExcel(file) {
@@ -59253,6 +59252,8 @@ var app = (function () {
     		reader.readAsBinaryString(file);
     	}
 
+    	let showFaq = false;
+    	const toogleFaq = () => $$invalidate(1, showFaq = !showFaq);
     	const writable_props = ["files"];
 
     	Object_1$3.keys($$props).forEach(key => {
@@ -59261,7 +59262,6 @@ var app = (function () {
 
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("App", $$slots, []);
-    	const click_handler = () => $$invalidate(1, toggleFaqs = !toggleFaqs);
 
     	function input_change_handler() {
     		files = this.files;
@@ -59281,15 +59281,16 @@ var app = (function () {
     		Header,
     		Warning,
     		moderateStore,
-    		toggleFaqs,
     		files,
     		parseExcel,
+    		showFaq,
+    		toogleFaq,
     		$items
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("toggleFaqs" in $$props) $$invalidate(1, toggleFaqs = $$props.toggleFaqs);
     		if ("files" in $$props) $$invalidate(0, files = $$props.files);
+    		if ("showFaq" in $$props) $$invalidate(1, showFaq = $$props.showFaq);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -59304,7 +59305,7 @@ var app = (function () {
     		}
     	};
 
-    	return [files, toggleFaqs, $items, click_handler, input_change_handler];
+    	return [files, showFaq, $items, toogleFaq, input_change_handler];
     }
 
     class App extends SvelteComponentDev {

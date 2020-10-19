@@ -6,7 +6,6 @@
 	import Header from "./components/Header.svelte";
 	import Warning from "./components/Warning.svelte";
 	import { moderateStore } from "./stores/moderateStore";
-	let toggleFaqs = false;
 
 	export let files;
 	$: if (files.length) {
@@ -51,6 +50,9 @@
 
 		reader.readAsBinaryString(file);
 	}
+
+	let showFaq = false;
+	const toogleFaq = () => (showFaq = !showFaq);
 </script>
 
 <style>
@@ -74,10 +76,6 @@
 </style>
 
 <main>
-
-
-
-
 	<Header />
 
 	{#if !$items.length}
@@ -86,7 +84,7 @@
 
 			<svg
 				class="grow link black dim"
-				on:click={() => (toggleFaqs = !toggleFaqs)}
+				on:click={toogleFaq}
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 				fill="black"
@@ -100,7 +98,7 @@
 				accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
 				bind:files />
 		</div>
-		{#if toggleFaqs}
+		{#if showFaq}
 			<div class="tc center">
 				<Faqs />
 			</div>
