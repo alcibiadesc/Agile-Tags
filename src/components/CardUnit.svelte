@@ -1,9 +1,45 @@
 <script>
-    import { onMount } from "svelte";
+    import { afterUpdate } from "svelte";
     import { dataLevel, dataAxis } from "./../stores/chartStore.js";
     import TableResult from "./TableResult.svelte";
     import { moderateStore } from "./../stores/moderateStore.js";
     import { itemsMaster } from "./../stores/masterStore.js";
+    import { axisStore } from "./../stores/axisStore.js";
+    import {
+        productOwner,
+        scrumMaster,
+        rte,
+        tribeLead,
+        ttl,
+    } from "../AxisBBDD.js";
+
+    export let tag = [0, 0, 0, 0];
+
+    $: tag = [0, 0, 0, 0];
+
+    switch ($axisStore) {
+        case "productOwner":
+            tag = productOwner;
+            break;
+        case "scrumMaster":
+            tag = scrumMaster;
+            break;
+
+        case "rte":
+            tag = rte;
+            break;
+
+        case "tribeLead":
+            tag = tribeLead;
+            break;
+
+        case "ttl":
+            tag = ttl;
+            break;
+
+        default:
+            break;
+    }
 
     export let name;
     export let tribal;
@@ -124,7 +160,7 @@
             axisB.participant[0] +
             axisC.participant[0] +
             axisD.participant[0]) /
-            4
+            tag.length
     );
 
     let practitionerAll = Number(
@@ -132,7 +168,7 @@
             axisB.practitioner[0] +
             axisC.practitioner[0] +
             axisD.practitioner[0]) /
-            4
+            tag.length
     );
 
     let expertAll = Number(
@@ -140,7 +176,7 @@
             axisB.expert[0] +
             axisC.expert[0] +
             axisD.expert[0]) /
-            4
+            tag.length
     );
 
     let allAxisA = Number(

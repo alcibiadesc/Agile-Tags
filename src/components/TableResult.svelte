@@ -92,13 +92,17 @@
                     <td class="pa3">{axisC.expert}</td>
                     <td class="pa3">{allAxisC.toFixed(2)}</td>
                 </tr>
-                <tr class="stripe-dark">
-                    <td class="pa3">{tag[3]}</td>
-                    <td class="pa3">{axisD.participant}</td>
-                    <td class="pa3">{axisD.practitioner}</td>
-                    <td class="pa3">{axisD.expert}</td>
-                    <td class="pa3">{allAxisD.toFixed(2)}</td>
-                </tr>
+
+                {#if tag[3]}
+                    <tr class="stripe-dark">
+                        <td class="pa3">{tag[3]}</td>
+                        <td class="pa3">{axisD.participant}</td>
+                        <td class="pa3">{axisD.practitioner}</td>
+                        <td class="pa3">{axisD.expert}</td>
+                        <td class="pa3">{allAxisD.toFixed(2)}</td>
+                    </tr>
+                {/if}
+
                 <tr class="stripe-dark">
                     <td class="pa3"><strong>Resultado</strong></td>
                     <td class="pa3">
