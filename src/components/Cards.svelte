@@ -35,7 +35,7 @@
 
 <style>
     .pair {
-        background-color: #f9fff7;
+        background-color: #ffbdbd;
     }
 </style>
 

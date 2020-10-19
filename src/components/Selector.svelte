@@ -40,10 +40,8 @@
         <div class=" fl w-50  bg-white   ">
             <Vertical />
         </div>
-        <div class="fl w-50  bg-white  ">
+        <div class="fr w-50  bg-white  ">
             <Polar />
         </div>
     </div>
-
-    <!-- </div> -->
 {/if}

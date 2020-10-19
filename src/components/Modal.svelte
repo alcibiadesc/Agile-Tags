@@ -132,8 +132,11 @@
     <div>
         <p>¿A qué rol le pertenece?</p>
         <select bind:value={$axisStore} name="roles" id="roles">
-            <option value="productOwner">Product Owner</option>
-            <option value="scrumMaster">Scrum Master</option>
+            <option value="productOwner">PO: Product Owner</option>
+            <option value="scrumMaster">SM: Scrum Master</option>
+            <option value="rte">RTE: Release Train Engineer</option>
+            <option value="tribeLead">TL: Tribe Lead</option>
+            <option value="ttl">TL: Tribe Technology Lead</option>
         </select>
     </div>
     <div class=" mt3">

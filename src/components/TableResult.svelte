@@ -1,6 +1,12 @@
 <script>
     import { axisStore } from "./../stores/axisStore.js";
-    import { productOwner, scrumMaster } from "../AxisBBDD.js";
+    import {
+        productOwner,
+        scrumMaster,
+        rte,
+        tribeLead,
+        ttl,
+    } from "../AxisBBDD.js";
     import { afterUpdate } from "svelte";
 
     export let axisA;
@@ -26,6 +32,18 @@
                 break;
             case "scrumMaster":
                 tag = scrumMaster;
+                break;
+
+            case "rte":
+                tag = rte;
+                break;
+
+            case "tribeLead":
+                tag = tribeLead;
+                break;
+
+            case "ttl":
+                tag = ttl;
                 break;
 
             default:

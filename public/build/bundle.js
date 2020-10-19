@@ -22624,7 +22624,7 @@ var app = (function () {
     const borderWidth = 1;
 
     const productOwner = [
-        "Product Managment",
+        "Product Management",
         "Customer & Stakeholder Management	",
         "Product Delivery",
         "Relationship with the team"];
@@ -22632,9 +22632,19 @@ var app = (function () {
 
     const scrumMaster = ["Developing Teams", "Adoption of agile", "Enabling Continuous Improvement", "Enabling Transparency"];
 
+    const rte = [
+        "Product Managment", "Scaling Agile", "Product Delivery", "Relationship with Tribe"
+    ];
 
+    const tribeLead = [
+        "Product Management", "Customer and Stakeholders Management", "Product Delivery", "Relationship with Tribe"
+    ];
 
-    // Change in tableResult.svelte and in charts that uses tag: vertical
+    const ttl = [
+        "Engineering consistency, standards and best practices", "Product Delivery", "Relationship with Tribe"
+    ];
+
+    // Change in tableResult.svelte and in charts that uses tag: vertical // add option in Modal
 
     const STORE_PREFIX$1 = 'axis_';
 
@@ -22660,7 +22670,7 @@ var app = (function () {
     			attr_dev(canvas, "id", "myChart");
     			attr_dev(canvas, "width", "20px");
     			attr_dev(canvas, "height", "20px");
-    			add_location(canvas, file$1, 78, 0, 2288);
+    			add_location(canvas, file$1, 90, 0, 2561);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -22718,6 +22728,12 @@ var app = (function () {
     			tag = scrumMaster;
     		} else if ($axisStore == "productOwner") {
     			tag = productOwner;
+    		} else if ($axisStore == "rte") {
+    			tag = rte;
+    		} else if ($axisStore == "tribeLead") {
+    			tag = tribeLead;
+    		} else if ($axisStore == "ttl") {
+    			tag = ttl;
     		}
     	});
 
@@ -22773,6 +22789,9 @@ var app = (function () {
     		borderWidth,
     		productOwner,
     		scrumMaster,
+    		rte,
+    		tribeLead,
+    		ttl,
     		axisStore,
     		data,
     		axisA,
@@ -23227,93 +23246,93 @@ var app = (function () {
     			strong6 = element("strong");
     			t56 = text(t56_value);
     			attr_dev(th0, "class", "fw6 tc pa3 bg-white");
-    			add_location(th0, file$3, 43, 20, 1063);
-    			add_location(strong0, file$3, 45, 24, 1182);
+    			add_location(th0, file$3, 61, 20, 1366);
+    			add_location(strong0, file$3, 63, 24, 1485);
     			attr_dev(th1, "class", "fw6 tc pa3 bg-white");
-    			add_location(th1, file$3, 44, 20, 1125);
-    			add_location(strong1, file$3, 48, 24, 1314);
+    			add_location(th1, file$3, 62, 20, 1428);
+    			add_location(strong1, file$3, 66, 24, 1617);
     			attr_dev(th2, "class", "fw6 tc pa3 bg-white");
-    			add_location(th2, file$3, 47, 20, 1257);
-    			add_location(strong2, file$3, 50, 52, 1422);
+    			add_location(th2, file$3, 65, 20, 1560);
+    			add_location(strong2, file$3, 68, 52, 1725);
     			attr_dev(th3, "class", "fw6 tc pa3 bg-white");
-    			add_location(th3, file$3, 50, 20, 1390);
+    			add_location(th3, file$3, 68, 20, 1693);
     			attr_dev(th4, "class", "fw6 tc pa3 bg-white");
-    			add_location(th4, file$3, 51, 20, 1471);
+    			add_location(th4, file$3, 69, 20, 1774);
     			attr_dev(tr0, "class", "stripe-dark ");
-    			add_location(tr0, file$3, 42, 16, 1017);
+    			add_location(tr0, file$3, 60, 16, 1320);
     			attr_dev(thead, "class", "");
-    			add_location(thead, file$3, 41, 12, 984);
+    			add_location(thead, file$3, 59, 12, 1287);
     			attr_dev(td0, "class", "pa3");
-    			add_location(td0, file$3, 56, 20, 1661);
+    			add_location(td0, file$3, 74, 20, 1964);
     			attr_dev(td1, "class", "pa3");
-    			add_location(td1, file$3, 57, 20, 1711);
+    			add_location(td1, file$3, 75, 20, 2014);
     			attr_dev(td2, "class", "pa3");
-    			add_location(td2, file$3, 58, 20, 1772);
+    			add_location(td2, file$3, 76, 20, 2075);
     			attr_dev(td3, "class", "pa3");
-    			add_location(td3, file$3, 59, 20, 1834);
+    			add_location(td3, file$3, 77, 20, 2137);
     			attr_dev(td4, "class", "pa3");
-    			add_location(td4, file$3, 60, 20, 1890);
+    			add_location(td4, file$3, 78, 20, 2193);
     			attr_dev(tr1, "class", "stripe-dark");
-    			add_location(tr1, file$3, 55, 16, 1616);
+    			add_location(tr1, file$3, 73, 16, 1919);
     			attr_dev(td5, "class", "pa3");
-    			add_location(td5, file$3, 63, 20, 2016);
+    			add_location(td5, file$3, 81, 20, 2319);
     			attr_dev(td6, "class", "pa3");
-    			add_location(td6, file$3, 64, 20, 2066);
+    			add_location(td6, file$3, 82, 20, 2369);
     			attr_dev(td7, "class", "pa3");
-    			add_location(td7, file$3, 65, 20, 2127);
+    			add_location(td7, file$3, 83, 20, 2430);
     			attr_dev(td8, "class", "pa3");
-    			add_location(td8, file$3, 66, 20, 2189);
+    			add_location(td8, file$3, 84, 20, 2492);
     			attr_dev(td9, "class", "pa3");
-    			add_location(td9, file$3, 67, 20, 2245);
+    			add_location(td9, file$3, 85, 20, 2548);
     			attr_dev(tr2, "class", "stripe-dark");
-    			add_location(tr2, file$3, 62, 16, 1971);
+    			add_location(tr2, file$3, 80, 16, 2274);
     			attr_dev(td10, "class", "pa3");
-    			add_location(td10, file$3, 70, 20, 2371);
+    			add_location(td10, file$3, 88, 20, 2674);
     			attr_dev(td11, "class", "pa3");
-    			add_location(td11, file$3, 71, 20, 2421);
+    			add_location(td11, file$3, 89, 20, 2724);
     			attr_dev(td12, "class", "pa3");
-    			add_location(td12, file$3, 72, 20, 2482);
+    			add_location(td12, file$3, 90, 20, 2785);
     			attr_dev(td13, "class", "pa3");
-    			add_location(td13, file$3, 73, 20, 2544);
+    			add_location(td13, file$3, 91, 20, 2847);
     			attr_dev(td14, "class", "pa3");
-    			add_location(td14, file$3, 74, 20, 2600);
+    			add_location(td14, file$3, 92, 20, 2903);
     			attr_dev(tr3, "class", "stripe-dark");
-    			add_location(tr3, file$3, 69, 16, 2326);
+    			add_location(tr3, file$3, 87, 16, 2629);
     			attr_dev(td15, "class", "pa3");
-    			add_location(td15, file$3, 77, 20, 2726);
+    			add_location(td15, file$3, 95, 20, 3029);
     			attr_dev(td16, "class", "pa3");
-    			add_location(td16, file$3, 78, 20, 2776);
+    			add_location(td16, file$3, 96, 20, 3079);
     			attr_dev(td17, "class", "pa3");
-    			add_location(td17, file$3, 79, 20, 2837);
+    			add_location(td17, file$3, 97, 20, 3140);
     			attr_dev(td18, "class", "pa3");
-    			add_location(td18, file$3, 80, 20, 2899);
+    			add_location(td18, file$3, 98, 20, 3202);
     			attr_dev(td19, "class", "pa3");
-    			add_location(td19, file$3, 81, 20, 2955);
+    			add_location(td19, file$3, 99, 20, 3258);
     			attr_dev(tr4, "class", "stripe-dark");
-    			add_location(tr4, file$3, 76, 16, 2681);
-    			add_location(strong3, file$3, 84, 36, 3097);
+    			add_location(tr4, file$3, 94, 16, 2984);
+    			add_location(strong3, file$3, 102, 36, 3400);
     			attr_dev(td20, "class", "pa3");
-    			add_location(td20, file$3, 84, 20, 3081);
-    			add_location(strong4, file$3, 86, 24, 3190);
+    			add_location(td20, file$3, 102, 20, 3384);
+    			add_location(strong4, file$3, 104, 24, 3493);
     			attr_dev(td21, "class", "pa3");
-    			add_location(td21, file$3, 85, 20, 3149);
-    			add_location(strong5, file$3, 89, 24, 3322);
+    			add_location(td21, file$3, 103, 20, 3452);
+    			add_location(strong5, file$3, 107, 24, 3625);
     			attr_dev(td22, "class", "pa3");
-    			add_location(td22, file$3, 88, 20, 3281);
-    			add_location(strong6, file$3, 91, 36, 3430);
+    			add_location(td22, file$3, 106, 20, 3584);
+    			add_location(strong6, file$3, 109, 36, 3733);
     			attr_dev(td23, "class", "pa3");
-    			add_location(td23, file$3, 91, 20, 3414);
+    			add_location(td23, file$3, 109, 20, 3717);
     			attr_dev(tr5, "class", "stripe-dark");
-    			add_location(tr5, file$3, 83, 16, 3036);
+    			add_location(tr5, file$3, 101, 16, 3339);
     			attr_dev(tbody, "class", "lh-copy tc");
-    			add_location(tbody, file$3, 54, 12, 1573);
+    			add_location(tbody, file$3, 72, 12, 1876);
     			attr_dev(table, "class", "f6 w-80 mw8 center bg-white ma2 shadow-5 br3");
     			attr_dev(table, "cellspacing", "0");
-    			add_location(table, file$3, 38, 8, 871);
+    			add_location(table, file$3, 56, 8, 1174);
     			attr_dev(div0, "class", "overflow-auto");
-    			add_location(div0, file$3, 37, 4, 835);
+    			add_location(div0, file$3, 55, 4, 1138);
     			attr_dev(div1, "class", "mb4 pb3 pt0 mt0 topindex");
-    			add_location(div1, file$3, 36, 0, 792);
+    			add_location(div1, file$3, 54, 0, 1095);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -23485,6 +23504,15 @@ var app = (function () {
     			case "scrumMaster":
     				$$invalidate(11, tag = scrumMaster);
     				break;
+    			case "rte":
+    				$$invalidate(11, tag = rte);
+    				break;
+    			case "tribeLead":
+    				$$invalidate(11, tag = tribeLead);
+    				break;
+    			case "ttl":
+    				$$invalidate(11, tag = ttl);
+    				break;
     		}
     	});
 
@@ -23527,6 +23555,9 @@ var app = (function () {
     		axisStore,
     		productOwner,
     		scrumMaster,
+    		rte,
+    		tribeLead,
+    		ttl,
     		afterUpdate,
     		axisA,
     		axisB,
@@ -24672,7 +24703,7 @@ var app = (function () {
     			add_location(p4, file$5, 75, 24, 2425);
     			attr_dev(div0, "class", "cf");
     			add_location(div0, file$5, 63, 20, 1889);
-    			attr_dev(div1, "class", "mt3 ph3 pt2 pb2 shadow-5 bg-white svelte-n4gs8n");
+    			attr_dev(div1, "class", "mt3 ph3 pt2 pb2 shadow-5 bg-white svelte-1e84c9h");
 
     			toggle_class(div1, "pair", Number(/*key*/ ctx[11].substring(4, 5)) % 2 === 0
     			? true
@@ -25331,7 +25362,7 @@ var app = (function () {
     			create_component(polar.$$.fragment);
     			attr_dev(div0, "class", " fl w-50  bg-white   ");
     			add_location(div0, file$7, 39, 8, 845);
-    			attr_dev(div1, "class", "fl w-50  bg-white  ");
+    			attr_dev(div1, "class", "fr w-50  bg-white  ");
     			add_location(div1, file$7, 42, 8, 929);
     			attr_dev(div2, "class", "cf  centered w-80  svelte-1too8pc");
     			add_location(div2, file$7, 38, 4, 804);
@@ -57648,10 +57679,13 @@ var app = (function () {
     	let select;
     	let option0;
     	let option1;
-    	let t8;
+    	let option2;
+    	let option3;
+    	let option4;
+    	let t11;
     	let div2;
     	let button1;
-    	let t10;
+    	let t13;
     	let button2;
     	let mounted;
     	let dispose;
@@ -57672,14 +57706,20 @@ var app = (function () {
     			t5 = space();
     			select = element("select");
     			option0 = element("option");
-    			option0.textContent = "Product Owner";
+    			option0.textContent = "PO: Product Owner";
     			option1 = element("option");
-    			option1.textContent = "Scrum Master";
-    			t8 = space();
+    			option1.textContent = "SM: Scrum Master";
+    			option2 = element("option");
+    			option2.textContent = "RTE: Release Train Engineer";
+    			option3 = element("option");
+    			option3.textContent = "TL: Tribe Lead";
+    			option4 = element("option");
+    			option4.textContent = "TL: Tribe Technology Lead";
+    			t11 = space();
     			div2 = element("div");
     			button1 = element("button");
     			button1.textContent = "Aceptar";
-    			t10 = space();
+    			t13 = space();
     			button2 = element("button");
     			button2.textContent = "Cancelar";
     			attr_dev(button0, "type", "plain");
@@ -57697,18 +57737,27 @@ var app = (function () {
     			add_location(option0, file$9, 134, 12, 3155);
     			option1.__value = "scrumMaster";
     			option1.value = option1.__value;
-    			add_location(option1, file$9, 135, 12, 3219);
+    			add_location(option1, file$9, 135, 12, 3223);
+    			option2.__value = "rte";
+    			option2.value = option2.__value;
+    			add_location(option2, file$9, 136, 12, 3289);
+    			option3.__value = "tribeLead";
+    			option3.value = option3.__value;
+    			add_location(option3, file$9, 137, 12, 3358);
+    			option4.__value = "ttl";
+    			option4.value = option4.__value;
+    			add_location(option4, file$9, 138, 12, 3420);
     			attr_dev(select, "name", "roles");
     			attr_dev(select, "id", "roles");
     			if (/*$axisStore*/ ctx[2] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[5].call(select));
     			add_location(select, file$9, 133, 8, 3086);
     			add_location(div1, file$9, 131, 4, 3032);
     			attr_dev(button1, "class", "aceptar svelte-13mz6nd");
-    			add_location(button1, file$9, 139, 8, 3329);
+    			add_location(button1, file$9, 142, 8, 3535);
     			attr_dev(button2, "class", "cancel svelte-13mz6nd");
-    			add_location(button2, file$9, 148, 8, 3540);
+    			add_location(button2, file$9, 151, 8, 3746);
     			attr_dev(div2, "class", " mt3");
-    			add_location(div2, file$9, 138, 4, 3302);
+    			add_location(div2, file$9, 141, 4, 3508);
     			attr_dev(dialog, "class", "svelte-13mz6nd");
     			toggle_class(dialog, "hide", /*showModal*/ ctx[1] == false);
     			toggle_class(dialog, "show", /*showModal*/ ctx[1] == true);
@@ -57731,11 +57780,14 @@ var app = (function () {
     			append_dev(div1, select);
     			append_dev(select, option0);
     			append_dev(select, option1);
+    			append_dev(select, option2);
+    			append_dev(select, option3);
+    			append_dev(select, option4);
     			select_option(select, /*$axisStore*/ ctx[2]);
-    			append_dev(dialog, t8);
+    			append_dev(dialog, t11);
     			append_dev(dialog, div2);
     			append_dev(div2, button1);
-    			append_dev(div2, t10);
+    			append_dev(div2, t13);
     			append_dev(div2, button2);
 
     			if (!mounted) {

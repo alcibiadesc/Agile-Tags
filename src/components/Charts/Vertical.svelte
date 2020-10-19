@@ -3,7 +3,13 @@
     import { onMount, onDestroy, afterUpdate } from "svelte";
     import Chart from "chart.js";
     import { backgroundColor, borderColor, borderWidth } from "./custom.js";
-    import { productOwner, scrumMaster } from "./../../AxisBBDD.js";
+    import {
+        productOwner,
+        scrumMaster,
+        rte,
+        tribeLead,
+        ttl,
+    } from "./../../AxisBBDD.js";
     import { axisStore } from "./../../stores/axisStore.js";
 
     $: tag = productOwner;
@@ -36,6 +42,12 @@
             tag = scrumMaster;
         } else if ($axisStore == "productOwner") {
             tag = productOwner;
+        } else if ($axisStore == "rte") {
+            tag = rte;
+        } else if ($axisStore == "tribeLead") {
+            tag = tribeLead;
+        } else if ($axisStore == "ttl") {
+            tag = ttl;
         }
     });
 
