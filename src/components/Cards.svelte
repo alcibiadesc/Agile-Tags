@@ -3,7 +3,7 @@
     import CardUnit from "./CardUnit.svelte";
     import { items } from "./../stores/answerStore.js";
     import { searchStore } from "../stores/searchStore.js";
-
+		import Moderar from "./Moderar.svelte";
     let listItems = $items || [];
 
     const removeAccents = (str) => {
@@ -33,11 +33,6 @@
     });
 </script>
 
-<style>
-    .pair {
-        background-color: #ffbdbd;
-    }
-</style>
 
 {#each listFiltered as item, i}
     <CardUnit
@@ -55,28 +50,13 @@
             {:else if key == 'Tribu'}
                 <p />
             {:else}
-                <div
-                    class="mt3 ph3 pt2 pb2 shadow-5 bg-white"
-                    class:pair={Number(key.substring(4, 5)) % 2 === 0 ? true : false}>
-                    <p class="b">{key}</p>
-                    <p>{item[key]}</p>
+							<Moderar
+							{key}
+ 							{item}
+							{i}
 
-                    <div class="cf">
-                        <p class="f6 green fl w-50">
-                            Puntuación:
-                            {$moderateStore[i][key] ? $moderateStore[i][key] : 0}
-                        </p>
-
-                        <p class=" f6 tr mb1 fl w-50">
-                            <input
-                                bind:value={$moderateStore[i][key]}
-                                type="number"
-                                placeholder="Moderar" />
-                        </p>
-                        <p />
-                    </div>
-                </div>
-            {/if}
+							/>
+           	{/if}
         {/each}
     </CardUnit>
 {/each}

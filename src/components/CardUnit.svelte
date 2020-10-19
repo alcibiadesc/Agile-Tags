@@ -143,6 +143,8 @@
 
     // Relationship with the team -> "D-"
     let axisD = clusterLevels("D-1", "D-2", "D-3");
+
+
     // change color select unselect
 
     const evaluation = (practitioner, expert) => {
@@ -194,10 +196,6 @@
     let allAxisD = Number(
         (axisD.participant[0] + axisD.practitioner[0] + axisD.expert[0]) / 3
     );
-
-    // Push the level of madurity
-
-    // Solo cuando esta seleccionado
 
     // Push the level of knowledge in a field
 
