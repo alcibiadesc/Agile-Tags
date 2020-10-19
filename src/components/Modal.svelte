@@ -136,7 +136,7 @@
             <option value="scrumMaster">SM: Scrum Master</option>
             <option value="rte">RTE: Release Train Engineer</option>
             <option value="tribeLead">TL: Tribe Lead</option>
-            <option value="ttl">TL: Tribe Technology Lead</option>
+            <option value="ttl">TTL: Tribe Technology Lead</option>
         </select>
     </div>
     <div class=" mt3">

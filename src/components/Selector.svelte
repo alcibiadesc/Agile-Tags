@@ -1,19 +1,9 @@
 <script>
-    import { Vertical, Polar } from "./Charts";
     import Cards from "./Cards.svelte";
-
+		import Charts from "./Charts.svelte";
     import Searchbar from "./Searchbar.svelte";
-
     let toggleMenu = "Personas";
 </script>
-
-<style>
-    .centered {
-        margin-right: auto;
-        margin-left: auto;
-        border: red;
-    }
-</style>
 
 <article class="cf f7 ma4 noselect">
     <div
@@ -36,12 +26,5 @@
     <Searchbar />
     <Cards />
 {:else if toggleMenu == 'Metricas'}
-    <div class="cf  centered w-80 ">
-        <div class=" fl w-50  bg-white   ">
-            <Vertical />
-        </div>
-        <div class="fr w-50  bg-white  ">
-            <Polar />
-        </div>
-    </div>
+	<Charts/>
 {/if}
