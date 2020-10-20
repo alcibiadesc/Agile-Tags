@@ -47,36 +47,6 @@
 	};
 
 	$: selectValue = 0;
-
-	// Tags
-
-	$: tag = [0, 0, 0, 0];
-
-	afterUpdate(() => {
-		switch ($axisStore) {
-			case "productOwner":
-				tag = productOwner;
-				break;
-			case "scrumMaster":
-				tag = scrumMaster;
-				break;
-
-			case "rte":
-				tag = rte;
-				break;
-
-			case "tribeLead":
-				tag = tribeLead;
-				break;
-
-			case "ttl":
-				tag = ttl;
-				break;
-
-			default:
-				break;
-		}
-	});
 </script>
 
 <style>
@@ -95,7 +65,6 @@
 			{$moderateStore[i][key] ? $moderateStore[i][key] : 0}
 		</p>
 
-		<h3>Hola</h3>
 		<p class=" f6 tr mb1 fl w-50">
 			Moderar:
 			<!-- svelte-ignore a11y-no-onchange -->

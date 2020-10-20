@@ -205,7 +205,7 @@ var app = (function () {
     function onMount(fn) {
         get_current_component().$$.on_mount.push(fn);
     }
-    function afterUpdate$1(fn) {
+    function afterUpdate(fn) {
         get_current_component().$$.after_update.push(fn);
     }
     function onDestroy(fn) {
@@ -1569,7 +1569,7 @@ var app = (function () {
     	let { practitionerAll } = $$props;
     	let { expertAll } = $$props;
 
-    	afterUpdate$1(() => {
+    	afterUpdate(() => {
     		switch ($axisStore) {
     			case "productOwner":
     				$$invalidate(11, tag = productOwner);
@@ -1631,7 +1631,7 @@ var app = (function () {
     		rte,
     		tribeLead,
     		ttl,
-    		afterUpdate: afterUpdate$1,
+    		afterUpdate,
     		axisA,
     		axisB,
     		axisC,
@@ -2500,7 +2500,7 @@ var app = (function () {
     	};
 
     	$$self.$capture_state = () => ({
-    		afterUpdate: afterUpdate$1,
+    		afterUpdate,
     		dataLevel,
     		dataAxis,
     		TableResult,
@@ -2764,10 +2764,8 @@ var app = (function () {
 
     	let t5;
     	let t6;
-    	let h3;
-    	let t8;
     	let p3;
-    	let t9;
+    	let t7;
     	let select;
     	let option0;
     	let option0_value_value;
@@ -2779,7 +2777,7 @@ var app = (function () {
     	let option3_value_value;
     	let option4;
     	let option4_value_value;
-    	let t15;
+    	let t13;
     	let p4;
     	let mounted;
     	let dispose;
@@ -2798,11 +2796,8 @@ var app = (function () {
     			t4 = text("Puntuación:\n\t\t\t");
     			t5 = text(t5_value);
     			t6 = space();
-    			h3 = element("h3");
-    			h3.textContent = "Hola";
-    			t8 = space();
     			p3 = element("p");
-    			t9 = text("Moderar:\n\t\t\t\n\t\t\t");
+    			t7 = text("Moderar:\n\t\t\t\n\t\t\t");
     			select = element("select");
     			option0 = element("option");
     			option0.textContent = "0";
@@ -2814,40 +2809,39 @@ var app = (function () {
     			option3.textContent = "0,75";
     			option4 = element("option");
     			option4.textContent = "1";
-    			t15 = space();
+    			t13 = space();
     			p4 = element("p");
     			attr_dev(p0, "class", "b");
-    			add_location(p0, file$3, 88, 1, 1340);
-    			add_location(p1, file$3, 89, 1, 1364);
+    			add_location(p0, file$3, 58, 1, 972);
+    			add_location(p1, file$3, 59, 1, 996);
     			attr_dev(p2, "class", "f6 green fl w-50");
-    			add_location(p2, file$3, 92, 2, 1404);
-    			add_location(h3, file$3, 97, 2, 1515);
+    			add_location(p2, file$3, 62, 2, 1036);
     			option0.__value = option0_value_value = 0;
     			option0.value = option0.__value;
-    			add_location(option0, file$3, 107, 4, 1756);
+    			add_location(option0, file$3, 76, 4, 1372);
     			option1.__value = option1_value_value = 0.25;
     			option1.value = option1.__value;
-    			add_location(option1, file$3, 108, 4, 1789);
+    			add_location(option1, file$3, 77, 4, 1405);
     			option2.__value = option2_value_value = 0.5;
     			option2.value = option2.__value;
-    			add_location(option2, file$3, 109, 4, 1828);
+    			add_location(option2, file$3, 78, 4, 1444);
     			option3.__value = option3_value_value = 0.75;
     			option3.value = option3.__value;
-    			add_location(option3, file$3, 110, 4, 1866);
+    			add_location(option3, file$3, 79, 4, 1482);
     			option4.__value = option4_value_value = 1;
     			option4.value = option4.__value;
-    			add_location(option4, file$3, 111, 4, 1905);
+    			add_location(option4, file$3, 80, 4, 1521);
     			attr_dev(select, "name", "moderator");
     			if (/*selectValue*/ ctx[3] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[6].call(select));
-    			add_location(select, file$3, 101, 3, 1620);
+    			add_location(select, file$3, 70, 3, 1236);
     			attr_dev(p3, "class", " f6 tr mb1 fl w-50");
-    			add_location(p3, file$3, 98, 2, 1531);
-    			add_location(p4, file$3, 114, 2, 1956);
+    			add_location(p3, file$3, 67, 2, 1147);
+    			add_location(p4, file$3, 83, 2, 1572);
     			attr_dev(div0, "class", "cf");
-    			add_location(div0, file$3, 91, 1, 1385);
+    			add_location(div0, file$3, 61, 1, 1017);
     			attr_dev(div1, "class", "mt3 ph3 pt2 pb2 shadow-5 bg-white svelte-s8z00x");
     			toggle_class(div1, "pair", /*isPair*/ ctx[5]());
-    			add_location(div1, file$3, 87, 0, 1269);
+    			add_location(div1, file$3, 57, 0, 901);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2865,10 +2859,8 @@ var app = (function () {
     			append_dev(p2, t4);
     			append_dev(p2, t5);
     			append_dev(div0, t6);
-    			append_dev(div0, h3);
-    			append_dev(div0, t8);
     			append_dev(div0, p3);
-    			append_dev(p3, t9);
+    			append_dev(p3, t7);
     			append_dev(p3, select);
     			append_dev(select, option0);
     			append_dev(select, option1);
@@ -2876,7 +2868,7 @@ var app = (function () {
     			append_dev(select, option3);
     			append_dev(select, option4);
     			select_option(select, /*selectValue*/ ctx[3]);
-    			append_dev(div0, t15);
+    			append_dev(div0, t13);
     			append_dev(div0, p4);
 
     			if (!mounted) {
@@ -2925,10 +2917,7 @@ var app = (function () {
     }
 
     function instance$3($$self, $$props, $$invalidate) {
-    	let $axisStore;
     	let $moderateStore;
-    	validate_store(axisStore, "axisStore");
-    	component_subscribe($$self, axisStore, $$value => $$invalidate(9, $axisStore = $$value));
     	validate_store(moderateStore, "moderateStore");
     	component_subscribe($$self, moderateStore, $$value => $$invalidate(4, $moderateStore = $$value));
     	let { key } = $$props;
@@ -2958,26 +2947,6 @@ var app = (function () {
     		console.log(result);
     		return result;
     	};
-
-    	afterUpdate(() => {
-    		switch ($axisStore) {
-    			case "productOwner":
-    				tag = productOwner;
-    				break;
-    			case "scrumMaster":
-    				tag = scrumMaster;
-    				break;
-    			case "rte":
-    				tag = rte;
-    				break;
-    			case "tribeLead":
-    				tag = tribeLead;
-    				break;
-    			case "ttl":
-    				tag = ttl;
-    				break;
-    		}
-    	});
 
     	const writable_props = ["key", "item", "i"];
 
@@ -3016,8 +2985,6 @@ var app = (function () {
     		ttl,
     		isPair,
     		selectValue,
-    		tag,
-    		$axisStore,
     		$moderateStore
     	});
 
@@ -3026,20 +2993,15 @@ var app = (function () {
     		if ("item" in $$props) $$invalidate(1, item = $$props.item);
     		if ("i" in $$props) $$invalidate(2, i = $$props.i);
     		if ("selectValue" in $$props) $$invalidate(3, selectValue = $$props.selectValue);
-    		if ("tag" in $$props) tag = $$props.tag;
     	};
 
     	let selectValue;
-    	let tag;
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
     	 $$invalidate(3, selectValue = 0);
-
-    	// Tags
-    	 tag = [0, 0, 0, 0];
 
     	return [
     		key,
@@ -25657,7 +25619,7 @@ var app = (function () {
     		dataAxis,
     		onMount,
     		onDestroy,
-    		afterUpdate: afterUpdate$1,
+    		afterUpdate,
     		Chart,
     		backgroundColor,
     		borderColor,
