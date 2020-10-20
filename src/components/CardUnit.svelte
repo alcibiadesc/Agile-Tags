@@ -426,7 +426,7 @@
                 <div class="stats">
                     <div>
                         <div class="tr">
-                            <span class="f6 tr">
+                            <span class="f6 mt1 tr">
                                 <a
                                     href={`mailto:${email}`}>{email ? email : ''}</a></span>
                         </div>
