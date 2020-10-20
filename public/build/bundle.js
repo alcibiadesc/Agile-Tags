@@ -99,6 +99,10 @@ var app = (function () {
     function null_to_empty(value) {
         return value == null ? '' : value;
     }
+    function set_store_value(store, ret, value = ret) {
+        store.set(value);
+        return ret;
+    }
 
     function append(target, node) {
         target.appendChild(node);
@@ -160,9 +164,6 @@ var app = (function () {
                 attr(node, key, attributes[key]);
             }
         }
-    }
-    function to_number(value) {
-        return value === '' ? undefined : +value;
     }
     function children(element) {
         return Array.from(element.childNodes);
@@ -2757,15 +2758,26 @@ var app = (function () {
     	let p2;
     	let t4;
 
-    	let t5_value = (/*$moderateStore*/ ctx[3][/*i*/ ctx[2]][/*key*/ ctx[0]]
-    	? /*$moderateStore*/ ctx[3][/*i*/ ctx[2]][/*key*/ ctx[0]]
+    	let t5_value = (/*$moderateStore*/ ctx[4][/*i*/ ctx[2]][/*key*/ ctx[0]]
+    	? /*$moderateStore*/ ctx[4][/*i*/ ctx[2]][/*key*/ ctx[0]]
     	: 0) + "";
 
     	let t5;
     	let t6;
     	let p3;
-    	let input;
     	let t7;
+    	let select;
+    	let option0;
+    	let option0_value_value;
+    	let option1;
+    	let option1_value_value;
+    	let option2;
+    	let option2_value_value;
+    	let option3;
+    	let option3_value_value;
+    	let option4;
+    	let option4_value_value;
+    	let t13;
     	let p4;
     	let mounted;
     	let dispose;
@@ -2785,25 +2797,51 @@ var app = (function () {
     			t5 = text(t5_value);
     			t6 = space();
     			p3 = element("p");
-    			input = element("input");
-    			t7 = space();
+    			t7 = text("Moderar:\n\t\t\t");
+    			select = element("select");
+    			option0 = element("option");
+    			option0.textContent = "0";
+    			option1 = element("option");
+    			option1.textContent = "0,25";
+    			option2 = element("option");
+    			option2.textContent = "0,50";
+    			option3 = element("option");
+    			option3.textContent = "0,75";
+    			option4 = element("option");
+    			option4.textContent = "1";
+    			t13 = space();
     			p4 = element("p");
     			attr_dev(p0, "class", "b");
-    			add_location(p0, file$3, 20, 1, 398);
-    			add_location(p1, file$3, 21, 1, 422);
+    			add_location(p0, file$3, 22, 1, 420);
+    			add_location(p1, file$3, 23, 1, 444);
     			attr_dev(p2, "class", "f6 green fl w-50");
-    			add_location(p2, file$3, 24, 2, 462);
-    			attr_dev(input, "type", "number");
-    			attr_dev(input, "placeholder", "Moderar");
-    			add_location(input, file$3, 30, 3, 607);
+    			add_location(p2, file$3, 26, 2, 484);
+    			option0.__value = option0_value_value = 0;
+    			option0.value = option0.__value;
+    			add_location(option0, file$3, 46, 4, 926);
+    			option1.__value = option1_value_value = 0.25;
+    			option1.value = option1.__value;
+    			add_location(option1, file$3, 47, 4, 959);
+    			option2.__value = option2_value_value = 0.5;
+    			option2.value = option2.__value;
+    			add_location(option2, file$3, 48, 4, 998);
+    			option3.__value = option3_value_value = 0.75;
+    			option3.value = option3.__value;
+    			add_location(option3, file$3, 49, 4, 1036);
+    			option4.__value = option4_value_value = 1;
+    			option4.value = option4.__value;
+    			add_location(option4, file$3, 50, 4, 1075);
+    			attr_dev(select, "name", "moderator");
+    			if (/*selectValue*/ ctx[3] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[6].call(select));
+    			add_location(select, file$3, 40, 3, 790);
     			attr_dev(p3, "class", " f6 tr mb1 fl w-50");
-    			add_location(p3, file$3, 29, 2, 573);
-    			add_location(p4, file$3, 35, 2, 710);
+    			add_location(p3, file$3, 38, 2, 744);
+    			add_location(p4, file$3, 53, 2, 1126);
     			attr_dev(div0, "class", "cf");
-    			add_location(div0, file$3, 23, 1, 443);
+    			add_location(div0, file$3, 25, 1, 465);
     			attr_dev(div1, "class", "mt3 ph3 pt2 pb2 shadow-5 bg-white svelte-s8z00x");
-    			toggle_class(div1, "pair", /*isPair*/ ctx[4]());
-    			add_location(div1, file$3, 19, 0, 327);
+    			toggle_class(div1, "pair", /*isPair*/ ctx[5]());
+    			add_location(div1, file$3, 21, 0, 349);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2822,13 +2860,23 @@ var app = (function () {
     			append_dev(p2, t5);
     			append_dev(div0, t6);
     			append_dev(div0, p3);
-    			append_dev(p3, input);
-    			set_input_value(input, /*$moderateStore*/ ctx[3][/*i*/ ctx[2]][/*key*/ ctx[0]]);
-    			append_dev(div0, t7);
+    			append_dev(p3, t7);
+    			append_dev(p3, select);
+    			append_dev(select, option0);
+    			append_dev(select, option1);
+    			append_dev(select, option2);
+    			append_dev(select, option3);
+    			append_dev(select, option4);
+    			select_option(select, /*selectValue*/ ctx[3]);
+    			append_dev(div0, t13);
     			append_dev(div0, p4);
 
     			if (!mounted) {
-    				dispose = listen_dev(input, "input", /*input_input_handler*/ ctx[5]);
+    				dispose = [
+    					listen_dev(select, "change", /*select_change_handler*/ ctx[6]),
+    					listen_dev(select, "change", /*change_handler*/ ctx[7], false, false, false)
+    				];
+
     				mounted = true;
     			}
     		},
@@ -2836,16 +2884,16 @@ var app = (function () {
     			if (dirty & /*key*/ 1) set_data_dev(t0, /*key*/ ctx[0]);
     			if (dirty & /*item, key*/ 3 && t2_value !== (t2_value = /*item*/ ctx[1][/*key*/ ctx[0]] + "")) set_data_dev(t2, t2_value);
 
-    			if (dirty & /*$moderateStore, i, key*/ 13 && t5_value !== (t5_value = (/*$moderateStore*/ ctx[3][/*i*/ ctx[2]][/*key*/ ctx[0]]
-    			? /*$moderateStore*/ ctx[3][/*i*/ ctx[2]][/*key*/ ctx[0]]
+    			if (dirty & /*$moderateStore, i, key*/ 21 && t5_value !== (t5_value = (/*$moderateStore*/ ctx[4][/*i*/ ctx[2]][/*key*/ ctx[0]]
+    			? /*$moderateStore*/ ctx[4][/*i*/ ctx[2]][/*key*/ ctx[0]]
     			: 0) + "")) set_data_dev(t5, t5_value);
 
-    			if (dirty & /*$moderateStore, i, key*/ 13 && to_number(input.value) !== /*$moderateStore*/ ctx[3][/*i*/ ctx[2]][/*key*/ ctx[0]]) {
-    				set_input_value(input, /*$moderateStore*/ ctx[3][/*i*/ ctx[2]][/*key*/ ctx[0]]);
+    			if (dirty & /*selectValue*/ 8) {
+    				select_option(select, /*selectValue*/ ctx[3]);
     			}
 
-    			if (dirty & /*isPair*/ 16) {
-    				toggle_class(div1, "pair", /*isPair*/ ctx[4]());
+    			if (dirty & /*isPair*/ 32) {
+    				toggle_class(div1, "pair", /*isPair*/ ctx[5]());
     			}
     		},
     		i: noop,
@@ -2853,7 +2901,7 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(div1);
     			mounted = false;
-    			dispose();
+    			run_all(dispose);
     		}
     	};
 
@@ -2871,7 +2919,7 @@ var app = (function () {
     function instance$3($$self, $$props, $$invalidate) {
     	let $moderateStore;
     	validate_store(moderateStore, "moderateStore");
-    	component_subscribe($$self, moderateStore, $$value => $$invalidate(3, $moderateStore = $$value));
+    	component_subscribe($$self, moderateStore, $$value => $$invalidate(4, $moderateStore = $$value));
     	let { key } = $$props;
     	let { item } = $$props;
     	let { i } = $$props;
@@ -2891,12 +2939,14 @@ var app = (function () {
     	let { $$slots = {}, $$scope } = $$props;
     	validate_slots("Moderar", $$slots, []);
 
-    	function input_input_handler() {
-    		$moderateStore[i][key] = to_number(this.value);
-    		moderateStore.set($moderateStore);
-    		$$invalidate(2, i);
-    		$$invalidate(0, key);
+    	function select_change_handler() {
+    		selectValue = select_value(this);
+    		$$invalidate(3, selectValue);
     	}
+
+    	const change_handler = () => {
+    		set_store_value(moderateStore, $moderateStore[i][key] = selectValue, $moderateStore);
+    	};
 
     	$$self.$set = $$props => {
     		if ("key" in $$props) $$invalidate(0, key = $$props.key);
@@ -2910,6 +2960,7 @@ var app = (function () {
     		item,
     		i,
     		isPair,
+    		selectValue,
     		$moderateStore
     	});
 
@@ -2917,13 +2968,27 @@ var app = (function () {
     		if ("key" in $$props) $$invalidate(0, key = $$props.key);
     		if ("item" in $$props) $$invalidate(1, item = $$props.item);
     		if ("i" in $$props) $$invalidate(2, i = $$props.i);
+    		if ("selectValue" in $$props) $$invalidate(3, selectValue = $$props.selectValue);
     	};
+
+    	let selectValue;
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [key, item, i, $moderateStore, isPair, input_input_handler];
+    	 $$invalidate(3, selectValue = 0);
+
+    	return [
+    		key,
+    		item,
+    		i,
+    		selectValue,
+    		$moderateStore,
+    		isPair,
+    		select_change_handler,
+    		change_handler
+    	];
     }
 
     class Moderar extends SvelteComponentDev {
