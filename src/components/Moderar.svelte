@@ -38,6 +38,7 @@
 
 		<p class=" f6 tr mb1 fl w-50">
 			Moderar:
+			<!-- svelte-ignore a11y-no-onchange -->
 			<select
 				name="moderator"
 				bind:value={selectValue}
