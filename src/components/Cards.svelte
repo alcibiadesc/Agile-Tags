@@ -3,7 +3,7 @@
     import CardUnit from "./CardUnit.svelte";
     import { items } from "./../stores/answerStore.js";
     import { searchStore } from "../stores/searchStore.js";
-		import Moderar from "./Moderar.svelte";
+    import Moderar from "./Moderar.svelte";
     let listItems = $items || [];
 
     const removeAccents = (str) => {
@@ -33,7 +33,6 @@
     });
 </script>
 
-
 {#each listFiltered as item, i}
     <CardUnit
         name={item.Nombre}
@@ -50,13 +49,8 @@
             {:else if key == 'Tribu'}
                 <p />
             {:else}
-							<Moderar
-							{key}
- 							{item}
-							{i}
-
-							/>
-           	{/if}
+                <Moderar {key} {item} {i} />
+            {/if}
         {/each}
     </CardUnit>
 {/each}
