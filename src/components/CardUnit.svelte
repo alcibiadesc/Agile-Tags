@@ -67,7 +67,7 @@
                 ? masterAnswersValues.split("&")
                 : {};
             let trueAnswer = splitMasterAnswer[0]
-                ? splitMasterAnswer[0].replace(" ", "")
+                ? splitMasterAnswer[0].replaceAll(" ", "")
                 : "";
             let scoreSum = Number(
                 splitMasterAnswer[1]
@@ -76,7 +76,7 @@
             ); // prevent use "," to decimals
 
             let answerToEvaluate = answers[key[i]]
-                ? answers[key[i]].replace(" ", "")
+                ? answers[key[i]].replaceAll(" ", "")
                 : "";
 
             if (answerToEvaluate == trueAnswer) {
@@ -143,7 +143,6 @@
 
     // Relationship with the team -> "D-"
     let axisD = clusterLevels("D-1", "D-2", "D-3");
-
 
     // change color select unselect
 
