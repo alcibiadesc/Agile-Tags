@@ -73,16 +73,16 @@
             <tbody class="lh-copy tc">
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[0]}</td>
-                    <td class="pa3">{Number(axisA.participant).toFixed(2)}</td>
-                    <td class="pa3">{Number(axisA.practitioner).toFixed(2)}</td>
-                    <td class="pa3">{Number(axisA.expert).toFixed(2)}</td>
+                    <td class="pa3">{axisA.participant}</td>
+                    <td class="pa3">{axisA.practitioner}</td>
+                    <td class="pa3">{axisA.expert}</td>
                     <td class="pa3">{allAxisA.toFixed(2)}</td>
                 </tr>
                 <tr class="stripe-dark">
                     <td class="pa3">{tag[1]}</td>
-                    <td class="pa3">{Number(axisB.participant).toFixed(2)}</td>
-                    <td class="pa3">{Number(axisB.practitioner).toFixed(2)}</td>
-                    <td class="pa3">{Number(axisB.expert).toFixed(2)}</td>
+                    <td class="pa3">{axisB.participant}</td>
+                    <td class="pa3">{axisB.practitioner}</td>
+                    <td class="pa3">{axisB.expert}</td>
                     <td class="pa3">{allAxisB.toFixed(2)}</td>
                 </tr>
                 <tr class="stripe-dark">
