@@ -123,7 +123,8 @@
 
 <dialog class:hide={showModal == false} class:show={showModal == true}>
     <div class="drop-area ">
-        ¡Añade tu plantilla correctora aquí!
+			<p>¡Añade tu plantilla correctora aquí!</p>
+			<a href="https://teams.microsoft.com/_#/files/General?threadId=19%3A96955f08827f4d52a19e5ae5e410f968%40thread.skype&ctx=channel&context=VALIDADORES%2520-%2520Plantillas%2520Maestra&rootfolder=%252Fsites%252FCTO-TransformacinAGILEyDevops%252FShared%2520Documents%252FGeneral%252FAgile%2526EE%2520Academy%25202020%252FEtiquetado%2520Roles%252FValidador%2520Web%252FVALIDADORES%2520-%2520Plantillas%2520Maestra">Carpeta de Teams con los validadores</a>
         <input
             type="file"
             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
