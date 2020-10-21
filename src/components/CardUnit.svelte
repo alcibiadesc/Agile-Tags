@@ -110,7 +110,7 @@
 	const sumAll = (object) => {
 		let values = Object.values(object);
 		let cleanValues = values.length > 0 ? values : [0];
-		let result = cleanValues.reduce((a, b) => a + b / values.length);
+		let result = cleanValues.reduce((a, b) => a + b);
 
 		return result;
 	};
@@ -118,9 +118,9 @@
 	// Cluster in Participant, Practitioner, Expert
 
 	const clusterLevels = (participant, practitioner, expert) => {
-		let parti = sumAll(findAndFilter(participant));
-		let pract = sumAll(findAndFilter(practitioner));
-		let exp = sumAll(findAndFilter(expert));
+		let parti = sumAll(findAndFilter(participant)) / participant.length;
+		let pract = sumAll(findAndFilter(practitioner)) / practitioner.length;
+		let exp = sumAll(findAndFilter(expert)) / expert.length;
 		let result = {
 			participant: [parti],
 			practitioner: [pract],
@@ -202,7 +202,7 @@
 
 	let scoreFinal = sumaAllPoints();
 
-	let status = evaluation(participantAll, practitionerAll, expertAll);
+	let status = evaluation(practitionerAll, expertAll);
 
 	// Toogle Visibility
 	let isUnSelected = false;
