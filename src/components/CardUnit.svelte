@@ -117,14 +117,13 @@
 
 	// Cluster in Participant, Practitioner, Expert
 
-	const clusterLevels = (practitioner, participant, expert) => {
-		let pract = sumAll(findAndFilter(practitioner));
-
+	const clusterLevels = (participant, practitioner, expert) => {
 		let parti = sumAll(findAndFilter(participant));
+		let pract = sumAll(findAndFilter(practitioner));
 		let exp = sumAll(findAndFilter(expert));
 		let result = {
-			practitioner: [pract],
 			participant: [parti],
+			practitioner: [pract],
 			expert: [exp],
 		};
 		return result;
