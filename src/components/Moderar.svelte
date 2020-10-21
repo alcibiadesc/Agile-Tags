@@ -47,7 +47,7 @@
 	const codesNum = () => {
 		let axis = key.substring(0, 1);
 		let level = Number(key.substring(2, 3));
-		let group = Number(key.substring(4, 6).replace("-",""));
+		let group = Number(key.substring(4, 6).replace("-", ""));
 
 		let axisToNumber = () => {
 			switch (axis) {
@@ -130,10 +130,10 @@
 
 	<div class="cf">
 		<div class="f6 fl w-50">
-			<p>
-				Puntuación:
-				{$moderateStore[i][key] ? $moderateStore[i][key] : 0}
-			</p>
+			<p />
+			{#if $moderateStore[i][key] >= 0}
+				<p>Puntuación: {$moderateStore[i][key]}</p>
+			{/if}
 		</div>
 
 		<div class=" f6 tr fl w-50">
@@ -146,8 +146,7 @@
 					on:change={() => {
 						$moderateStore[i][key] = selectValue;
 					}}>
-
-					<option value={""} selected hidden>-</option>
+					<option value={''} selected disabled>-</option>
 					<option value={0}>0</option>
 					<option value={0.25}>0,25</option>
 					<option value={0.5}>0,50</option>

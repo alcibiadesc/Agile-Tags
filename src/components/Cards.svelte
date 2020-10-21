@@ -1,5 +1,4 @@
 <script>
-    import { moderateStore } from "./../stores/moderateStore.js";
     import CardUnit from "./CardUnit.svelte";
     import { items } from "./../stores/answerStore.js";
     import { searchStore } from "../stores/searchStore.js";

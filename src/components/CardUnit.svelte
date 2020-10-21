@@ -1,5 +1,4 @@
 <script>
-	import { afterUpdate } from "svelte";
 	import { dataLevel, dataAxis } from "./../stores/chartStore.js";
 	import TableResult from "./TableResult.svelte";
 	import { moderateStore } from "./../stores/moderateStore.js";
@@ -54,8 +53,6 @@
 
 	let key = Object.keys(answers);
 
-	let score = 0;
-
 	let sizeQuest = key.length; // number of questions define to use the loop.
 	let sizeQuestMaster = Object.keys(masterAnswers).length;
 
@@ -72,7 +69,7 @@
 			let scoreSum = Number(
 				splitMasterAnswer[1]
 					? splitMasterAnswer[1].replace(",", ".")
-					: "0"
+					: 0
 			); // prevent use "," to decimals
 
 			let answerToEvaluate = answers[key[i]]
@@ -80,15 +77,15 @@
 				: "";
 
 			if (answerToEvaluate == trueAnswer) {
-				score += scoreSum;
 				scoreSum > 0 ? (userObject[key[i]] = scoreSum) : 0;
-			} else {
-				score += 0;
+			} else if (answerToEvaluate != trueAnswer) {
+				userObject[key[i]] = 0;
 			}
 		}
 	}
 
 	// Add Object to array with only scores
+
 	$moderateStore.push(userObject);
 
 	// Sum Global Score
@@ -111,10 +108,9 @@
 
 	const sumAll = (object) => {
 		let values = Object.values(object);
-		let keys = Object.keys(object);
-		console.log(Object.keys(object));
+
 		let cleanValues = values.length > 0 ? values : [0];
-		// Divido entre el número de preguntas, para evitar que si responde 1 de un grupo le de la máxima puntuación.
+
 		let result =
 			values.length > 0
 				? cleanValues.reduce((a, b) => a + b) / values.length
