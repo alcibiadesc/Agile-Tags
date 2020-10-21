@@ -47,7 +47,7 @@
 	const codesNum = () => {
 		let axis = key.substring(0, 1);
 		let level = Number(key.substring(2, 3));
-		let group = Number(key.substring(4, 5));
+		let group = Number(key.substring(4, 6).replace("-",""));
 
 		let axisToNumber = () => {
 			switch (axis) {
