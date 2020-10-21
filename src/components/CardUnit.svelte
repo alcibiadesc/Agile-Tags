@@ -437,7 +437,7 @@
 			</p>
 		</div>
 	</div>
-	<div class="w6" class:invisible={showChart}>
+	<div class:invisible={showChart}>
 		<TableResult
 			{axisA}
 			{axisB}
