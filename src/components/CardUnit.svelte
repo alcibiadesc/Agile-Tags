@@ -111,8 +111,10 @@
 
 	const sumAll = (object) => {
 		let values = Object.values(object);
+		let keys = Object.keys(object);
+		console.log(Object.keys(object));
 		let cleanValues = values.length > 0 ? values : [0];
-
+		// Divido entre el número de preguntas, para evitar que si responde 1 de un grupo le de la máxima puntuación.
 		let result =
 			values.length > 0
 				? cleanValues.reduce((a, b) => a + b) / values.length
