@@ -84,9 +84,8 @@
 				answerToEvaluate.toUpperCase() == "NO."
 			) {
 				userObject[key[i]] = 0;
-				console.log("funciona");
 			}
-
+			// It's not and else because maybe we need to score some points is the candidate answers with NO
 			if (answerToEvaluate == trueAnswer && scoreSum) {
 				userObject[key[i]] = scoreSum;
 			}
