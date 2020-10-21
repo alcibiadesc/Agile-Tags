@@ -60,6 +60,8 @@
 	for (let index = 0; index < sizeQuestMaster; index++) {
 		for (let i = 0; i < sizeQuest; i++) {
 			let masterAnswersValues = masterAnswers[index][key[i]];
+
+			// get the score points
 			let splitMasterAnswer = masterAnswersValues
 				? masterAnswersValues.split("&")
 				: {};
@@ -76,10 +78,17 @@
 				? answers[key[i]].replaceAll(" ", "")
 				: "";
 
-			if (answerToEvaluate == trueAnswer) {
-				scoreSum > 0 ? (userObject[key[i]] = scoreSum) : 0;
-			} else if (answerToEvaluate != trueAnswer) {
+			// Answers equal to "NO" score 0;
+			if (
+				answerToEvaluate.toUpperCase() == "NO" ||
+				answerToEvaluate.toUpperCase() == "NO."
+			) {
 				userObject[key[i]] = 0;
+				console.log("funciona");
+			}
+
+			if (answerToEvaluate == trueAnswer && scoreSum) {
+				userObject[key[i]] = scoreSum;
 			}
 		}
 	}
