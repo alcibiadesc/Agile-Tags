@@ -76,7 +76,7 @@
 		return result;
 	};
 
-	$: selectValue = 0;
+	$: selectValue = "";
 </script>
 
 <style>
@@ -146,6 +146,8 @@
 					on:change={() => {
 						$moderateStore[i][key] = selectValue;
 					}}>
+
+					<option value={""} selected hidden>-</option>
 					<option value={0}>0</option>
 					<option value={0.25}>0,25</option>
 					<option value={0.5}>0,50</option>
