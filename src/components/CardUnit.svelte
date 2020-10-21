@@ -70,7 +70,9 @@
 				? splitMasterAnswer[0].replaceAll(" ", "")
 				: "";
 			let scoreSum = Number(
-				splitMasterAnswer[1] ? splitMasterAnswer[1].replace(",", ".") : "0"
+				splitMasterAnswer[1]
+					? splitMasterAnswer[1].replace(",", ".")
+					: "0"
 			); // prevent use "," to decimals
 
 			let answerToEvaluate = answers[key[i]]
@@ -110,7 +112,11 @@
 	const sumAll = (object) => {
 		let values = Object.values(object);
 		let cleanValues = values.length > 0 ? values : [0];
-		let result = cleanValues.reduce((a, b) => a + b);
+
+		let result =
+			values.length > 0
+				? cleanValues.reduce((a, b) => a + b) / values.length
+				: 0;
 
 		return result;
 	};
@@ -118,9 +124,9 @@
 	// Cluster in Participant, Practitioner, Expert
 
 	const clusterLevels = (participant, practitioner, expert) => {
-		let parti = sumAll(findAndFilter(participant)) / participant.length;
-		let pract = sumAll(findAndFilter(practitioner)) / practitioner.length;
-		let exp = sumAll(findAndFilter(expert)) / expert.length;
+		let parti = sumAll(findAndFilter(participant));
+		let pract = sumAll(findAndFilter(practitioner));
+		let exp = sumAll(findAndFilter(expert));
 		let result = {
 			participant: [parti],
 			practitioner: [pract],
@@ -170,7 +176,10 @@
 	);
 
 	let expertAll = Number(
-		(axisA.expert[0] + axisB.expert[0] + axisC.expert[0] + axisD.expert[0]) /
+		(axisA.expert[0] +
+			axisB.expert[0] +
+			axisC.expert[0] +
+			axisD.expert[0]) /
 			tag.length
 	);
 
@@ -421,7 +430,8 @@
 					<div>
 						<div class="tr">
 							<span class="f6 mt1 tr">
-								<a href={`mailto:${email}`}>{email ? email : ''}</a></span>
+								<a
+									href={`mailto:${email}`}>{email ? email : ''}</a></span>
 						</div>
 					</div>
 				</div>
