@@ -1,11 +1,11 @@
 <script>
-	import Faqs from "./components/Faqs.svelte";
-	import { columns, items } from "./stores/answerStore.js";
-	import Selector from "./components/Selector.svelte";
 	import xlsx from "xlsx";
-	import Header from "./components/Header.svelte";
-	import Warning from "./components/Warning.svelte";
+	import { items } from "./stores/answerStore.js";
 	import { moderateStore } from "./stores/moderateStore";
+	import Faqs from "./components/Faqs.svelte";
+	import Header from "./components/Header.svelte";
+	import Selector from "./components/Selector.svelte";
+	import Footer from "./components/Footer.svelte";
 
 	export let files;
 	$: if (files.length) {
@@ -32,15 +32,6 @@
 					items.set(rowObject);
 				}
 
-				const keys = Object.keys(rowObject[0]).map((col) => {
-					return {
-						id: col,
-						isVisible: true,
-						isEditable: false,
-						isImage: false,
-					};
-				});
-				columns.set(keys);
 			});
 		};
 
@@ -106,5 +97,5 @@
 	{:else}
 		<Selector />
 	{/if}
-	<Warning />
+	<Footer />
 </main>

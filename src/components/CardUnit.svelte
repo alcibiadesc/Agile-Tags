@@ -69,9 +69,7 @@
 				? splitMasterAnswer[0].replaceAll(" ", "")
 				: "";
 			let scoreSum = Number(
-				splitMasterAnswer[1]
-					? splitMasterAnswer[1].replace(",", ".")
-					: 0
+				splitMasterAnswer[1] ? splitMasterAnswer[1].replace(",", ".") : 0
 			); // prevent use "," to decimals
 
 			let answerToEvaluate = answers[key[i]]
@@ -182,10 +180,7 @@
 	);
 
 	let expertAll = Number(
-		(axisA.expert[0] +
-			axisB.expert[0] +
-			axisC.expert[0] +
-			axisD.expert[0]) /
+		(axisA.expert[0] + axisB.expert[0] + axisC.expert[0] + axisD.expert[0]) /
 			tag.length
 	);
 
@@ -436,8 +431,7 @@
 					<div>
 						<div class="tr">
 							<span class="f6 mt1 tr">
-								<a
-									href={`mailto:${email}`}>{email ? email : ''}</a></span>
+								<a href={`mailto:${email}`}>{email ? email : ''}</a></span>
 						</div>
 					</div>
 				</div>

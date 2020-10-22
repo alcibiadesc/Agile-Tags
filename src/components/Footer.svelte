@@ -2,7 +2,13 @@
     let yearNow = new Date().getFullYear();
 </script>
 
-<footer class="bottom-0 pv4 ph3 ph5-m ph6-l mid-gray mt6">
+<style>
+    footer {
+        bottom: 0;
+    }
+</style>
+
+<footer class="pv4 ph3 ph5-m ph6-l mid-gray mt6">
     <small class="f6 db tc">©
         {yearNow}
         <b class="ttu">Santander Global Tech</b>., All Rights Reserved</small>
