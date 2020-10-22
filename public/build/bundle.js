@@ -1897,7 +1897,7 @@ var app = (function () {
     			t1 = text(/*rol*/ ctx[3]);
     			t2 = text(".");
     			attr_dev(span, "class", "b svelte-17yew4s");
-    			add_location(span, file$2, 450, 27, 9411);
+    			add_location(span, file$2, 450, 27, 9510);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -2058,78 +2058,78 @@ var app = (function () {
     			path2 = svg_element("path");
     			path3 = svg_element("path");
     			attr_dev(div0, "class", "level ma2 w4 svelte-17yew4s");
-    			add_location(div0, file$2, 400, 4, 7838);
+    			add_location(div0, file$2, 400, 4, 7937);
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$2, 408, 19, 8026);
+    			add_location(path0, file$2, 408, 19, 8125);
     			attr_dev(path1, "d", "M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z");
-    			add_location(path1, file$2, 409, 5, 8070);
+    			add_location(path1, file$2, 409, 5, 8169);
     			attr_dev(svg0, "class", "mv3 svelte-17yew4s");
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "viewBox", "0 0 24 24");
     			attr_dev(svg0, "fill", "white");
     			attr_dev(svg0, "width", "60px");
     			attr_dev(svg0, "height", "60px");
-    			add_location(svg0, file$2, 402, 4, 7884);
+    			add_location(svg0, file$2, 402, 4, 7983);
     			attr_dev(div1, "class", "points ma2 w4  svelte-17yew4s");
-    			add_location(div1, file$2, 412, 4, 8513);
+    			add_location(div1, file$2, 412, 4, 8612);
     			attr_dev(div2, "class", "user-card mt4 svelte-17yew4s");
-    			add_location(div2, file$2, 399, 3, 7806);
+    			add_location(div2, file$2, 399, 3, 7905);
     			attr_dev(h10, "class", "f4  svelte-17yew4s");
-    			add_location(h10, file$2, 415, 4, 8612);
+    			add_location(h10, file$2, 415, 4, 8711);
     			attr_dev(button0, "class", "grow mt4 br3");
-    			add_location(button0, file$2, 418, 5, 8656);
-    			add_location(div3, file$2, 417, 4, 8645);
+    			add_location(button0, file$2, 418, 5, 8755);
+    			add_location(div3, file$2, 417, 4, 8744);
     			attr_dev(button1, "class", "grow mt4 br3");
-    			add_location(button1, file$2, 427, 5, 8860);
-    			add_location(div4, file$2, 426, 4, 8849);
+    			add_location(button1, file$2, 427, 5, 8959);
+    			add_location(div4, file$2, 426, 4, 8948);
     			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
     			attr_dev(a, "class", "svelte-17yew4s");
-    			add_location(a, file$2, 438, 8, 9126);
+    			add_location(a, file$2, 438, 8, 9225);
     			attr_dev(span0, "class", "f6 mt1 tr svelte-17yew4s");
-    			add_location(span0, file$2, 437, 7, 9093);
+    			add_location(span0, file$2, 437, 7, 9192);
     			attr_dev(div5, "class", "tr");
-    			add_location(div5, file$2, 436, 6, 9069);
+    			add_location(div5, file$2, 436, 6, 9168);
     			attr_dev(div6, "class", "svelte-17yew4s");
-    			add_location(div6, file$2, 435, 5, 9057);
+    			add_location(div6, file$2, 435, 5, 9156);
     			attr_dev(div7, "class", "stats svelte-17yew4s");
-    			add_location(div7, file$2, 434, 4, 9032);
+    			add_location(div7, file$2, 434, 4, 9131);
     			attr_dev(div8, "class", "more-info svelte-17yew4s");
-    			add_location(div8, file$2, 414, 3, 8584);
+    			add_location(div8, file$2, 414, 3, 8683);
     			attr_dev(div9, "class", "additional  svelte-17yew4s");
     			toggle_class(div9, "unCheck", /*isUnSelected*/ ctx[4]);
-    			add_location(div9, file$2, 398, 2, 7748);
+    			add_location(div9, file$2, 398, 2, 7847);
     			attr_dev(h11, "class", "f4  svelte-17yew4s");
-    			add_location(h11, file$2, 446, 3, 9277);
+    			add_location(h11, file$2, 446, 3, 9376);
     			attr_dev(span1, "class", "b svelte-17yew4s");
-    			add_location(span1, file$2, 449, 4, 9352);
+    			add_location(span1, file$2, 449, 4, 9451);
     			attr_dev(p, "class", "tl");
-    			add_location(p, file$2, 447, 3, 9308);
+    			add_location(p, file$2, 447, 3, 9407);
     			attr_dev(div10, "class", "general svelte-17yew4s");
-    			add_location(div10, file$2, 445, 2, 9252);
+    			add_location(div10, file$2, 445, 2, 9351);
     			attr_dev(div11, "class", "card svelte-17yew4s");
-    			add_location(div11, file$2, 393, 1, 7667);
+    			add_location(div11, file$2, 393, 1, 7766);
     			attr_dev(div12, "class", "svelte-17yew4s");
     			toggle_class(div12, "invisible", /*showChart*/ ctx[5]);
-    			add_location(div12, file$2, 454, 1, 9472);
+    			add_location(div12, file$2, 454, 1, 9571);
     			attr_dev(path2, "d", "M0 0h24v24H0z");
     			attr_dev(path2, "fill", "none");
-    			add_location(path2, file$2, 482, 18, 10002);
+    			add_location(path2, file$2, 482, 18, 10101);
     			attr_dev(path3, "d", "M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z");
-    			add_location(path3, file$2, 483, 4, 10045);
+    			add_location(path3, file$2, 483, 4, 10144);
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "viewBox", "0 0 24 24");
     			attr_dev(svg1, "fill", "white");
     			attr_dev(svg1, "width", "24px");
     			attr_dev(svg1, "height", "24px");
-    			add_location(svg1, file$2, 477, 3, 9882);
+    			add_location(svg1, file$2, 477, 3, 9981);
     			attr_dev(div13, "class", "float-btn grow  svelte-17yew4s");
-    			add_location(div13, file$2, 471, 2, 9753);
+    			add_location(div13, file$2, 471, 2, 9852);
     			attr_dev(div14, "class", "tl  svelte-17yew4s");
     			toggle_class(div14, "invisible", /*hideModerator*/ ctx[6]);
-    			add_location(div14, file$2, 468, 1, 9689);
+    			add_location(div14, file$2, 468, 1, 9788);
     			attr_dev(div15, "class", "centered  svelte-17yew4s");
-    			add_location(div15, file$2, 392, 0, 7642);
+    			add_location(div15, file$2, 392, 0, 7741);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2351,6 +2351,7 @@ var app = (function () {
     				userObject[key[i]] = 0;
     			}
 
+    			// It's not and else because maybe we need to score some points is the candidate answers with NO
     			if (answerToEvaluate == trueAnswer && scoreSum) {
     				userObject[key[i]] = scoreSum;
     			}
@@ -2745,7 +2746,7 @@ var app = (function () {
     /* src/components/Moderar.svelte generated by Svelte v3.23.2 */
     const file$3 = "src/components/Moderar.svelte";
 
-    // (118:40) 
+    // (89:40) 
     function create_if_block_7(ctx) {
     	let t0_value = /*tag*/ ctx[3][3] + "";
     	let t0;
@@ -2773,14 +2774,14 @@ var app = (function () {
     		block,
     		id: create_if_block_7.name,
     		type: "if",
-    		source: "(118:40) ",
+    		source: "(89:40) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (116:40) 
+    // (87:40) 
     function create_if_block_6(ctx) {
     	let t0_value = /*tag*/ ctx[3][2] + "";
     	let t0;
@@ -2808,14 +2809,14 @@ var app = (function () {
     		block,
     		id: create_if_block_6.name,
     		type: "if",
-    		source: "(116:40) ",
+    		source: "(87:40) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (114:40) 
+    // (85:40) 
     function create_if_block_5(ctx) {
     	let t0_value = /*tag*/ ctx[3][1] + "";
     	let t0;
@@ -2843,14 +2844,14 @@ var app = (function () {
     		block,
     		id: create_if_block_5.name,
     		type: "if",
-    		source: "(114:40) ",
+    		source: "(85:40) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (112:3) {#if key.substring(0, 1) == 'A'}
+    // (83:3) {#if key.substring(0, 1) == 'A'}
     function create_if_block_4(ctx) {
     	let t0_value = /*tag*/ ctx[3][0] + "";
     	let t0;
@@ -2878,14 +2879,14 @@ var app = (function () {
     		block,
     		id: create_if_block_4.name,
     		type: "if",
-    		source: "(112:3) {#if key.substring(0, 1) == 'A'}",
+    		source: "(83:3) {#if key.substring(0, 1) == 'A'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (124:40) 
+    // (95:40) 
     function create_if_block_3(ctx) {
     	let t;
 
@@ -2905,14 +2906,14 @@ var app = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(124:40) ",
+    		source: "(95:40) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (122:40) 
+    // (93:40) 
     function create_if_block_2(ctx) {
     	let t;
 
@@ -2932,14 +2933,14 @@ var app = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(122:40) ",
+    		source: "(93:40) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (120:3) {#if key.substring(2, 3) == '1'}
+    // (91:3) {#if key.substring(2, 3) == '1'}
     function create_if_block_1(ctx) {
     	let t;
 
@@ -2959,14 +2960,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(120:3) {#if key.substring(2, 3) == '1'}",
+    		source: "(91:3) {#if key.substring(2, 3) == '1'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (134:3) {#if $moderateStore[i][key] >= 0}
+    // (105:3) {#if $moderateStore[i][key] >= 0}
     function create_if_block$2(ctx) {
     	let p;
     	let t0;
@@ -2978,7 +2979,7 @@ var app = (function () {
     			p = element("p");
     			t0 = text("Puntuación: ");
     			t1 = text(t1_value);
-    			add_location(p, file$3, 134, 4, 2310);
+    			add_location(p, file$3, 105, 4, 1893);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -2997,7 +2998,7 @@ var app = (function () {
     		block,
     		id: create_if_block$2.name,
     		type: "if",
-    		source: "(134:3) {#if $moderateStore[i][key] >= 0}",
+    		source: "(105:3) {#if $moderateStore[i][key] >= 0}",
     		ctx
     	});
 
@@ -3119,50 +3120,50 @@ var app = (function () {
     			t16 = space();
     			p5 = element("p");
     			attr_dev(p0, "class", "f6 b helvetica fw4 mv3 ");
-    			add_location(p0, file$3, 110, 2, 1726);
-    			add_location(div0, file$3, 109, 1, 1718);
+    			add_location(p0, file$3, 81, 2, 1309);
+    			add_location(div0, file$3, 80, 1, 1301);
     			attr_dev(p1, "class", "b");
-    			add_location(p1, file$3, 127, 1, 2157);
+    			add_location(p1, file$3, 98, 1, 1740);
     			attr_dev(p2, "class", "pl2");
-    			add_location(p2, file$3, 128, 1, 2181);
-    			add_location(p3, file$3, 132, 3, 2263);
+    			add_location(p2, file$3, 99, 1, 1764);
+    			add_location(p3, file$3, 103, 3, 1846);
     			attr_dev(div1, "class", "f6 fl w-50");
-    			add_location(div1, file$3, 131, 2, 2235);
+    			add_location(div1, file$3, 102, 2, 1818);
     			option0.__value = option0_value_value = "";
     			option0.value = option0.__value;
     			option0.selected = true;
     			option0.disabled = true;
-    			add_location(option0, file$3, 148, 5, 2614);
+    			add_location(option0, file$3, 119, 5, 2197);
     			option1.__value = option1_value_value = 0;
     			option1.value = option1.__value;
-    			add_location(option1, file$3, 149, 5, 2667);
+    			add_location(option1, file$3, 120, 5, 2250);
     			option2.__value = option2_value_value = 0.25;
     			option2.value = option2.__value;
-    			add_location(option2, file$3, 150, 5, 2701);
+    			add_location(option2, file$3, 121, 5, 2284);
     			option3.__value = option3_value_value = 0.5;
     			option3.value = option3.__value;
-    			add_location(option3, file$3, 151, 5, 2741);
+    			add_location(option3, file$3, 122, 5, 2324);
     			option4.__value = option4_value_value = 0.75;
     			option4.value = option4.__value;
-    			add_location(option4, file$3, 152, 5, 2780);
+    			add_location(option4, file$3, 123, 5, 2363);
     			option5.__value = option5_value_value = 1;
     			option5.value = option5.__value;
-    			add_location(option5, file$3, 153, 5, 2820);
+    			add_location(option5, file$3, 124, 5, 2403);
     			attr_dev(select, "name", "moderator");
-    			if (/*selectValue*/ ctx[4] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[7].call(select));
-    			add_location(select, file$3, 142, 4, 2472);
-    			add_location(p4, file$3, 139, 3, 2407);
+    			if (/*selectValue*/ ctx[4] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[9].call(select));
+    			add_location(select, file$3, 113, 4, 2055);
+    			add_location(p4, file$3, 110, 3, 1990);
     			attr_dev(div2, "class", " f6 tr fl w-50");
-    			add_location(div2, file$3, 138, 2, 2375);
-    			add_location(p5, file$3, 157, 2, 2882);
+    			add_location(div2, file$3, 109, 2, 1958);
+    			add_location(p5, file$3, 128, 2, 2465);
     			attr_dev(div3, "class", "cf");
-    			add_location(div3, file$3, 130, 1, 2216);
+    			add_location(div3, file$3, 101, 1, 1799);
     			attr_dev(div4, "class", "mt3 ph3 pt2 pb2 shadow-5 br4 bg-white svelte-1em8vyc");
-    			toggle_class(div4, "red", /*codesNum*/ ctx[6]() % 4 == 0 ? true : false);
-    			toggle_class(div4, "green", /*codesNum*/ ctx[6]() % 4 == 1 ? true : false);
-    			toggle_class(div4, "blue", /*codesNum*/ ctx[6]() % 4 == 2 ? true : false);
-    			toggle_class(div4, "yellow", /*codesNum*/ ctx[6]() % 4 == 3 ? true : false);
-    			add_location(div4, file$3, 103, 0, 1466);
+    			toggle_class(div4, "red", /*colorCode*/ ctx[6] % 2 == 0 ? true : false);
+    			toggle_class(div4, "green", /*colorCode*/ ctx[6] % 2 == 1 ? true : false);
+    			toggle_class(div4, "blue", /*colorCode*/ ctx[6] % 4 == 2 ? true : false);
+    			toggle_class(div4, "yellow", /*colorCode*/ ctx[6] % 4 == 3 ? true : false);
+    			add_location(div4, file$3, 74, 0, 1053);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3204,8 +3205,8 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(select, "change", /*select_change_handler*/ ctx[7]),
-    					listen_dev(select, "change", /*change_handler*/ ctx[8], false, false, false)
+    					listen_dev(select, "change", /*select_change_handler*/ ctx[9]),
+    					listen_dev(select, "change", /*change_handler*/ ctx[10], false, false, false)
     				];
 
     				mounted = true;
@@ -3254,20 +3255,20 @@ var app = (function () {
     				select_option(select, /*selectValue*/ ctx[4]);
     			}
 
-    			if (dirty & /*codesNum*/ 64) {
-    				toggle_class(div4, "red", /*codesNum*/ ctx[6]() % 4 == 0 ? true : false);
+    			if (dirty & /*colorCode*/ 64) {
+    				toggle_class(div4, "red", /*colorCode*/ ctx[6] % 2 == 0 ? true : false);
     			}
 
-    			if (dirty & /*codesNum*/ 64) {
-    				toggle_class(div4, "green", /*codesNum*/ ctx[6]() % 4 == 1 ? true : false);
+    			if (dirty & /*colorCode*/ 64) {
+    				toggle_class(div4, "green", /*colorCode*/ ctx[6] % 2 == 1 ? true : false);
     			}
 
-    			if (dirty & /*codesNum*/ 64) {
-    				toggle_class(div4, "blue", /*codesNum*/ ctx[6]() % 4 == 2 ? true : false);
+    			if (dirty & /*colorCode*/ 64) {
+    				toggle_class(div4, "blue", /*colorCode*/ ctx[6] % 4 == 2 ? true : false);
     			}
 
-    			if (dirty & /*codesNum*/ 64) {
-    				toggle_class(div4, "yellow", /*codesNum*/ ctx[6]() % 4 == 3 ? true : false);
+    			if (dirty & /*colorCode*/ 64) {
+    				toggle_class(div4, "yellow", /*colorCode*/ ctx[6] % 4 == 3 ? true : false);
     			}
     		},
     		i: noop,
@@ -3304,13 +3305,15 @@ var app = (function () {
     	let $axisStore;
     	let $moderateStore;
     	validate_store(axisStore, "axisStore");
-    	component_subscribe($$self, axisStore, $$value => $$invalidate(9, $axisStore = $$value));
+    	component_subscribe($$self, axisStore, $$value => $$invalidate(11, $axisStore = $$value));
     	validate_store(moderateStore, "moderateStore");
     	component_subscribe($$self, moderateStore, $$value => $$invalidate(5, $moderateStore = $$value));
     	let { key } = $$props;
     	let { item } = $$props;
     	let { i } = $$props;
-    	let isPair;
+    	let { arrayColors } = $$props;
+    	let { index } = $$props;
+    	let colorCode = arrayColors[i][index];
 
     	afterUpdate(() => {
     		switch ($axisStore) {
@@ -3332,29 +3335,7 @@ var app = (function () {
     		}
     	});
 
-    	const codesNum = () => {
-    		let axis = key.substring(0, 1);
-    		let level = Number(key.substring(2, 3));
-    		let group = Number(key.substring(4, 6).replace("-", ""));
-
-    		let axisToNumber = () => {
-    			switch (axis) {
-    				case "A":
-    					return 1;
-    				case "B":
-    					return 2;
-    				case "C":
-    					return 2;
-    				case "D":
-    					return 1;
-    			}
-    		};
-
-    		let result = axisToNumber() + level + group;
-    		return result;
-    	};
-
-    	const writable_props = ["key", "item", "i"];
+    	const writable_props = ["key", "item", "i", "arrayColors", "index"];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== "$$") console.warn(`<Moderar> was created with unknown prop '${key}'`);
@@ -3376,6 +3357,8 @@ var app = (function () {
     		if ("key" in $$props) $$invalidate(0, key = $$props.key);
     		if ("item" in $$props) $$invalidate(1, item = $$props.item);
     		if ("i" in $$props) $$invalidate(2, i = $$props.i);
+    		if ("arrayColors" in $$props) $$invalidate(7, arrayColors = $$props.arrayColors);
+    		if ("index" in $$props) $$invalidate(8, index = $$props.index);
     	};
 
     	$$self.$capture_state = () => ({
@@ -3383,7 +3366,9 @@ var app = (function () {
     		key,
     		item,
     		i,
-    		isPair,
+    		arrayColors,
+    		index,
+    		colorCode,
     		axisStore,
     		productOwner,
     		scrumMaster,
@@ -3391,7 +3376,6 @@ var app = (function () {
     		tribeLead,
     		ttl,
     		afterUpdate,
-    		codesNum,
     		tag,
     		$axisStore,
     		selectValue,
@@ -3402,7 +3386,9 @@ var app = (function () {
     		if ("key" in $$props) $$invalidate(0, key = $$props.key);
     		if ("item" in $$props) $$invalidate(1, item = $$props.item);
     		if ("i" in $$props) $$invalidate(2, i = $$props.i);
-    		if ("isPair" in $$props) isPair = $$props.isPair;
+    		if ("arrayColors" in $$props) $$invalidate(7, arrayColors = $$props.arrayColors);
+    		if ("index" in $$props) $$invalidate(8, index = $$props.index);
+    		if ("colorCode" in $$props) $$invalidate(6, colorCode = $$props.colorCode);
     		if ("tag" in $$props) $$invalidate(3, tag = $$props.tag);
     		if ("selectValue" in $$props) $$invalidate(4, selectValue = $$props.selectValue);
     	};
@@ -3424,7 +3410,9 @@ var app = (function () {
     		tag,
     		selectValue,
     		$moderateStore,
-    		codesNum,
+    		colorCode,
+    		arrayColors,
+    		index,
     		select_change_handler,
     		change_handler
     	];
@@ -3433,7 +3421,14 @@ var app = (function () {
     class Moderar extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { key: 0, item: 1, i: 2 });
+
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, {
+    			key: 0,
+    			item: 1,
+    			i: 2,
+    			arrayColors: 7,
+    			index: 8
+    		});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -3455,6 +3450,14 @@ var app = (function () {
 
     		if (/*i*/ ctx[2] === undefined && !("i" in props)) {
     			console.warn("<Moderar> was created without expected prop 'i'");
+    		}
+
+    		if (/*arrayColors*/ ctx[7] === undefined && !("arrayColors" in props)) {
+    			console.warn("<Moderar> was created without expected prop 'arrayColors'");
+    		}
+
+    		if (/*index*/ ctx[8] === undefined && !("index" in props)) {
+    			console.warn("<Moderar> was created without expected prop 'index'");
     		}
     	}
 
@@ -3481,6 +3484,22 @@ var app = (function () {
     	set i(value) {
     		throw new Error("<Moderar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
+
+    	get arrayColors() {
+    		throw new Error("<Moderar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set arrayColors(value) {
+    		throw new Error("<Moderar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	get index() {
+    		throw new Error("<Moderar>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set index(value) {
+    		throw new Error("<Moderar>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
     }
 
     /* src/components/Cards.svelte generated by Svelte v3.23.2 */
@@ -3490,27 +3509,30 @@ var app = (function () {
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[9] = list[i];
+    	child_ctx[11] = list[i];
+    	child_ctx[13] = i;
     	return child_ctx;
     }
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[6] = list[i];
-    	child_ctx[8] = i;
+    	child_ctx[8] = list[i];
+    	child_ctx[10] = i;
     	return child_ctx;
     }
 
-    // (50:12) {:else}
+    // (73:12) {:else}
     function create_else_block(ctx) {
     	let moderar;
     	let current;
 
     	moderar = new Moderar({
     			props: {
-    				key: /*key*/ ctx[9],
-    				item: /*item*/ ctx[6],
-    				i: /*i*/ ctx[8]
+    				key: /*key*/ ctx[11],
+    				item: /*item*/ ctx[8],
+    				i: /*i*/ ctx[10],
+    				index: /*index*/ ctx[13],
+    				arrayColors: /*arrayColors*/ ctx[1]
     			},
     			$$inline: true
     		});
@@ -3525,8 +3547,9 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const moderar_changes = {};
-    			if (dirty & /*listFiltered*/ 1) moderar_changes.key = /*key*/ ctx[9];
-    			if (dirty & /*listFiltered*/ 1) moderar_changes.item = /*item*/ ctx[6];
+    			if (dirty & /*listFiltered*/ 1) moderar_changes.key = /*key*/ ctx[11];
+    			if (dirty & /*listFiltered*/ 1) moderar_changes.item = /*item*/ ctx[8];
+    			if (dirty & /*arrayColors*/ 2) moderar_changes.arrayColors = /*arrayColors*/ ctx[1];
     			moderar.$set(moderar_changes);
     		},
     		i: function intro(local) {
@@ -3547,21 +3570,21 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(50:12) {:else}",
+    		source: "(73:12) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (48:37) 
+    // (71:37) 
     function create_if_block_2$1(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			add_location(p, file$4, 48, 16, 1496);
+    			add_location(p, file$4, 71, 16, 2169);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3578,21 +3601,21 @@ var app = (function () {
     		block,
     		id: create_if_block_2$1.name,
     		type: "if",
-    		source: "(48:37) ",
+    		source: "(71:37) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:38) 
+    // (69:38) 
     function create_if_block_1$1(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			add_location(p, file$4, 46, 16, 1436);
+    			add_location(p, file$4, 69, 16, 2109);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3609,21 +3632,21 @@ var app = (function () {
     		block,
     		id: create_if_block_1$1.name,
     		type: "if",
-    		source: "(46:38) ",
+    		source: "(69:38) ",
     		ctx
     	});
 
     	return block;
     }
 
-    // (44:12) {#if key == 'Correo electrónico'}
+    // (67:12) {#if key == 'Correo electrónico'}
     function create_if_block$3(ctx) {
     	let p;
 
     	const block = {
     		c: function create() {
     			p = element("p");
-    			add_location(p, file$4, 44, 16, 1375);
+    			add_location(p, file$4, 67, 16, 2048);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -3640,14 +3663,14 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(44:12) {#if key == 'Correo electrónico'}",
+    		source: "(67:12) {#if key == 'Correo electrónico'}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (43:8) {#each Object.keys(item) as key}
+    // (66:8) {#each Object.keys(item) as key, index}
     function create_each_block_1(ctx) {
     	let current_block_type_index;
     	let if_block;
@@ -3657,9 +3680,9 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*key*/ ctx[9] == "Correo electrónico") return 0;
-    		if (/*key*/ ctx[9] == "Nombre") return 1;
-    		if (/*key*/ ctx[9] == "Tribu") return 2;
+    		if (/*key*/ ctx[11] == "Correo electrónico") return 0;
+    		if (/*key*/ ctx[11] == "Nombre") return 1;
+    		if (/*key*/ ctx[11] == "Tribu") return 2;
     		return 3;
     	}
 
@@ -3720,18 +3743,18 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(43:8) {#each Object.keys(item) as key}",
+    		source: "(66:8) {#each Object.keys(item) as key, index}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (36:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}>
+    // (58:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}         groupByColor={groupByColor(Object.keys(item))}>
     function create_default_slot(ctx) {
     	let t;
     	let current;
-    	let each_value_1 = Object.keys(/*item*/ ctx[6]);
+    	let each_value_1 = Object.keys(/*item*/ ctx[8]);
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -3760,8 +3783,8 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*Object, listFiltered*/ 1) {
-    				each_value_1 = Object.keys(/*item*/ ctx[6]);
+    			if (dirty & /*Object, listFiltered, arrayColors*/ 3) {
+    				each_value_1 = Object.keys(/*item*/ ctx[8]);
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -3816,26 +3839,27 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(36:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}>",
+    		source: "(58:4) <CardUnit         name={item.Nombre}         tribal={item.Tribu}         email={item['Correo electrónico']}         rol={item.Rol}         answers={listFiltered[i]}         index={i}         groupByColor={groupByColor(Object.keys(item))}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (35:0) {#each listFiltered as item, i}
+    // (57:0) {#each listFiltered as item, i}
     function create_each_block(ctx) {
     	let cardunit;
     	let current;
 
     	cardunit = new CardUnit({
     			props: {
-    				name: /*item*/ ctx[6].Nombre,
-    				tribal: /*item*/ ctx[6].Tribu,
-    				email: /*item*/ ctx[6]["Correo electrónico"],
-    				rol: /*item*/ ctx[6].Rol,
-    				answers: /*listFiltered*/ ctx[0][/*i*/ ctx[8]],
-    				index: /*i*/ ctx[8],
+    				name: /*item*/ ctx[8].Nombre,
+    				tribal: /*item*/ ctx[8].Tribu,
+    				email: /*item*/ ctx[8]["Correo electrónico"],
+    				rol: /*item*/ ctx[8].Rol,
+    				answers: /*listFiltered*/ ctx[0][/*i*/ ctx[10]],
+    				index: /*i*/ ctx[10],
+    				groupByColor: /*groupByColor*/ ctx[2](Object.keys(/*item*/ ctx[8])),
     				$$slots: { default: [create_default_slot] },
     				$$scope: { ctx }
     			},
@@ -3852,13 +3876,14 @@ var app = (function () {
     		},
     		p: function update(ctx, dirty) {
     			const cardunit_changes = {};
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.name = /*item*/ ctx[6].Nombre;
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.tribal = /*item*/ ctx[6].Tribu;
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.email = /*item*/ ctx[6]["Correo electrónico"];
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.rol = /*item*/ ctx[6].Rol;
-    			if (dirty & /*listFiltered*/ 1) cardunit_changes.answers = /*listFiltered*/ ctx[0][/*i*/ ctx[8]];
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.name = /*item*/ ctx[8].Nombre;
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.tribal = /*item*/ ctx[8].Tribu;
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.email = /*item*/ ctx[8]["Correo electrónico"];
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.rol = /*item*/ ctx[8].Rol;
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.answers = /*listFiltered*/ ctx[0][/*i*/ ctx[10]];
+    			if (dirty & /*listFiltered*/ 1) cardunit_changes.groupByColor = /*groupByColor*/ ctx[2](Object.keys(/*item*/ ctx[8]));
 
-    			if (dirty & /*$$scope, listFiltered*/ 4097) {
+    			if (dirty & /*$$scope, listFiltered, arrayColors*/ 16387) {
     				cardunit_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3882,7 +3907,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(35:0) {#each listFiltered as item, i}",
+    		source: "(57:0) {#each listFiltered as item, i}",
     		ctx
     	});
 
@@ -3924,7 +3949,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*listFiltered, Object*/ 1) {
+    			if (dirty & /*listFiltered, groupByColor, Object, arrayColors*/ 7) {
     				each_value = /*listFiltered*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -3991,13 +4016,32 @@ var app = (function () {
     	let $items;
     	let $searchStore;
     	validate_store(items, "items");
-    	component_subscribe($$self, items, $$value => $$invalidate(1, $items = $$value));
+    	component_subscribe($$self, items, $$value => $$invalidate(3, $items = $$value));
     	validate_store(searchStore, "searchStore");
-    	component_subscribe($$self, searchStore, $$value => $$invalidate(2, $searchStore = $$value));
+    	component_subscribe($$self, searchStore, $$value => $$invalidate(4, $searchStore = $$value));
     	let listItems = $items || [];
 
     	const removeAccents = str => {
     		return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    	};
+
+    	const groupByColor = ele => {
+    		let counter = 0;
+    		let arrayColorCollection = [];
+
+    		const checkColor = ele.map((item, index) => {
+    			if (ele[index + 1]) {
+    				let result = item.substring(0, 5) == ele[index + 1].substring(0, 5)
+    				? counter
+    				: counter++;
+
+    				arrayColorCollection.push(result);
+    			} else {
+    				arrayColorCollection.push(counter);
+    			}
+    		});
+
+    		arrayColors.push(arrayColorCollection);
     	};
 
     	const writable_props = [];
@@ -4016,27 +4060,31 @@ var app = (function () {
     		Moderar,
     		listItems,
     		removeAccents,
+    		groupByColor,
     		$items,
     		listFiltered,
     		$searchStore,
-    		listCrop
+    		listCrop,
+    		arrayColors
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ("listItems" in $$props) $$invalidate(4, listItems = $$props.listItems);
+    		if ("listItems" in $$props) $$invalidate(6, listItems = $$props.listItems);
     		if ("listFiltered" in $$props) $$invalidate(0, listFiltered = $$props.listFiltered);
     		if ("listCrop" in $$props) listCrop = $$props.listCrop;
+    		if ("arrayColors" in $$props) $$invalidate(1, arrayColors = $$props.arrayColors);
     	};
 
     	let listFiltered;
     	let listCrop;
+    	let arrayColors;
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*$searchStore*/ 4) {
+    		if ($$self.$$.dirty & /*$searchStore*/ 16) {
     			 $$invalidate(0, listFiltered = listItems.filter(item => (item.Tribu
     			? removeAccents(item.Tribu.toLowerCase()).includes(removeAccents($searchStore.toLowerCase()))
     			: listItems) || (item.Nombre
@@ -4054,7 +4102,8 @@ var app = (function () {
     		}
     	};
 
-    	return [listFiltered];
+    	 $$invalidate(1, arrayColors = []);
+    	return [listFiltered, arrayColors, groupByColor];
     }
 
     class Cards extends SvelteComponentDev {

@@ -3,11 +3,11 @@
 	export let key;
 	export let item;
 	export let i;
-	let isPair;
 	export let arrayColors;
 	export let index;
 
-	let arrayColorsCode = arrayColors[index];
+	let colorCode = arrayColors[i][index];
+
 	// tag
 
 	import { axisStore } from "./../stores/axisStore.js";
@@ -47,38 +47,6 @@
 		}
 	});
 
-	const codesNum = () => {
-		let axis = key.substring(0, 1);
-		let level = Number(key.substring(2, 3));
-		let group = Number(key.substring(4, 6).replace("-", ""));
-
-		let axisToNumber = () => {
-			switch (axis) {
-				case "A":
-					return 1;
-					break;
-
-				case "B":
-					return 2;
-					break;
-
-				case "C":
-					return 2;
-					break;
-
-				case "D":
-					return 1;
-					break;
-
-				default:
-					break;
-			}
-		};
-		let result = axisToNumber() + level + group;
-
-		return result;
-	};
-
 	$: selectValue = "";
 </script>
 
@@ -106,10 +74,10 @@
 
 <div
 	class="mt3 ph3 pt2 pb2 shadow-5 br4 bg-white"
-	class:red={arrayColorsCode % 4 == 0 ? true : false}
-	class:green={arrayColorsCode % 4 == 1 ? true : false}
-	class:blue={arrayColorsCode % 4 == 2 ? true : false}
-	class:yellow={arrayColorsCode % 4 == 3 ? true : false}>
+	class:red={colorCode % 2 == 0 ? true : false}
+	class:green={colorCode % 2 == 1 ? true : false}
+	class:blue={colorCode % 4 == 2 ? true : false}
+	class:yellow={colorCode % 4 == 3 ? true : false}>
 	<div>
 		<p class="f6 b helvetica fw4 mv3 ">
 			{#if key.substring(0, 1) == 'A'}
