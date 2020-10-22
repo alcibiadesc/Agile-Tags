@@ -1,95 +1,90 @@
-export const po = [
-	"Product Management",
-	"Customer & Stakeholder Management	",
-	"Product Delivery",
-	"Relationship with the team",
-];
-
-export const sm = [
-	"Developing Teams",
-	"Adoption of agile",
-	"Enabling Continuous Improvement",
-	"Enabling Transparency",
-];
-
-export const rte = [
-	"Product Managment",
-	"Scaling Agile",
-	"Product Delivery",
-	"Relationship with Tribe",
-];
-
-export const tl = [
-	"Product Management",
-	"Customer and Stakeholders Management",
-	"Product Delivery",
-	"Relationship with Tribe",
-];
-
-export const ttl = [
-	"Engineering consistency, standards and best practices",
-	"Product Delivery",
-	"Relationship with Tribe",
-];
-
-export const pm = [
-	"Product Management",
-	"Product Delivery",
-	"Optimizing Strategy and Budgeting",
-	"Organizational Leadership",
-];
-
-export const cl = [
-	"Developing People",
-	"Defining Standards and Quality",
-	"Relationship with Chapter Members",
-];
-
-export const selectOptions = [
-	{ value: "cl", description: "CL: Chapter Lead" },
-	{ value: "pm", description: "PM: Product Manager" },
-	{ value: "po", description: "PO: Product Owner" },
-	{ value: "rte", description: "RTE: Release Train Engineer" },
-	{ value: "sm", description: "SM: Scrum Master" },
-	{ value: "tl", description: "TL: Tribe Lead" },
-	{ value: "ttl", description: "TTL: Tribe Technology Lead" },
-];
-
 import { axisStore } from "./stores/axisStore.js";
 
-export let tag;
+const axisTags = [
+	{
+		value: "cl",
+		description: "CL: Chapter Lead",
+		tags: [
+			"Developing People",
+			"Defining Standards and Quality",
+			"Relationship with Chapter Members",
+		],
+	},
 
-axisStore.subscribe((storeName) => {
-	console.log("funciona");
+	{
+		value: "pm",
+		description: "PM: Product Manager",
+		tags: [
+			"Product Management",
+			"Product Delivery",
+			"Optimizing Strategy and Budgeting",
+			"Organizational Leadership",
+		],
+	},
+	{
+		value: "po",
+		description: "PO: Product Owner",
+		tags: [
+			"Product Management",
+			"Customer & Stakeholder Management",
+			"Product Delivery",
+			"Relationship with the team",
+		],
+	},
+	{
+		value: "rte",
+		description: "RTE: Release Train Engineer",
+		tags: [
+			"Product Managment",
+			"Scaling Agile",
+			"Product Delivery",
+			"Relationship with Tribe",
+		],
+	},
+	{
+		value: "sm",
+		description: "SM: Scrum Master",
+		tags: [
+			"Developing Teams",
+			"Adoption of agile",
+			"Enabling Continuous Improvement",
+			"Enabling Transparency",
+		],
+	},
+	{
+		value: "tl",
+		description: "TL: Tribe Lead",
+		tags: [
+			"Product Management",
+			"Customer and Stakeholders Management",
+			"Product Delivery",
+			"Relationship with Tribe",
+		],
+	},
+	{
+		value: "ttl",
+		description: "TTL: Tribe Technology Lead",
+		tags: [
+			"Engineering consistency, standards and best practices",
+			"Product Delivery",
+			"Relationship with Tribe",
+		],
+	},
+];
 
-	switch (storeName) {
-		case "cl":
-			tag = cl;
-			break;
-		case "pm":
-			tag = pm;
-			break;
+// options in modal to select axis
 
-		case "po":
-			tag = po;
-			break;
-		case "rte":
-			tag = rte;
-			break;
+export const selectOptions = [];
 
-		case "sm":
-			tag = sm;
-			break;
+let axisTagsSelectOptions = axisTags.map((obj) =>
+	selectOptions.push({ value: obj.value, description: obj.description })
+);
 
-		case "tl":
-			tag = tl;
-			break;
+// tags to axis (used in score calculation (cardUnit & moderator) and vertical chart
 
-		case "ttl":
-			tag = ttl;
-			break;
+export let tag = [0];
 
-		default:
-			tag = "cl";
-	}
+axisStore.subscribe((axisSelected) => {
+	let axisTagsFiltered = axisTags.filter((obj) => obj.value == axisSelected);
+	tag = axisTagsFiltered[0].tags;
 });
