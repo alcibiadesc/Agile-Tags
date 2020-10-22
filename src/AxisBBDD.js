@@ -1,11 +1,11 @@
-export const productOwner = [
+export const po = [
 	"Product Management",
 	"Customer & Stakeholder Management	",
 	"Product Delivery",
 	"Relationship with the team",
 ];
 
-export const scrumMaster = [
+export const sm = [
 	"Developing Teams",
 	"Adoption of agile",
 	"Enabling Continuous Improvement",
@@ -19,7 +19,7 @@ export const rte = [
 	"Relationship with Tribe",
 ];
 
-export const tribeLead = [
+export const tl = [
 	"Product Management",
 	"Customer and Stakeholders Management",
 	"Product Delivery",
@@ -45,4 +45,51 @@ export const cl = [
 	"Relationship with Chapter Members",
 ];
 
-// Change in tableResult.svelte and in charts that uses tag: vertical // add option in Modal.svelte
+export const selectOptions = [
+	{ value: "cl", description: "CL: Chapter Lead" },
+	{ value: "pm", description: "PM: Product Manager" },
+	{ value: "po", description: "PO: Product Owner" },
+	{ value: "rte", description: "RTE: Release Train Engineer" },
+	{ value: "sm", description: "SM: Scrum Master" },
+	{ value: "tl", description: "TL: Tribe Lead" },
+	{ value: "ttl", description: "TTL: Tribe Technology Lead" },
+];
+
+import { axisStore } from "./stores/axisStore.js";
+
+export let tag;
+
+axisStore.subscribe((storeName) => {
+	console.log("funciona");
+
+	switch (storeName) {
+		case "cl":
+			tag = cl;
+			break;
+		case "pm":
+			tag = pm;
+			break;
+
+		case "po":
+			tag = po;
+			break;
+		case "rte":
+			tag = rte;
+			break;
+
+		case "sm":
+			tag = sm;
+			break;
+
+		case "tl":
+			tag = tl;
+			break;
+
+		case "ttl":
+			tag = ttl;
+			break;
+
+		default:
+			tag = "cl";
+	}
+});

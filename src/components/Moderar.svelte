@@ -1,5 +1,9 @@
 <script>
 	import { moderateStore } from "../stores/moderateStore.js";
+	import { axisStore } from "./../stores/axisStore.js";
+	import { tag } from "../AxisBBDD.js";
+	import { afterUpdate } from "svelte";
+
 	export let key;
 	export let item;
 	export let i;
@@ -7,46 +11,6 @@
 	export let index;
 
 	let colorCode = arrayColors[i][index];
-
-	// tag
-
-	import { axisStore } from "./../stores/axisStore.js";
-	import {
-		productOwner,
-		scrumMaster,
-		rte,
-		tribeLead,
-		ttl,
-	} from "../AxisBBDD.js";
-	import { afterUpdate } from "svelte";
-	$: tag = [0, 0, 0, 0];
-
-	afterUpdate(() => {
-		switch ($axisStore) {
-			case "productOwner":
-				tag = productOwner;
-				break;
-			case "scrumMaster":
-				tag = scrumMaster;
-				break;
-
-			case "rte":
-				tag = rte;
-				break;
-
-			case "tribeLead":
-				tag = tribeLead;
-				break;
-
-			case "ttl":
-				tag = ttl;
-				break;
-
-			default:
-				break;
-		}
-	});
-
 	$: selectValue = "";
 </script>
 

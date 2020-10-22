@@ -4,41 +4,7 @@
 	import { moderateStore } from "./../stores/moderateStore.js";
 	import { itemsMaster } from "./../stores/masterStore.js";
 	import { axisStore } from "./../stores/axisStore.js";
-	import {
-		productOwner,
-		scrumMaster,
-		rte,
-		tribeLead,
-		ttl,
-	} from "../AxisBBDD.js";
-
-	export let tag = [0, 0, 0, 0];
-
-	$: tag = [0, 0, 0, 0];
-
-	switch ($axisStore) {
-		case "productOwner":
-			tag = productOwner;
-			break;
-		case "scrumMaster":
-			tag = scrumMaster;
-			break;
-
-		case "rte":
-			tag = rte;
-			break;
-
-		case "tribeLead":
-			tag = tribeLead;
-			break;
-
-		case "ttl":
-			tag = ttl;
-			break;
-
-		default:
-			break;
-	}
+	import {tag} from "../AxisBBDD.js";
 
 	export let name;
 	export let tribal;

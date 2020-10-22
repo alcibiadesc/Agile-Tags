@@ -3,18 +3,8 @@
 	import { onMount, onDestroy, afterUpdate } from "svelte";
 	import Chart from "chart.js";
 	import { backgroundColor, borderColor, borderWidth } from "./custom.js";
-	import {
-		productOwner,
-		scrumMaster,
-		rte,
-		tribeLead,
-		ttl,
-		pm,
-		cl,
-	} from "./../../AxisBBDD.js";
+	import { tag } from "../../AxisBBDD.js";
 	import { axisStore } from "./../../stores/axisStore.js";
-
-	$: tag = productOwner;
 
 	let data = [0, 0, 0];
 	let axisA = [0];
@@ -38,24 +28,6 @@
 	let axisDresult = (axisD.reduce((a, b) => a + b) / axisD.length).toFixed(2);
 
 	data = [axisAresult, axisBresult, axisCresult, axisDresult];
-
-	onMount(() => {
-		if ($axisStore == "scrumMaster") {
-			tag = scrumMaster;
-		} else if ($axisStore == "productOwner") {
-			tag = productOwner;
-		} else if ($axisStore == "rte") {
-			tag = rte;
-		} else if ($axisStore == "tribeLead") {
-			tag = tribeLead;
-		} else if ($axisStore == "ttl") {
-			tag = ttl;
-		} else if ($axisStore == "pm") {
-			tag = pm;
-		} else if ($axisStore == "cl") {
-			tag = cl;
-		}
-	});
 
 	function createChart() {
 		var ctx = document.getElementById("myChart").getContext("2d");

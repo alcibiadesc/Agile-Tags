@@ -1,18 +1,13 @@
-import { writable } from 'svelte/store';
+import { writable } from 'svelte/store'
 
+const STORE_PREFIX = 'axis_'
 
-const STORE_PREFIX = 'axis_';
+const itemsData = localStorage.getItem(`${STORE_PREFIX}items`)
 
-const itemsData = localStorage.getItem(`${STORE_PREFIX}items`);
+export const axisStore = writable(JSON.parse(itemsData) || 'po')
 
-export const axisStore = writable(JSON.parse(itemsData) || "productOwner");
-
-axisStore.subscribe(value => {
-    if (itemsData !== value) {
-        localStorage.setItem(`${STORE_PREFIX}items`, JSON.stringify(value));
-    }
-});
-
-
-
-
+axisStore.subscribe((value) => {
+  if (itemsData !== value) {
+    localStorage.setItem(`${STORE_PREFIX}items`, JSON.stringify(value))
+  }
+})
