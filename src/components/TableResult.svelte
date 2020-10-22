@@ -6,7 +6,7 @@
 		rte,
 		tribeLead,
 		ttl,
-		pm,
+		pm,cl
 	} from "../AxisBBDD.js";
 	import { afterUpdate } from "svelte";
 
@@ -50,7 +50,9 @@
 			case "pm":
 				tag = pm;
 				break;
-
+			case "cl":
+				tag = cl;
+				break;
 			default:
 				break;
 		}
