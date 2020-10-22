@@ -9,6 +9,7 @@
         rte,
         tribeLead,
         ttl,
+        pm,
     } from "./../../AxisBBDD.js";
     import { axisStore } from "./../../stores/axisStore.js";
 
@@ -48,6 +49,8 @@
             tag = tribeLead;
         } else if ($axisStore == "ttl") {
             tag = ttl;
+        } else if ($axisStore == "pm") {
+            tag = pm;
         }
     });
 

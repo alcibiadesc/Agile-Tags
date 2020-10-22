@@ -19,4 +19,8 @@ export const ttl = [
     "Engineering consistency, standards and best practices", "Product Delivery", "Relationship with Tribe"
 ]
 
-// Change in tableResult.svelte and in charts that uses tag: vertical // add option in Modal
+export const pm = [
+    "Product Management", "Product Delivery", "Optimizing Strategy and Budgeting", "Organizational Leadership"
+]
+
+// Change in tableResult.svelte and in charts that uses tag: vertical // add option in Modal.svelte
