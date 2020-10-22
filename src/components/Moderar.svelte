@@ -4,7 +4,10 @@
 	export let item;
 	export let i;
 	let isPair;
+	export let arrayColors;
+	export let index;
 
+	let arrayColorsCode = arrayColors[index];
 	// tag
 
 	import { axisStore } from "./../stores/axisStore.js";
@@ -103,10 +106,10 @@
 
 <div
 	class="mt3 ph3 pt2 pb2 shadow-5 br4 bg-white"
-	class:red={codesNum() % 4 == 0 ? true : false}
-	class:green={codesNum() % 4 == 1 ? true : false}
-	class:blue={codesNum() % 4 == 2 ? true : false}
-	class:yellow={codesNum() % 4 == 3 ? true : false}>
+	class:red={arrayColorsCode % 4 == 0 ? true : false}
+	class:green={arrayColorsCode % 4 == 1 ? true : false}
+	class:blue={arrayColorsCode % 4 == 2 ? true : false}
+	class:yellow={arrayColorsCode % 4 == 3 ? true : false}>
 	<div>
 		<p class="f6 b helvetica fw4 mv3 ">
 			{#if key.substring(0, 1) == 'A'}

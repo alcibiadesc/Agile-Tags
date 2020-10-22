@@ -1,55 +1,70 @@
 <script>
-    import CardUnit from "./CardUnit.svelte";
-    import { items } from "./../stores/answerStore.js";
-    import { searchStore } from "../stores/searchStore.js";
-    import Moderar from "./Moderar.svelte";
-    let listItems = $items || [];
+	import CardUnit from "./CardUnit.svelte";
+	import { afterUpdate } from "svelte";
+	import { items } from "./../stores/answerStore.js";
+	import { searchStore } from "../stores/searchStore.js";
+	import Moderar from "./Moderar.svelte";
+	let listItems = $items || [];
 
-    const removeAccents = (str) => {
-        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    };
+	const removeAccents = (str) => {
+		return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+	};
 
-    $: listFiltered = listItems.filter(
-        (item) =>
-            (item.Tribu
-                ? removeAccents(item.Tribu.toLowerCase()).includes(
-                      removeAccents($searchStore.toLowerCase())
-                  )
-                : listItems) ||
-            (item.Nombre
-                ? removeAccents(item.Nombre.toLowerCase()).includes(
-                      removeAccents($searchStore.toLowerCase())
-                  )
-                : listItems)
-    );
+	$: listFiltered = listItems.filter(
+		(item) =>
+			(item.Tribu
+				? removeAccents(item.Tribu.toLowerCase()).includes(
+						removeAccents($searchStore.toLowerCase())
+				  )
+				: listItems) ||
+			(item.Nombre
+				? removeAccents(item.Nombre.toLowerCase()).includes(
+						removeAccents($searchStore.toLowerCase())
+				  )
+				: listItems)
+	);
 
-    $: listCrop = listFiltered.map((item, i, array) => {
-        delete item.ID;
-        delete item["Hora de finalización"];
-        delete item["Hora de inicio"];
+	$: listCrop = listFiltered.map((item, i, array) => {
+		delete item.ID;
+		delete item["Hora de finalización"];
+		delete item["Hora de inicio"];
 
-        return array;
-    });
+		return array;
+	});
+
+	$: arrayColors = [];
+
+	const groupByColor = (ele) => {
+		let counter = 0;
+		const checkColor = ele.map((item, index) => {
+
+			if(ele[index - 1]){
+			let result = item.substring(0, 5) == ele[index -1].substring(0, 5) ? counter : counter++;
+			arrayColors.push(result);
+				} else {
+				arrayColors.push(counter)}
+		});
+	};
 </script>
 
 {#each listFiltered as item, i}
-    <CardUnit
-        name={item.Nombre}
-        tribal={item.Tribu}
-        email={item['Correo electrónico']}
-        rol={item.Rol}
-        answers={listFiltered[i]}
-        index={i}>
-        {#each Object.keys(item) as key}
-            {#if key == 'Correo electrónico'}
-                <p />
-            {:else if key == 'Nombre'}
-                <p />
-            {:else if key == 'Tribu'}
-                <p />
-            {:else}
-                <Moderar {key} {item} {i} />
-            {/if}
-        {/each}
-    </CardUnit>
+	<CardUnit
+		name={item.Nombre}
+		tribal={item.Tribu}
+		email={item['Correo electrónico']}
+		rol={item.Rol}
+		answers={listFiltered[i]}
+		index={i}>
+		{#each Object.keys(item) as key, index}
+			{#if key == 'Correo electrónico'}
+				<p />
+			{:else if key == 'Nombre'}
+				<p />
+			{:else if key == 'Tribu'}
+				<p />
+			{:else}
+				<Moderar {key} {item} {i} {arrayColors} {index}/>
+			{/if}
+		{/each}
+	</CardUnit>
 {/each}
