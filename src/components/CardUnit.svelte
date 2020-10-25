@@ -3,7 +3,6 @@
 	import TableResult from "./TableResult.svelte";
 	import { moderateStore } from "./../stores/moderateStore.js";
 	import { itemsMaster } from "./../stores/masterStore.js";
-	import { axisStore } from "./../stores/axisStore.js";
 	import {tag} from "../AxisBBDD.js";
 
 	export let name;
