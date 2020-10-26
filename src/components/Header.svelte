@@ -44,7 +44,7 @@
 </style>
 
 <header class={$items.length ? 'with-menu' : ''}>
-	<img class="w-50" src={'banner.svg'} alt="site logo" />
+	<img class="w-30" src={'banner.svg'} alt="site logo" />
 
 	<div class="menu">
 		<Button onClick={resetStores}>Resetear</Button>
