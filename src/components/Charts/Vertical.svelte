@@ -4,7 +4,6 @@
 	import Chart from "chart.js";
 	import { backgroundColor, borderColor, borderWidth } from "./custom.js";
 	import { tag } from "../../AxisBBDD.js";
-	import { axisStore } from "./../../stores/axisStore.js";
 
 	let data = [0, 0, 0];
 	let axisA = [0];
