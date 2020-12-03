@@ -2,21 +2,70 @@
 	article {
 		background-color: white;
 		z-index: 3;
-	}
-	p {
 		text-align: left;
 	}
-
-	li {
-		text-align: left;
-	}
-
-	ol {
-		text-align: left;
+	img{
+	margin: 1rem;
 	}
 </style>
 
 <article class=" bba b--black-05 mb6 pa3 bg-white">
+	
+	<h2>¿Cómo utilizo la plataforma?</h2>
+	<ol>
+		<li>
+			<p>Accede al formulario con las respuestas en modo edición
+				<a href="https://santandernet.sharepoint.com/:p:/r/sites/CTO-TransformacinAGILEyDevops/Shared%20Documents/General/Agile%26EE%20Academy%202020/Etiquetado%20Roles/Role-leveling%20Assessment%20(Agile%20Tags).pptx?d=w4a159648a1fa4d249a3621ce942775a3&csf=1&web=1&e=SjKRoT&nav=eyJzSWQiOjMzNCwiY0lkIjoyNzc4ODkyMDcyfQ">(enlace)</a>
+
+				<img src="faqs/1.png" alt="">
+			</p>
+			</li>
+
+			<li>
+				<p> Dentro del formulario correspondiente al rol, haz click en "Respuestas"</p>
+				<img src="faqs/2.png" alt="">
+				</li>
+
+				<li>
+					<p>Descarga el archivo haciendo click en "Abrir Excel"</p>
+					<img src="faqs/3.png" alt="">
+					</li>
+
+					<li>
+						<p>Dentro de la plataforma Agile Flags, selecciona el fichero descargado</p>
+						<img src="faqs/4.png" alt="">
+							<img src="faqs/5.png" alt="">
+							</li>
+
+							<li>
+								<p>Enhorabuena, ya has cargado el listado de usuarios con sus respuestas, ahora procede a descargar y agregar la plantilla correctora (Validador)</p>
+								<p>Haz click en Plantilla Correctora</p>
+								<img src="faqs/6.png" alt="">
+
+									<p>Ve a la carpeta de Teams con los Validadores a través del hipervínculo</p>
+									<img src="faqs/7.png" alt="">
+										<p>Selecciona el validor correspondiente al rol (p.ej: PO = Product Owner)</p>
+										<img src="faqs/8.png" alt="">
+											<p>Descarga el Archivo en excel</p>
+
+											<img src="faqs/9.png" alt="">
+
+												<p>Seleccionalo desde la Plataforma Agile Flags</p>
+												<img src="faqs/10.png" alt="">
+
+								<li>
+									<p>Selecciona el rol que estas corrigiendo</p>
+									<img src="faqs/11.png" alt="">
+									</li>
+
+									<li>
+										<p>Terminado, se ha corregido automaticamente, ahora tienes la posibilidad de moderar manualmente, ver el detalle o exportar los resultados</p>
+
+										<img src="faqs/12.png" alt="">
+									</li>
+	</ol>
+
+
 	<h2>¿Qué campos son obligatorios tener en el excel y con que formato?</h2>
 	<p>
 		Los únicos campos obligatorios que deben figurar

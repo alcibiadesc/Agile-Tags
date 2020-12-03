@@ -1,10 +1,10 @@
 <script>
-
+	import {items} from "./../../stores/answerStore.js"; 
 	import xlsx from "xlsx";
 	import { moderateStore } from "./../../stores/moderateStore.js";
 	import Faqs from './../atoms/Faqs.svelte';  
 
-	export let files;
+	export let files = "";
 	$: if (files.length) {
 		parseExcel(files[0]);
 	}

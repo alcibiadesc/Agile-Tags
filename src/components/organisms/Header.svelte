@@ -1,6 +1,6 @@
 <script>
 	import xlsx from "xlsx";
-	import Button from "./../UI/Button.svelte";
+	import Button from "./../atoms/Button.svelte";
 	import Modal from "./../molecules/Modal.svelte";
 	import { resetMaster } from "./../../stores/masterStore.js";
 	import { moderateStore, resetModerator } from "./../../stores/moderateStore.js";
