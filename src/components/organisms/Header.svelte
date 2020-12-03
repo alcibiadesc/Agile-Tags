@@ -4,21 +4,26 @@
 	import Modal from "./../molecules/Modal.svelte";
 	import { resetMaster } from "./../../stores/masterStore.js";
 	import { moderateStore, resetModerator } from "./../../stores/moderateStore.js";
+	import {recomendatorStore, resetRecomendator} from "./../../stores/recomendator.js"; 
 	import { items, reset } from "./../../stores/answerStore.js";
 
 	function exportFile() {
 		const ws = xlsx.utils.json_to_sheet($items);
 		const wb = xlsx.utils.book_new();
 		const moderator = xlsx.utils.json_to_sheet($moderateStore);
-
+		const recomendator = xlsx.utils.json_to_sheet($recomendatorStore);
+		
 		xlsx.utils.book_append_sheet(wb, ws, "Answer");
 		xlsx.utils.book_append_sheet(wb, moderator, "Moderator");
+		xlsx.utils.book_append_sheet(wb, recomendator, "Recomendator");
+
 		xlsx.writeFile(wb, "Moderated-Agile-Flags.xlsx");
 	}
 	const resetStores = () => {
 		reset();
 		resetMaster();
 		resetModerator();
+		resetRecomendator(); 
 	};
 </script>
 

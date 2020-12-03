@@ -4,7 +4,7 @@
 	import { moderateStore } from "./../../stores/moderateStore.js";
 	import { itemsMaster } from "./../../stores/masterStore.js";
 	import {tag} from "../../AxisBBDD.js";
-
+	import Dojo from "../molecules/Dojo.svelte"; 
 	export let name;
 	export let tribal;
 	export let email;
@@ -182,6 +182,7 @@
 	// Toogle Visibility
 	let isUnSelected = false;
 	let showChart = true;
+	let showDojo = false; 
 	let hideModerator = true;
 
 	// send data to charts
@@ -377,20 +378,37 @@
 
 				<div>
 					<button
-						class="grow mt4 br3"
+						class="grow mt4 br3 "
+						title="Moderar las respuestas"
 						on:click={() => {
 							hideModerator = !hideModerator;
 							isUnSelected = !isUnSelected;
-						}}>Moderar su cuestionario</button>
-				</div>
+							}}>
+						<img src="icons/edit.svg" alt="Moderar Respuestas">
+						</button>
 
-				<div>
 					<button
+							class="grow mt4 br3" 
+							title="Recomendación de cursos"
+							on:click={() => {
+								isUnSelected = !isUnSelected; 
+								showDojo = !showDojo; 
+								}
+							}
+						>
+						<img src="icons/dojo.svg" alt="Cursos de Dojo">
+						</button>
+
+
+						<button
+							title="Ver el detalle"
 						class="grow mt4 br3"
 						on:click={() => {
 							isUnSelected = !isUnSelected;
 							showChart = !showChart;
-						}}>Ver detalle</button>
+							}}>
+							<img src="icons/metricas.svg" alt="Detalle de la puntuación">
+						</button>
 				</div>
 				<div class="stats">
 					<div>
@@ -407,9 +425,15 @@
 			<p class="tl">
 				Pertenece a la tribu
 				<span class="b">{tribal}</span>
-				{#if rol}con el rol de <span class="b">{rol}.</span>{/if}
+				{#if rol}
+					con el rol de <span class="b">{rol}.</span>
+				{/if}
 			</p>
 		</div>
+	</div>
+
+	<div class:invisible={showDojo}>
+		<Dojo/>
 	</div>
 	<div class:invisible={showChart}>
 		<TableResult

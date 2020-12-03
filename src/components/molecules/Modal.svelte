@@ -2,6 +2,8 @@
 	import { axisStore } from "../../stores/axisStore.js";
 	import { columnsMaster, itemsMaster } from "../../stores/masterStore.js";
 	import { selectOptions } from "../../AxisBBDD.js";
+	import {recomendatorStore} from "../../stores/recomendator.js"; 
+	import {moderateStore} from "./../../stores/moderateStore.js"; 
 	import xlsx from "xlsx";
 	$: showModal = false;
 
@@ -23,17 +25,25 @@
 			workbook.SheetNames.forEach((sheetName) => {
 				const rowObject = xlsx.utils.sheet_to_row_object_array(
 					workbook.Sheets[sheetName]
+				
+
 				);
 				const keys = Object.keys(rowObject[0]).map((col) => {
 					return {
 						id: col,
-						isVisible: true,
-						isEditable: false,
-						isImage: false,
 					};
 				});
-				columnsMaster.set(keys);
-				itemsMaster.set(rowObject);
+			
+				if(sheetName == "Recomendator"){
+					recomendatorStore.set(rowObject); 	
+				} else if (sheetName == "Moderator"){
+					moderateStore.set(rowObject); 
+				} else {
+					
+					columnsMaster.set(keys);
+					itemsMaster.set(rowObject);
+				}
+					
 			});
 		};
 

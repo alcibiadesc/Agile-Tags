@@ -1,4 +1,5 @@
-<script>
+<script>import { recomendatorStore } from "../../stores/recomendator.js";
+
 	import {items} from "./../../stores/answerStore.js"; 
 	import xlsx from "xlsx";
 	import { moderateStore } from "./../../stores/moderateStore.js";
@@ -25,7 +26,9 @@
 
 				if (sheetName == "Moderator") {
 					moderateStore.set(rowObject);
-				} else {
+				} else if (sheetName == "Recomendator"){
+					recomendatorStore.set(rowObject);
+				}	else {
 					items.set(rowObject);
 				}
 			});
