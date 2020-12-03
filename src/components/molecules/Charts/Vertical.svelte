@@ -1,9 +1,9 @@
 <script>
-	import { dataAxis } from "./../../stores/chartStore.js";
-	import { onMount, onDestroy, afterUpdate } from "svelte";
+	import { dataAxis } from "./../../../stores/chartStore.js";
+	import { onMount, onDestroy } from "svelte";
 	import Chart from "chart.js";
-	import { backgroundColor, borderColor, borderWidth } from "./custom.js";
-	import { tag } from "../../AxisBBDD.js";
+	import { backgroundColor, borderColor, borderWidth } from "./../Charts/custom.js";
+	import { tag } from "../../../AxisBBDD.js";
 
 	let data = [0, 0, 0];
 	let axisA = [0];

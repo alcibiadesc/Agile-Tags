@@ -1,5 +1,5 @@
 <script>
-	import { Polar, Vertical } from "./../Charts";
+	import { Polar, Vertical } from "./../molecules/Charts";
 </script>
 
 <style>
