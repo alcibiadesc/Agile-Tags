@@ -1,7 +1,5 @@
 <script>
-	import { axisStore } from "./../stores/axisStore.js";
-	import {tag} from "../AxisBBDD.js";
-	import { afterUpdate } from "svelte";
+	import {tag} from "../../AxisBBDD.js";
 
 	export let axisA;
 	export let axisB;

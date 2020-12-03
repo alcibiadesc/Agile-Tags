@@ -1,5 +1,5 @@
 <script>
-	import { searchStore } from "../stores/searchStore.js";
+	import { searchStore } from "../../stores/searchStore.js";
 </script>
 
 <style>

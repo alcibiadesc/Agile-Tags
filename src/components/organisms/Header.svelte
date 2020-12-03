@@ -1,10 +1,10 @@
 <script>
 	import xlsx from "xlsx";
-	import Button from "./UI/Button.svelte";
-	import Modal from "./Modal.svelte";
-	import { resetMaster } from "./../stores/masterStore.js";
-	import { moderateStore, resetModerator } from "./../stores/moderateStore.js";
-	import { items, reset } from "./../stores/answerStore.js";
+	import Button from "./../UI/Button.svelte";
+	import Modal from "./../molecules/Modal.svelte";
+	import { resetMaster } from "./../../stores/masterStore.js";
+	import { moderateStore, resetModerator } from "./../../stores/moderateStore.js";
+	import { items, reset } from "./../../stores/answerStore.js";
 
 	function exportFile() {
 		const ws = xlsx.utils.json_to_sheet($items);

@@ -1,7 +1,7 @@
 <script>
-	import { axisStore } from "../stores/axisStore.js";
-	import { columnsMaster, itemsMaster } from "../stores/masterStore.js";
-	import { selectOptions } from "../AxisBBDD.js";
+	import { axisStore } from "../../stores/axisStore.js";
+	import { columnsMaster, itemsMaster } from "../../stores/masterStore.js";
+	import { selectOptions } from "../../AxisBBDD.js";
 	import xlsx from "xlsx";
 	$: showModal = false;
 

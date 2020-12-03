@@ -1,7 +1,7 @@
 <script>
-    import Cards from "./Cards.svelte";
-		import Charts from "./Charts.svelte";
-    import Searchbar from "./Searchbar.svelte";
+	import Cards from "./../organisms/Cards.svelte";
+	import Charts from "./../organisms/Charts.svelte";
+	import Searchbar from "./../organisms/Searchbar.svelte";
     let toggleMenu = "Personas";
 </script>
 

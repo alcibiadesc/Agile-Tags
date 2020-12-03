@@ -1,8 +1,6 @@
 <script>
-	import { moderateStore } from "../stores/moderateStore.js";
-	import { axisStore } from "./../stores/axisStore.js";
-	import { tag } from "../AxisBBDD.js";
-	import { afterUpdate } from "svelte";
+	import { moderateStore } from "../../stores/moderateStore.js";
+	import { tag } from "../../AxisBBDD.js";
 
 	export let key;
 	export let item;

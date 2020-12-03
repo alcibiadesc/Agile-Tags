@@ -1,9 +1,8 @@
 <script>
-    import CardUnit from "./CardUnit.svelte";
-
-    import { items } from "./../stores/answerStore.js";
-    import { searchStore } from "../stores/searchStore.js";
-    import Moderar from "./Moderar.svelte";
+	import CardUnit from "./../molecules/CardUnit.svelte";
+	import { items } from "./../../stores/answerStore.js";
+	import { searchStore } from "./../../stores/searchStore.js";
+	import Moderar from "./../molecules/Moderar.svelte";
     let listItems = $items || [];
 
     const removeAccents = (str) => {
