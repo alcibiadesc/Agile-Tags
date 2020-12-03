@@ -1,4 +1,7 @@
 .vercel
-node_modules
-node_modules
-public/build/bundle
+.DS_store
+node_modules/
+public/
+
+
+
