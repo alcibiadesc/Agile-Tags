@@ -80,6 +80,15 @@ const axisTags = [
 		],
 	},
 	{
+		value: "te",
+		description: "TE: Testing Engineer",
+		tags: [
+			"QA Strategy",
+			"Test Automatization",
+			"Agile Product testing & Tracking",
+		],
+	},
+	{
 		value: "tl",
 		description: "TL: Tribe Lead",
 		tags: [
