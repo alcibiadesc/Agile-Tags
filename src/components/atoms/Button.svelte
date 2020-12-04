@@ -1,5 +1,5 @@
 <script>
-  export let type;
+  export let type = '';
   export let onClick = () => {};
 </script>
 

@@ -16,3 +16,5 @@ recomendatorStore.subscribe((value) => {
 export const resetRecomendator = () => {
 	recomendatorStore.set([]);
 };
+
+

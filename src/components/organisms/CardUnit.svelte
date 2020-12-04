@@ -8,6 +8,7 @@
 	import { tag } from "../../AxisBBDD.js";
 	import Dojo from "../molecules/Dojo.svelte";
 	import Moderar from "./../molecules/Moderar.svelte";
+	import { recomendatorStore } from "./../../stores/recomendator.js";
 
 	export let cardData = {};
 	export let index = 0;
@@ -27,29 +28,52 @@
 
 	filterCardData(deleteThisKeys, moderatorData);
 
-	///////
 
 	let userObject = {};
 
 	const masterAnswers = $itemsMaster ? $itemsMaster : {};
-
 	let key = Object.keys(answers);
 
-	let sizeQuest = key.length; // number of questions define to use the loop.
-	let sizeQuestMaster = Object.keys(masterAnswers).length;
 
+	///// RECOMENDATOR ////
+
+	let dojoData = [];
+
+	const checkRecomendator = (arrayObj, key, answer) => {
+		arrayObj.forEach((array) => {
+			console.log($recomendatorStore)
+			let dojoQuestion = array.PREGUNTA; 
+			let dojoAnswer = array['RESPUESTA ESPERADA'].replaceAll(' ', '');  
+
+			if (key.includes(dojoQuestion)) {
+				let checkAnswer = dojoAnswer  == answer;
+
+				if (checkAnswer) {
+					dojoData = [
+						...dojoData,
+						{
+							pregunta: dojoQuestion,
+							curso: array.RECOMENDACIÓN,
+							enlace: array.LINK,
+						},
+					];
+				}
+
+			} 
+		});
+	};
 
 
 	// Loop Validate Answers
-	
-	for (let index = 0; index < sizeQuestMaster; index++) {
-		for (let i = 0; i < sizeQuest; i++) {
+	masterAnswers.forEach((_, index) => {
+		key.forEach((_, i) => {
 			let masterAnswersValues = masterAnswers[index][key[i]];
 
 			// get the score points
 			let splitMasterAnswer = masterAnswersValues
 				? masterAnswersValues.split("&")
 				: {};
+
 			let trueAnswer = splitMasterAnswer[0]
 				? splitMasterAnswer[0].replaceAll(" ", "")
 				: "";
@@ -60,20 +84,20 @@
 			let answerToEvaluate = answers[key[i]]
 				? answers[key[i]].replaceAll(" ", "")
 				: "";
-
+			
+				checkRecomendator($recomendatorStore, key[i], answerToEvaluate)
 			// Answers equal to "NO" score 0;
 			if (
 				answerToEvaluate.toUpperCase() == "NO" ||
 				answerToEvaluate.toUpperCase() == "NO."
 			) {
 				userObject[key[i]] = 0;
-			}
-			// It's not and else because maybe we need to score some points is the candidate answers with NO
-			if (answerToEvaluate == trueAnswer && scoreSum) {
+			} else if (answerToEvaluate == trueAnswer && scoreSum) {
 				userObject[key[i]] = scoreSum;
 			}
-		}
-	}
+		});
+	});
+	// Add recomendation
 
 	// Add Object to array with only scores
 
@@ -201,17 +225,6 @@
 	];
 
 	// Recomendador
-
-	let dojoData = [
-		{ pregunta: "a", curso: "d", enlace: "c" },
-		{ pregunta: "a", curso: "b", enlace: "c" },
-		{ pregunta: "a", curso: "b", enlace: "c" },
-		{ pregunta: "a", curso: "b", enlace: "c" },
-		{ pregunta: "a", curso: "b", enlace: "c" },
-		{ pregunta: "a", curso: "b", enlace: "c" },
-		{ pregunta: "a", curso: "b", enlace: "c" },
-		{ pregunta: "a", curso: "b", enlace: "c" },
-	];
 </script>
 
 <style>

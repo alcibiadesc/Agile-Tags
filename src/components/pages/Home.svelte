@@ -24,10 +24,10 @@
 					workbook.Sheets[sheetName]
 				);
 
-				if (sheetName == "Moderator") {
-					moderateStore.set(rowObject);
-				} else if (sheetName == "Recomendator") {
+				if (sheetName == "Dojo") {
 					recomendatorStore.set(rowObject);
+				} else if (sheetName == "Moderator") {
+					moderateStore.set(rowObject);
 				} else {
 					items.set(rowObject);
 				}

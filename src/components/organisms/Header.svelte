@@ -15,7 +15,7 @@
 		
 		xlsx.utils.book_append_sheet(wb, ws, "Answer");
 		xlsx.utils.book_append_sheet(wb, moderator, "Moderator");
-		xlsx.utils.book_append_sheet(wb, recomendator, "Recomendator");
+		xlsx.utils.book_append_sheet(wb, recomendator, "Dojo");
 
 		xlsx.writeFile(wb, "Moderated-Agile-Flags.xlsx");
 	}

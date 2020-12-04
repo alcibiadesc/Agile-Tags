@@ -55,4 +55,6 @@
 		{index}
 		groupByColor={groupByColor(Object.keys(item))}
 		{arrayColors} />
+
+		
 {/each}

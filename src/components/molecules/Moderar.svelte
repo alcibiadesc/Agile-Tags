@@ -40,7 +40,6 @@
 	let keyColor = arrayColors[index][i] % 4;
 	let isColor = colors[keyColor];
 
-	console.log(arrayColors[index]);
 </script>
 
 <style>
