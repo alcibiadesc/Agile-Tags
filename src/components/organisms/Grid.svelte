@@ -1,5 +1,5 @@
 <script>
-	import CardUnit from "./../molecules/CardUnit.svelte";
+	import CardUnit from "./CardUnit.svelte";
 	import { items } from "./../../stores/answerStore.js";
 	import { searchStore } from "./../../stores/searchStore.js";
 	import Moderar from "./../molecules/Moderar.svelte";

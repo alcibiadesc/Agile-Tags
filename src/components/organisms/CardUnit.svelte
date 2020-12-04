@@ -1,5 +1,6 @@
 <script>
 	import { dataLevel, dataAxis } from "./../../stores/chartStore.js";
+	import CardRightInfo from "./../molecules/CardRightInfo.svelte"; 
 	import TableResult from "./../molecules/TableResult.svelte";
 	import { moderateStore } from "./../../stores/moderateStore.js";
 	import { itemsMaster } from "./../../stores/masterStore.js";
@@ -118,15 +119,7 @@
 
 	// change color select unselect
 
-	const evaluation = (practitioner, expert) => {
-		if (practitioner + expert / 2 >= 0.65 && expert >= 0.75) {
-			return "Expert";
-		} else if (practitioner + expert / 2 >= 0.65) {
-			return "Practitioner";
-		} else {
-			return "Participant";
-		}
-	};
+
 
 	let participantAll = Number(
 		(axisA.participant[0] +
@@ -165,19 +158,8 @@
 		(axisD.participant[0] + axisD.practitioner[0] + axisD.expert[0]) / 3
 	);
 
-	// Push the level of knowledge in a field
 
-	let sumaAllPoints = () => {
-		let result = participantAll + practitionerAll + expertAll;
 
-		return result;
-	};
-
-	sumaAllPoints();
-
-	let scoreFinal = sumaAllPoints();
-
-	let status = evaluation(practitionerAll, expertAll);
 
 	// Toogle Visibility
 	let isUnSelected = false;
@@ -250,43 +232,6 @@
 		border-radius: 0 5px 5px 0;
 	}
 
-	.card .additional .user-card {
-		width: 150px;
-		height: 100%;
-		position: relative;
-		float: left;
-	}
-
-	.card .additional .user-card::after {
-		content: "";
-		display: block;
-		position: absolute;
-		top: 10%;
-		right: -2px;
-		height: 80%;
-		border-left: 2px solid rgba(0, 0, 0, 0.025);
-	}
-
-	.card .additional .user-card .level,
-	.card .additional .user-card .points {
-		top: 15%;
-		color: #fff;
-		text-transform: uppercase;
-		font-size: 0.75em;
-		font-weight: bold;
-		background: rgba(0, 0, 0, 0.15);
-		padding: 0.125rem 0.75rem;
-		border-radius: 100px;
-		white-space: nowrap;
-	}
-
-	.card .additional .user-card .points {
-		top: 85%;
-	}
-
-	.card .additional .user-card svg {
-		top: 50%;
-	}
 
 	.card .additional .more-info {
 		width: 300px;
@@ -358,21 +303,8 @@
 			isUnSelected = !isUnSelected;
 		}}>
 		<div class="additional " class:unCheck={isUnSelected}>
-			<div class="user-card mt4">
-				<div class="level ma2 w4">{status}</div>
-
-				<svg
-					class="mv3"
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="white"
-					width="60px"
-					height="60px"><path d="M0 0h24v24H0z" fill="none" />
-					<path
-						d="M9 11.75c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zm6 0c-.69 0-1.25.56-1.25 1.25s.56 1.25 1.25 1.25 1.25-.56 1.25-1.25-.56-1.25-1.25-1.25zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-.29.02-.58.05-.86 2.36-1.05 4.23-2.98 5.21-5.37C11.07 8.33 14.05 10 17.42 10c.78 0 1.53-.09 2.25-.26.21.71.33 1.47.33 2.26 0 4.41-3.59 8-8 8z" /></svg>
-
-				<div class="points ma2 w4 ">{scoreFinal.toFixed(2)}</div>
-			</div>
+			<CardRightInfo statusObj={{participantAll, practitionerAll, expertAll}}/>
+			
 			<div class="more-info">
 				<h1 class="f4 ">{name}</h1>
 
