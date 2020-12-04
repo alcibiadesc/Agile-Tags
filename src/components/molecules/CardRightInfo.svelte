@@ -1,73 +1,84 @@
 <script>
-	export let statusObj = { 
-		participantAll: 0,
-		practitionerAll: 0, 
-		expertAll: 0,
-
-	}
-
-	const evaluation = ({practitionerAll, expertAll}) => {
-	
-		if (practitionerAll + expertAll / 2 >= 0.65 && expertAll >= 0.75) {
-
-			return "Expert";
-		} else if (practitionerAll + expertAll / 2 >= 0.65) {
-			return "Practitioner";
-		} else {
-			return "Participant";
-		}
-	};
-
-	let status = evaluation(statusObj); 
-
-	let score = Object.values(statusObj).reduce((acc, current) => acc + current);  
+	import CardButtons from "./CardButtons.svelte"; 
 
 
+	export let name = "hola";
+	export let email = "xx";
+	export let tribal = "y"; 
+	export let rol = "n"; 
+	export let buttons = [];
 </script>
-
 
 <style>
 
-	.user-card {
-		width: 150px;
-		height: 100%;
-		position: relative;
+
+	.additional .more-info {
+		width: 300px;
 		float: left;
-	}
-
-	.user-card::after {
-		content: "";
-		display: block;
 		position: absolute;
-		top: 10%;
-		right: -2px;
-		height: 80%;
-		border-left: 2px solid rgba(0, 0, 0, 0.025);
+		left: 150px;
+		height: 100%;
 	}
 
- 	.level, .user-card .points {
-		top: 15%;
+	.card .additional .more-info h1 {
 		color: #fff;
-		text-transform: uppercase;
-		font-size: 0.75em;
-		font-weight: bold;
-		background: rgba(0, 0, 0, 0.15);
-		padding: 0.125rem 0.75rem;
-		border-radius: 100px;
-		white-space: nowrap;
+		margin-bottom: 0;
 	}
 
-	.user-card .points {
-		top: 85%;
+	.card .additional .coords span + span {
+		float: right;
 	}
 
+	.additional .stats {
+		font-size: 2rem;
+		display: flex;
+		position: absolute;
+		bottom: 1rem;
+		left: 1rem;
+		right: 1rem;
+		top: auto;
+		color: #fff;
+	}
 
+	.additional .stats > div {
+		flex: 1;
+	}
+
+	.general {
+		width: 300px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		box-sizing: border-box;
+		padding: 1rem;
+		padding-top: 0;
+	}
 </style>
 
 
+<div class="more-info">
+				<h1 class="f4 ">{name}</h1>
 
-<div class="user-card mt4">
-	<div class="level ma2 w4">{status}</div>
-		 <img class="mt3 mb2" src="icons/face.svg" alt="">
-	<div class="points ma2 w4 ">{score.toFixed(2)}</div>
-</div>
+				<CardButtons {buttons} />
+				
+				<div class="stats">
+					<div>
+						<div class="tr">
+							<span class="f6 mt1 tr">
+								<a href={`mailto:${email}`}>{email ? email : ''}</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="general">
+			<h1 class="f4 ">{name}</h1>
+			<p class="tl">
+				Pertenece a la tribu
+				<span class="b">{tribal}</span>
+				{#if rol}
+					con el rol de <span class="b">{rol}.</span>
+				{/if}
+			</p>
+		</div>
