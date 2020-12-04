@@ -1,9 +1,7 @@
 <script>
-	import CardButtons from "./../molecules/CardButtons.svelte";
 	import ButtonFloat from "./../atoms/ButtonFloat.svelte";
 	import { dataLevel, dataAxis } from "./../../stores/chartStore.js";
-	import CardRightInfo from "./../molecules/CardRightInfo.svelte"; 
-	import CardLeftInfo from "./../molecules/CardLeftInfo.svelte"; 
+	import CardInfo from "./../molecules/CardInfo.svelte"; 
 	import TableResult from "./../molecules/TableResult.svelte";
 	import { moderateStore } from "./../../stores/moderateStore.js";
 	import { itemsMaster } from "./../../stores/masterStore.js";
@@ -149,7 +147,8 @@
 
 
 	// Toogle Visibility
-	let isUnSelected = false;
+	let isSelected = false; 
+	const toogleSelect = () => isSelected = !isSelected; 
 
 
 	// send data to charts
@@ -184,10 +183,7 @@
 </script>
 
 <style>
-	a {
-		text-decoration-color: none;
-		color: white;
-	}
+
 
 	@import url("https://fonts.googleapis.com/css?family=Abel");
 	.centered {
@@ -195,142 +191,33 @@
 		width: 50%;
 		padding: 10px;
 	}
-	.card {
-		width: 450px;
-		height: 220px;
-		background-color: #fff;
-		background: linear-gradient(#f8f8f8, #fff);
-		box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
-		border-radius: 6px;
-		overflow: hidden;
-		position: relative;
-
-		margin: auto;
-	}
-
-	.card h1 {
-		text-align: center;
-	}
-
-	.card .additional {
-		position: absolute;
-		width: 150px;
-		height: 100%;
-		background: linear-gradient(#de685e, #ee786e);
-
-		transition: width 0.4s;
-		overflow: hidden;
-		z-index: 2;
-	}
-
-	.card .unCheck {
-		background: linear-gradient(#777777, #747474);
-	}
-
-	.card:hover .additional {
-		width: 100%;
-		border-radius: 0 5px 5px 0;
-	}
-
-
-	.card .additional .more-info {
-		width: 300px;
-		float: left;
-		position: absolute;
-		left: 150px;
-		height: 100%;
-	}
-
-	.card .additional .more-info h1 {
-		color: #fff;
-		margin-bottom: 0;
-	}
-
-	.card .additional .coords span + span {
-		float: right;
-	}
-
-	.card .additional .stats {
-		font-size: 2rem;
-		display: flex;
-		position: absolute;
-		bottom: 1rem;
-		left: 1rem;
-		right: 1rem;
-		top: auto;
-		color: #fff;
-	}
-
-	.card .additional .stats > div {
-		flex: 1;
-	}
-
-	.card .general {
-		width: 300px;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		right: 0;
-		z-index: 1;
-		box-sizing: border-box;
-		padding: 1rem;
-		padding-top: 0;
-	}
-
-
 
 
 </style>
 
 <div class="centered ">
-	<div
-		class="card"
-		on:click={() => {
-			isUnSelected = !isUnSelected;
-		}}>
-		<div class="additional " class:unCheck={isUnSelected}>
-			<CardLeftInfo statusObj={{participantAll, practitionerAll, expertAll}}/>
-			<CardRightInfo/>
-			<div class="more-info">
-				<h1 class="f4 ">{name}</h1>
 
-				<CardButtons {buttons} />
-				
-				<div class="stats">
-					<div>
-						<div class="tr">
-							<span class="f6 mt1 tr">
-								<a href={`mailto:${email}`}>{email ? email : ''}</a></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="general">
-			<h1 class="f4 ">{name}</h1>
-			<p class="tl">
-				Pertenece a la tribu
-				<span class="b">{tribal}</span>
-				{#if rol}
-					con el rol de <span class="b">{rol}.</span>
-				{/if}
-			</p>
-		</div>
-	</div>
+	<CardInfo
+		{toogleSelect}
+		{isSelected}
+		statusObj= {{participantAll, practitionerAll, expertAll}}
+		{buttons}
+		{name}
+		{email}
+		{tribal}
+		{rol}
+	/>
 
 	<div>
 		{#if section == "moderar"}
-		<div class="tl">
-			<slot />
-			<ButtonFloat onClick={() => window.location.reload()}/>
-		</div>
-	
-				{:else if section == "recomendar"}
+			<div class="tl">
+				<slot />
+				<ButtonFloat onClick={() => window.location.reload()}/>
+			</div>
+		{:else if section == "recomendar"}
 			<Dojo/>
 		{:else if section == "metricas"}
 			<TableResult {tableResultData}/>
 		{/if}
 	</div>
-
-
-	</div>
+</div>
