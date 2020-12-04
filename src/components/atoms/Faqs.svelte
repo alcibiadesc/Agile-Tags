@@ -65,6 +65,10 @@
 									</li>
 	</ol>
 
+	<h2>¿Cómo guardo los datos que he editado / moderado?</h2>
+	<p> Para guardar los datos editados, haz click en el botón Exportar y guarda el fichero .xlsx</p>
+	<img src="botonExportar.png" alt="boton Exportar">
+
 
 	<h2>¿Qué campos son obligatorios tener en el excel y con que formato?</h2>
 	<p>
