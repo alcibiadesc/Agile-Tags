@@ -1,5 +1,5 @@
 <script>
-	import Selector from "./../organisms/Selector.svelte";
+	import Selector from "./../atoms/Selector.svelte";
 	import Grid from "./../organisms/Grid.svelte";
 	import Charts from "./../molecules/Charts.svelte";
 	import Searchbar from "./../organisms/Searchbar.svelte";
