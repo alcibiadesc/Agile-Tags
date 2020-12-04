@@ -1,19 +1,15 @@
 <script>
 	import {tag} from "../../AxisBBDD.js";
 
-	export let axisA;
-	export let axisB;
-	export let axisC;
-	export let axisD;
+	export let tableResultData = {}; 
 
-	export let allAxisA;
-	export let allAxisB;
-	export let allAxisC;
-	export let allAxisD;
+	const {
+		participantAll, practitionerAll, expertAll,
+		axisA, axisB, axisC, axisD,
+		allAxisA, allAxisB, allAxisC, allAxisD,
 
-	export let participantAll;
-	export let practitionerAll;
-	export let expertAll;
+				} = tableResultData; 
+
 
 </script>
 

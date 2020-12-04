@@ -9,7 +9,7 @@
 					<button
 						class="grow mt4 mh2 br3 "
 						title= {title}
-						on:click={onClick(id)}>
+						on:click|stopPropagation={onClick(id)}>
 						<img src="icons/{icon}.svg" alt={title}>
 					</button>
 	{/each}

@@ -1,5 +1,6 @@
 <script>
-	import CardButtons from "./../molecules/CardButtons.svelte"; 
+	import CardButtons from "./../molecules/CardButtons.svelte";
+	import ButtonFloat from "./../atoms/ButtonFloat.svelte";
 	import { dataLevel, dataAxis } from "./../../stores/chartStore.js";
 	import CardRightInfo from "./../molecules/CardRightInfo.svelte"; 
 	import TableResult from "./../molecules/TableResult.svelte";
@@ -106,67 +107,49 @@
 		return result;
 	};
 
-	// Product Managment -> "A-"
-	let axisA = clusterLevels("A-1", "A-2", "A-3");
-
-	// Customer And Stakeholder Management -> "B-"
-	let axisB = clusterLevels("B-1", "B-2", "B-3");
-
-	// Product Delivery -> "C-"
-	let axisC = clusterLevels("C-1", "C-2", "C-3");
-
-	// Relationship with the team -> "D-"
-	let axisD = clusterLevels("D-1", "D-2", "D-3");
-
-	// change color select unselect
 
 
 
-	let participantAll = Number(
-		(axisA.participant[0] +
-			axisB.participant[0] +
-			axisC.participant[0] +
-			axisD.participant[0]) /
-			tag.length
+	const sumLevel = (levelSelected) => Number(
+		(
+			axisA[levelSelected][0] +
+			axisB[levelSelected][0] +
+			axisC[levelSelected][0] +
+			axisD[levelSelected][0] 
+		) / tag.length
+	)
+
+	const sumAxis = (axisSelected) => Number((
+		axisSelected.participant[0] + axisSelected.practitioner[0] + axisSelected.expert[0]) /3
 	);
 
-	let practitionerAll = Number(
-		(axisA.practitioner[0] +
-			axisB.practitioner[0] +
-			axisC.practitioner[0] +
-			axisD.practitioner[0]) /
-			tag.length
-	);
 
-	let expertAll = Number(
-		(axisA.expert[0] + axisB.expert[0] + axisC.expert[0] + axisD.expert[0]) /
-			tag.length
-	);
 
-	let allAxisA = Number(
-		(axisA.participant[0] + axisA.practitioner[0] + axisA.expert[0]) / 3
-	);
+	let	axisA = clusterLevels("A-1", "A-2", "A-3");
+	let	axisB = clusterLevels("B-1", "B-2", "B-3");
+	let	axisC = clusterLevels("C-1", "C-2", "C-3");
+	let	axisD = clusterLevels("D-1", "D-2", "D-3");
+	let allAxisA = sumAxis(axisA);
+	let allAxisB = sumAxis(axisB);
+	let allAxisC = sumAxis(axisC);
+	let allAxisD = sumAxis(axisD);
+	let	participantAll = sumLevel("participant");
+	let	practitionerAll = sumLevel("practitioner");
+	let	expertAll = sumLevel("expert");
 
-	let allAxisB = Number(
-		(axisB.participant[0] + axisB.practitioner[0] + axisB.expert[0]) / 3
-	);
 
-	let allAxisC = Number(
-		(axisC.participant[0] + axisC.practitioner[0] + axisC.expert[0]) / 3
-	);
+	let tableResultData = {
+		axisA, axisB, axisC, axisD,
+		allAxisA, allAxisB, allAxisC, allAxisD,
+		participantAll, practitionerAll, expertAll,
 
-	let allAxisD = Number(
-		(axisD.participant[0] + axisD.practitioner[0] + axisD.expert[0]) / 3
-	);
-
+	}
 
 
 
 	// Toogle Visibility
 	let isUnSelected = false;
-	let showChart = true;
-	let showDojo = false; 
-	let hideModerator = true;
+
 
 	// send data to charts
 
@@ -183,12 +166,19 @@
 		axisD: allAxisD,
 	});
 
-	let section = ""; 
-	const onclick = (id) => section = id (id); 
+	let section = "";
+	let toogle = false;
+
+	const onClick = (id) => {
+
+		section == id ? toogle = false : toogle = true; 
+		toogle ? section = id : section = ""; 
+		}
+
 	let buttons = [
-		{ id: "moderar", title: "Moderar las respuestas", icon: "edit", onclick },
-		{ id: "recomendar", title: "Recomendar cursos", icon: "dojo", onclick },
-		{ id: "metricas", title: "Visualizar métricas", icon: "metricas", onclick }
+		{ id: "moderar", title: "Moderar las respuestas", icon: "edit", onClick },
+		{ id: "recomendar", title: "Recomendar cursos", icon: "dojo", onClick },
+		{ id: "metricas", title: "Visualizar métricas", icon: "metricas", onClick }
 	]
 </script>
 
@@ -286,23 +276,9 @@
 		padding-top: 0;
 	}
 
-	.invisible {
-		display: none;
-	}
 
-	.float-btn {
-		position: fixed;
-		width: 60px;
-		height: 60px;
-		bottom: 40px;
-		right: 40px;
-		padding-top: 15px;
-		background-color: #53adb2;
-		color: #fff;
-		border-radius: 50px;
-		text-align: center;
-		box-shadow: 2px 2px 3px #999;
-	}
+
+
 </style>
 
 <div class="centered ">
@@ -341,40 +317,19 @@
 		</div>
 	</div>
 
-	<div class:invisible={showDojo}>
-		<Dojo/>
-	</div>
-	<div class:invisible={showChart}>
-		<TableResult
-			{axisA}
-			{axisB}
-			{axisC}
-			{axisD}
-			{participantAll}
-			{practitionerAll}
-			{expertAll}
-			{allAxisA}
-			{allAxisB}
-			{allAxisC}
-			{allAxisD} />
-	</div>
-	<div class="tl " class:invisible={hideModerator}>
-		<slot />
-
-		<div
-			on:click={() => {
-				hideModerator = !hideModerator;
-				window.location.reload();
-			}}
-			class="float-btn grow ">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				viewBox="0 0 24 24"
-				fill="white"
-				width="24px"
-				height="24px"><path d="M0 0h24v24H0z" fill="none" />
-				<path
-					d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z" /></svg>
+	<div>
+		{#if section == "moderar"}
+		<div class="tl">
+			<slot />
+			<ButtonFloat onClick={() => window.location.reload()}/>
 		</div>
+	
+				{:else if section == "recomendar"}
+			<Dojo/>
+		{:else if section == "metricas"}
+			<TableResult {tableResultData}/>
+		{/if}
 	</div>
-</div>
+
+
+	</div>
