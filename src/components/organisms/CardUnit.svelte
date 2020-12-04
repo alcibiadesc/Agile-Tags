@@ -7,11 +7,9 @@
 	import { itemsMaster } from "./../../stores/masterStore.js";
 	import { tag } from "../../AxisBBDD.js";
 	import Dojo from "../molecules/Dojo.svelte";
-	export let name;
-	export let tribal;
-	export let email;
-	export let index;
-	export let rol;
+
+	export let cardData = {}; 
+	export let index = 0;
 	export let answers;
 
 	let userObject = {};
@@ -211,10 +209,8 @@
 		{isSelected}
 		statusObj={{ participantAll, practitionerAll, expertAll }}
 		{buttons}
-		{name}
-		{email}
-		{tribal}
-		{rol} />
+		{cardData}
+		/>
 
 	<div>
 		{#if section == 'moderar'}

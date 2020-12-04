@@ -5,10 +5,8 @@
 	export let isSelected = false;
 	export let statusObj = {};
 	export let buttons = [];
-	export let name = "";
-	export let email = "";
-	export let tribal = "";
-	export let rol = "";
+	export let cardData;
+	const { Nombre, Tribu, ["Correo electrónico"]: email, Rol } = cardData;
 </script>
 
 <style>
@@ -74,15 +72,15 @@
 <div class="card" on:click={toogleSelect}>
 	<div class="additional " class:unCheck={isSelected}>
 		<CardLeftInfo {statusObj} />
-		<CardRightInfo {buttons} {name} {email} />
+		<CardRightInfo {buttons} name={Nombre} {email} />
 	</div>
 
 	<div class="general">
-		<h1 class="f4 ">{name}</h1>
+		<h1 class="f4 ">{Nombre}</h1>
 		<p class="tl">
 			Pertenece a la tribu
-			<span class="b">{tribal}</span>
-			{#if rol}con el rol de <span class="b">{rol}.</span>{/if}
+			<span class="b">{Tribu}</span>
+			{#if Rol}con el rol de <span class="b">{Rol}.</span>{/if}
 		</p>
 	</div>
 </div>

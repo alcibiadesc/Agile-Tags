@@ -20,7 +20,7 @@
 	)
 
 
-	$: listCrop = filter.map((item, i, array) => {
+	$: listCrop = filter.map((item, _, array) => {
 		delete item.ID;
 		delete item["Hora de finalización"];
 		delete item["Hora de inicio"];
@@ -50,12 +50,11 @@
 	};
 </script>
 
+
+
 {#each filter as item, i}
 	<CardUnit
-		name={item.Nombre}
-		tribal={item.Tribu}
-		email={item['Correo electrónico']}
-		rol={item.Rol}
+		cardData = {item}
 		answers={filter[i]}
 		index={i}
 		groupByColor={groupByColor(Object.keys(item))}>
@@ -71,4 +70,6 @@
 			{/if}
 		{/each}
 	</CardUnit>
+
+
 {/each}
