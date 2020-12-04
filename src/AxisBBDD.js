@@ -1,4 +1,5 @@
 import { axisStore } from "./stores/axisStore.js";
+	export let tribal = "";
 
 const axisTags = [
 	{

@@ -1,16 +1,21 @@
 <script>
-	import {tag} from "../../AxisBBDD.js";
+	import { tag } from "../../AxisBBDD.js";
 
-	export let tableResultData = {}; 
+	export let tableResultData = {};
 
 	const {
-		participantAll, practitionerAll, expertAll,
-		axisA, axisB, axisC, axisD,
-		allAxisA, allAxisB, allAxisC, allAxisD,
-
-				} = tableResultData; 
-
-
+		participantAll,
+		practitionerAll,
+		expertAll,
+		axisA,
+		axisB,
+		axisC,
+		axisD,
+		allAxisA,
+		allAxisB,
+		allAxisC,
+		allAxisD,
+	} = tableResultData;
 </script>
 
 <div class="mb4 pb3 pt0 mt0 topindex">
@@ -27,32 +32,32 @@
 			</thead>
 			<tbody class="lh-copy tc">
 				{#if tag[0]}
-				<tr class="stripe-dark">
-					<td class="pa3">{tag[0]}</td>
-					<td class="pa3">{Number(axisA.participant).toFixed(2)}</td>
-					<td class="pa3">{Number(axisA.practitioner).toFixed(2)}</td>
-					<td class="pa3">{Number(axisA.expert).toFixed(2)}</td>
-					<td class="pa3">{allAxisA.toFixed(2)}</td>
-				</tr>
-			{/if}
+					<tr class="stripe-dark">
+						<td class="pa3">{tag[0]}</td>
+						<td class="pa3">{Number(axisA.participant).toFixed(2)}</td>
+						<td class="pa3">{Number(axisA.practitioner).toFixed(2)}</td>
+						<td class="pa3">{Number(axisA.expert).toFixed(2)}</td>
+						<td class="pa3">{allAxisA.toFixed(2)}</td>
+					</tr>
+				{/if}
 				{#if tag[1]}
-				<tr class="stripe-dark">
-					<td class="pa3">{tag[1]}</td>
-					<td class="pa3">{Number(axisB.participant).toFixed(2)}</td>
-					<td class="pa3">{Number(axisB.practitioner).toFixed(2)}</td>
-					<td class="pa3">{Number(axisB.expert).toFixed(2)}</td>
-					<td class="pa3">{allAxisB.toFixed(2)}</td>
-				</tr>
-			{/if}
+					<tr class="stripe-dark">
+						<td class="pa3">{tag[1]}</td>
+						<td class="pa3">{Number(axisB.participant).toFixed(2)}</td>
+						<td class="pa3">{Number(axisB.practitioner).toFixed(2)}</td>
+						<td class="pa3">{Number(axisB.expert).toFixed(2)}</td>
+						<td class="pa3">{allAxisB.toFixed(2)}</td>
+					</tr>
+				{/if}
 				{#if tag[2]}
-				<tr class="stripe-dark">
-					<td class="pa3">{tag[2]}</td>
-					<td class="pa3">{Number(axisC.participant).toFixed(2)}</td>
-					<td class="pa3">{Number(axisC.practitioner).toFixed(2)}</td>
-					<td class="pa3">{Number(axisC.expert).toFixed(2)}</td>
-					<td class="pa3">{allAxisC.toFixed(2)}</td>
-				</tr>
-			{/if}
+					<tr class="stripe-dark">
+						<td class="pa3">{tag[2]}</td>
+						<td class="pa3">{Number(axisC.participant).toFixed(2)}</td>
+						<td class="pa3">{Number(axisC.practitioner).toFixed(2)}</td>
+						<td class="pa3">{Number(axisC.expert).toFixed(2)}</td>
+						<td class="pa3">{allAxisC.toFixed(2)}</td>
+					</tr>
+				{/if}
 				{#if tag[3]}
 					<tr class="stripe-dark">
 						<td class="pa3">{tag[3]}</td>

@@ -1,20 +1,14 @@
 <script>
-	import CardButtons from "./../molecules/CardButtons.svelte"; 
-	export let buttons = []; 
+	import CardButtons from "./../molecules/CardButtons.svelte";
+	export let buttons = [];
 	export let name = "";
-	export let email = ""; 
-	export let rol = "";
-	export let tribal = "";
+	export let email = "";
 </script>
 
-
-
 <style>
-	
 	.stats > div {
 		flex: 1;
 	}
-
 
 	.stats {
 		font-size: 2rem;
@@ -44,23 +38,18 @@
 		text-decoration-color: none;
 		color: white;
 	}
-
 </style>
-
-
 
 <div class="more-info">
 	<h1 class="f4 ">{name}</h1>
 	<CardButtons {buttons} />
-				
+
 	<div class="stats">
 		<div>
 			<div class="tr">
 				<span class="f6 mt1 tr">
-				<a href={`mailto:${email}`}>{email ? email : ''}</a></span>
+					<a href={`mailto:${email}`}>{email ? email : ''}</a></span>
 			</div>
 		</div>
 	</div>
 </div>
-
-

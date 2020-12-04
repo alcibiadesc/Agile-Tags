@@ -1,12 +1,12 @@
 <script>
 	import ButtonFloat from "./../atoms/ButtonFloat.svelte";
 	import { dataLevel, dataAxis } from "./../../stores/chartStore.js";
-	import CardInfo from "./../molecules/CardInfo.svelte"; 
+	import CardInfo from "./../molecules/CardInfo.svelte";
 	import TableResult from "./../molecules/TableResult.svelte";
 	import { moderateStore } from "./../../stores/moderateStore.js";
 	import { itemsMaster } from "./../../stores/masterStore.js";
-	import {tag} from "../../AxisBBDD.js";
-	import Dojo from "../molecules/Dojo.svelte"; 
+	import { tag } from "../../AxisBBDD.js";
+	import Dojo from "../molecules/Dojo.svelte";
 	export let name;
 	export let tribal;
 	export let email;
@@ -106,47 +106,52 @@
 		return result;
 	};
 
+	const sumLevel = (levelSelected) =>
+		Number(
+			(axisA[levelSelected][0] +
+				axisB[levelSelected][0] +
+				axisC[levelSelected][0] +
+				axisD[levelSelected][0]) /
+				tag.length
+		);
 
-	const sumLevel = (levelSelected) => Number(
-		(
-			axisA[levelSelected][0] +
-			axisB[levelSelected][0] +
-			axisC[levelSelected][0] +
-			axisD[levelSelected][0] 
-		) / tag.length
-	)
+	const sumAxis = (axisSelected) =>
+		Number(
+			(axisSelected.participant[0] +
+				axisSelected.practitioner[0] +
+				axisSelected.expert[0]) /
+				3
+		);
 
-	const sumAxis = (axisSelected) => Number((
-		axisSelected.participant[0] + axisSelected.practitioner[0] + axisSelected.expert[0]) /3
-	);
-
-
-
-	let	axisA = clusterLevels("A-1", "A-2", "A-3");
-	let	axisB = clusterLevels("B-1", "B-2", "B-3");
-	let	axisC = clusterLevels("C-1", "C-2", "C-3");
-	let	axisD = clusterLevels("D-1", "D-2", "D-3");
+	let axisA = clusterLevels("A-1", "A-2", "A-3");
+	let axisB = clusterLevels("B-1", "B-2", "B-3");
+	let axisC = clusterLevels("C-1", "C-2", "C-3");
+	let axisD = clusterLevels("D-1", "D-2", "D-3");
 	let allAxisA = sumAxis(axisA);
 	let allAxisB = sumAxis(axisB);
 	let allAxisC = sumAxis(axisC);
 	let allAxisD = sumAxis(axisD);
-	let	participantAll = sumLevel("participant");
-	let	practitionerAll = sumLevel("practitioner");
-	let	expertAll = sumLevel("expert");
-
+	let participantAll = sumLevel("participant");
+	let practitionerAll = sumLevel("practitioner");
+	let expertAll = sumLevel("expert");
 
 	let tableResultData = {
-		axisA, axisB, axisC, axisD,
-		allAxisA, allAxisB, allAxisC, allAxisD,
-		participantAll, practitionerAll, expertAll,
-
-	}
-
+		axisA,
+		axisB,
+		axisC,
+		axisD,
+		allAxisA,
+		allAxisB,
+		allAxisC,
+		allAxisD,
+		participantAll,
+		practitionerAll,
+		expertAll,
+	};
 
 	// Toogle Visibility
-	let isSelected = false; 
-	const toogleSelect = () => isSelected = !isSelected; 
-
+	let isSelected = false;
+	const toogleSelect = () => (isSelected = !isSelected);
 
 	// send data to charts
 
@@ -167,68 +172,60 @@
 	let toogle = false;
 
 	const onClick = (id) => {
-
-		section == id ? toogle = false : toogle = true; 
-		toogle ? section = id : section = ""; 
-		}
+		section == id ? (toogle = false) : (toogle = true);
+		toogle ? (section = id) : (section = "");
+	};
 
 	let buttons = [
 		{ id: "moderar", title: "Moderar las respuestas", icon: "edit", onClick },
 		{ id: "recomendar", title: "Recomendar cursos", icon: "dojo", onClick },
-		{ id: "metricas", title: "Visualizar métricas", icon: "metricas", onClick }
-	]
-
+		{ id: "metricas", title: "Visualizar métricas", icon: "metricas", onClick },
+	];
 
 	// Recomendador
 
-	
 	let dojoData = [
-
-		{pregunta: "a", curso: "d", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-	]
+		{ pregunta: "a", curso: "d", enlace: "c" },
+		{ pregunta: "a", curso: "b", enlace: "c" },
+		{ pregunta: "a", curso: "b", enlace: "c" },
+		{ pregunta: "a", curso: "b", enlace: "c" },
+		{ pregunta: "a", curso: "b", enlace: "c" },
+		{ pregunta: "a", curso: "b", enlace: "c" },
+		{ pregunta: "a", curso: "b", enlace: "c" },
+		{ pregunta: "a", curso: "b", enlace: "c" },
+	];
 </script>
 
 <style>
-
 	@import url("https://fonts.googleapis.com/css?family=Abel");
 	.centered {
 		margin: auto;
 		width: 50%;
 		padding: 10px;
 	}
-
 </style>
 
 <div class="centered ">
-
 	<CardInfo
 		{toogleSelect}
 		{isSelected}
-		statusObj= {{participantAll, practitionerAll, expertAll}}
+		statusObj={{ participantAll, practitionerAll, expertAll }}
 		{buttons}
 		{name}
 		{email}
 		{tribal}
-		{rol}
-	/>
+		{rol} />
 
 	<div>
-		{#if section == "moderar"}
+		{#if section == 'moderar'}
 			<div class="tl">
 				<slot />
-				<ButtonFloat onClick={() => window.location.reload()}/>
+				<ButtonFloat onClick={() => window.location.reload()} />
 			</div>
-		{:else if section == "recomendar"}
-			<Dojo {dojoData}/>
-		{:else if section == "metricas"}
-			<TableResult {tableResultData}/>
+		{:else if section == 'recomendar'}
+			<Dojo {dojoData} />
+		{:else if section == 'metricas'}
+			<TableResult {tableResultData} />
 		{/if}
 	</div>
 </div>

@@ -2,8 +2,8 @@
 	import { axisStore } from "../../stores/axisStore.js";
 	import { columnsMaster, itemsMaster } from "../../stores/masterStore.js";
 	import { selectOptions } from "../../AxisBBDD.js";
-	import {recomendatorStore} from "../../stores/recomendator.js"; 
-	import {moderateStore} from "./../../stores/moderateStore.js"; 
+	import { recomendatorStore } from "../../stores/recomendator.js";
+	import { moderateStore } from "./../../stores/moderateStore.js";
 	import xlsx from "xlsx";
 	$: showModal = false;
 
@@ -25,25 +25,21 @@
 			workbook.SheetNames.forEach((sheetName) => {
 				const rowObject = xlsx.utils.sheet_to_row_object_array(
 					workbook.Sheets[sheetName]
-				
-
 				);
 				const keys = Object.keys(rowObject[0]).map((col) => {
 					return {
 						id: col,
 					};
 				});
-			
-				if(sheetName == "Recomendator"){
-					recomendatorStore.set(rowObject); 	
-				} else if (sheetName == "Moderator"){
-					moderateStore.set(rowObject); 
+
+				if (sheetName == "Recomendator") {
+					recomendatorStore.set(rowObject);
+				} else if (sheetName == "Moderator") {
+					moderateStore.set(rowObject);
 				} else {
-					
 					columnsMaster.set(keys);
 					itemsMaster.set(rowObject);
 				}
-					
 			});
 		};
 
@@ -133,7 +129,8 @@
 <dialog class:hide={showModal == false} class:show={showModal == true}>
 	<div class="drop-area ">
 		<p>¡Añade tu plantilla correctora aquí!</p>
-		<a target="_blank"
+		<a
+			target="_blank"
 			href="https://teams.microsoft.com/_#/files/General?threadId=19%3A96955f08827f4d52a19e5ae5e410f968%40thread.skype&ctx=channel&context=VALIDADORES%2520-%2520Plantillas%2520Maestra&rootfolder=%252Fsites%252FCTO-TransformacinAGILEyDevops%252FShared%2520Documents%252FGeneral%252FAgile%2526EE%2520Academy%25202020%252FEtiquetado%2520Roles%252FValidador%2520Web%252FVALIDADORES%2520-%2520Plantillas%2520Maestra">Carpeta
 			de Teams con los validadores</a>
 		<input

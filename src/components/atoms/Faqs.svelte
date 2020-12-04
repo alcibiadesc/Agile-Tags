@@ -65,7 +65,7 @@
 									</li>
 	</ol>
 
-	<h2>¿Cómo guardo los datos que he editado / moderado?</h2>
+	<h2>¿Cómo guardo los datos que he editado?</h2>
 	<p> Para guardar los datos editados, haz click en el botón Exportar y guarda el fichero .xlsx</p>
 	<img src="botonExportar.png" alt="boton Exportar">
 
