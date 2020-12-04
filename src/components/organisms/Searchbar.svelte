@@ -1,5 +1,6 @@
 <script>
-	import { searchStore } from "../../stores/searchStore.js";
+	export let value = "";
+	export let placeholder = "";
 </script>
 
 <style>
@@ -54,10 +55,6 @@
 
 <div class="mb4">
 	<div class="search__container  centered m">
-		<input
-			class="search__input"
-			type="text"
-			placeholder="Busca por nombre y apellidos o Tribu..."
-			bind:value={$searchStore} />
+		<input class="search__input" type="text" {placeholder} bind:value />
 	</div>
 </div>

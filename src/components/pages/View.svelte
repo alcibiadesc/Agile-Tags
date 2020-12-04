@@ -11,13 +11,17 @@
 		{ id: "personas", title: "PERSONAS", onClick: selectorToogle },
 		{ id: "metricas", title: "MÉTRICAS", onClick: selectorToogle },
 	];
+
+	$: searchValue = "";
 </script>
 
 <Selector {selectors} />
 
 {#if toggleMenu == 'personas'}
-	<Searchbar />
-	<Grid />
+	<Searchbar
+		bind:value={searchValue}
+		placeholder="Buscar por nombre o Tribu..." />
+	<Grid {searchValue} />
 {:else if toggleMenu == 'metricas'}
 	<Charts />
 {/if}
