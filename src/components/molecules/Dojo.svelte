@@ -1,15 +1,5 @@
 <script>
-	let recomendator = [
-
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-		{pregunta: "a", curso: "b", enlace: "c"},
-	]
+export	let dojoData = [] 
 </script>
 
 
@@ -31,11 +21,12 @@
 			</thead>	
 
 			<tbody>
-	{#each recomendator as row, index}
+	{#each dojoData as {pregunta, curso, enlace}, index}
+
 			<tr class="cf {index%2 == 0 ? "bg-light-gray" : "bg-white"}">
-				<td class="fl tc w-third pa2">{row.pregunta}</td>
-				<td class="fl tc w-third pa2">{row.curso}</td>
-				<td class="fl tc w-third pa2 grow"> <a target="_blank" href="{row.enlace}">
+				<td class="fl tc w-third pa2">{pregunta}</td>
+				<td class="fl tc w-third pa2">{curso}</td>
+				<td class="fl tc w-third pa2 grow"> <a target="_blank" href="{enlace}">
 					<img src="icons/link.svg" alt="click">
 				</a></td>
 			</tr>

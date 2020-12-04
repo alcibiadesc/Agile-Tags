@@ -107,8 +107,6 @@
 	};
 
 
-
-
 	const sumLevel = (levelSelected) => Number(
 		(
 			axisA[levelSelected][0] +
@@ -145,7 +143,6 @@
 	}
 
 
-
 	// Toogle Visibility
 	let isSelected = false; 
 	const toogleSelect = () => isSelected = !isSelected; 
@@ -180,10 +177,25 @@
 		{ id: "recomendar", title: "Recomendar cursos", icon: "dojo", onClick },
 		{ id: "metricas", title: "Visualizar métricas", icon: "metricas", onClick }
 	]
+
+
+	// Recomendador
+
+	
+	let dojoData = [
+
+		{pregunta: "a", curso: "d", enlace: "c"},
+		{pregunta: "a", curso: "b", enlace: "c"},
+		{pregunta: "a", curso: "b", enlace: "c"},
+		{pregunta: "a", curso: "b", enlace: "c"},
+		{pregunta: "a", curso: "b", enlace: "c"},
+		{pregunta: "a", curso: "b", enlace: "c"},
+		{pregunta: "a", curso: "b", enlace: "c"},
+		{pregunta: "a", curso: "b", enlace: "c"},
+	]
 </script>
 
 <style>
-
 
 	@import url("https://fonts.googleapis.com/css?family=Abel");
 	.centered {
@@ -191,7 +203,6 @@
 		width: 50%;
 		padding: 10px;
 	}
-
 
 </style>
 
@@ -215,7 +226,7 @@
 				<ButtonFloat onClick={() => window.location.reload()}/>
 			</div>
 		{:else if section == "recomendar"}
-			<Dojo/>
+			<Dojo {dojoData}/>
 		{:else if section == "metricas"}
 			<TableResult {tableResultData}/>
 		{/if}
