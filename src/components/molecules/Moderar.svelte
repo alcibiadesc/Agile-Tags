@@ -10,6 +10,38 @@
 
 	let colorCode = arrayColors[i][index];
 	$: selectValue = "";
+
+	const scoreOptions = [0, 0.25, 0.5, 0.75, 1];
+
+	let keyTag = key.substring(0, 1);
+	let keyLevel = key.substring(2, 3);
+
+	const tags = {
+		A: tag[0],
+		B: tag[1],
+		C: tag[2],
+		D: tag[3],
+	};
+
+	const levels = {
+		1: "Participant",
+		2: "Practitioner",
+		3: "Expert",
+	};
+
+	let isTag = tags[keyTag];
+	let isLevel = levels[keyLevel];
+
+	let keyColor = colorCode % 4;
+
+	const colors = {
+		0: "red",
+		1: "blue",
+		2: "green",
+		3: "yellow",
+	};
+
+	let isColor = colors[keyColor];
 </script>
 
 <style>
@@ -34,28 +66,9 @@
 	}
 </style>
 
-<div
-	class="mt3 ph3 pt2 pb2 shadow-5 br4 bg-white"
-	class:red={colorCode % 2 == 0 ? true : false}
-	class:green={colorCode % 2 == 1 ? true : false}
-	class:blue={colorCode % 4 == 2 ? true : false}
-	class:yellow={colorCode % 4 == 3 ? true : false}>
+<div class="mt3 ph3 pt2 pb2 shadow-5 br4 bg-white {isColor} ">
 	<div>
-		<p class="f6 b helvetica fw4 mv3 ">
-			{#if key.substring(0, 1) == 'A'}
-				{tag[0]}:
-			{:else if key.substring(0, 1) == 'B'}
-				{tag[1]}:
-			{:else if key.substring(0, 1) == 'C'}
-				{tag[2]}:
-			{:else if key.substring(0, 1) == 'D'}{tag[3]}:{/if}
-
-			{#if key.substring(2, 3) == '1'}
-				Participant
-			{:else if key.substring(2, 3) == '2'}
-				Practitioner
-			{:else if key.substring(2, 3) == '3'}Expert{/if}
-		</p>
+		<p class="f6 b helvetica fw4 mv3 ">{isTag} | {isLevel}</p>
 	</div>
 
 	<p class="b">{key}</p>
@@ -80,11 +93,9 @@
 						$moderateStore[i][key] = selectValue;
 					}}>
 					<option value={''} selected disabled>-</option>
-					<option value={0}>0</option>
-					<option value={0.25}>0,25</option>
-					<option value={0.5}>0,50</option>
-					<option value={0.75}>0,75</option>
-					<option value={1}>1</option>
+					{#each scoreOptions as score}
+						<option value={score}>{score}</option>
+					{/each}
 				</select>
 			</p>
 		</div>
