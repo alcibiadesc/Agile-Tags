@@ -1,4 +1,5 @@
 <script>
+	import CardButtons from "./../molecules/CardButtons.svelte"; 
 	import { dataLevel, dataAxis } from "./../../stores/chartStore.js";
 	import CardRightInfo from "./../molecules/CardRightInfo.svelte"; 
 	import TableResult from "./../molecules/TableResult.svelte";
@@ -181,6 +182,14 @@
 		axisC: allAxisC,
 		axisD: allAxisD,
 	});
+
+	let section = ""; 
+	const onclick = (id) => section = id (id); 
+	let buttons = [
+		{ id: "moderar", title: "Moderar las respuestas", icon: "edit", onclick },
+		{ id: "recomendar", title: "Recomendar cursos", icon: "dojo", onclick },
+		{ id: "metricas", title: "Visualizar métricas", icon: "metricas", onclick }
+	]
 </script>
 
 <style>
@@ -308,40 +317,8 @@
 			<div class="more-info">
 				<h1 class="f4 ">{name}</h1>
 
-				<div>
-					<button
-						class="grow mt4 br3 "
-						title="Moderar las respuestas"
-						on:click={() => {
-							hideModerator = !hideModerator;
-							isUnSelected = !isUnSelected;
-							}}>
-						<img src="icons/edit.svg" alt="Moderar Respuestas">
-						</button>
-
-					<button
-							class="grow mt4 br3" 
-							title="Recomendación de cursos"
-							on:click={() => {
-								isUnSelected = !isUnSelected; 
-								showDojo = !showDojo; 
-								}
-							}
-						>
-						<img src="icons/dojo.svg" alt="Cursos de Dojo">
-						</button>
-
-
-						<button
-							title="Ver el detalle"
-						class="grow mt4 br3"
-						on:click={() => {
-							isUnSelected = !isUnSelected;
-							showChart = !showChart;
-							}}>
-							<img src="icons/metricas.svg" alt="Detalle de la puntuación">
-						</button>
-				</div>
+				<CardButtons {buttons} />
+				
 				<div class="stats">
 					<div>
 						<div class="tr">
