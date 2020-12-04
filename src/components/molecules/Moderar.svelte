@@ -8,7 +8,6 @@
 	export let arrayColors;
 	export let index;
 
-	let colorCode = arrayColors[i][index];
 	$: selectValue = "";
 
 	const scoreOptions = [0, 0.25, 0.5, 0.75, 1];
@@ -22,7 +21,6 @@
 		C: tag[2],
 		D: tag[3],
 	};
-
 	const levels = {
 		1: "Participant",
 		2: "Practitioner",
@@ -32,8 +30,6 @@
 	let isTag = tags[keyTag];
 	let isLevel = levels[keyLevel];
 
-	let keyColor = colorCode % 4;
-
 	const colors = {
 		0: "red",
 		1: "blue",
@@ -41,7 +37,10 @@
 		3: "yellow",
 	};
 
+	let keyColor = arrayColors[index][i] % 4;
 	let isColor = colors[keyColor];
+
+	console.log(arrayColors[index]);
 </script>
 
 <style>
@@ -77,8 +76,8 @@
 	<div class="cf">
 		<div class="f6 fl w-50">
 			<p />
-			{#if $moderateStore[i][key] >= 0}
-				<p>Puntuación: {$moderateStore[i][key]}</p>
+			{#if $moderateStore[index][key] >= 0}
+				<p>Puntuación: {$moderateStore[index][key]}</p>
 			{/if}
 		</div>
 

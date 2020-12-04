@@ -7,10 +7,27 @@
 	import { itemsMaster } from "./../../stores/masterStore.js";
 	import { tag } from "../../AxisBBDD.js";
 	import Dojo from "../molecules/Dojo.svelte";
+	import Moderar from "./../molecules/Moderar.svelte";
 
-	export let cardData = {}; 
+	export let cardData = {};
 	export let index = 0;
 	export let answers;
+	export let arrayColors;
+
+	const deleteThisKeys = [
+		"Correo electrónico",
+		"Nombre",
+		"Tribu",
+		"Rol",
+		"Hola de finalización",
+	];
+	const filterCardData = (keys, object) =>
+		keys.map((key) => delete object[key]);
+	const moderatorData = { ...cardData };
+
+	filterCardData(deleteThisKeys, moderatorData);
+
+	///////
 
 	let userObject = {};
 
@@ -21,7 +38,10 @@
 	let sizeQuest = key.length; // number of questions define to use the loop.
 	let sizeQuestMaster = Object.keys(masterAnswers).length;
 
+
+
 	// Loop Validate Answers
+	
 	for (let index = 0; index < sizeQuestMaster; index++) {
 		for (let i = 0; i < sizeQuest; i++) {
 			let masterAnswersValues = masterAnswers[index][key[i]];
@@ -209,13 +229,14 @@
 		{isSelected}
 		statusObj={{ participantAll, practitionerAll, expertAll }}
 		{buttons}
-		{cardData}
-		/>
+		{cardData} />
 
 	<div>
 		{#if section == 'moderar'}
 			<div class="tl">
-				<slot />
+				{#each Object.keys(moderatorData) as key, i}
+					<Moderar {key} item={moderatorData} {index} {i} {arrayColors} />
+				{/each}
 				<ButtonFloat onClick={() => window.location.reload()} />
 			</div>
 		{:else if section == 'recomendar'}
