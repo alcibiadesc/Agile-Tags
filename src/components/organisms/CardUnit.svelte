@@ -3,6 +3,7 @@
 	import ButtonFloat from "./../atoms/ButtonFloat.svelte";
 	import { dataLevel, dataAxis } from "./../../stores/chartStore.js";
 	import CardRightInfo from "./../molecules/CardRightInfo.svelte"; 
+	import CardLeftInfo from "./../molecules/CardLeftInfo.svelte"; 
 	import TableResult from "./../molecules/TableResult.svelte";
 	import { moderateStore } from "./../../stores/moderateStore.js";
 	import { itemsMaster } from "./../../stores/masterStore.js";
@@ -288,8 +289,8 @@
 			isUnSelected = !isUnSelected;
 		}}>
 		<div class="additional " class:unCheck={isUnSelected}>
-			<CardRightInfo statusObj={{participantAll, practitionerAll, expertAll}}/>
-			
+			<CardLeftInfo statusObj={{participantAll, practitionerAll, expertAll}}/>
+			<CardRightInfo/>
 			<div class="more-info">
 				<h1 class="f4 ">{name}</h1>
 
