@@ -1,6 +1,7 @@
 <script>
 	import { recomendatorStore } from "../../stores/recomendator.js";
 	import { items } from "./../../stores/answerStore.js";
+	import {itemsMaster} from "./../../stores/masterStore.js"; 
 	import xlsx from "xlsx";
 	import { moderateStore } from "./../../stores/moderateStore.js";
 	import Faqs from "./../atoms/Faqs.svelte";
@@ -30,6 +31,7 @@
 					moderateStore.set(rowObject);
 				} else {
 					items.set(rowObject);
+					itemsMaster.set(rowObject); 
 				}
 			});
 		};

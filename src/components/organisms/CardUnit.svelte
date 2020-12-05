@@ -8,7 +8,8 @@
 	import { tag } from "../../AxisBBDD.js";
 	import Dojo from "../molecules/Dojo.svelte";
 	import Moderar from "./../molecules/Moderar.svelte";
-	import { recomendatorStore } from "./../../stores/recomendator.js";
+	import { recomendatorStore, recomendationMatch } from "./../../stores/recomendator.js";
+	
 
 	export let cardData = {};
 	export let index = 0;
@@ -31,37 +32,14 @@
 
 	let userObject = {};
 
-	const masterAnswers = $itemsMaster ? $itemsMaster : {};
+	const masterAnswers = $itemsMaster ? $itemsMaster : [{a:0},{b:0}];
 	let key = Object.keys(answers);
 
 
 	///// RECOMENDATOR ////
 
-	let dojoData = [];
 
-	const checkRecomendator = (arrayObj, key, answer) => {
-		arrayObj.forEach((array) => {
-			console.log($recomendatorStore)
-			let dojoQuestion = array.PREGUNTA; 
-			let dojoAnswer = array['RESPUESTA ESPERADA'].replaceAll(' ', '');  
-
-			if (key.includes(dojoQuestion)) {
-				let checkAnswer = dojoAnswer  == answer;
-
-				if (checkAnswer) {
-					dojoData = [
-						...dojoData,
-						{
-							pregunta: dojoQuestion,
-							curso: array.RECOMENDACIÓN,
-							enlace: array.LINK,
-						},
-					];
-				}
-
-			} 
-		});
-	};
+let dojoData = []; 	
 
 
 	// Loop Validate Answers
@@ -85,7 +63,7 @@
 				? answers[key[i]].replaceAll(" ", "")
 				: "";
 			
-				checkRecomendator($recomendatorStore, key[i], answerToEvaluate)
+				recomendationMatch($recomendatorStore, key[i], answerToEvaluate, dojoData)
 			// Answers equal to "NO" score 0;
 			if (
 				answerToEvaluate.toUpperCase() == "NO" ||
@@ -253,7 +231,7 @@
 				<ButtonFloat onClick={() => window.location.reload()} />
 			</div>
 		{:else if section == 'recomendar'}
-			<Dojo {dojoData} />
+			<Dojo dojoData={dojoData} />
 		{:else if section == 'metricas'}
 			<TableResult {tableResultData} />
 		{/if}
