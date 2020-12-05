@@ -47,7 +47,7 @@
 
 	const checkScore = (answer, correctAnswer, score = 0) => {
 		let answerIsNo = answer.toUpperCase().replaceAll(".", "");
-		let scoreObject = null; 
+		let scoreObject = null;
 		if (answerIsNo == "NO") {
 			scoreObject = 0;
 		}
@@ -55,7 +55,7 @@
 		if (answer == correctAnswer) {
 			scoreObject = score;
 		}
-		return scoreObject; 
+		return scoreObject;
 	};
 
 	// Loop Validate Answers
@@ -77,7 +77,7 @@
 			userObject[key[i]] = checkScore(answerToEvaluate, trueAnswer, scoreSum);
 		});
 	});
-	console.log(userObject)
+	console.log(userObject);
 	$moderateStore.push(userObject);
 
 	// Sum Global Score
@@ -99,12 +99,12 @@
 	// sum all values in a term
 
 	const sumAll = (object) => {
-		let values = Object.values(object).filter(score => score != null);
+		let values = Object.values(object).filter((score) => score != null);
 
 		let cleanValues = values.length > 0 ? values : [0];
 
 		let result =
-			values.length > 0 
+			values.length > 0
 				? cleanValues.reduce((a, b) => a + b) / values.length
 				: 0;
 
