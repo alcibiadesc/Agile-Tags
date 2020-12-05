@@ -1,7 +1,8 @@
 <script>
 	export let dojoData = [];
-	export let index = 0; 
+	export let index = 0;
 	import Button from "./../atoms/Button.svelte";
+	import Toast from "./../atoms/Toast.svelte";
 
 	function CopyToClipboard(id) {
 		var r = document.createRange();
@@ -10,18 +11,31 @@
 		window.getSelection().addRange(r);
 		document.execCommand("copy");
 		window.getSelection().removeAllRanges();
+
+		changeToast(); 
 	}
+
+	const changeToast = () => {
+		showToast = !showToast; 	
+		setTimeout(() => showToast = !showToast, 1800 )
+	}
+
+	let showToast = false; 
+	
 </script>
 
+<Toast {showToast}/>
 <div class="bg-white ma2 shadow-5  br3 tl ">
 	{#if dojoData.length > 0}
 		<div class="tr pt2 pr2">
-			<Button onClick={() => CopyToClipboard(`tableID-${index}`)}>Copiar</Button>
+			<Button onClick={() => CopyToClipboard(`tableID-${index}`)}>
+				<img src="icons/copy.svg" alt="copiar">		
+			</Button>
 		</div>
 		<div>
 			<h3 class=" tc">CURSOS RECOMENDADOS</h3>
 		</div>
-		<div id="{`tableID-${index}`}">
+		<div id={`tableID-${index}`}>
 			<table class="w-100">
 				<thead>
 					<tr>
