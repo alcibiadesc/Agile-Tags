@@ -79,6 +79,7 @@
 	});
 
 
+		//only push if its undefined or new
 	if(!$moderateStore[index]) {
 		 $moderateStore[index] = userObject; 
 	} 
