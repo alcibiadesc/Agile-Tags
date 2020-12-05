@@ -23,10 +23,23 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
-    "chart.js": "^2.9.3",
+    "@types/chart.js": "^2.9.28",
+    "chart.js": "^2.9.4",
     "lint-staged": "^8.1.7",
     "sirv-cli": "^0.4.4",
     "svelte-fusioncharts": "^1.0.0",
     "xlsx": "^0.16.2"
-  }
+  },
+  "description": "This is an internal project of the CoE Agile of Santander Global Tech.  Our purpose is study Agile mindset maturity levels",
+  "main": "rollup.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alci6/Agile-Flags.git"
+  },
+  "author": "Alcibíades Cabral Díaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alci6/Agile-Flags/issues"
+  },
+  "homepage": "https://github.com/Alci6/Agile-Flags#readme"
 }

@@ -1,8 +1,8 @@
 <script>
 	import { dataLevel } from "./../../../stores/chartStore.js";
-    import { onDestroy, onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
 	import { backgroundColor, borderColor, borderWidth } from "./custom.js";
-    import Chart from "chart.js";
+	import Chart from "chart.js";
 
     let data = [0, 0, 0];
     let participant = [0];
