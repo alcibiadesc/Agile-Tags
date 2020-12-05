@@ -4,7 +4,7 @@ const STORE_PREFIX = "moderator_";
 
 const itemsData = localStorage.getItem(`${STORE_PREFIX}items`);
 
-export const moderateStore = writable(JSON.parse(itemsData) || []);
+export const moderateStore = writable(JSON.parse(itemsData) || [12]);
 
 moderateStore.subscribe((value) => {
 	if (itemsData !== value) {
