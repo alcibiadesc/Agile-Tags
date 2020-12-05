@@ -1,7 +1,6 @@
 <script>
 	import Card from "./Card.svelte";
 	import { items } from "./../../stores/answerStore.js";
-	import { fade } from "svelte/transition";
 	import { v4 as uuidv4 } from 'uuid';
 
 	let listItems = $items || [];
@@ -52,7 +51,7 @@
 </script>
 
 {#each filter as itemData, index (uuidv4())}
-	<div transition:fade={{duration: 500}}>
+	<div>
 		<Card
 			cardData={itemData}
 			answers={filter[index]}
