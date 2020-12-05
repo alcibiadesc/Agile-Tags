@@ -8,7 +8,9 @@
 	export let arrayColors;
 	export let index;
 
-	$: selectValue = "";
+	let selectValue = "";
+
+	const changeScore = () => $moderateStore[index][key] = selectValue; 
 
 	const scoreOptions = [0, 0.25, 0.5, 0.75, 1];
 
@@ -87,9 +89,7 @@
 				<select
 					name="moderator"
 					bind:value={selectValue}
-					on:change={() => {
-						$moderateStore[i][key] = selectValue;
-					}}>
+					on:change={changeScore}>
 					<option value={''} selected disabled>-</option>
 					{#each scoreOptions as score}
 						<option value={score}>{score}</option>

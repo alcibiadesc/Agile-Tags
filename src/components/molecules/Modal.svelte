@@ -3,7 +3,7 @@
 	import {itemsMaster } from "../../stores/masterStore.js";
 	import { selectOptions } from "../../AxisBBDD.js";
 	import { recomendatorStore } from "../../stores/recomendator.js";
-	import { moderateStore } from "./../../stores/moderateStore.js";
+	import { moderateStore, resetModerator } from "./../../stores/moderateStore.js";
 	import xlsx from "xlsx";
 	$: showModal = false;
 
@@ -146,6 +146,7 @@
 			on:click={() => {
 				window.location.reload();
 				showModal = !showModal;
+				resetModerator();
 			}}>
 			Aceptar
 		</button>

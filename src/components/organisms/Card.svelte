@@ -77,8 +77,11 @@
 			userObject[key[i]] = checkScore(answerToEvaluate, trueAnswer, scoreSum);
 		});
 	});
-	console.log(userObject);
-	$moderateStore.push(userObject);
+
+
+	if(!$moderateStore[index]) {
+		 $moderateStore[index] = userObject; 
+	} 
 
 	// Sum Global Score
 
