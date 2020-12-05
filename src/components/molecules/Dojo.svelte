@@ -1,5 +1,6 @@
 <script>
 	export let dojoData = [];
+	export let index = 0; 
 	import Button from "./../atoms/Button.svelte";
 
 	function CopyToClipboard(id) {
@@ -15,12 +16,12 @@
 <div class="bg-white ma2 shadow-5  br3 tl ">
 	{#if dojoData.length > 0}
 		<div class="tr pt2 pr2">
-			<Button onClick={() => CopyToClipboard('tableID')}>Copiar</Button>
+			<Button onClick={() => CopyToClipboard(`tableID-${index}`)}>Copiar</Button>
 		</div>
 		<div>
 			<h3 class=" tc">CURSOS RECOMENDADOS</h3>
 		</div>
-		<div id="tableID">
+		<div id="{`tableID-${index}`}">
 			<table class="w-100">
 				<thead>
 					<tr>

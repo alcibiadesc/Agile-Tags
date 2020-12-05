@@ -67,22 +67,21 @@
 			let scoreSum = transformToNumber(splitMasterAnswer[1]);
 			let answerToEvaluate = deleteSpaceString(answers[key[i]]);
 
-			recomendationMatch(
-				$recomendatorStore,
-				key[i],
-				answerToEvaluate,
-				dojoData
-			);
-
 			userObject[key[i]] = checkScore(answerToEvaluate, trueAnswer, scoreSum);
 		});
 	});
 
+	// Recomendation
+	key.forEach((_, i) => {
+		let answerToEvaluate = deleteSpaceString(answers[key[i]]);
 
-		//only push if its undefined or new
-	if(!$moderateStore[index]) {
-		 $moderateStore[index] = userObject; 
-	} 
+		recomendationMatch($recomendatorStore, key[i], answerToEvaluate, dojoData);
+	});
+
+	//only push if its undefined or new
+	if (!$moderateStore[index]) {
+		$moderateStore[index] = userObject;
+	}
 
 	// Sum Global Score
 
@@ -234,7 +233,7 @@
 				<ButtonFloat onClick={() => window.location.reload()} />
 			</div>
 		{:else if section == 'recomendar'}
-			<Dojo {dojoData} />
+			<Dojo {dojoData} {index} />
 		{:else if section == 'metricas'}
 			<TableResult {tableResultData} />
 		{/if}
