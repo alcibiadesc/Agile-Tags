@@ -7,13 +7,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="2in"
-   height="1in"
-   viewBox="0 0 50.799996 25.4"
+   width="1.7in"
+   height="0.5in"
+   viewBox="0 0 43.18 12.7"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (c497b03c, 2020-09-10)"
-   sodipodi:docname="banner copia.svg">
+   sodipodi:docname="banner.svg">
   <defs
      id="defs2">
     <rect
@@ -42,9 +42,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.7860651"
-     inkscape:cx="159.9286"
-     inkscape:cy="95.709817"
+     inkscape:zoom="4.4"
+     inkscape:cx="95.451807"
+     inkscape:cy="43.777972"
      inkscape:document-units="mm"
      inkscape:current-layer="g18"
      inkscape:document-rotation="0"
@@ -52,10 +52,11 @@
      units="in"
      width="9in"
      inkscape:window-width="1280"
-     inkscape:window-height="687"
-     inkscape:window-x="0"
-     inkscape:window-y="23"
-     inkscape:window-maximized="0" />
+     inkscape:window-height="674"
+     inkscape:window-x="1483"
+     inkscape:window-y="167"
+     inkscape:window-maximized="0"
+     scale-x="1" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -77,16 +78,16 @@
        transform="matrix(0.26458333,0,0,0.26458333,101.12986,123.20873)">
       <line
          class="st2"
-         x1="-369.87778"
-         y1="-442.45639"
-         x2="-369.87778"
-         y2="-400.50638"
+         x1="-377.69901"
+         y1="-464.24411"
+         x2="-377.69901"
+         y2="-422.2941"
          id="line16" />
       <g
          aria-label="Agile Flags"
          id="text34"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:SantanderTextW05-Light;-inkscape-font-specification:'SantanderTextW05-Light Bold';fill:#ff2a2a;fill-opacity:1;stroke:none"
-         transform="translate(-235.7137,-5.5989001)">
+         transform="translate(-243.53493,-27.38661)">
         <path
            d="m -105.58453,-411.08961 h -9.632 l -2.016,6.08 h -1.536 l 7.456,-22.048 q 0.288,-0.096 0.832,-0.16 0.544,-0.064 0.992,-0.064 l 7.552,22.272 h -1.632 z m -0.448,-1.408 -4.352,-13.088 -4.352,13.088 z"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32px;font-family:SantanderTextW05-Light;-inkscape-font-specification:'SantanderTextW05-Light Light';fill:#ff2a2a"

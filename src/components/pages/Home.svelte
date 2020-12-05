@@ -60,7 +60,7 @@
 	}
 </style>
 
-<div class="drop-area bg-white">
+<div class="drop-area bg-white mt4">
 	Añade tu archivo de excel
 	<img
 		class="grow link black dim"
