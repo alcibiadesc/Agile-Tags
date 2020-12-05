@@ -28,6 +28,7 @@
     "lint-staged": "^8.1.7",
     "sirv-cli": "^0.4.4",
     "svelte-fusioncharts": "^1.0.0",
+    "uuid": "^8.3.1",
     "xlsx": "^0.16.2"
   },
   "description": "This is an internal project of the CoE Agile of Santander Global Tech.  Our purpose is study Agile mindset maturity levels",

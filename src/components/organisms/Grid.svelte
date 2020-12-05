@@ -1,6 +1,9 @@
 <script>
 	import Card from "./Card.svelte";
 	import { items } from "./../../stores/answerStore.js";
+	import { fade } from "svelte/transition";
+	import { v4 as uuidv4 } from 'uuid';
+
 	let listItems = $items || [];
 
 	export let searchValue = "";
@@ -11,11 +14,11 @@
 			.replace(/[\u0300-\u036f]/g, "")
 			.toLowerCase();
 
-	$: filter = listItems.filter(({ Tribu, Nombre }) => {
+	$: filter = listItems.filter((data) => {
 		let query = normalize(searchValue);
-		let tribu = normalize(Tribu);
-		let nombre = normalize(Nombre);
-		return tribu.includes(query) || nombre.includes(query);
+		let tribu = normalize(data.Tribu);
+		let nombre = normalize(data.Nombre);
+		return nombre.includes(query) || tribu.includes(query) ;
 	});
 
 	$: filter.map((item, _, array) => {
@@ -48,13 +51,13 @@
 	};
 </script>
 
-{#each filter as item, index}
-	<Card
-		cardData={item}
-		answers={filter[index]}
-		{index}
-		groupByColor={groupByColor(Object.keys(item))}
-		{arrayColors} />
-
-		
+{#each filter as itemData, index (uuidv4())}
+	<div transition:fade={{duration: 500}}>
+		<Card
+			cardData={itemData}
+			answers={filter[index]}
+			{index}
+			groupByColor={groupByColor(Object.keys(itemData))}
+			{arrayColors} />
+	</div>
 {/each}
