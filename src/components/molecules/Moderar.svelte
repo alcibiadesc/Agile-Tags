@@ -75,7 +75,7 @@
 	<div class="cf">
 		<div class="f6 fl w-50">
 			<p />
-			{#if $moderateStore[index][key] >= 0}
+			{#if $moderateStore[index][key] != null}
 				<p>Puntuación: {$moderateStore[index][key]}</p>
 			{/if}
 		</div>

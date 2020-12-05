@@ -24,13 +24,13 @@
 			<table class="w-100">
 				<thead>
 					<tr>
-						<th class="tc fl w-third pa2">
+						<th class="tc fl w-40 pa2">
 							<p>PREGUNTA</p>
 						</th>
-						<th class="tc fl w-third pa2 ">
+						<th class="tc fl w-40 pa2 ">
 							<p>CURSO</p>
 						</th>
-						<th class="tc fl w-third pa2">
+						<th class="tc fl w-20 pa2">
 							<p>ENLACE</p>
 						</th>
 					</tr>
@@ -39,9 +39,9 @@
 				<tbody>
 					{#each dojoData as { pregunta, curso, enlace }, index}
 						<tr class="cf {index % 2 == 0 ? 'bg-light-gray' : 'bg-white'}">
-							<td class="fl tc w-third pa2">{pregunta}</td>
-							<td class="fl tc w-third pa2">{curso}</td>
-							<td class="fl tc w-third pa2 grow">
+							<td class="fl tl w-40 pa2 f6">{pregunta}</td>
+							<td class="fl tc w-40 pa2">{curso}</td>
+							<td class="fl tc w-20 pa2 grow">
 								<a target="_blank" href={enlace}> 🔗 </a>
 							</td>
 						</tr>

@@ -25,7 +25,6 @@ export const recomendationMatch = (
 	userAnswer,
 	arrayDojo
 ) => {
-	console.log("check recomendations");
 	arrayWithRecomendations.forEach((array) => {
 		let dojoQuestion = array["PREGUNTA"];
 		let dojoAnswer = array["RESPUESTA ESPERADA"].replaceAll(" ", "");

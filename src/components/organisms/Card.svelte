@@ -8,8 +8,10 @@
 	import { tag } from "../../AxisBBDD.js";
 	import Dojo from "../molecules/Dojo.svelte";
 	import Moderar from "./../molecules/Moderar.svelte";
-	import { recomendatorStore, recomendationMatch } from "./../../stores/recomendator.js";
-	
+	import {
+		recomendatorStore,
+		recomendationMatch,
+	} from "./../../stores/recomendator.js";
 
 	export let cardData = {};
 	export let index = 0;
@@ -29,56 +31,53 @@
 
 	filterCardData(deleteThisKeys, moderatorData);
 
-
 	let userObject = {};
+	let dojoData = [];
+	const masterAnswers = $itemsMaster ? $itemsMaster : [{ a: 0 }, { b: 0 }];
 
-	const masterAnswers = $itemsMaster ? $itemsMaster : [{a:0},{b:0}];
 	let key = Object.keys(answers);
 
+	const deleteSpaceString = (string = "") =>
+		(string = string.replaceAll(" ", ""));
 
-	///// RECOMENDATOR ////
+	const transformToNumber = (string = "0") =>
+		(string = Number(string.replace(",", ".")));
 
+	const splitAnswerAndScore = (string = "a&0") => string.split("&");
 
-let dojoData = []; 	
+	const checkScore = (answer, correctAnswer, score = 0) => {
+		let answerIsNo = answer.toUpperCase().replaceAll(".", "");
+		let scoreObject = null; 
+		if (answerIsNo == "NO") {
+			scoreObject = 0;
+		}
 
+		if (answer == correctAnswer) {
+			scoreObject = score;
+		}
+		return scoreObject; 
+	};
 
 	// Loop Validate Answers
 	masterAnswers.forEach((_, index) => {
 		key.forEach((_, i) => {
 			let masterAnswersValues = masterAnswers[index][key[i]];
+			let splitMasterAnswer = splitAnswerAndScore(masterAnswersValues);
+			let trueAnswer = deleteSpaceString(splitMasterAnswer[0]);
+			let scoreSum = transformToNumber(splitMasterAnswer[1]);
+			let answerToEvaluate = deleteSpaceString(answers[key[i]]);
 
-			// get the score points
-			let splitMasterAnswer = masterAnswersValues
-				? masterAnswersValues.split("&")
-				: {};
+			recomendationMatch(
+				$recomendatorStore,
+				key[i],
+				answerToEvaluate,
+				dojoData
+			);
 
-			let trueAnswer = splitMasterAnswer[0]
-				? splitMasterAnswer[0].replaceAll(" ", "")
-				: "";
-			let scoreSum = Number(
-				splitMasterAnswer[1] ? splitMasterAnswer[1].replace(",", ".") : 0
-			); // prevent use "," to decimals
-
-			let answerToEvaluate = answers[key[i]]
-				? answers[key[i]].replaceAll(" ", "")
-				: "";
-			
-				recomendationMatch($recomendatorStore, key[i], answerToEvaluate, dojoData)
-			// Answers equal to "NO" score 0;
-			if (
-				answerToEvaluate.toUpperCase() == "NO" ||
-				answerToEvaluate.toUpperCase() == "NO."
-			) {
-				userObject[key[i]] = 0;
-			} else if (answerToEvaluate == trueAnswer && scoreSum) {
-				userObject[key[i]] = scoreSum;
-			}
+			userObject[key[i]] = checkScore(answerToEvaluate, trueAnswer, scoreSum);
 		});
 	});
-	// Add recomendation
-
-	// Add Object to array with only scores
-
+	console.log(userObject)
 	$moderateStore.push(userObject);
 
 	// Sum Global Score
@@ -100,12 +99,12 @@ let dojoData = [];
 	// sum all values in a term
 
 	const sumAll = (object) => {
-		let values = Object.values(object);
+		let values = Object.values(object).filter(score => score != null);
 
 		let cleanValues = values.length > 0 ? values : [0];
 
 		let result =
-			values.length > 0
+			values.length > 0 
 				? cleanValues.reduce((a, b) => a + b) / values.length
 				: 0;
 
@@ -231,7 +230,7 @@ let dojoData = [];
 				<ButtonFloat onClick={() => window.location.reload()} />
 			</div>
 		{:else if section == 'recomendar'}
-			<Dojo dojoData={dojoData} />
+			<Dojo {dojoData} />
 		{:else if section == 'metricas'}
 			<TableResult {tableResultData} />
 		{/if}

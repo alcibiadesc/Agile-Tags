@@ -1,5 +1,5 @@
 <script>
-	import CardUnit from "./CardUnit.svelte";
+	import Card from "./Card.svelte";
 	import { items } from "./../../stores/answerStore.js";
 	let listItems = $items || [];
 
@@ -49,7 +49,7 @@
 </script>
 
 {#each filter as item, index}
-	<CardUnit
+	<Card
 		cardData={item}
 		answers={filter[index]}
 		{index}
