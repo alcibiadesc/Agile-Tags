@@ -23,7 +23,8 @@ export const recomendationMatch = (
 	arrayWithRecomendations,
 	question,
 	userAnswer,
-	arrayDojo
+	arrayDojo,
+	
 ) => {
 	arrayWithRecomendations.forEach((array) => {
 		let dojoQuestion = array["PREGUNTA"];
@@ -33,7 +34,8 @@ export const recomendationMatch = (
 			let checkAnswer = dojoAnswer == userAnswer;
 
 			if (checkAnswer) {
-				arrayDojo.push({
+				console.log([arrayDojo]);
+				arrayDojo.push( {
 					pregunta: question,
 					curso: array["RECOMENDACIÓN"],
 					enlace: array["LINK"],
