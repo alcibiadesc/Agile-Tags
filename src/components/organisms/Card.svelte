@@ -109,7 +109,7 @@
 
 	const sumAxis = (axisSelected) => {
 		let arrayValues = Object.values(axisSelected);
-		Number(arrayValues.reduce((acc, num) => acc + num) / arrayValues.length);
+		return Number(arrayValues.reduce((acc, num) => acc + num) / arrayValues.length);
 	};
 
 	const axisObj = {
