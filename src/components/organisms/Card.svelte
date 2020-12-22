@@ -49,6 +49,7 @@
 		key.forEach((_, i) => {
 			let masterAnswersValues = masterAnswers[index][key[i]];
 			let splitMasterAnswer = splitAnswerAndScore(masterAnswersValues);
+
 			let trueAnswer = deleteSpaceString(splitMasterAnswer[0]);
 			let scoreSum = transformToNumber(splitMasterAnswer[1]);
 			let answerToEvaluate = deleteSpaceString(answers[key[i]]);
@@ -103,7 +104,7 @@
 
 	const sumAxis = (axisSelected) => {
 		let arrayValues = Object.values(axisSelected);
-		Number(arrayValues.reduce((acc, num) => acc + num) / arrayValues.length);
+		return	Number(arrayValues.reduce((acc, num) => acc + num) / arrayValues.length);
 	};
 	const allAxis = {
 		allAxisA: sumAxis(axisA),
