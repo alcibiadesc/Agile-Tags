@@ -9,6 +9,14 @@
 	import Dojo from "../molecules/Dojo.svelte";
 	import Moderar from "./../molecules/Moderar.svelte";
 	import {
+		deleteSpaceString,
+		transformToNumber,
+		filterCardData,
+		splitAnswerAndScore,
+		checkScore,
+		sumAll,
+	} from "./Card.js";
+	import {
 		recomendatorStore,
 		recomendationMatch,
 	} from "./../../stores/recomendator.js";
@@ -18,6 +26,8 @@
 	export let answers;
 	export let arrayColors;
 
+	const moderatorData = { ...cardData };
+
 	const deleteThisKeys = [
 		"Correo electrónico",
 		"Nombre",
@@ -25,9 +35,6 @@
 		"Rol",
 		"Hola de finalización",
 	];
-	const filterCardData = (keys, object) =>
-		keys.map((key) => delete object[key]);
-	const moderatorData = { ...cardData };
 
 	filterCardData(deleteThisKeys, moderatorData);
 
@@ -36,27 +43,6 @@
 	const masterAnswers = $itemsMaster ? $itemsMaster : [{ a: 0 }, { b: 0 }];
 
 	let key = Object.keys(answers);
-
-	const deleteSpaceString = (string = "") =>
-		(string = string.replaceAll(" ", ""));
-
-	const transformToNumber = (string = "0") =>
-		(string = Number(string.replace(",", ".")));
-
-	const splitAnswerAndScore = (string = "a&0") => string.split("&");
-
-	const checkScore = (answer, correctAnswer, score = 0) => {
-		let answerIsNo = answer.toUpperCase().replaceAll(".", "");
-		let scoreObject = null;
-		if (answerIsNo == "NO") {
-			scoreObject = 0;
-		}
-
-		if (answer == correctAnswer) {
-			scoreObject = score;
-		}
-		return scoreObject;
-	};
 
 	// Loop Validate Answers
 	masterAnswers.forEach((_, index) => {
@@ -71,7 +57,7 @@
 		});
 	});
 
-	// Recomendation
+	// Recomendation dojo
 	key.forEach((_, i) => {
 		let answerToEvaluate = deleteSpaceString(answers[key[i]]);
 
@@ -101,29 +87,13 @@
 
 	// sum all values in a term
 
-	const sumAll = (object) => {
-		let values = Object.values(object).filter((score) => score != null);
-
-		let cleanValues = values.length > 0 ? values : [0];
-
-		let result =
-			values.length > 0
-				? cleanValues.reduce((a, b) => a + b) / values.length
-				: 0;
-
-		return result;
-	};
-
 	// Cluster in Participant, Practitioner, Expert
 
 	const clusterLevels = (participant, practitioner, expert) => {
-		let parti = sumAll(findAndFilter(participant));
-		let pract = sumAll(findAndFilter(practitioner));
-		let exp = sumAll(findAndFilter(expert));
 		let result = {
-			participant: [parti],
-			practitioner: [pract],
-			expert: [exp],
+			participant: [sumAll(findAndFilter(participant))],
+			practitioner: [sumAll(findAndFilter(practitioner))],
+			expert: [sumAll(findAndFilter(expert))],
 		};
 		return result;
 	};
@@ -137,35 +107,35 @@
 				tag.length
 		);
 
-	const sumAxis = (axisSelected) =>
-		Number(
-			(axisSelected.participant[0] +
-				axisSelected.practitioner[0] +
-				axisSelected.expert[0]) /
-				3
-		);
+	const sumAxis = (axisSelected) => {
+		let arrayValues = Object.values(axisSelected);
+		Number(arrayValues.reduce((acc, num) => acc + num) / arrayValues.length);
+	};
 
-	let axisA = clusterLevels("A-1", "A-2", "A-3");
-	let axisB = clusterLevels("B-1", "B-2", "B-3");
-	let axisC = clusterLevels("C-1", "C-2", "C-3");
-	let axisD = clusterLevels("D-1", "D-2", "D-3");
-	let allAxisA = sumAxis(axisA);
-	let allAxisB = sumAxis(axisB);
-	let allAxisC = sumAxis(axisC);
-	let allAxisD = sumAxis(axisD);
+	const axisObj = {
+		axisA: clusterLevels("A-1", "A-2", "A-3"),
+		axisB: clusterLevels("B-1", "B-2", "B-3"),
+		axisC: clusterLevels("C-1", "C-2", "C-3"),
+		axisD: clusterLevels("D-1", "D-2", "D-3"),
+	};
+	const { axisA, axisB, axisC, axisD } = axisObj;
+
+	const allAxis = {
+		allAxisA: sumAxis(axisA),
+		allAxisB: sumAxis(axisB),
+		allAxisC: sumAxis(axisC),
+		allAxisD: sumAxis(axisD),
+	};
+
+	const { allAxisA, allAxisB, allAxisC, allAxisD } = allAxis;
+		
 	let participantAll = sumLevel("participant");
 	let practitionerAll = sumLevel("practitioner");
 	let expertAll = sumLevel("expert");
 
 	let tableResultData = {
-		axisA,
-		axisB,
-		axisC,
-		axisD,
-		allAxisA,
-		allAxisB,
-		allAxisC,
-		allAxisD,
+		axisObj,
+		allAxis,
 		participantAll,
 		practitionerAll,
 		expertAll,
@@ -203,12 +173,9 @@
 		{ id: "recomendar", title: "Recomendar cursos", icon: "dojo", onClick },
 		{ id: "metricas", title: "Visualizar métricas", icon: "metricas", onClick },
 	];
-
-	// Recomendador
 </script>
 
 <style>
-	@import url("https://fonts.googleapis.com/css?family=Abel");
 	.centered {
 		margin: auto;
 		width: 50%;

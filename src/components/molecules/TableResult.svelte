@@ -7,15 +7,12 @@
 		participantAll,
 		practitionerAll,
 		expertAll,
-		axisA,
-		axisB,
-		axisC,
-		axisD,
-		allAxisA,
-		allAxisB,
-		allAxisC,
-		allAxisD,
+		axisObj,
+		allAxis,
 	} = tableResultData;
+
+	const { axisA, axisB, axisC, axisD } = axisObj;
+	const { allAxisA, allAxisB, allAxisC, allAxisD } = allAxis;
 </script>
 
 <div class="mb4 pb3 pt0 mt0 topindex">
