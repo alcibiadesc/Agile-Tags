@@ -85,10 +85,6 @@
 		return filtered;
 	};
 
-	// sum all values in a term
-
-	// Cluster in Participant, Practitioner, Expert
-
 	const clusterLevels = (participant, practitioner, expert) => {
 		let result = {
 			participant: [sumAll(findAndFilter(participant))],
@@ -97,6 +93,26 @@
 		};
 		return result;
 	};
+	const axisObj = {
+		axisA: clusterLevels("A-1", "A-2", "A-3"),
+		axisB: clusterLevels("B-1", "B-2", "B-3"),
+		axisC: clusterLevels("C-1", "C-2", "C-3"),
+		axisD: clusterLevels("D-1", "D-2", "D-3"),
+	};
+	const { axisA, axisB, axisC, axisD } = axisObj;
+
+	const sumAxis = (axisSelected) => {
+		let arrayValues = Object.values(axisSelected);
+		Number(arrayValues.reduce((acc, num) => acc + num) / arrayValues.length);
+	};
+	const allAxis = {
+		allAxisA: sumAxis(axisA),
+		allAxisB: sumAxis(axisB),
+		allAxisC: sumAxis(axisC),
+		allAxisD: sumAxis(axisD),
+	};
+
+	const { allAxisA, allAxisB, allAxisC, allAxisD } = allAxis;
 
 	const sumLevel = (levelSelected) =>
 		Number(
@@ -106,29 +122,6 @@
 				axisD[levelSelected][0]) /
 				tag.length
 		);
-
-	const sumAxis = (axisSelected) => {
-		let arrayValues = Object.values(axisSelected);
-		return Number(arrayValues.reduce((acc, num) => acc + num) / arrayValues.length);
-	};
-
-	const axisObj = {
-		axisA: clusterLevels("A-1", "A-2", "A-3"),
-		axisB: clusterLevels("B-1", "B-2", "B-3"),
-		axisC: clusterLevels("C-1", "C-2", "C-3"),
-		axisD: clusterLevels("D-1", "D-2", "D-3"),
-	};
-	const { axisA, axisB, axisC, axisD } = axisObj;
-
-	const allAxis = {
-		allAxisA: sumAxis(axisA),
-		allAxisB: sumAxis(axisB),
-		allAxisC: sumAxis(axisC),
-		allAxisD: sumAxis(axisD),
-	};
-
-	const { allAxisA, allAxisB, allAxisC, allAxisD } = allAxis;
-		
 	let participantAll = sumLevel("participant");
 	let practitionerAll = sumLevel("practitioner");
 	let expertAll = sumLevel("expert");
