@@ -1,7 +1,6 @@
 .vercel
 .DS_store
 node_modules/
-public/build/
 public/.DS_Store
 
 
