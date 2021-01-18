@@ -54,7 +54,9 @@
 			let scoreSum = transformToNumber(splitMasterAnswer[1]);
 			let answerToEvaluate = deleteSpaceString(answers[key[i]]);
 
-			userObject[key[i]] = checkScore(answerToEvaluate, trueAnswer, scoreSum);
+			if (!userObject[key[i]]) {
+				userObject[key[i]] = checkScore(answerToEvaluate, trueAnswer, scoreSum);
+			}
 		});
 	});
 
@@ -104,7 +106,9 @@
 
 	const sumAxis = (axisSelected) => {
 		let arrayValues = Object.values(axisSelected);
-		return	Number(arrayValues.reduce((acc, num) => acc + num) / arrayValues.length);
+		return Number(
+			arrayValues.reduce((acc, num) => acc + num) / arrayValues.length
+		);
 	};
 	const allAxis = {
 		allAxisA: sumAxis(axisA),
