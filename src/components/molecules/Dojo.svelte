@@ -12,24 +12,23 @@
 		document.execCommand("copy");
 		window.getSelection().removeAllRanges();
 
-		changeToast(); 
+		changeToast();
 	}
 
 	const changeToast = () => {
-		showToast = !showToast; 	
-		setTimeout(() => showToast = !showToast, 1800 )
-	}
+		showToast = !showToast;
+		setTimeout(() => (showToast = !showToast), 1800);
+	};
 
-	let showToast = false; 
-	
+	let showToast = false;
 </script>
 
-<Toast {showToast}/>
+<Toast {showToast} />
 <div class="bg-white ma2 shadow-5  br3 tl ">
 	{#if dojoData.length > 0}
 		<div class="tr pt2 pr2">
 			<Button onClick={() => CopyToClipboard(`tableID-${index}`)}>
-				<img src="icons/copy.svg" alt="copiar">		
+				<img src="icons/copy.svg" alt="copiar" />
 			</Button>
 		</div>
 		<div>
@@ -63,6 +62,26 @@
 					{/each}
 				</tbody>
 			</table>
+
+			<div class="ma2 pa2 f6">
+				<h3 class="tc">Leyenda</h3>
+				<p>
+					<b>E-Learning: </b>
+					Si tienes acceso a Dojo ya puedes acceder a esta formación.
+				</p>
+				<p>
+					<b>Synchronous: </b>
+					Tiene que ser gestionado a través del área de formación.
+				</p>
+				<p>
+					<b>Guided Learning: </b>
+					Tiene que ser gestionado a través del área de formación.
+				</p>
+				<p>
+					<b>Standard: </b>
+					Tiene que ser gestionado a través del área de formación.
+				</p>
+			</div>
 		</div>
 	{:else}
 		<h3 class="pa4 tc ">Actualmente no tiene cursos recomendados</h3>
