@@ -34309,7 +34309,7 @@ var app = (function () {
     			t3 = text(t3_value);
     			attr_dev(h1, "class", "f4  svelte-1u2fxiv");
     			add_location(h1, file$7, 43, 1, 587);
-    			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}`);
+    			attr_dev(a, "href", a_href_value = `mailto:${/*email*/ ctx[2]}?subject=[FORMACIÓN] Cursos Recomendados para ${/*name*/ ctx[1]}`);
     			attr_dev(a, "class", "svelte-1u2fxiv");
     			add_location(a, file$7, 50, 5, 726);
     			attr_dev(span, "class", "f6 mt1 tr");
@@ -34348,7 +34348,7 @@ var app = (function () {
     			cardbuttons.$set(cardbuttons_changes);
     			if ((!current || dirty & /*email*/ 4) && t3_value !== (t3_value = (/*email*/ ctx[2] ? /*email*/ ctx[2] : "") + "")) set_data_dev(t3, t3_value);
 
-    			if (!current || dirty & /*email*/ 4 && a_href_value !== (a_href_value = `mailto:${/*email*/ ctx[2]}`)) {
+    			if (!current || dirty & /*email, name*/ 6 && a_href_value !== (a_href_value = `mailto:${/*email*/ ctx[2]}?subject=[FORMACIÓN] Cursos Recomendados para ${/*name*/ ctx[1]}`)) {
     				attr_dev(a, "href", a_href_value);
     			}
     		},

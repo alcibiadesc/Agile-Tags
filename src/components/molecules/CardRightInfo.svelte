@@ -48,7 +48,7 @@
 		<div>
 			<div class="tr">
 				<span class="f6 mt1 tr">
-					<a href={`mailto:${email}`}>{email ? email : ''}</a></span>
+					<a href={`mailto:${email}?subject=[FORMACIÓN] Cursos Recomendados para ${name}`}>{email ? email : ''}</a></span>
 			</div>
 		</div>
 	</div>
