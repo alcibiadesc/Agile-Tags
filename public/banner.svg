@@ -43,7 +43,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="4.4"
-     inkscape:cx="95.451807"
+     inkscape:cx="51.701807"
      inkscape:cy="43.777972"
      inkscape:document-units="mm"
      inkscape:current-layer="text34"
@@ -54,7 +54,7 @@
      inkscape:window-width="1280"
      inkscape:window-height="674"
      inkscape:window-x="20"
-     inkscape:window-y="37"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      scale-x="1" />
   <metadata
@@ -120,17 +120,16 @@
            d="m 5.9406497,-405.08016 q -1.28,0 -2.624,-0.32 -1.312,-0.32 -2.272,-0.928 0.032,-0.64 0.256,-1.344 0.992,0.64 2.24,0.96 1.28,0.32 2.336,0.32 1.984,0 3.104,-0.768 1.1520003,-0.768 1.1520003,-2.176 0,-1.312 -0.8000003,-2.048 -0.768,-0.736 -2.56,-1.28 l -1.248,-0.384 q -2.048,-0.608 -3.168,-1.664 -1.088,-1.056 -1.088,-2.848 0,-1.984 1.408,-3.04 1.44,-1.056 3.904,-1.056 2.496,0 4.6080003,0.8 -0.064,0.736 -0.224,1.312 -1.9200003,-0.8 -4.2880003,-0.8 -1.792,0 -2.848,0.704 -1.024,0.672 -1.024,2.016 0,1.28 0.832,2.048 0.864,0.736 2.592,1.28 l 1.28,0.384 q 2.208,0.672 3.2000003,1.696 0.992,1.024 0.992,2.752 0,1.312 -0.704,2.304 -0.672,0.992 -1.9840003,1.536 -1.28,0.544 -3.072,0.544 z"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:32px;font-family:SantanderTextW05-Light;-inkscape-font-specification:'SantanderTextW05-Light Light';fill:#ff2a2a"
            id="path98" />
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:0;font-family:SantanderTextW05-Light;-inkscape-font-specification:SantanderTextW05-Light;fill:#ff0000;fill-opacity:1;stroke:none"
-           x="-45.960899"
-           y="-404.64783"
-           id="text75"><tspan
-             sodipodi:role="line"
-             id="tspan73"
-             x="-45.960899"
-             y="-404.64783"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:0.05;font-family:SantanderTextW05-Light;-inkscape-font-specification:SantanderTextW05-Light;fill:#ff0000">T</tspan></text>
+        <g
+           aria-label="T"
+           id="text75"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:0;font-family:SantanderTextW05-Light;-inkscape-font-specification:SantanderTextW05-Light;fill:#ff0000;fill-opacity:1;stroke:none">
+          <path
+             d="m -29.928899,-426.79183 c -0.04267,0.61867 -0.106667,1.09867 -0.192,1.44 h -6.944 v 12.52219 8.18181 h -1.568 v -20.704 h -7.04 c 0,-0.23467 0.01067,-0.48 0.032,-0.736 0.04267,-0.27733 0.096,-0.512 0.16,-0.704 z"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:0.05;font-family:SantanderTextW05-Light;-inkscape-font-specification:SantanderTextW05-Light;fill:#ff0000"
+             id="path2438"
+             sodipodi:nodetypes="ccccccccccc" />
+        </g>
       </g>
       <text
          xml:space="preserve"
