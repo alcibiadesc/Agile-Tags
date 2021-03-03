@@ -32773,6 +32773,17 @@ var app = (function () {
 
     const axisTags = [
     	{
+    		value: "ac",
+    		description: "AC: Agile Coach",
+    		tags: [
+    			"Product Management Facilitation",
+    			"Adoption of Agile Practices",
+    			"Transformational Leadership",
+    			"Developing People",
+    		],
+    	},
+
+    	{
     		value: "cl",
     		description: "CL: Chapter Lead",
     		tags: [

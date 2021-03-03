@@ -1,7 +1,18 @@
 import { axisStore } from "./stores/axisStore.js";
-	export let tribal = "";
+export let tribal = "";
 
 const axisTags = [
+	{
+		value: "ac",
+		description: "AC: Agile Coach",
+		tags: [
+			"Product Management Facilitation",
+			"Adoption of Agile Practices",
+			"Transformational Leadership",
+			"Developing People",
+		],
+	},
+
 	{
 		value: "cl",
 		description: "CL: Chapter Lead",
