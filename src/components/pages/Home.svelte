@@ -29,7 +29,7 @@
 					recomendatorStore.set(rowObject);
 				} else if (sheetName == "Moderator") {
 					moderateStore.set(rowObject);
-				} else {
+				} else if (sheetName[0] !== "_" ){
 					items.set(rowObject);
 					itemsMaster.set(rowObject); 
 				}
