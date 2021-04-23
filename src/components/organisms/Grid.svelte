@@ -16,7 +16,7 @@
 	$: filter = listItems.filter((data) => {
 		let query = normalize(searchValue);
 		let tribu = normalize(data.Tribu);
-		let nombre = normalize(data.Nombre);
+		let nombre = data.Nombre ? normalize(data.Nombre) : "anónimo" ;
 		return nombre.includes(query) || tribu.includes(query) ;
 	});
 

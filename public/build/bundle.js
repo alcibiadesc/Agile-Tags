@@ -37499,7 +37499,7 @@ var app = (function () {
     			div = element("div");
     			create_component(card.$$.fragment);
     			t = space();
-    			add_location(div, file$e, 53, 1, 1183);
+    			add_location(div, file$e, 53, 1, 1210);
     			this.first = div;
     		},
     		m: function mount(target, anchor) {
@@ -37696,7 +37696,7 @@ var app = (function () {
     			 $$invalidate(0, filter = listItems.filter(data => {
     				let query = normalize(searchValue);
     				let tribu = normalize(data.Tribu);
-    				let nombre = normalize(data.Nombre);
+    				let nombre = data.Nombre ? normalize(data.Nombre) : "anónimo";
     				return nombre.includes(query) || tribu.includes(query);
     			}));
     		}
