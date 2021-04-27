@@ -1,7 +1,7 @@
 <script>
 	import Card from "./Card.svelte";
 	import { items } from "./../../stores/answerStore.js";
-	import { v4 as uuidv4 } from 'uuid';
+	import { v4 as uuidv4 } from "uuid";
 
 	let listItems = $items || [];
 
@@ -15,9 +15,11 @@
 
 	$: filter = listItems.filter((data) => {
 		let query = normalize(searchValue);
-		let tribu = normalize(data.Tribu);
-		let nombre = data.Nombre ? normalize(data.Nombre) : "anónimo" ;
-		return nombre.includes(query) || tribu.includes(query) ;
+		let tribu = data.Tribu ? normalize(data.Tribu) : (data.Tribu = "");
+		let nombre = data.Nombre
+			? normalize(data.Nombre)
+			: (data.Nombre = "anónimo " + data.ID);
+		return nombre.includes(query) || tribu.includes(query);
 	});
 
 	$: filter.map((item, _, array) => {
