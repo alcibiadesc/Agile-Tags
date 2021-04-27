@@ -78,9 +78,19 @@
 	<div class="general">
 		<h1 class="f4 ">{Nombre}</h1>
 		<p class="tl">
+			{#if Tribu}
+
+		
 			Pertenece a la tribu
 			<span class="b">{Tribu}</span>
-			{#if Rol}con el rol de <span class="b">{Rol}.</span>{/if}
+			{#if Rol} con el rol de <span class="b">{Rol}.</span>{/if}
+		{:else}
+			<h5>
+
+			Error: Tribu desconocida, compruebe que en el excel aparece la columna <span class="red">Tribu</span>  escrita exactamente así y sin ningún caracter especial, como por ejemplo, . o : al terminar la palabra. 
+
+			</h5>
+	{/if}
 		</p>
 	</div>
 </div>
