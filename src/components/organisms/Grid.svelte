@@ -13,6 +13,7 @@
 			.replace(/[\u0300-\u036f]/g, "")
 			.toLowerCase();
 
+	// Pendiente refactorizar esta parte, debido a un bug se utiliza FilterCSS para hacer un display none en lugar de cambiar la bbdd dado que se superponia info
 	$: filter = listItems.filter((data) => {
 		let query = normalize(searchValue);
 		let tribu = data.Tribu ? normalize(data.Tribu) : (data.Tribu = "");
@@ -50,13 +51,33 @@
 		});
 		arrayColors.push(arrayColorCollection);
 	};
+
+	const filterCSS = (name, tribe, query) => {
+		query = normalize(query);
+		tribe = normalize(tribe);
+		name = normalize(name);
+
+		return query == ""
+			? ""
+			: name.includes(query)
+			? ""
+			: tribe.includes(query)
+			? ""
+			: "hide";
+	};
 </script>
 
-{#each filter as itemData, index (uuidv4())}
-	<div>
+<style>
+	.hide {
+		display: none;
+	}
+</style>
+
+{#each listItems as itemData, index (uuidv4())}
+	<div class={filterCSS(itemData.Nombre, itemData.Tribu, searchValue)}>
 		<Card
 			cardData={itemData}
-			answers={filter[index]}
+			answers={listItems[index]}
 			{index}
 			groupByColor={groupByColor(Object.keys(itemData))}
 			{arrayColors} />
