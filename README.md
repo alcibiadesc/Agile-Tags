@@ -11,3 +11,5 @@ Our purpose is study Agile mindset maturity levels
 3. Load [VALIDADOR.xls](https://github.com/alcibiadesc/Agile-Tags/blob/master/checkDocs/VALIDADOR.xlsx) from the folder checkdocs, in the button "Plantilla Correctora" inside the app.
 4. Enjoy!
 
+# Offline Version
+Here 👉 [download](https://github.com/alcibiadesc/Agile-Tags/blob/master/Agile%20Tags%20--%20Offline%20Version.zip)
